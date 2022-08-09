@@ -5,14 +5,12 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 作者测试用的centos8.2系统  
 附加脚本IpUpdemo.sh.x为快捷登录服务器  
 附加脚本FileUpdemo.sh.x为快捷上传插件  
-下载至Windows使用  
-附加脚本Pluginsdemo.sh.x为plugins&js插件安装更新卸载  
-附加脚本viocedemo.sh.x为plugins&js语音配置  
+下载至Windows使用
 [移步Window安装YunzaiV2&V3教程](https://b23.tv/uTguBSj)  
 ## 二、安裝教程
 >温聲提示  
 >>您的服务器需要安装Git  
->>>才能复制脚本  
+>>才能复制脚本  
 
 `yum -y install git #安装Git`  
 
@@ -27,13 +25,15 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 ## 三、功能介绍
 * 一键部署基础环境Node.js、Redis、 git、 Redis开机自启
 * 一键安装和卸载Yunzai-BotV2&V3&miao-plugin插件
-* 一键更新Yunzai-BotV2&V3&miao-plugin 
-* 一键前台启动机器人以查看反馈
-* 一键后台启动和停止机器人
-* 一键修改机器人配置
-* 一键初始化机器人配置
+* 一键更新Yunzai-BotV2&V3&miao-plugin
+* 机器人状态控制面板
+* 插件管理&扩展功能
+* 一键修改与删除配置
 * 一键脚本自更新自配置
-* 一键重启服务器
-* 一键删除喵喵帮助图-底图(删除后背景图将只显示主图)
 * SSH开通帮助(IpUpdemo.sh.x&FileUpdemo.sh.x)
 * 系统语言帮助(设置中文，修改后需重启)
+## 四、更新记录
+* V0.0.0：首发测试，补充更多实用性功能，优化代码逻辑，修复更新功能
+* V1.0.0：修改与整合功能列表，优化交互，修复bug若干
+* V1.0.1：添加插件管理与扩展功能，优化机器人启动方式
+
