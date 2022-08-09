@@ -5,7 +5,7 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 作者测试用的centos8.2系统  
 附加脚本IpUpdemo.sh.x为快捷登录服务器  
 附加脚本FileUpdemo.sh.x为快捷上传插件  
-下载至Windows使用
+下载至Windows使用  
 [移步Window安装YunzaiV2&V3教程](https://b23.tv/uTguBSj)  
 ## 二、安裝教程
 >温聲提示  
