@@ -21,7 +21,7 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 `git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`  
 ### 3. 执行脚本
 `cd /        #移步最外层目录`  
-`./Yunzai-Bot-Help/helpdemo.sh.x   #启动`  
+`./Yunzai-Bot-Help/Centos/Centosdemo.sh.x   #启动`  
 ## 三、功能介绍
 * 一键部署基础环境Node.js、Redis、 git、 Redis开机自启
 * 一键安装和卸载Yunzai-BotV2&V3&miao-plugin插件
