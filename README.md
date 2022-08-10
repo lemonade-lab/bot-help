@@ -28,6 +28,7 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 * 一键更新Yunzai-BotV2&V3&miao-plugin
 * 机器人状态控制面板
 * 插件管理&扩展功能
+* 一键查看运行状态
 * 一键修改与删除配置
 * 一键脚本自更新自配置
 * SSH开通帮助(IpUpdemo.sh&FileUpdemo.sh)
@@ -36,4 +37,4 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 * V0.0.0：首发测试，补充更多实用性功能，优化代码逻辑，修复更新功能
 * V1.0.0：修改与整合功能列表，优化交互，修复bug若干
 * V1.0.1：添加插件管理与扩展功能，优化机器人启动方式
-
+* V1.0.2：新增加pm2运行管理，补充更多插件，优化菜单显示
