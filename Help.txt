@@ -15,9 +15,12 @@ cd /
 git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git
 #运行
 cd /
-./Yunzai-Bot-Help/Centos/Centosdemo.sh.x
-cd /Yunzai-Bot-Help
+sh /Yunzai-Bot-Help/Centos/Centosdemo.sh
 #更新yunzai-bot-help
+cd /Yunzai-Bot-Help
 git pull 
 # 空格也是字符，不要忽略
 #小技巧，当输入   ./Yun     的时候，可以按TAB自己补全名字
+#——————————————
+#windows目录有实用工具
+#——————————————
