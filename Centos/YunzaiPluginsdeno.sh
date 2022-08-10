@@ -108,7 +108,7 @@ git clone https://gitee.com/zolay-poi/achievements-plugin.git ./plugins/achievem
 echo "命令已执行！"
 cd /home/lighthouse
 fi
-if [ $Y = 3 ]
+if [ $y = 3 ]
 then
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
