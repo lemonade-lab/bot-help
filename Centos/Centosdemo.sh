@@ -18,8 +18,8 @@ fruits0=(
  '功能扩展'
  '环境管理' 
  '系统语言' 
+ 'Help控制'
  'SSH管理' 
- 'Help更新'
  '系统重启'
  '退出'
 )
@@ -85,7 +85,7 @@ clear
 cd /Yunzai-Bot-Help/Centos
 ./SSHdemo.sh.x
 ;;
-'Help更新')
+'Help控制')
 clear
 cd /Yunzai-Bot-Help/Centos
 ./Update.sh.x
