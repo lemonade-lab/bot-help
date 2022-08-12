@@ -20,6 +20,7 @@ fruits0=(
  '系统语言' 
  'Help控制'
  'SSH管理' 
+ '防火墙' 
  '系统重启'
  '退出'
 )
@@ -91,11 +92,17 @@ cd /Yunzai-Bot-Help/Centos
 ./Update.sh.x
 break
 ;;
+'防火墙')
+clear
+
+exit
+;;
 '系统重启')
 clear
 shutdown -r now
 exit
 ;;
+
 '退出')
 clear
 exit
