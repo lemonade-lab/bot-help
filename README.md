@@ -62,3 +62,7 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 
 免费企鹅交流群`558505956`    
 柠檬冲水：无进群要求，欢迎各路朋友加入哈    
+
+## 六、特别赞助
+排名不分先后
+`TEIO`    
