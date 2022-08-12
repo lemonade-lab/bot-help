@@ -1,15 +1,16 @@
 #!/bin/bash
+myadress="/home/lighthouse"
 [ -d /home ] || echo "警告：不是Centos系统！退出执行！"
 [ -d /home ] || exit
 cd /home
-[ -d /home/lighthouse ] || mkdir  lighthouse
-[ -d /home/lighthouse ] || echo "初始化lighthouse目录失败！退出执行！"
-cd /home/lighthouse
-[ -d /home/lighthouse/YunzaiV2 ] || mkdir  YunzaiV2
-[ -d /home/lighthouse/YunzaiV3 ] || mkdir  YunzaiV3
-[ -d /home/lighthouse/YunzaiV3 ] || echo "初始化Yunzai目录失败！退出执行！" 
-[ -d /home/lighthouse/YunzaiV3 ] || exit
-cd /home/lighthouse
+[ -d ${myadress} ] || mkdir  lighthouse
+[ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
+cd ${myadress}
+[ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
+[ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
+[ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
+[ -d ${myadress}"/YunzaiV3" ] || exit
+cd ${myadress}
 PS3="请选择: "
 while true; 
 do
@@ -38,26 +39,26 @@ do
 case $version1 in
 '安装PM2')
 clear
-cd /home/lighthouse
+cd ${myadress}
 npm i pm2 -g   
 echo "安装执行已执行！"
 break
 ;;
 '查看进程列表')
 clear
-cd /home/lighthouse
+cd ${myadress}
 pm2 list
 break
 ;;
 '监视所有进程')
 clear
-cd /home/lighthouse
+cd ${myadress}
 pm2 monit
 break
 ;;
 '运行所有进程')
 clear
-cd /home/lighthouse
+cd ${myadress}
 pm2 start all
 break
 ;;
@@ -65,46 +66,46 @@ break
 clear
 read -p "进程ID：" x
 pm2 list
-cd /home/lighthouse
+cd ${myadress}
 pm2 stop $x
 break
 ;;
 '停止所有进程')
 clear
-cd /home/lighthouse
+cd ${myadress}
 pm2 stop all
 break
 ;;
 '重启指定进程')
 clear
 read -p "进程ID：" x
-cd /home/lighthouse
+cd ${myadress}
 pm2 list
 pm2 restart $x
 break
 ;;
 '重启所有进程')
 clear
-cd /home/lighthouse
+cd ${myadress}
 pm2 restart all
 break
 ;;
 '杀死特定进程')
 clear
 read -p "进程ID：" x
-cd /home/lighthouse
+cd ${myadress}
 pm2 restart $x
 break
 ;;
 '杀死所有进程')
 clear
-cd /home/lighthouse
+cd ${myadress}
 pm2 delete all
 break
 ;;
 '显示进程日记')
 clear
-cd /home/lighthouse
+cd ${myadress}
 pm2 logs
 break
 ;;

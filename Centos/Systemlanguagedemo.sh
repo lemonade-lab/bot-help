@@ -1,15 +1,16 @@
 #!/bin/bash
+myadress="/home/lighthouse"
 [ -d /home ] || echo "警告：不是Centos系统！退出执行！"
 [ -d /home ] || exit
 cd /home
-[ -d /home/lighthouse ] || mkdir  lighthouse
-[ -d /home/lighthouse ] || echo "初始化lighthouse目录失败！退出执行！"
-cd /home/lighthouse
-[ -d /home/lighthouse/YunzaiV2 ] || mkdir  YunzaiV2
-[ -d /home/lighthouse/YunzaiV3 ] || mkdir  YunzaiV3
-[ -d /home/lighthouse/YunzaiV3 ] || echo "初始化Yunzai目录失败！退出执行！" 
-[ -d /home/lighthouse/YunzaiV3 ] || exit
-cd /home/lighthouse
+[ -d ${myadress} ] || mkdir  lighthouse
+[ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
+cd ${myadress}
+[ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
+[ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
+[ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
+[ -d ${myadress}"/YunzaiV3" ] || exit
+cd ${myadress}
 PS3="请选择: "
 while true; 
 do
@@ -33,20 +34,20 @@ case $version1 in
 clear
 dnf install langpacks-zh_CN
 nf install -y ibus-libpinyin.x86_64
-cd /home/lighthouse
+cd ${myadress}
 
 break
 ;;
 '语言列表')
 clear
 locale -a
-cd /home/lighthouse
+cd ${myadress}
 break
 ;;
 '当前语言')
 clear
 echo $LANG
-cd /home/lighthouse
+cd ${myadress}
 break
 ;;
 '编辑教程')
@@ -59,28 +60,28 @@ echo "按i进入修改模式"
 echo "按ESE退出修改模式"
 echo "输入:wq!强制保存"
 echo "按CTRL+Z退出文件"
-cd /home/lighthouse
+cd ${myadress}
 break
 ;;
 '编辑语言')
 vi /etc/locale.conf
-cd /home/lighthouse
+cd ${myadress}
 break
 ;;
 '重启')
-cd /home/lighthouse
+cd ${myadress}
 echo "执行重启，请重新登录！"
 shutdown -r now
 exit
 ;;
 '返回')
-cd /home/lighthouse
+cd ${myadress}
 exit
 ;;
 *)
 clear
 echo "#您的选择不存在，请重新选择！"
-cd /home/lighthouse
+cd ${myadress}
 break
 esac
 done

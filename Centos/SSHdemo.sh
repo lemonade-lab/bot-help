@@ -1,15 +1,16 @@
 #!/bin/bash
+myadress="/home/lighthouse"
 [ -d /home ] || echo "警告：不是Centos系统！退出执行！"
 [ -d /home ] || exit
 cd /home
-[ -d /home/lighthouse ] || mkdir  lighthouse
-[ -d /home/lighthouse ] || echo "初始化lighthouse目录失败！退出执行！"
-cd /home/lighthouse
-[ -d /home/lighthouse/YunzaiV2 ] || mkdir  YunzaiV2
-[ -d /home/lighthouse/YunzaiV3 ] || mkdir  YunzaiV3
-[ -d /home/lighthouse/YunzaiV3 ] || echo "初始化Yunzai目录失败！退出执行！" 
-[ -d /home/lighthouse/YunzaiV3 ] || exit
-cd /home/lighthouse
+[ -d ${myadress} ] || mkdir  lighthouse
+[ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
+cd ${myadress}
+[ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
+[ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
+[ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
+[ -d ${myadress}"/YunzaiV3" ] || exit
+cd ${myadress}
 PS3="请选择: "
 while true;
 do
@@ -50,7 +51,7 @@ echo "————————————————————————�
 echo "改#PubkeyAuthentication yes为"
 echo "PubkeyAuthentication yes"
 echo "——————————————————————————————"
-cd /home/lighthouse
+cd ${myadress}
 break
 ;;
 '编辑SSH')
@@ -61,13 +62,13 @@ break
 '重启SSH')
 clear
 systemctl restart sshd.service
-cd /home/lighthouse
+cd ${myadress}
 break
 ;;
 'SSH状态')
 clear
 systemctl status sshd.service
-cd /home/lighthouse
+cd ${myadress}
 break
 ;;
 '返回')

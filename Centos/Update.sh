@@ -1,15 +1,18 @@
 #!/bin/bash
+myadress="/home/lighthouse"
+bot="/Yunzai-Bot-Help"
+Centosdemo="${bot}/Centos/Centosdemo.sh"
 [ -d /home ] || echo "警告：不是Centos系统！退出执行！"
 [ -d /home ] || exit
 cd /home
-[ -d /home/lighthouse ] || mkdir  lighthouse
-[ -d /home/lighthouse ] || echo "初始化lighthouse目录失败！退出执行！"
-cd /home/lighthouse
-[ -d /home/lighthouse/YunzaiV2 ] || mkdir  YunzaiV2
-[ -d /home/lighthouse/YunzaiV3 ] || mkdir  YunzaiV3
-[ -d /home/lighthouse/YunzaiV3 ] || echo "初始化Yunzai目录失败！退出执行！" 
-[ -d /home/lighthouse/YunzaiV3 ] || exit
-cd /home/lighthouse
+[ -d ${myadress} ] || mkdir  lighthouse
+[ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
+cd ${myadress}
+[ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
+[ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
+[ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
+[ -d ${myadress}"/YunzaiV3" ] || exit
+cd ${myadress}
 PS3="请选择: "
 while true; 
 do
@@ -32,22 +35,21 @@ do
 case $version1 in
 '更新')
 clear
-[ -d /Yunzai-Bot-Help ] || echo "未有指定目录Yunzai-Bot-Help"
-[ -d /Yunzai-Bot-Help ] || echo "正在重新拉入脚本"
-[ -d /Yunzai-Bot-Help ] || cd /
-[ -d /Yunzai-Bot-Help ] || git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git
-Centosdemo="/Yunzai-Bot-Help/Centos/Centosdemo.sh"
-[ -e ${Centosdemo}] || echo "启动不存在！"
+[ -d ${bot} ] || echo "未有指定目录Yunzai-Bot-Help"
+[ -d ${bot} ] || echo "正在重新拉入脚本"
+[ -d ${bot} ] || cd /
+[ -d ${bot} ] || git clone "https://github.com/ningmengchongshui"${bot}".git"
+[ -e ${Centosdemo} ] || echo "启动不存在！"
 [ -e ${Centosdemo} ] || echo "正在删除残留..."
-[ -e ${Centosdemo} ] || rm -rf /Yunzai-Bot-Help
+[ -e ${Centosdemo} ] || rm -rf ${bot}
 [ -e ${Centosdemo} ] || echo "清除成功，重新执行更新！"
 [ -e ${Centosdemo} ] || exit
 [ ! -e ${Centosdemo} ] || echo "启动存在！"
 [ ! -e ${Centosdemo} ] || echo "尝试更新中......"
-[ ! -e ${Centosdemo} ] || cd /Yunzai-Bot-Help
+[ ! -e ${Centosdemo} ] || cd ${bot}
 [ ! -e ${Centosdemo} ] || git pull
 [ ! -e ${Centosdemo} ] || echo "更新命令执行完成！"
-[ ! -e ${Centosdemo} ] || cd /home/lighthouse
+[ ! -e ${Centosdemo} ] || cd ${myadress}
 [ ! -e ${Centosdemo} ] || echo "请使用下列两条命令来确保能正确执行最新版"
 [ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
 [ ! -e ${Centosdemo} ] || echo "sudo su root"
@@ -62,38 +64,38 @@ Centosdemo="/Yunzai-Bot-Help/Centos/Centosdemo.sh"
 [ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
 [ !  -e ${Centosdemo} ] || exit
 echo "——————————————————————————————————————————————————"
-cd /home/lighthouse
+cd ${myadress}
 echo "脚本出错，请执行下面两行命令来手动更新！"
 echo "——————————————————————————————————————————————————"
-echo "cd /Yunzai-Bot-Help"
+echo "cd ${bot}"
 echo "git pull"
 echo "——————————————————————————————————————————————————"
 echo "如果您的想重新获取最新代码，可以先删除后再重新复制"
 echo "——————————————————————————————————————————————————"
 echo "cd /"
-echo "git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git"
+echo "git clone https://github.com/ningmengchongshui${bot}.git"
 echo "——————————————————————————————————————————————————"
 break
 ;;
 '强制更新')
 clear
-[ -d /Yunzai-Bot-Help ] || echo "未有指定目录Yunzai-Bot-Help"
-[ -d /Yunzai-Bot-Help ] || echo "正在重新拉入脚本"
-[ -d /Yunzai-Bot-Help ] || cd /
-[ -d /Yunzai-Bot-Help ] || git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git
+[ -d ${bot} ] || echo "未有指定目录Yunzai-Bot-Help"
+[ -d ${bot} ] || echo "正在重新拉入脚本"
+[ -d ${bot} ] || cd /
+[ -d ${bot} ] || "https://github.com/ningmengchongshui"${bot}".git"
 [ -e ${Centosdemo} ] || echo "启动不存在！"
 [ -e ${Centosdemo} ] || echo "正在删除残留..."
-[ -e ${Centosdemo} ] || rm -rf /Yunzai-Bot-Help
+[ -e ${Centosdemo} ] || rm -rf ${bot}
 [ -e ${Centosdemo} ] || echo "清除成功，重新执行更新！"
 [ -e ${Centosdemo} ] || exit
 [ ! -e ${Centosdemo} ] || echo "启动存在！"
 [ ! -e ${Centosdemo} ] || echo "尝试更新中......"
-[ ! -e ${Centosdemo} ] || cd /Yunzai-Bot-Help
+[ ! -e ${Centosdemo} ] || cd ${bot}
 [ ! -e ${Centosdemo} ] || git fetch --all
 [ ! -e ${Centosdemo} ] || git reset --hard main
 [ ! -e ${Centosdemo} ] || git pull
 [ ! -e ${Centosdemo} ] || echo "更新命令执行完成！"
-[ ! -e ${Centosdemo} ] || cd /home/lighthouse
+[ ! -e ${Centosdemo} ] || cd ${myadress}
 [ ! -e ${Centosdemo} ] || echo "请使用下列两条命令来确保能正确执行最新版"
 [ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
 [ ! -e ${Centosdemo} ] || echo "sudo su root"
@@ -108,49 +110,49 @@ clear
 [ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
 [ !  -e ${Centosdemo} ] || exit
 echo "——————————————————————————————————————————————————"
-cd /home/lighthouse
+cd ${myadress}
 echo "脚本出错，请执行下面两行命令来手动更新！"
 echo "——————————————————————————————————————————————————"
-echo "cd /Yunzai-Bot-Help"
+echo "cd ${bot}"
 echo "git pull"
 echo "——————————————————————————————————————————————————"
 echo "如果您的想重新获取最新代码，可以先删除后再重新复制"
 echo "——————————————————————————————————————————————————"
 echo "cd /"
-echo "git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git"
+echo "git clone https://github.com/ningmengchongshui${bot}.git"
 echo "——————————————————————————————————————————————————"
 break
 ;;
 '重装')
 clear
-[ -d /Yunzai-Bot-Help ] || echo "——————————————————————————————————————————————————"
-[ -d /Yunzai-Bot-Help ] || echo "您已成功卸载！"
-[ -d /Yunzai-Bot-Help ] || echo "若需要help的支持，可执行更新操作！"
-[ -d /Yunzai-Bot-Help ] || echo "——————————————————————————————————————————————————"
-[ -d /Yunzai-Bot-Help ] || break
-[ -d /Yunzai-Bot-Help ] && echo "——————————————————————————————————————————————————"
-[ -d /Yunzai-Bot-Help ] && echo "正在删除..."
-[ -d /Yunzai-Bot-Help ] && rm -rf /Yunzai-Bot-Help
-[ -d /Yunzai-Bot-Help ] && echo "清除成功！"
-[ -d /Yunzai-Bot-Help ] && git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git
-[ -d /Yunzai-Bot-Help ] && echo "重装失败！"
-[ -d /Yunzai-Bot-Help ] && break
+[ -d ${bot} ] || echo "——————————————————————————————————————————————————"
+[ -d ${bot} ] || echo "您已成功卸载！"
+[ -d ${bot} ] || echo "若需要help的支持，可执行更新操作！"
+[ -d ${bot} ] || echo "——————————————————————————————————————————————————"
+[ -d ${bot} ] || break
+[ -d ${bot} ] && echo "——————————————————————————————————————————————————"
+[ -d ${bot} ] && echo "正在删除..."
+[ -d ${bot} ] && rm -rf ${bot}
+[ -d ${bot} ] && echo "清除成功！"
+[ -d ${bot} ] && git "https://github.com/ningmengchongshui"${bot}".git"
+[ -d ${bot} ] && echo "重装失败！"
+[ -d ${bot} ] && break
 echo "重装成功！"
 ;;
 '卸载')
 clear
-[ -d /Yunzai-Bot-Help ] || echo "——————————————————————————————————————————————————"
-[ -d /Yunzai-Bot-Help ] || echo "您已成功卸载！"
-[ -d /Yunzai-Bot-Help ] || echo "若需要help的支持，可执行更新操作！"
-[ -d /Yunzai-Bot-Help ] || echo "——————————————————————————————————————————————————"
-[ -d /Yunzai-Bot-Help ] || break
-[ -d /Yunzai-Bot-Help ] && echo "——————————————————————————————————————————————————"
-[ -d /Yunzai-Bot-Help ] && echo "正在删除..."
-[ -d /Yunzai-Bot-Help ] && rm -rf /Yunzai-Bot-Help
-[ -d /Yunzai-Bot-Help ] && echo "清除成功，重新执行更新！"
-[ -d /Yunzai-Bot-Help ] && echo "您若需要help的支持，可执行更新操作！"
-[ -d /Yunzai-Bot-Help ] && echo "——————————————————————————————————————————————————"
-[ -d /Yunzai-Bot-Help ] && break
+[ -d ${bot} ] || echo "——————————————————————————————————————————————————"
+[ -d ${bot} ] || echo "您已成功卸载！"
+[ -d ${bot} ] || echo "若需要help的支持，可执行更新操作！"
+[ -d ${bot} ] || echo "——————————————————————————————————————————————————"
+[ -d ${bot} ] || break
+[ -d ${bot} ] && echo "——————————————————————————————————————————————————"
+[ -d ${bot} ] && echo "正在删除..."
+[ -d ${bot} ] && rm -rf ${bot}
+[ -d ${bot} ] && echo "清除成功，重新执行更新！"
+[ -d ${bot} ] && echo "您若需要help的支持，可执行更新操作！"
+[ -d ${bot} ] && echo "——————————————————————————————————————————————————"
+[ -d ${bot} ] && break
 ;;
 '返回')
 clear
