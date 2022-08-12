@@ -34,6 +34,9 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 ### 5. 运行代码   
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`    
 
+### 6. 强制卸载   
+`rm -rf /Yunzai-Bot-Help   #卸载` 
+
 ## 三、功能介绍
 * 一键部署基础环境与开机自启
 * 一键安装启动更新停止
