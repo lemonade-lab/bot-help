@@ -1,6 +1,8 @@
 #!/bin/bash
 myadress="/home/lighthouse"
+readonly myadress
 bot="/Yunzai-Bot-Help"
+readonly bot
 Centosdemo="${bot}/Centos/Centosdemo.sh"
 [ -d /home ] || echo "警告：不是Centos系统！退出执行！"
 [ -d /home ] || exit

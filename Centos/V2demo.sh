@@ -64,11 +64,11 @@ echo "正在安装Yunzai-BotV2，请耐心等待..."
 [ -d ${myadress}"/YunzaiV2" ] || echo "初始化目录失败，退出执行！"
 [ -d ${myadress}"/YunzaiV2" ] || break
 cd ${myadress}"/YunzaiV2"
-[ -d ${yunzai22}"/plugins" ] || git clone https://gitee.com/yoimiya-kokomi/Yunzai-Bot
-[ -d ${yunzai22}"/plugins" ] || echo "YunzaiV2安装失败！" 
-[ -d ${yunzai22}"/plugins" ] || rm -rf ${yunzai22} 
-[ -d ${yunzai22}"/plugins" ] || echo "YunzaiV2残留已清除！" 
-[ -d ${yunzai22}"/plugins" ] || break
+[ -d ${Yunzai22}"/plugins" ] || git clone https://gitee.com/yoimiya-kokomi/Yunzai-Bot
+[ -d ${Yunzai22}"/plugins" ] || echo "YunzaiV2安装失败！" 
+[ -d ${Yunzai22}"/plugins" ] || rm -rf ${Yunzai22} 
+[ -d ${Yunzai22}"/plugins" ] || echo "YunzaiV2残留已清除！" 
+[ -d ${Yunzai22}"/plugins" ] || break
 echo "Yunzai-BotV2安装成功！"
 cd ${myadress}
 break
@@ -76,13 +76,13 @@ break
 '安装miaoV2')
 clear
 echo "正在安装miao-plugin，请耐心等待..."
-[ -d ${yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2" 
-[ -d ${yunzai22}"/plugins" ] || break
-cd ${yunzai22}
+[ -d ${Yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2" 
+[ -d ${Yunzai22}"/plugins" ] || break
+cd ${Yunzai22}
 git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
-[ -d ${yunzai22}"/plugins/miao-plugin/resources" ] || echo "miao-pluginV2安装失败！" 
-[ -d ${yunzai22}"/plugins/miao-plugin/resources" ] || rm -rf ${yunzai22}"/plugins/miao-plugin"
-[ -d ${yunzai22}"/plugins/miao-plugin/resources" ] || break
+[ -d ${Yunzai22}"/plugins/miao-plugin/resources" ] || echo "miao-pluginV2安装失败！" 
+[ -d ${Yunzai22}"/plugins/miao-plugin/resources" ] || rm -rf ${Yunzai22}"/plugins/miao-plugin"
+[ -d ${Yunzai22}"/plugins/miao-plugin/resources" ] || break
 echo "miao-pluginV2安装成功！"
 cd ${myadress}
 break
@@ -91,9 +91,9 @@ break
 clear
 echo "正在加载，请耐心等待..."
 echo "若是卡住太久，可按CTRL+Z退出后，重新执行"
-[ -d ${yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
-[ -d ${yunzai22}"/plugins" ] || break
-cd ${yunzai22}
+[ -d ${Yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
+[ -d ${Yunzai22}"/plugins" ] || break
+cd ${Yunzai22}
 npm install
 echo "加载成功！"
 cd ${myadress}/
@@ -102,9 +102,9 @@ break
 '安装Chromium')
 clear
 echo "正在安装Chromium，请耐心等待..."
-[ -d ${yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2" 
-[ -d ${yunzai22}"/plugins" ] || break
-cd ${yunzai22}
+[ -d ${Yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2" 
+[ -d ${Yunzai22}"/plugins" ] || break
+cd ${Yunzai22}
 yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 -y 
 yum install libdrm libgbm libxshmfence -y
 yum install nss -y
@@ -120,17 +120,17 @@ break
 ;;
 '更新')
 clear
-[ -d ${yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
-[ -d ${yunzai22}"/plugins" ] || break
+[ -d ${Yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
+[ -d ${Yunzai22}"/plugins" ] || break
 echo "正在更新Yunzai-BotV2..."
-cd ${yunzai22}
+cd ${Yunzai22}
 git pull
 echo "Yunzai-BotV2更新命令执行完成！"
 cd ${myadress}
-[ -d ${yunzai22}"/plugins/miao-plugin" ] || echo "请先安装miao-pluginV2"
-[ -d ${yunzai22}"/plugins/miao-plugin" ] || break
+[ -d ${Yunzai22}"/plugins/miao-plugin" ] || echo "请先安装miao-pluginV2"
+[ -d ${Yunzai22}"/plugins/miao-plugin" ] || break
 echo "正在更新miao-pluginV2..."
-cd ${yunzai22}"/plugins/miao-plugin"
+cd ${Yunzai22}"/plugins/miao-plugin"
 git pull
 echo "miao-pluginV2更新命令执行完成！"
 cd ${myadress}
@@ -138,33 +138,33 @@ break
 ;;
 '初始化启动')
 clear
-[ -d ${yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
-[ -d ${yunzai22}"/plugins" ] || break
+[ -d ${Yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
+[ -d ${Yunzai22}"/plugins" ] || break
 cd ${myadress}
-cd ${yunzai22}
+cd ${Yunzai22}
 echo "初始化完成后,按CTRL+Z退出"
 node app.js
 break
 ;;
 '修改配置')
 clear
-[ -d ${yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
-[ -d ${yunzai22}"/plugins" ] || break
-[ -e ${yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ"
-[ -e ${yunzai22}"/config/config.js" ] || break
-vi ${yunzai22}"/config/config.js"
+[ -d ${Yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
+[ -d ${Yunzai22}"/plugins" ] || break
+[ -e ${Yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ"
+[ -e ${Yunzai22}"/config/config.js" ] || break
+vi ${Yunzai22}"/config/config.js"
 cd ${myadress}
 break
 ;;
 '删除配置')
 clear
-[ -d ${yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
-[ -d ${yunzai22}"/plugins" ] || break
-[ -e ${yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ"
-[ -e ${yunzai22}"/config/config.js" ] || break
-rm -rf ${yunzai22}"/config/config.js"
-[ -e ${yunzai22}"/config/config.js" ] || echo "配置删除成功！"
-[ -e ${yunzai22}"/config/config.js" ] || break
+[ -d ${Yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
+[ -d ${Yunzai22}"/plugins" ] || break
+[ -e ${Yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ"
+[ -e ${Yunzai22}"/config/config.js" ] || break
+rm -rf ${Yunzai22}"/config/config.js"
+[ -e ${Yunzai22}"/config/config.js" ] || echo "配置删除成功！"
+[ -e ${Yunzai22}"/config/config.js" ] || break
 cd ${myadress}
 echo "配置删除失败！"
 break
@@ -179,11 +179,11 @@ echo "任意值返回"
 read -p "请选择：" x
 if [ $x = 0 ]
 then
-[ -d ${yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
-[ -d ${yunzai22}"/plugins" ] || break
-rm -rf ${yunzai22}
-[ -e ${yunzai22} ] || echo "卸载Yunzai-BotV2成功！"
-[ -e ${yunzai22} ] || break
+[ -d ${Yunzai22}"/plugins" ] || echo "请先安装Yunzai-BotV2"
+[ -d ${Yunzai22}"/plugins" ] || break
+rm -rf ${Yunzai22}
+[ -e ${Yunzai22} ] || echo "卸载Yunzai-BotV2成功！"
+[ -e ${Yunzai22} ] || break
 cd ${myadress}
 echo "卸载Yunzai-BotV2失败！"
 else
