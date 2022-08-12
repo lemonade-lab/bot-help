@@ -21,14 +21,15 @@ echo "版本：1.1.0"
 echo "__________________________________________________"
 fruits5=(
 '加载依赖' 
+'插件列表'
 '逍遥图鉴' 
 '成就帮助'
-'闲心娱乐' 
-'插件列表'
+'闲心娱乐'
+'我要修仙'  
 '插件安装'
 '插件删除'
-'更新帮助'
-'回滚插件'
+'选择更新'
+'回滚更新'
 '返回'
 )
 select version5 in ${fruits5[@]}
@@ -173,8 +174,8 @@ echo "您已返回"
 break
 ;;
 '闲心娱乐')
-echo "放入V3成就：3"
-echo "卸载V3成就：30"
+echo "放入V3闲心：3"
+echo "卸载V3闲心：30"
 echo "任意输入返回"
 read -p "请选择：" y
 if [ $y = 3 ]
@@ -203,6 +204,42 @@ then
 [ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || rm -rf /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin
 clear
 
+echo "命令已执行！"
+cd /home/lighthouse
+fi
+echo "您已返回"
+break
+;;
+'我要修仙')
+echo "放入V3修仙：3"
+echo "卸载V3修仙：30"
+echo "任意输入返回"
+read -p "请选择：" y
+if [ $y = 3 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo " 已安装成就！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || break
+clear
+cd /home/lighthouse/YunzaiV3/Yunzai-Bot
+git clone https://gitee.com/waterfeet/xiuxian-emulator-plugin ./plugins/xiuxian-emulator-plugin/  
+echo "命令已执行！"
+cd /home/lighthouse
+fi
+if [ $y = 30 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo "未安装闲心！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || rm -rf /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin
+clear
 echo "命令已执行！"
 cd /home/lighthouse
 fi
@@ -310,26 +347,36 @@ fi
 echo "你选择了未知版本！"
 break
 ;;
-'更新帮助')
+'选择更新')
 clear
-echo "更新图鉴：2"
-echo "更新成就：3"
-echo "更新闲心：4"
+echo "更新图鉴V2：12"
+echo "更新图鉴V3：13"
+echo "更新成就V2：22"
+echo "更新成就V3：23"
+echo "更新闲心V3：33"
 echo "更新插件：5"
 echo "任意值返回！"
 read -p "请选择：" y
-echo "更能待添加！"
+if [ $y = 0 ]
+then
+
+fi 
 break
 ;;
-'回滚插件')
+'回滚更新')
 clear
-echo "回滚图鉴：2"
-echo "回滚成就：3"
-echo "回滚闲心：5"
+echo "回滚图鉴V2：12"
+echo "回滚图鉴V3：13"
+echo "回滚成就V2：22"
+echo "回滚成就V3：23"
+echo "回滚闲心V3：33"
 echo "回滚插件：5"
 echo "任意值返回！"
 read -p "请选择：" y
-echo "更能待添加！"
+if [ $y = 0 ]
+then
+
+fi 
 break
 ;;
 '返回')

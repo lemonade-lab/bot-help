@@ -95,12 +95,17 @@ break
 '防火墙')
 clear
 cd /Yunzai-Bot-Help/Centos
-./YunzaiFirewalldemo.sh
+./Firewalldemo.sh
 exit
 ;;
 '系统重启')
 clear
+read -p "任意值返回，输入0确定：" x
+if [ $x = 0 ]
+then
 shutdown -r now
+fi
+echo "您取消了重启操作！"
 exit
 ;;
 '退出')
