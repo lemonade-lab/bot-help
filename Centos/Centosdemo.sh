@@ -30,71 +30,72 @@ case $version0 in
 '安装环境')
 clear
 cd /Yunzai-Bot-Help/Centos
-./Nodejsdemo.sh.x
+./Nodejsdemo.sh
 break
 ;;
 '管理V2')
 clear
 cd /Yunzai-Bot-Help/Centos
-./V2demo.sh.x
+./V2demo.sh
 break
 ;;
 '管理V3')
 clear
 cd /Yunzai-Bot-Help/Centos
-./V3demo.sh.x
+./V3demo.sh
 break
 ;;
 '机器控制')
 clear
 cd /Yunzai-Bot-Help/Centos
-./Robotdemo.sh.x
+./Robotdemo.sh
 break
 ;;
 '进程管理')
 clear
 cd /Yunzai-Bot-Help/Centos
-./Pm2demo.sh.x
+./Pm2demo.sh
 break
 ;;
 '插件管理')
 clear
 cd /Yunzai-Bot-Help/Centos
-./Pluginsdeno.sh.x
+./Pluginsdeno.sh
 break
 ;;
 '功能扩展')
 clear
 cd /Yunzai-Bot-Help/Centos
-./Extensiondemo.sh.x
+./Extensiondemo.sh
 break
 ;;
 '环境管理')
 clear
 cd /Yunzai-Bot-Help/Centos
-./Environmentdemo.sh.x
+./Environmentdemo.sh
 break
 ;;
 '系统语言')
 clear
 cd /Yunzai-Bot-Help/Centos
-./Systemlanguagedemo.sh.x
+./Systemlanguagedemo.sh
 break
 ;;
 'SSH管理')
 clear
 cd /Yunzai-Bot-Help/Centos
-./SSHdemo.sh.x
+./SSHdemo.sh
 ;;
 'Help控制')
 clear
 cd /Yunzai-Bot-Help/Centos
-./Update.sh.x
+./Update.sh
 break
 ;;
 '防火墙')
 clear
-
+cd /Yunzai-Bot-Help/Centos
+./YunzaiFirewalldemo.sh
 exit
 ;;
 '系统重启')
@@ -102,7 +103,6 @@ clear
 shutdown -r now
 exit
 ;;
-
 '退出')
 clear
 exit
