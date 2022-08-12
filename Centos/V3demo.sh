@@ -11,7 +11,7 @@ cd /home/lighthouse
 [ -d /home/lighthouse/YunzaiV3 ] || exit
 cd /home/lighthouse
 PS3="请选择: "
-Yunzai33="${yunzai33}"
+Yunzai33="/home/lighthouse/YunzaiV3/Yunzai-Bot"
 while true; 
 do
 echo "__________________________________________________"

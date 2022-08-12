@@ -18,29 +18,29 @@ echo "  《防火墙管理》  "
 echo "__________________________________________________"
 fruits1=(
  '状态'
- '开端口'
+ '端口'
  '重启'
  '返回'
 )
 select version1 in ${fruits1[@]}
 do
 case $version1 in
-'防火墙状态')
+'状态')
 clear
 firewall-cmd --state
 break
 ;;
-'开端口')
+'端口')
 clear
 systemctl start firewalld.service
-read -p "端口：" x
+read -p "开启端口：" x
 firewall-cmd --zone=public --add-port=$x/tcp --permanent
 systemctl restart firewalld.service
 firewall-cmd --reload
 echo "命令已执行！"
 break
 ;;
-'重启防火墙')
+'重启')
 clear
 systemctl restart firewalld.service
 break
