@@ -1,12 +1,11 @@
 # Yunzai-Bot-Help
 Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本  
  
-作者简介：   
-在校大二生  
-因安装太过费时间    
-就跑去学了一下    
-仓库为个人研究成果   
-分享给大家   
+【作者简介】   
+职业：大二学生    
+开发原因：安装费时间    
+学习开始日期：2022年8月8日     
+结语：免费分享给大家用，欢迎大家积极能反馈，谢谢！     
 
 ## 一、项目介绍
 拥有一键环境部署和一键安装启动更新停止等实用性功能  
@@ -14,22 +13,22 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 [移步Window安装YunzaiV2&V3教程|附有Yunzai-Bot常见问题](https://b23.tv/uTguBSj)  
 
 ## 二、安裝教程
->温聲提示  
->>手机也能装Centos 
->>代码需要安装Git  
->>才能复制代码 
-
-`yum -y install git #安装Git`  
-
+>温聲提示    
+>>手机能装Centos     
+>>代码复制需装Git     
+ 
 ### 1. 获取Root权限  
 `sudo su root #权限`   
 
-### 2. 复制 
-`cd /         #移步最外层目录`   
-`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制  
+### 2. 安装git    
+`yum -y install git #安装Git`   
 
-### 3. 运行  
-`sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动` 
+### 3. 拷贝项目    
+`cd /         #移步最外层目录`   
+`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制   
+
+### 3. 运行代码   
+`sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`    
 
 ## 三、功能介绍
 * 一键部署基础环境与开机自启
@@ -53,4 +52,5 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 
 ## 五、反馈与交流
 
-企鹅群`558505956`
+免费企鹅交流群`558505956`    
+柠檬冲水：无进群要求，欢迎各类朋友加入    
