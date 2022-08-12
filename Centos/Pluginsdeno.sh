@@ -1,18 +1,21 @@
 #!/bin/bash
 myadress="/home/lighthouse"
+readonly myadress
 [ -d /home ] || echo "警告：不是Centos系统！退出执行！"
 [ -d /home ] || exit
 cd /home
 [ -d ${myadress} ] || mkdir  lighthouse
 [ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}
+cd ${myadress}""
 [ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
 [ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}
+cd ${myadress}""
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
-Yunzai22="${myadress}/YunzaiV3/Yunzai-Bot"
+readonly Yunzai22
+Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
+readonly Yunzai33
 PS3="请选择: "
 while true;
 do
@@ -68,14 +71,14 @@ cd ${myadress}""
 fi
 if [ $y = 3 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || break
 clear
-cd ${Yunzai22}""
+cd ${Yunzai33}""
 git clone https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin.git ./plugins/xiaoyao-cvs-plugin/
 echo "命令已执行！"
 cd ${myadress}""
@@ -96,14 +99,14 @@ cd ${myadress}""
 fi
 if [ $y = 30 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || clear
-[ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
-[ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai22}""
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || rm -rf ${Yunzai22}"/plugins/xiaoyao-cvs-plugin"
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || clear
+[ -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
+[ -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai33}""
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || rm -rf ${Yunzai33}"/plugins/xiaoyao-cvs-plugin"
 clear
 echo "命令已执行！"
 cd ${myadress}""
@@ -134,13 +137,13 @@ cd ${myadress}""
 fi
 if [ $y = 3 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "已安装成就！"
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-cd ${Yunzai22}""
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || echo "已安装成就！"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || break
+cd ${Yunzai33}""
 git clone https://gitee.com/zolay-poi/achievements-plugin.git ./plugins/achievements-plugin/
 echo "命令已执行！"
 cd ${myadress}""
@@ -161,14 +164,14 @@ cd ${myadress}""
 fi
 if [ $y = 30 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -d ${Yunzai22}"/plugins/achievements-plugin" ] || clear
-[ -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "未安装成就"
-[ -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || cd ${Yunzai22}""
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || rm -rf ${Yunzai22}"/plugins/achievements-plugin"
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/achievements-plugin" ] || clear
+[ -d ${Yunzai33}"/plugins/achievements-plugin" ] || echo "未安装成就"
+[ -d ${Yunzai33}"/plugins/achievements-plugin" ] || break
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || cd ${Yunzai33}""
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || rm -rf ${Yunzai33}"/plugins/achievements-plugin"
 clear
 echo "命令已执行！"
 cd ${myadress}""
@@ -183,28 +186,28 @@ echo "任意输入返回"
 read -p "请选择：" y
 if [ $y = 3 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo " 已安装闲心！"
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || echo " 已安装闲心！"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
 clear
-cd ${Yunzai22}""
+cd ${Yunzai33}""
 git clone https://gitee.com/xianxincoder/xianxin-plugin.git ./plugins/xianxin-plugin/  
 echo "命令已执行！"
 cd ${myadress}""
 fi
 if [ $y = 30 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -d ${Yunzai22}"/plugins/xianxin-plugin" ] || clear
-[ -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo "未安装闲心！"
-[ -d ${Yunzai22}"/plugins/xianxin-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || cd ${Yunzai22}""
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || rm -rf ${Yunzai22}"/plugins/xianxin-plugin"
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/xianxin-plugin" ] || clear
+[ -d ${Yunzai33}"/plugins/xianxin-plugin" ] || echo "未安装闲心！"
+[ -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || cd ${Yunzai33}""
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || rm -rf ${Yunzai33}"/plugins/xianxin-plugin"
 clear
 
 echo "命令已执行！"
@@ -220,28 +223,28 @@ echo "任意输入返回"
 read -p "请选择：" y
 if [ $y = 3 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 clear
-cd ${Yunzai22}""
+cd ${Yunzai33}""
 git clone https://gitee.com/waterfeet/xiuxian-emulator-plugin ./plugins/xiuxian-emulator-plugin/  
 echo "命令已执行！"
 cd ${myadress}""
 fi
 if [ $y = 30 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || clear
-[ -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
-[ -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai22}""
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || rm -rf ${Yunzai22}"/plugins/xiuxian-emulator-plugin"
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai33}""
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || rm -rf ${Yunzai33}"/plugins/xiuxian-emulator-plugin"
 clear
 echo "命令已执行！"
 cd ${myadress}""
@@ -255,10 +258,10 @@ clear
 [ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}"/lib/example"
 [ ! -d ${Yunzai22}"/plugins" ] || echo "【V2插件列表】"
 [ ! -d ${Yunzai22}"/plugins" ] || ls
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}"/plugins/example"
-[ ! -d ${Yunzai22}"/plugins" ] || echo "【V3插件列表】"
-[ ! -d ${Yunzai22}"/plugins" ] || ls
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ ! -d ${Yunzai33}"/plugins" ] || cd ${Yunzai33}"/plugins/example"
+[ ! -d ${Yunzai33}"/plugins" ] || echo "【V3插件列表】"
+[ ! -d ${Yunzai33}"/plugins" ] || ls
 cd ${myadress}""
 break
 ;;
@@ -294,8 +297,8 @@ break
 fi
 if [ $x = 3 ]
 then 
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
 [ -d /Yunzai-Bot-Help/Allfile/plugins/ ] || echo "Yunzai-Bot-Help版本错误！"
 [ -d /Yunzai-Bot-Help/Allfile/plugins/ ] || break
 cd /Yunzai-Bot-Help/Allfile/plugins
@@ -304,10 +307,10 @@ cd /Yunzai-Bot-Help/Allfile/plugins
 [ -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || break
 [ ! -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || echo "已加载插件！"
 cd /Yunzai-Bot-Help/Allfile/plugins/nada-plugin
-cp v3plugin.zip ${Yunzai22}"/plugins/example"
-[ -e ${Yunzai22}"/plugins/example/v3plugin.zip" ] || echo "版本插件不存在"
-[ -e ${Yunzai22}"/plugins/example/v3plugin.zip" ] || break
-cd ${Yunzai22}"/plugins/example"
+cp v3plugin.zip ${Yunzai33}"/plugins/example"
+[ -e ${Yunzai33}"/plugins/example/v3plugin.zip" ] || echo "版本插件不存在"
+[ -e ${Yunzai33}"/plugins/example/v3plugin.zip" ] || break
+cd ${Yunzai33}"/plugins/example"
 unzip v3plugin.zip
 echo "操作已执行"
 cd ${myadress}""
@@ -335,15 +338,15 @@ break
 fi
 if [ $x = 3 ]
 then 
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}"/plugins/example"
-[ ! -d ${Yunzai22}"/plugins" ] || echo "【V3插件列表】"
-[ ! -d ${Yunzai22}"/plugins" ] || ls
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins" ] || cd ${Yunzai33}"/plugins/example"
+[ ! -d ${Yunzai33}"/plugins" ] || echo "【V3插件列表】"
+[ ! -d ${Yunzai33}"/plugins" ] || ls
 read -p "插件名：" y
-[ -e ${Yunzai22}"/plugins/example/"$y ] || echo "插件不存在！"
-[ -e ${Yunzai22}"/plugins/example/"$y ] || break
-rm -rf ${Yunzai22}"/example/plugins/"$y
+[ -e ${Yunzai33}"/plugins/example/"$y ] || echo "插件不存在！"
+[ -e ${Yunzai33}"/plugins/example/"$y ] || break
+rm -rf ${Yunzai33}"/example/plugins/"$y
 echo "操作已执行"
 break
 fi
@@ -377,15 +380,15 @@ echo "执行出错啦！"
 fi 
 if [ $y = 13 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin"] || clear
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai22}"/plugins/xiaoyao-cvs-plugin"
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || git pull
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin"] || clear
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai33}"/plugins/xiaoyao-cvs-plugin"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || git pull
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi 
@@ -405,43 +408,43 @@ echo "执行出错啦！"
 fi 
 if [ $y = 23 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "已安装成就！"
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || cd ${Yunzai22}"/plugins/achievements-plugin"
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || git pull
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || echo "已安装成就！"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || cd ${Yunzai33}"/plugins/achievements-plugin"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || git pull
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 33 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo " 已安装闲心！"
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || cd ${Yunzai22}"/plugins/xianxin-plugin"
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || git pull
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || echo " 已安装闲心！"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || cd ${Yunzai33}"/plugins/xianxin-plugin"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || git pull
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 43 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai22}"/plugins/xiuxian-emulator-plugin"
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || git pull
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || git pull
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi
@@ -479,15 +482,15 @@ echo "执行出错啦！"
 fi 
 if [ $y = 13 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai22}"/plugins/xiaoyao-cvs-plugin"
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || git revert
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai33}"/plugins/xiaoyao-cvs-plugin"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || git revert
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi 
@@ -507,43 +510,43 @@ echo "执行出错啦！"
 fi 
 if [ $y = 23 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "已安装成就！"
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || cd ${Yunzai22}"/plugins/achievements-plugin"
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || git revert
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || echo "已安装成就！"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || cd ${Yunzai33}"/plugins/achievements-plugin"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || git revert
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 33 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo " 已安装闲心！"
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || cd ${Yunzai22}"/plugins/xianxin-plugin"
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || git revert
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || echo " 已安装闲心！"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || cd ${Yunzai33}"/plugins/xianxin-plugin"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || git revert
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 43 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || clear
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai22}"/plugins/xiuxian-emulator-plugin"
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || git revert
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || git revert
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi

@@ -6,7 +6,7 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir  lighthouse
 [ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}
+cd ${myadress}""
 [ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
@@ -14,8 +14,8 @@ cd ${myadress}
 cd ${myadress}""
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
 readonly Yunzai22
-Yunzai22="${myadress}/YunzaiV3/Yunzai-Bot"
-readonly Yunzai22
+Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
+readonly Yunzai33
 PS3="请选择: "
 while true;
 do
@@ -53,18 +53,18 @@ then
 cd ${Yunzai22}""
 git clone https://gitee.com/litefen/fen-plugin.git   ./plugins/fen-plugin/
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $Y = 20 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -d ${Yunzai22}"/plugins/fen-plugin" ] || echo "未安装禁涩！"
-[ -d ${Yunzai22}"/plugins/fen-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || cd ${Yunzai22}""
-[ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || rm -rf ${Yunzai22}"/plugins/fen-plugin"
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/fen-plugin" ] || echo "未安装禁涩！"
+[ -d ${Yunzai33}"/plugins/fen-plugin" ] || break
+[ ! -d ${Yunzai33}"/plugins/fen-plugin" ] || cd ${Yunzai33}""
+[ ! -d ${Yunzai33}"/plugins/fen-plugin" ] || rm -rf ${Yunzai33}"/plugins/fen-plugin"
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 echo "您已返回"
 break
@@ -94,22 +94,22 @@ then
 [ -d ${Yunzai22}"/plugins" ] || break
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "已安装抽卡！"
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-cd ${Yunzai22}
+cd ${Yunzai22}""
 git clone https://gitee.com/Nwflower/Gacha-plugin.git   ./plugins/gacha-plugin/
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 
 if [ $y = 3 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "已安装抽卡！"
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-cd ${Yunzai22}
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || echo "已安装抽卡！"
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || break
+cd ${Yunzai33}""
 git clone https://gitee.com/Nwflower/Gacha-plugin.git   ./plugins/gacha-plugin/
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 
 if [ $y = 20 ]
@@ -121,19 +121,19 @@ then
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || rm -rf ${Yunzai22}"/plugins/gacha-plugin"
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 
 if [ $y = 30 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "未安装抽卡"
-[ -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || cd ${Yunzai22}""
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || rm -rf ${Yunzai22}"/plugins/gacha-plugin"
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/gacha-plugin" ] || echo "未安装抽卡"
+[ -d ${Yunzai33}"/plugins/gacha-plugin" ] || break
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || cd ${Yunzai33}""
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || rm -rf ${Yunzai33}"/plugins/gacha-plugin"
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 
 echo "您已返回"
@@ -161,18 +161,18 @@ break
 
 '替换V3Help')
 clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -d ${Yunzai22}"/plugins/miao-plugin/resources/help" ] || echo "未安装miao"
-[ -d ${Yunzai22}"/plugins/miao-plugin/resources/help" ] || break
-[ -d ${Yunzai22}"/plugins/miao-plugin/resources/common/theme" ] || echo "未安装miao"
-[ -d ${Yunzai22}"/plugins/miao-plugin/resources/common/theme" ] || break
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/miao-plugin/resources/help" ] || echo "未安装miao"
+[ -d ${Yunzai33}"/plugins/miao-plugin/resources/help" ] || break
+[ -d ${Yunzai33}"/plugins/miao-plugin/resources/common/theme" ] || echo "未安装miao"
+[ -d ${Yunzai33}"/plugins/miao-plugin/resources/common/theme" ] || break
 [ -d "/Yunzai-Bot-Help/Allfile/help" ] || echo "Yunzai-Bot-help出错"
 [ -d "/Yunzai-Bot-Help/Allfile/help" ] || break
 cd /Yunzai-Bot-Help/Allfile/help/V3help
-cp help-list.js ${Yunzai22}"/plugins/miao-plugin/resources/help"
-cp icon.png ${Yunzai22}"/plugins/miao-plugin/resources/help"
-cp main-01.png ${Yunzai22}"/plugins/miao-plugin/resources/common/theme"
+cp help-list.js ${Yunzai33}"/plugins/miao-plugin/resources/help"
+cp icon.png ${Yunzai33}"/plugins/miao-plugin/resources/help"
+cp main-01.png ${Yunzai33}"/plugins/miao-plugin/resources/common/theme"
 echo "已执行替换"
 cd ${myadress}""
 break
@@ -180,23 +180,23 @@ break
 '派梦语音')
 clear
 echo "正在配置语音..."
-[ -d ${Yunzai22}"/resources" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/resources" ] || break
-cd ${Yunzai22}"/resources"
-[ -d ${Yunzai22}"/resources/voice" ] || mkdir voice
-[ -d ${Yunzai22}"/resources/voice" ] || echo "初始化失败"
-[ -d ${Yunzai22}"/resources/voice" ] || break
-cd ${Yunzai22}"/resources/voice"
-[ -d ${Yunzai22}"/resources/voice/paimeng" ] || mkdir paimeng
-[ -d ${Yunzai22}"/resources/voice/paimeng" ] || echo "初始化失败"
-[ -d ${Yunzai22}"/resources/voice/paimeng" ] || break
+[ -d ${Yunzai33}"/resources" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/resources" ] || break
+cd ${Yunzai33}"/resources"
+[ -d ${Yunzai33}"/resources/voice" ] || mkdir voice
+[ -d ${Yunzai33}"/resources/voice" ] || echo "初始化失败"
+[ -d ${Yunzai33}"/resources/voice" ] || break
+cd ${Yunzai33}"/resources/voice"
+[ -d ${Yunzai33}"/resources/voice/paimeng" ] || mkdir paimeng
+[ -d ${Yunzai33}"/resources/voice/paimeng" ] || echo "初始化失败"
+[ -d ${Yunzai33}"/resources/voice/paimeng" ] || break
 [ -e /Yunzai-Bot-Help/Allfile/voice/paimeng/paimeng.zip ] || echo "Yunzai-Bot-help出错"
 [ -e /Yunzai-Bot-Help/Allfile/voice/paimeng/paimeng.zip ] || break
 cd /Yunzai-Bot-Help/Allfile/voice/paimeng
 cd /Yunzai-Bot-Help/Allfile/voice
-cp paimeng/* ${Yunzai22}"/resources/voice/paimeng"
-[ -e ${Yunzai22}"/plugins/example/派蒙语音v3.js" ] || echo "未安装插件(派梦语音v3.js)"
-[ -e ${Yunzai22}"/plugins/example/派蒙语音v3.js" ] || echo "错误语音的js会导致报错！"
+cp paimeng/* ""${Yunzai33}"/resources/voice/paimeng"
+[ -e ${Yunzai33}"/plugins/example/派蒙语音v3.js" ] || echo "未安装插件(派梦语音v3.js)"
+[ -e ${Yunzai33}"/plugins/example/派蒙语音v3.js" ] || echo "错误语音的js会导致报错！"
 echo "配置已执行"
 cd ${myadress}""
 break
@@ -234,13 +234,13 @@ echo "未安装"
 fi 
 if [ $y = 23 ]
 then
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "已安装抽卡！"
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || cd ${Yunzai22}"/plugins/gacha-plugin"
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || git pull
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || echo "已安装抽卡！"
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || cd ${Yunzai33}"/plugins/gacha-plugin"
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || git pull
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || break
 cd ${myadress}""
 echo "未安装"
 fi 
@@ -253,7 +253,7 @@ echo "回滚抽卡V2：22"
 echo "回滚抽卡V3：23"
 echo "任意值返回！"
 read -p "请选择：" y
-if [ $y = 13 ]
+if [ $y = 12 ]
 then
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
 [ -d ${Yunzai22}"/plugins" ] || break
@@ -279,13 +279,13 @@ echo "未安装"
 fi 
 if [ $y = 23 ]
 then
-[ -d ${Yunzai22}"/plugins ] || echo "未安装V3！"
-[ -d ${Yunzai22}"/plugins ] || break
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "已安装抽卡！"
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || cd ${Yunzai22}"/plugins/gacha-plugin"
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || git revert
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "命令已执行"
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
+[ -d ${Yunzai33}"/plugins ] || echo "未安装V3！"
+[ -d ${Yunzai33}""/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || echo "已安装抽卡！"
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || cd ${Yunzai33}"/plugins/gacha-plugin"
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || git revert
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/gacha-plugin" ] || break
 cd ${myadress}""
 echo "未安装"
 fi 

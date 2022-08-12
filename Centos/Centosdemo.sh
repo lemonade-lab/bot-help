@@ -1,5 +1,5 @@
 break
-Centos="/Yunzai-Bot-Help"
+Centos="/Yunzai-Bot-Help/Centos"
 readonly Centos
 PS3="请选择: "
 while true
@@ -32,66 +32,66 @@ do
 case $version0 in
 '安装环境')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Nodejsdemo.sh
 break
 ;;
 '管理V2')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./V2demo.sh
 break
 ;;
 '管理V3')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./V3demo.sh
 break
 ;;
 '机器控制')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Robotdemo.sh
 break
 ;;
 '进程管理')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Pm2demo.sh
 break
 ;;
 '插件管理')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Pluginsdeno.sh
 break
 ;;
 '功能扩展')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Extensiondemo.sh
 break
 ;;
 '环境管理')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Environmentdemo.sh
 break
 ;;
 '系统语言')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Systemlanguagedemo.sh
 break
 ;;
 'SSH管理')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./SSHdemo.sh
 ;;
 'Help控制')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Update.sh
 break
 ;;
@@ -100,7 +100,7 @@ clear
 echo "《help是手册与常用指令》"
 echo "————————————————————————"
 echo "1.加权限"
-echo "cd ${Centos}/Centos"
+echo "cd ${Centos}"
 echo "chmod +x *.sh"
 echo "————————————————————————"
 echo "2.常用指令"
@@ -115,7 +115,7 @@ break
 ;;
 '防火墙')
 clear
-cd ${Centos}"/Centos"
+cd "${Centos}"
 ./Firewalldemo.sh
 exit
 ;;

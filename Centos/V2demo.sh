@@ -1,5 +1,6 @@
 #!/bin/bash
 myadress="/home/lighthouse"
+readonly myadress
 [ -d /home ] || echo "警告：不是Centos系统！退出执行！"
 [ -d /home ] || exit
 cd /home
@@ -12,6 +13,7 @@ cd ${myadress}""
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd ${myadress}""
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
+readonly Yunzai22
 PS3="请选择: "
 while true; 
 do
