@@ -1,6 +1,12 @@
 # Yunzai-Bot-Help
-Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
-柠檬冲水：在校大二生，因安装太过费时间，就跑去学了一下，这是个人用的，分享给大家
+Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本  
+ 
+作者简介： 
+在校大二生  
+因安装太过费时间   
+就跑去学了一下 
+仓库为个人研究成果  
+分享给大家  
 
 ## 一、项目介绍
 拥有一键环境部署和一键安装启动更新停止等实用性功能  
