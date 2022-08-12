@@ -6,7 +6,7 @@ echo "__________________________________________________"
 echo "欢迎使用《Yunzai-Bot-Help》安装"
 echo "作者：bilibili柠檬冲水UP"
 echo "提示：请先安装环境后使用"
-echo "版本：1.1.0"
+echo "2022年8月12日V1.1.1"
 echo "__________________________________________________"
 fruits0=(
  '安装环境'
@@ -19,6 +19,7 @@ fruits0=(
  '环境管理' 
  '系统语言' 
  'Help控制'
+ 'Help帮助'
  'SSH管理' 
  '防火墙' 
  '系统重启'
@@ -90,6 +91,24 @@ cd /Yunzai-Bot-Help/Centos
 clear
 cd /Yunzai-Bot-Help/Centos
 ./Update.sh
+break
+;;
+'Help帮助')
+clear
+echo "《help是手册与常用指令》"
+echo "————————————————————————"
+echo "1.加权限"
+echo "cd /Yunzai-Bot-Help/Centos"
+echo "chmod +x *.sh"
+echo "————————————————————————"
+echo "2.常用指令"
+echo "sudo su root #获取root权限"
+echo "ls #查看当下目录"
+echo "rm -rf filename #删除文件 "
+echo "cd /filename/filename  #打开目录"
+echo "cd filename/filename  #打开该目录下的目录"
+echo "vi filename  #编辑文件"
+echo "————————————————————————"
 break
 ;;
 '防火墙')

@@ -10,8 +10,9 @@ cd /home/lighthouse
 [ -d /home/lighthouse/YunzaiV3 ] || echo "初始化Yunzai目录失败！退出执行！" 
 [ -d /home/lighthouse/YunzaiV3 ] || exit
 cd /home/lighthouse
+Yunzai22="/home/lighthouse/YunzaiV2/Yunzai-Bot"
+Yunzai33="/home/lighthouse/YunzaiV3/Yunzai-Bot"
 PS3="请选择: "
-cd /home/lighthouse
 while true; 
 do
 echo "__________________________________________________"
@@ -43,12 +44,12 @@ break
 clear
 
 echo "您的选择是启动V2版本"
-[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
-[ -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || echo "您未配置机器人V2QQ,需要初始化"
-[ ! -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot
-[ ! -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || npm stop
-[ ! -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || npm start
-[ ! -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || echo "V2后台运行"
+[ -d ${yunzai22}/plugins ] || echo "未安装V2！"
+[ -e ${yunzai22}/config/config.js ] || echo "您未配置机器人V2QQ,需要初始化"
+[ ! -e ${yunzai22}/config/config.js ] || cd ${yunzai22}
+[ ! -e ${yunzai22}/config/config.js ] || npm stop
+[ ! -e ${yunzai22}/config/config.js ] || npm start
+[ ! -e ${yunzai22}/config/config.js ] || echo "V2后台运行"
 cd /home/lighthouse
 
 break
@@ -56,12 +57,12 @@ break
 '启动V3')
 clear
 echo "您的选择是启动V3版本"
-[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
-[ -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || echo "您未配置机器人V3QQ"
-[ ! -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot
-[ ! -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || npm stop
-[ ! -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || npm start
-[ ! -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || echo "V3后台运行"
+[ -d ${yunzai33}/plugins ] || echo "未安装V3！"
+[ -e ${yunzai33}/config/config/qq.yaml ] || echo "您未配置机器人V3QQ"
+[ ! -e ${yunzai33}/config/config/qq.yaml ] || cd ${yunzai33}
+[ ! -e ${yunzai33}/config/config/qq.yaml ] || npm stop
+[ ! -e ${yunzai33}/config/config/qq.yaml ] || npm start
+[ ! -e ${yunzai33}/config/config/qq.yaml ] || echo "V3后台运行"
 cd /home/lighthouse
 
 break
@@ -69,10 +70,10 @@ break
 '停止V2')
 clear
 
-[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
-[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot
-[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || npm stop
-[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] ||  echo "V2关闭"
+[ -d ${yunzai22}/plugins ] || echo "未安装V2！"
+[ ! -d ${yunzai22}/plugins ] || cd ${yunzai22}
+[ ! -d ${yunzai22}/plugins ] || npm stop
+[ ! -d ${yunzai22}/plugins ] ||  echo "V2关闭"
 cd /home/lighthouse
 
 
@@ -80,41 +81,41 @@ break
 ;;
 '停止V3')
 clear
-[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
-[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot
-[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || npm stop
-[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] ||  echo "V3关闭"
+[ -d ${yunzai33}/plugins ] || echo "未安装V3！"
+[ ! -d ${yunzai33}/plugins ] || cd ${yunzai33}
+[ ! -d ${yunzai33}/plugins ] || npm stop
+[ ! -d ${yunzai33}/plugins ] ||  echo "V3关闭"
 cd /home/lighthouse
 
 break
 ;;
 '启动V2V3')
 clear
-[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
-[ -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || echo "您未配置机器人V2QQ,需要初始化"
-[ ! -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot
-[ ! -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || npm stop
-[ ! -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || npm start
-[ ! -e /home/lighthouse/YunzaiV2/Yunzai-Bot/config/config.js ] || echo "V2后台运行"
-[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
-[ -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || echo "您未配置机器人V3QQ,需要初始化"
-[ ! -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot
-[ ! -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || npm stop
-[ ! -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || npm start
-[ ! -e /home/lighthouse/YunzaiV3/Yunzai-Bot/config/config/qq.yaml ] || echo "V3后台运行"
+[ -d ${yunzai22}/plugins ] || echo "未安装V2！"
+[ -e ${yunzai22}/config/config.js ] || echo "您未配置机器人V2QQ,需要初始化"
+[ ! -e ${yunzai22}/config/config.js ] || cd ${yunzai22}
+[ ! -e ${yunzai22}/config/config.js ] || npm stop
+[ ! -e ${yunzai22}/config/config.js ] || npm start
+[ ! -e ${yunzai22}/config/config.js ] || echo "V2后台运行"
+[ -d ${yunzai33}/plugins ] || echo "未安装V3！"
+[ -e ${yunzai33}/config/config/qq.yaml ] || echo "您未配置机器人V3QQ,需要初始化"
+[ ! -e ${yunzai33}/config/config/qq.yaml ] || cd ${yunzai33}
+[ ! -e ${yunzai33}/config/config/qq.yaml ] || npm stop
+[ ! -e ${yunzai33}/config/config/qq.yaml ] || npm start
+[ ! -e ${yunzai33}/config/config/qq.yaml ] || echo "V3后台运行"
 cd /home/lighthouse
 break
 ;;
 '停止V2V3')
 clear
-[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
-[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot
-[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || npm stop
-[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] ||  echo "V2关闭"
-[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
-[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot
-[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || npm stop
-[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] ||  echo "V3关闭"
+[ -d ${yunzai22}/plugins ] || echo "未安装V2！"
+[ ! -d ${yunzai22}/plugins ] || cd ${yunzai22}
+[ ! -d ${yunzai22}/plugins ] || npm stop
+[ ! -d ${yunzai22}/plugins ] ||  echo "V2关闭"
+[ -d ${yunzai33}/plugins ] || echo "未安装V3！"
+[ ! -d ${yunzai33}/plugins ] || cd ${yunzai33}
+[ ! -d ${yunzai33}/plugins ] || npm stop
+[ ! -d ${yunzai33}/plugins ] ||  echo "V3关闭"
 cd /home/lighthouse
 
 break

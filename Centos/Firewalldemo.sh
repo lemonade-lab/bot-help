@@ -9,6 +9,7 @@ cd /home/lighthouse
 [ -d /home/lighthouse/YunzaiV3 ] || mkdir  YunzaiV3
 [ -d /home/lighthouse/YunzaiV3 ] || echo "初始化Yunzai目录失败！退出执行！" 
 [ -d /home/lighthouse/YunzaiV3 ] || exit
+cd /home/lighthouse
 PS3="请选择: "
 while true; 
 do

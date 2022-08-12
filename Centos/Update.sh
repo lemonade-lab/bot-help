@@ -36,30 +36,31 @@ clear
 [ -d /Yunzai-Bot-Help ] || echo "正在重新拉入脚本"
 [ -d /Yunzai-Bot-Help ] || cd /
 [ -d /Yunzai-Bot-Help ] || git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "启动不存在！"
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "正在删除残留..."
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || rm -rf /Yunzai-Bot-Help
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "清除成功，重新执行更新！"
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || exit
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "启动存在！"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "尝试更新中......"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || cd /Yunzai-Bot-Help
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || git pull
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "更新命令执行完成！"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || cd /home/lighthouse
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "请使用下列两条命令来确保能正确执行最新版"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "——————————————————————————————————————————————————"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "sudo su root"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "cd /"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "sh /Yunzai-Bot-Help/Centos/Centosdemo.sh"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "——————————————————————————————————————————————————"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "若无修改Yunzai权限，可执行下面的指令"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "——————————————————————————————————————————————————"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "sudo su root"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "cd /"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "comd + x /Yunzai-Bot-Help/Centos/Centosdemo.sh"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "——————————————————————————————————————————————————"
-[ !  -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || exit
+Centosdemo="/Yunzai-Bot-Help/Centos/Centosdemo.sh"
+[ -e ${Centosdemo}] || echo "启动不存在！"
+[ -e ${Centosdemo} ] || echo "正在删除残留..."
+[ -e ${Centosdemo} ] || rm -rf /Yunzai-Bot-Help
+[ -e ${Centosdemo} ] || echo "清除成功，重新执行更新！"
+[ -e ${Centosdemo} ] || exit
+[ ! -e ${Centosdemo} ] || echo "启动存在！"
+[ ! -e ${Centosdemo} ] || echo "尝试更新中......"
+[ ! -e ${Centosdemo} ] || cd /Yunzai-Bot-Help
+[ ! -e ${Centosdemo} ] || git pull
+[ ! -e ${Centosdemo} ] || echo "更新命令执行完成！"
+[ ! -e ${Centosdemo} ] || cd /home/lighthouse
+[ ! -e ${Centosdemo} ] || echo "请使用下列两条命令来确保能正确执行最新版"
+[ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
+[ ! -e ${Centosdemo} ] || echo "sudo su root"
+[ ! -e ${Centosdemo} ] || echo "cd /"
+[ ! -e ${Centosdemo} ] || echo "sh ${Centosdemo}"
+[ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
+[ ! -e ${Centosdemo} ] || echo "若无修改Yunzai权限，可执行下面的指令"
+[ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
+[ ! -e ${Centosdemo} ] || echo "sudo su root"
+[ ! -e ${Centosdemo} ] || echo "cd /"
+[ ! -e ${Centosdemo} ] || echo "comd + x ${Centosdemo}"
+[ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
+[ !  -e ${Centosdemo} ] || exit
 echo "——————————————————————————————————————————————————"
 cd /home/lighthouse
 echo "脚本出错，请执行下面两行命令来手动更新！"
@@ -80,32 +81,32 @@ clear
 [ -d /Yunzai-Bot-Help ] || echo "正在重新拉入脚本"
 [ -d /Yunzai-Bot-Help ] || cd /
 [ -d /Yunzai-Bot-Help ] || git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "启动不存在！"
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "正在删除残留..."
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || rm -rf /Yunzai-Bot-Help
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "清除成功，重新执行更新！"
-[ -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || exit
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "启动存在！"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "尝试更新中......"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || cd /Yunzai-Bot-Help
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || git fetch --all
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || git reset --hard main
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || git pull
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "更新命令执行完成！"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || cd /home/lighthouse
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "请使用下列两条命令来确保能正确执行最新版"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "——————————————————————————————————————————————————"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "sudo su root"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "cd /"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "sh /Yunzai-Bot-Help/Centos/Centosdemo.sh"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "——————————————————————————————————————————————————"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "若无修改Yunzai权限，可执行下面的指令"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "——————————————————————————————————————————————————"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "sudo su root"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "cd /"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "comd + x /Yunzai-Bot-Help/Centos/Centosdemo.sh"
-[ ! -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || echo "——————————————————————————————————————————————————"
-[ !  -e /Yunzai-Bot-Help/Centos/Centosdemo.sh ] || exit
+[ -e ${Centosdemo} ] || echo "启动不存在！"
+[ -e ${Centosdemo} ] || echo "正在删除残留..."
+[ -e ${Centosdemo} ] || rm -rf /Yunzai-Bot-Help
+[ -e ${Centosdemo} ] || echo "清除成功，重新执行更新！"
+[ -e ${Centosdemo} ] || exit
+[ ! -e ${Centosdemo} ] || echo "启动存在！"
+[ ! -e ${Centosdemo} ] || echo "尝试更新中......"
+[ ! -e ${Centosdemo} ] || cd /Yunzai-Bot-Help
+[ ! -e ${Centosdemo} ] || git fetch --all
+[ ! -e ${Centosdemo} ] || git reset --hard main
+[ ! -e ${Centosdemo} ] || git pull
+[ ! -e ${Centosdemo} ] || echo "更新命令执行完成！"
+[ ! -e ${Centosdemo} ] || cd /home/lighthouse
+[ ! -e ${Centosdemo} ] || echo "请使用下列两条命令来确保能正确执行最新版"
+[ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
+[ ! -e ${Centosdemo} ] || echo "sudo su root"
+[ ! -e ${Centosdemo} ] || echo "cd /"
+[ ! -e ${Centosdemo} ] || echo "sh ${Centosdemo}"
+[ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
+[ ! -e ${Centosdemo} ] || echo "若无修改Yunzai权限，可执行下面的指令"
+[ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
+[ ! -e ${Centosdemo} ] || echo "sudo su root"
+[ ! -e ${Centosdemo} ] || echo "cd /"
+[ ! -e ${Centosdemo} ] || echo "comd + x ${Centosdemo}"
+[ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
+[ !  -e ${Centosdemo} ] || exit
 echo "——————————————————————————————————————————————————"
 cd /home/lighthouse
 echo "脚本出错，请执行下面两行命令来手动更新！"
