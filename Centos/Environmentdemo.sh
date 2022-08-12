@@ -5,12 +5,12 @@ myadress="/home/lighthouse"
 cd /home
 [ -d ${myadress} ] || mkdir  lighthouse
 [ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}
+cd ${myadress}""
 [ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
 [ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}
+cd ${myadress}""
 PS3="请选择: "
 while true;
 do
@@ -87,7 +87,7 @@ exit
 ;;
 '安装sshpass')
 clear
-cd ${myadress}
+cd ${myadress}""
 wget https://nchc.dl.sourceforge.net/project/sshpass/sshpass/1.06/sshpass-1.06.tar
 tar  zxf sshpass-1.06.tar.gz
 ./configure  --prefix=/usr/local/
@@ -98,7 +98,7 @@ exit
 ;;
 '返回')
 clear
-cd ${myadress}
+cd ${myadress}""
 exit
 ;;
 *)

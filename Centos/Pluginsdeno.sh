@@ -61,10 +61,10 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
 clear
-cd ${Yunzai22}
+cd ${Yunzai22}""
 git clone https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin.git ./plugins/xiaoyao-cvs-plugin/
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $y = 3 ]
 then
@@ -75,10 +75,10 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
 clear
-cd ${Yunzai22}
+cd ${Yunzai22}""
 git clone https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin.git ./plugins/xiaoyao-cvs-plugin/
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $y = 20 ]
 then
@@ -88,11 +88,11 @@ then
 [ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || clear
 [ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
 [ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || rm -rf ${Yunzai22}"/plugins/xiaoyao-cvs-plugin"
 clear
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $y = 30 ]
 then
@@ -102,11 +102,11 @@ then
 [ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || clear
 [ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "已安装图鉴！"
 [ -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || rm -rf ${Yunzai22}"/plugins/xiaoyao-cvs-plugin"
 clear
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 echo "您已返回！"
 break
@@ -130,7 +130,7 @@ clear
 cd ${Yunzai22}
 git clone https://gitee.com/zolay-poi/achievements-plugin.git ./plugins/achievements-plugin/
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $y = 3 ]
 then
@@ -140,10 +140,10 @@ then
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || clear
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "已安装成就！"
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-cd ${Yunzai22}
+cd ${Yunzai22}""
 git clone https://gitee.com/zolay-poi/achievements-plugin.git ./plugins/achievements-plugin/
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $y = 20 ]
 then
@@ -153,11 +153,11 @@ then
 [ -d ${Yunzai22}"/plugins/achievements-plugin" ] || clear
 [ -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "未安装成就"
 [ -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || rm -rf ${Yunzai22}"/plugins/achievements-plugin"
 clear
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $y = 30 ]
 then
@@ -167,11 +167,11 @@ then
 [ -d ${Yunzai22}"/plugins/achievements-plugin" ] || clear
 [ -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "未安装成就"
 [ -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || rm -rf ${Yunzai22}"/plugins/achievements-plugin"
 clear
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 echo "您已返回"
 break
@@ -190,10 +190,10 @@ then
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo " 已安装闲心！"
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || break
 clear
-cd ${Yunzai22}
+cd ${Yunzai22}""
 git clone https://gitee.com/xianxincoder/xianxin-plugin.git ./plugins/xianxin-plugin/  
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $y = 30 ]
 then
@@ -203,12 +203,12 @@ then
 [ -d ${Yunzai22}"/plugins/xianxin-plugin" ] || clear
 [ -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo "未安装闲心！"
 [ -d ${Yunzai22}"/plugins/xianxin-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || rm -rf ${Yunzai22}"/plugins/xianxin-plugin"
 clear
 
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 echo "您已返回"
 break
@@ -227,10 +227,10 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || break
 clear
-cd ${Yunzai22}
+cd ${Yunzai22}""
 git clone https://gitee.com/waterfeet/xiuxian-emulator-plugin ./plugins/xiuxian-emulator-plugin/  
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 if [ $y = 30 ]
 then
@@ -240,11 +240,11 @@ then
 [ -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || clear
 [ -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
 [ -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || rm -rf ${Yunzai22}"/plugins/xiuxian-emulator-plugin"
 clear
 echo "命令已执行！"
-cd ${myadress}
+cd ${myadress}""
 fi
 echo "您已返回"
 break
@@ -259,7 +259,7 @@ clear
 [ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}"/plugins/example"
 [ ! -d ${Yunzai22}"/plugins" ] || echo "【V3插件列表】"
 [ ! -d ${Yunzai22}"/plugins" ] || ls
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '插件安装')
@@ -310,7 +310,7 @@ cp v3plugin.zip ${Yunzai22}"/plugins/example"
 cd ${Yunzai22}"/plugins/example"
 unzip v3plugin.zip
 echo "操作已执行"
-cd ${myadress}
+cd ${myadress}""
 break
 fi
 echo "您已返回！"
@@ -372,7 +372,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 13 ]
@@ -386,7 +386,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 22 ]
@@ -400,7 +400,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 23 ]
@@ -414,7 +414,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 33 ]
@@ -428,7 +428,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 43 ]
@@ -442,7 +442,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi
 if [ $y = 0 ]
@@ -474,7 +474,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 13 ]
@@ -488,7 +488,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/xiaoyao-cvs-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 22 ]
@@ -502,7 +502,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 23 ]
@@ -516,7 +516,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/achievements-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 33 ]
@@ -530,7 +530,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/xianxin-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 43 ]
@@ -544,7 +544,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/xiuxian-emulator-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "执行出错啦！"
 fi
 if [ $y = 0 ]

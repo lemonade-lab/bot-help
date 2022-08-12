@@ -11,7 +11,7 @@ cd ${myadress}
 [ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
 [ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}
+cd ${myadress}""
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
 readonly Yunzai22
 Yunzai22="${myadress}/YunzaiV3/Yunzai-Bot"
@@ -50,7 +50,7 @@ then
 [ -d ${Yunzai22}"/plugins" ] || break
 [ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || echo "已安装禁涩！"
 [ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || break
-cd ${Yunzai22}
+cd ${Yunzai22}""
 git clone https://gitee.com/litefen/fen-plugin.git   ./plugins/fen-plugin/
 echo "命令已执行！"
 cd ${myadress}
@@ -61,7 +61,7 @@ then
 [ -d ${Yunzai22}"/plugins" ] || break
 [ -d ${Yunzai22}"/plugins/fen-plugin" ] || echo "未安装禁涩！"
 [ -d ${Yunzai22}"/plugins/fen-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || rm -rf ${Yunzai22}"/plugins/fen-plugin"
 echo "命令已执行！"
 cd ${myadress}
@@ -85,7 +85,7 @@ read -p "请选择：" y
 if [ $y = 0 ]
 then
 npm i yaml
-cd ${myadress}
+cd ${myadress}""
 fi
 
 if [ $y = 2 ]
@@ -118,7 +118,7 @@ then
 [ -d ${Yunzai22}"/plugins" ] || break
 [ -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "未安装抽卡"
 [ -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || rm -rf ${Yunzai22}"/plugins/gacha-plugin"
 echo "命令已执行！"
 cd ${myadress}
@@ -130,7 +130,7 @@ then
 [ -d ${Yunzai22}"/plugins" ] || break
 [ -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "未安装抽卡"
 [ -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || rm -rf ${Yunzai22}"/plugins/gacha-plugin"
 echo "命令已执行！"
 cd ${myadress}
@@ -155,7 +155,7 @@ cp help-list.js ${Yunzai22}"/plugins/miao-plugin/resources/help"
 cp icon.png ${Yunzai22}"/plugins/miao-plugin/resources/help"
 cp main-01.png ${Yunzai22}"/plugins/miao-plugin/resources/common/theme"
 echo "已执行替换"
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 
@@ -174,7 +174,7 @@ cp help-list.js ${Yunzai22}"/plugins/miao-plugin/resources/help"
 cp icon.png ${Yunzai22}"/plugins/miao-plugin/resources/help"
 cp main-01.png ${Yunzai22}"/plugins/miao-plugin/resources/common/theme"
 echo "已执行替换"
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '派梦语音')
@@ -198,7 +198,7 @@ cp paimeng/* ${Yunzai22}"/resources/voice/paimeng"
 [ -e ${Yunzai22}"/plugins/example/派蒙语音v3.js" ] || echo "未安装插件(派梦语音v3.js)"
 [ -e ${Yunzai22}"/plugins/example/派蒙语音v3.js" ] || echo "错误语音的js会导致报错！"
 echo "配置已执行"
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '选择更新')
@@ -217,7 +217,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/fen-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "未安装"
 fi 
 if [ $y = 22 ]
@@ -229,7 +229,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "未安装"
 fi 
 if [ $y = 23 ]
@@ -241,7 +241,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || git pull
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "未安装"
 fi 
 break
@@ -262,7 +262,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "未安装"
 fi 
 if [ $y = 22 ]
@@ -274,7 +274,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "未安装"
 fi 
 if [ $y = 23 ]
@@ -286,7 +286,7 @@ then
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || git revert
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || echo "命令已执行"
 [ ! -d ${Yunzai22}"/plugins/gacha-plugin" ] || break
-cd ${myadress}
+cd ${myadress}""
 echo "未安装"
 fi 
 break

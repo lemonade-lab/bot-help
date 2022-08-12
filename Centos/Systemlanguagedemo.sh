@@ -5,12 +5,12 @@ myadress="/home/lighthouse"
 cd /home
 [ -d ${myadress} ] || mkdir  lighthouse
 [ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}
+cd ${myadress}""
 [ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
 [ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}
+cd ${myadress}""
 PS3="请选择: "
 while true; 
 do
@@ -34,20 +34,20 @@ case $version1 in
 clear
 dnf install langpacks-zh_CN
 nf install -y ibus-libpinyin.x86_64
-cd ${myadress}
+cd ${myadress}""
 
 break
 ;;
 '语言列表')
 clear
 locale -a
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '当前语言')
 clear
 echo $LANG
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '编辑教程')
@@ -60,28 +60,28 @@ echo "按i进入修改模式"
 echo "按ESE退出修改模式"
 echo "输入:wq!强制保存"
 echo "按CTRL+Z退出文件"
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '编辑语言')
 vi /etc/locale.conf
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '重启')
-cd ${myadress}
+cd ${myadress}""
 echo "执行重启，请重新登录！"
 shutdown -r now
 exit
 ;;
 '返回')
-cd ${myadress}
+cd ${myadress}""
 exit
 ;;
 *)
 clear
 echo "#您的选择不存在，请重新选择！"
-cd ${myadress}
+cd ${myadress}""
 break
 esac
 done

@@ -9,12 +9,12 @@ Centosdemo="${bot}/Centos/Centosdemo.sh"
 cd /home
 [ -d ${myadress} ] || mkdir  lighthouse
 [ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}
+cd ${myadress}""
 [ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
 [ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}
+cd ${myadress}""
 PS3="请选择: "
 while true; 
 do
@@ -43,15 +43,15 @@ clear
 [ -d ${bot} ] || git clone "https://github.com/ningmengchongshui"${bot}".git"
 [ -e ${Centosdemo} ] || echo "启动不存在！"
 [ -e ${Centosdemo} ] || echo "正在删除残留..."
-[ -e ${Centosdemo} ] || rm -rf ${bot}
+[ -e ${Centosdemo} ] || rm -rf ${bot}""
 [ -e ${Centosdemo} ] || echo "清除成功，重新执行更新！"
 [ -e ${Centosdemo} ] || exit
 [ ! -e ${Centosdemo} ] || echo "启动存在！"
 [ ! -e ${Centosdemo} ] || echo "尝试更新中......"
-[ ! -e ${Centosdemo} ] || cd ${bot}
+[ ! -e ${Centosdemo} ] || cd ${bot}""
 [ ! -e ${Centosdemo} ] || git pull
 [ ! -e ${Centosdemo} ] || echo "更新命令执行完成！"
-[ ! -e ${Centosdemo} ] || cd ${myadress}
+[ ! -e ${Centosdemo} ] || cd ${myadress}""
 [ ! -e ${Centosdemo} ] || echo "请使用下列两条命令来确保能正确执行最新版"
 [ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
 [ ! -e ${Centosdemo} ] || echo "sudo su root"
@@ -66,7 +66,7 @@ clear
 [ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
 [ !  -e ${Centosdemo} ] || exit
 echo "——————————————————————————————————————————————————"
-cd ${myadress}
+cd ${myadress}""
 echo "脚本出错，请执行下面两行命令来手动更新！"
 echo "——————————————————————————————————————————————————"
 echo "cd ${bot}"
@@ -92,12 +92,12 @@ clear
 [ -e ${Centosdemo} ] || exit
 [ ! -e ${Centosdemo} ] || echo "启动存在！"
 [ ! -e ${Centosdemo} ] || echo "尝试更新中......"
-[ ! -e ${Centosdemo} ] || cd ${bot}
+[ ! -e ${Centosdemo} ] || cd ${bot}""
 [ ! -e ${Centosdemo} ] || git fetch --all
 [ ! -e ${Centosdemo} ] || git reset --hard main
 [ ! -e ${Centosdemo} ] || git pull
 [ ! -e ${Centosdemo} ] || echo "更新命令执行完成！"
-[ ! -e ${Centosdemo} ] || cd ${myadress}
+[ ! -e ${Centosdemo} ] || cd ${myadress}""
 [ ! -e ${Centosdemo} ] || echo "请使用下列两条命令来确保能正确执行最新版"
 [ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
 [ ! -e ${Centosdemo} ] || echo "sudo su root"
@@ -112,7 +112,7 @@ clear
 [ ! -e ${Centosdemo} ] || echo "——————————————————————————————————————————————————"
 [ !  -e ${Centosdemo} ] || exit
 echo "——————————————————————————————————————————————————"
-cd ${myadress}
+cd ${myadress}""
 echo "脚本出错，请执行下面两行命令来手动更新！"
 echo "——————————————————————————————————————————————————"
 echo "cd ${bot}"
@@ -134,7 +134,7 @@ clear
 [ -d ${bot} ] || break
 [ -d ${bot} ] && echo "——————————————————————————————————————————————————"
 [ -d ${bot} ] && echo "正在删除..."
-[ -d ${bot} ] && rm -rf ${bot}
+[ -d ${bot} ] && rm -rf ${bot}""
 [ -d ${bot} ] && echo "清除成功！"
 [ -d ${bot} ] && git "https://github.com/ningmengchongshui"${bot}".git"
 [ -d ${bot} ] && echo "重装失败！"
@@ -150,7 +150,7 @@ clear
 [ -d ${bot} ] || break
 [ -d ${bot} ] && echo "——————————————————————————————————————————————————"
 [ -d ${bot} ] && echo "正在删除..."
-[ -d ${bot} ] && rm -rf ${bot}
+[ -d ${bot} ] && rm -rf ${bot}""
 [ -d ${bot} ] && echo "清除成功，重新执行更新！"
 [ -d ${bot} ] && echo "您若需要help的支持，可执行更新操作！"
 [ -d ${bot} ] && echo "——————————————————————————————————————————————————"

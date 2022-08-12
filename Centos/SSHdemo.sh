@@ -5,12 +5,12 @@ myadress="/home/lighthouse"
 cd /home
 [ -d ${myadress} ] || mkdir  lighthouse
 [ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}
+cd ${myadress}""
 [ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
 [ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}
+cd ${myadress}""
 PS3="请选择: "
 while true;
 do
@@ -51,7 +51,7 @@ echo "————————————————————————�
 echo "改#PubkeyAuthentication yes为"
 echo "PubkeyAuthentication yes"
 echo "——————————————————————————————"
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '编辑SSH')
@@ -62,13 +62,13 @@ break
 '重启SSH')
 clear
 systemctl restart sshd.service
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 'SSH状态')
 clear
 systemctl status sshd.service
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '返回')

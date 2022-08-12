@@ -37,7 +37,7 @@ do
 case $version1 in
 '状态')
 clear
-cd ${myadress}
+cd ${myadress}""
 pm2 list
 break
 ;;
@@ -47,11 +47,11 @@ clear
 echo "您的选择是启动V2版本"
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
 [ -e ${Yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ,需要初始化"
-[ ! -e ${Yunzai22}"/config/config.js" ] || cd ${Yunzai22}
+[ ! -e ${Yunzai22}"/config/config.js" ] || cd ${Yunzai22}""
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm stop
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm start
 [ ! -e ${Yunzai22}"/config/config.js" ] || echo "V2后台运行"
-cd ${myadress}
+cd ${myadress}""
 
 break
 ;;
@@ -60,11 +60,11 @@ clear
 echo "您的选择是启动V3版本"
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
 [ -e ${Yunzai22}"/config/config/qq.yaml" ] || echo "您未配置机器人V3QQ"
-[ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || cd ${Yunzai22}
+[ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || cd ${Yunzai22}""
 [ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || npm stop
 [ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || npm start
 [ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || echo "V3后台运行"
-cd ${myadress}
+cd ${myadress}""
 
 break
 ;;
@@ -72,10 +72,10 @@ break
 clear
 
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
-[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins" ] || npm stop
 [ ! -d ${Yunzai22}"/plugins" ] ||  echo "V2关闭"
-cd ${myadress}
+cd ${myadress}""
 
 
 break
@@ -83,10 +83,10 @@ break
 '停止V3')
 clear
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins" ] || npm stop
 [ ! -d ${Yunzai22}"/plugins" ] ||  echo "V3关闭"
-cd ${myadress}
+cd ${myadress}""
 
 break
 ;;
@@ -94,30 +94,30 @@ break
 clear
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
 [ -e ${Yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ,需要初始化"
-[ ! -e ${Yunzai22}"/config/config.js" ] || cd ${Yunzai22}
+[ ! -e ${Yunzai22}"/config/config.js" ] || cd ${Yunzai22}""
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm stop
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm start
 [ ! -e ${Yunzai22}"/config/config.js" ] || echo "V2后台运行"
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
 [ -e ${Yunzai22}"/config/config/qq.yaml" ] || echo "您未配置机器人V3QQ,需要初始化"
-[ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || cd ${Yunzai22}
+[ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || cd ${Yunzai22}""
 [ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || npm stop
 [ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || npm start
 [ ! -e ${Yunzai22}"/config/config/qq.yaml" ] || echo "V3后台运行"
-cd ${myadress}
+cd ${myadress}""
 break
 ;;
 '停止V2V3')
 clear
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
-[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins" ] || npm stop
 [ ! -d ${Yunzai22}"/plugins" ] ||  echo "V2关闭"
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V3！"
-[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}
+[ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins" ] || npm stop
 [ ! -d ${Yunzai22}"/plugins" ] ||  echo "V3关闭"
-cd ${myadress}
+cd ${myadress}""
 
 break
 ;;
