@@ -41,7 +41,7 @@ echo "任意输入返回"
 read -p "请选择：" y
 if [ $Y = 2 ]
 then
-[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
 [ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
 [ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/fen-plugin ] || echo "已安装禁涩！"
 [ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/fen-plugin ] || break
@@ -198,33 +198,91 @@ break
 ;;
 '选择更新')
 clear
-echo "更新图鉴V2：12"
-echo "更新图鉴V3：13"
-echo "更新成就V2：22"
-echo "更新成就V3：23"
-echo "更新闲心V3：33"
-echo "更新插件：5"
+echo "更新涩涩V2：12"
+echo "更新抽卡V2：22"
+echo "更新抽卡V3：23"
 echo "任意值返回！"
 read -p "请选择：" y
-if [ $y = 0 ]
+if [ $y = 12 ]
 then
-
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/fen-plugin ] || echo "已安装禁涩！"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/fen-plugin ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/fen-plugin
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/fen-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/fen-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/fen-plugin ] || break
+cd /home/lighthouse
+echo "未安装"
+fi 
+if [ $y = 22 ]
+then
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || echo "已安装抽卡！"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || break
+cd /home/lighthouse
+echo "未安装"
+fi 
+if [ $y = 23 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || echo "已安装抽卡！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || break
+cd /home/lighthouse
+echo "未安装"
 fi 
 break
 ;;
 '回滚更新')
 clear
-echo "回滚图鉴V2：12"
-echo "回滚图鉴V3：13"
-echo "回滚成就V2：22"
-echo "回滚成就V3：23"
-echo "回滚闲心V3：33"
-echo "回滚插件：5"
+echo "回滚涩涩V2：12"
+echo "回滚抽卡V2：22"
+echo "回滚抽卡V3：23"
 echo "任意值返回！"
 read -p "请选择：" y
-if [ $y = 0 ]
+if [ $y = 13 ]
 then
-
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || echo "已安装抽卡！"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || break
+cd /home/lighthouse
+echo "未安装"
+fi 
+if [ $y = 22 ]
+then
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || echo "已安装抽卡！"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/gacha-plugin ] || break
+cd /home/lighthouse
+echo "未安装"
+fi 
+if [ $y = 23 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || echo "已安装抽卡！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/gacha-plugin ] || break
+cd /home/lighthouse
+echo "未安装"
 fi 
 break
 ;;

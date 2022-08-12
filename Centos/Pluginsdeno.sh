@@ -184,7 +184,7 @@ then
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
 [ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || clear
-[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || echo " 已安装成就！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || echo " 已安装闲心！"
 [ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || break
 clear
 cd /home/lighthouse/YunzaiV3/Yunzai-Bot
@@ -221,7 +221,7 @@ then
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
 [ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || clear
-[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo " 已安装成就！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo " 已安装修仙！"
 [ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || break
 clear
 cd /home/lighthouse/YunzaiV3/Yunzai-Bot
@@ -235,7 +235,7 @@ then
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || clear
-[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo "未安装闲心！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo "未安装修仙！"
 [ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || break
 [ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot
 [ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || rm -rf /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin
@@ -354,13 +354,99 @@ echo "更新图鉴V3：13"
 echo "更新成就V2：22"
 echo "更新成就V3：23"
 echo "更新闲心V3：33"
-echo "更新插件：5"
+echo "更新修仙V3：43"
+echo "更新插件：0"
 echo "任意值返回！"
 read -p "请选择：" y
+if [ $y = 12 ]
+then
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || 
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || 
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || echo "已安装图鉴！"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 13 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || echo "已安装图鉴！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 22 ]
+then
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || echo "已安装成就！"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 23 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || echo "已安装成就！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 33 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || echo " 已安装闲心！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 43 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo " 已安装修仙！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || git pull
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi
 if [ $y = 0 ]
 then
-
+echo "功能等添加"
 fi 
+
 break
 ;;
 '回滚更新')
@@ -370,12 +456,97 @@ echo "回滚图鉴V3：13"
 echo "回滚成就V2：22"
 echo "回滚成就V3：23"
 echo "回滚闲心V3：33"
-echo "回滚插件：5"
+echo "回滚修仙V3：43"
+echo "回滚插件：0"
 echo "任意值返回！"
 read -p "请选择：" y
+if [ $y = 12 ]
+then
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || 
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || 
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || echo "已安装图鉴！"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 13 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || echo "已安装图鉴！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiaoyao-cvs-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 22 ]
+then
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || echo "未安装V2！"
+[ -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || echo "已安装成就！"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || cd /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV2/Yunzai-Bot/plugins/achievements-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 23 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || echo "已安装成就！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/achievements-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 33 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || echo " 已安装闲心！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xianxin-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi 
+if [ $y = 43 ]
+then
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || clear
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || echo "未安装V3！"
+[ -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins ] || break
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || clear
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo " 已安装修仙！"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || cd /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || git revert
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || echo "命令已执行"
+[ ! -d /home/lighthouse/YunzaiV3/Yunzai-Bot/plugins/xiuxian-emulator-plugin ] || break
+cd /home/lighthouse
+echo "执行出错啦！"
+fi
 if [ $y = 0 ]
 then
-
+echo "功能等添加"
 fi 
 break
 ;;
