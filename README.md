@@ -25,9 +25,13 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 
 ### 3. 拷贝项目    
 `cd /         #移步最外层目录`   
-`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制   
+`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`   
 
-### 3. 运行代码   
+### 4. 赋予权限    
+`cd /Yunzai-Bot-Help/Centos         #移步代码目录`   
+`chmod +x *.sh   #复制`  
+
+### 5. 运行代码   
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`    
 
 ## 三、功能介绍
