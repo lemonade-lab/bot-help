@@ -20,7 +20,7 @@ PS3="请选择: "
 while true; 
 do
 echo "__________________________________________________"
-echo "  《Yunzai控制面板》  "
+echo "  《后台Yunzai-Bot控制面板》  "
 echo "PM2：Node.js程序进程管理器"
 echo "升级维护时不需要停止机器人"
 echo "运行的机器人数目取决于CPU"
@@ -44,7 +44,7 @@ cd ${myadress}""
 pm2 list
 break
 ;;
-'启动V2')
+'重启V2')
 clear
 
 echo "您的选择是启动V2版本"
@@ -58,7 +58,7 @@ cd ${myadress}""
 
 break
 ;;
-'启动V3')
+'重启V3')
 clear
 echo "您的选择是启动V3版本"
 [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
@@ -93,7 +93,7 @@ cd ${myadress}""
 
 break
 ;;
-'启动V2V3')
+'重启V2V3')
 clear
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
 [ -e ${Yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ,需要初始化"
