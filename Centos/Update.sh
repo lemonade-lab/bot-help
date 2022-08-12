@@ -21,7 +21,9 @@ echo "注意：若更新提示清除，请勿返回，需要尝试继续更新�
 echo "注意：否则，您将直接失去它的支持！"
 echo "__________________________________________________"
 fruits1=(
- '更新'  
+ '更新' 
+ '强制更新' 
+ '重装'   
  '卸载'  
  '返回'
 )
@@ -117,6 +119,22 @@ echo "cd /"
 echo "git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git"
 echo "——————————————————————————————————————————————————"
 break
+;;
+'重装')
+clear
+[ -d /Yunzai-Bot-Help ] || echo "——————————————————————————————————————————————————"
+[ -d /Yunzai-Bot-Help ] || echo "您已成功卸载！"
+[ -d /Yunzai-Bot-Help ] || echo "若需要help的支持，可执行更新操作！"
+[ -d /Yunzai-Bot-Help ] || echo "——————————————————————————————————————————————————"
+[ -d /Yunzai-Bot-Help ] || break
+[ -d /Yunzai-Bot-Help ] && echo "——————————————————————————————————————————————————"
+[ -d /Yunzai-Bot-Help ] && echo "正在删除..."
+[ -d /Yunzai-Bot-Help ] && rm -rf /Yunzai-Bot-Help
+[ -d /Yunzai-Bot-Help ] && echo "清除成功！"
+[ -d /Yunzai-Bot-Help ] && git clone https://github.com/ningmengchongshui/Yunzai-Bot-Help.git
+[ -d /Yunzai-Bot-Help ] && echo "重装失败！"
+[ -d /Yunzai-Bot-Help ] && break
+echo "重装成功！"
 ;;
 '卸载')
 clear
