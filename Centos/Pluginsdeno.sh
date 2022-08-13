@@ -33,7 +33,8 @@ fruits5=(
 '成就帮助'
 '闲心娱乐'
 '碎月娱乐'   
-'我要修仙'
+'我要修仙'  
+'逆天改命'
 '插件安装'
 '插件删除'
 '选择更新'
@@ -291,6 +292,114 @@ fi
 echo "您已返回"
 break
 ;;
+
+
+'逆天改命')
+echo "查类：1"
+echo "纳戒：2"
+echo "装备: 3"
+read -p "任意值返回,请选择：" x
+
+if [ $x = 1 ]
+then
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
+y="xiuxian_player"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$xiuxian_player/"
+ls
+echo "改：0"
+echo "杀：1"
+read -p "选择:" z
+
+if [ $z = 0 ]
+then
+read -p "QQ:" qq
+vi $qq".json"
+fi
+
+if [ $z = 1 ]
+then
+read -p "QQ:" qq
+rm -rf $qq".json"
+fi
+
+fi
+
+
+if [ $x = 2 ]
+then
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
+y="xiuxian_najie"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$xiuxian_najie/"
+ls
+echo "改：0"
+echo "丢：1"
+read -p "选择:" z
+
+if [ $z = 0 ]
+then
+read -p "QQ:" qq
+vi $qq".json"
+fi
+
+if [ $z = 1 ]
+then
+read -p "QQ:" qq
+rm -rf $qq".json"
+fi
+
+fi
+
+
+
+if [ $x = 3 ]
+then
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
+y="xiuxian_equipment"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$xiuxian_equipment/"
+ls
+echo "改：0"
+echo "丢：1"
+read -p "选择:" z
+
+if [ $z = 0 ]
+then
+read -p "QQ:" qq
+vi $qq".json"
+fi
+
+if [ $z = 1 ]
+then
+read -p "QQ:" qq
+rm -rf $qq".json"
+fi
+
+fi
+
+cd ${myadress}""
+break
+echo "您已返回！"
+
+break
+;;
+
+
+
+
 '插件列表')
 clear
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
@@ -304,6 +413,8 @@ clear
 cd ${myadress}""
 break
 ;;
+
+
 '插件安装')
 clear
 echo "柠檬冲水：实力低微，认识不到大佬，非常抱歉！"
