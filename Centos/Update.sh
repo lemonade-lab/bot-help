@@ -51,6 +51,8 @@ clear
 [ ! -e ${Centosdemo} ] || echo "尝试更新中......"
 [ ! -e ${Centosdemo} ] || cd ${bot}""
 [ ! -e ${Centosdemo} ] || git pull
+[ ! -e ${Centosdemo} ] || cd /Yunzai-Bot-Help/Centos
+[ ! -e ${Centosdemo} ] || chmod +x *.sh
 [ ! -e ${Centosdemo} ] || echo "更新命令执行完成！"
 [ ! -e ${Centosdemo} ] || cd ${myadress}""
 [ ! -e ${Centosdemo} ] || echo "请使用下列两条命令来确保能正确执行最新版"
@@ -97,6 +99,8 @@ clear
 [ ! -e ${Centosdemo} ] || git fetch --all
 [ ! -e ${Centosdemo} ] || git reset --hard main
 [ ! -e ${Centosdemo} ] || git pull
+[ ! -e ${Centosdemo} ] || cd /Yunzai-Bot-Help/Centos
+[ ! -e ${Centosdemo} ] || chmod +x *.sh
 [ ! -e ${Centosdemo} ] || echo "更新命令执行完成！"
 [ ! -e ${Centosdemo} ] || cd ${myadress}""
 [ ! -e ${Centosdemo} ] || echo "请使用下列两条命令来确保能正确执行最新版"
