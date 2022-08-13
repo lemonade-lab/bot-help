@@ -311,6 +311,11 @@ then
 y="xiuxian_player"
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 ls
+echo "《文件编辑教程》"
+echo "按i进入修改模式"
+echo "按ESE退出修改模式"
+echo "输入:wq!并回车强制保存"
+echo "按CTRL+Z退出文件"
 echo "改：0"
 echo "杀：1"
 read -p "选择:" z
@@ -325,6 +330,12 @@ if [ $z = 1 ]
 then
 read -p "QQ:" qq
 rm -rf $qq".json"
+ls
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_najie"
+rm -rf $qq".json"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_equipment"
+rm -rf $qq".json"
+echo "执行完成！"
 fi
 
 fi
@@ -341,8 +352,12 @@ then
 y="xiuxian_najie"
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 ls
+echo "《文件编辑教程》"
+echo "按i进入修改模式"
+echo "按ESE退出修改模式"
+echo "输入:wq!并回车强制保存"
+echo "按CTRL+Z退出文件"
 echo "改：0"
-echo "丢：1"
 read -p "选择:" z
 
 if [ $z = 0 ]
@@ -351,11 +366,6 @@ read -p "QQ:" qq
 vi $qq".json"
 fi
 
-if [ $z = 1 ]
-then
-read -p "QQ:" qq
-rm -rf $qq".json"
-fi
 
 fi
 
@@ -372,8 +382,12 @@ then
 y="xiuxian_equipment"
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 ls
+echo "《文件编辑教程》"
+echo "按i进入修改模式"
+echo "按ESE退出修改模式"
+echo "输入:wq!并回车强制保存"
+echo "按CTRL+Z退出文件"
 echo "改：0"
-echo "丢：1"
 read -p "选择:" z
 
 if [ $z = 0 ]
@@ -382,11 +396,6 @@ read -p "QQ:" qq
 vi $qq".json"
 fi
 
-if [ $z = 1 ]
-then
-read -p "QQ:" qq
-rm -rf $qq".json"
-fi
 
 fi
 
