@@ -309,7 +309,7 @@ then
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 y="xiuxian_player"
-cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$xiuxian_player/"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 ls
 echo "改：0"
 echo "杀：1"
@@ -339,7 +339,7 @@ then
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 y="xiuxian_najie"
-cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$xiuxian_najie/"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 ls
 echo "改：0"
 echo "丢：1"
@@ -370,7 +370,7 @@ then
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "未安装修仙！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 y="xiuxian_equipment"
-cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$xiuxian_equipment/"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 ls
 echo "改：0"
 echo "丢：1"
