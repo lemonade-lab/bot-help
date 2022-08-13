@@ -37,6 +37,11 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 ### 6. 强制卸载   
 `rm -rf /Yunzai-Bot-Help   #卸载` 
 
+### 7. windows助手   
+在管家中下载git并安装    
+右键桌面点击git bash     
+`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`    
+
 ## 三、功能介绍
 * 一键部署基础环境与开机自启
 * 一键安装启动更新停止
@@ -57,7 +62,8 @@ Yunzai-Bot-help是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本
 * 2022年8月11日V1.0.3：采用新结构以稳定更新、优化菜单、修复错误显示   
 * 2022年8月12日V1.1.0：稳定且完善需求功能（稳定版）    
 * 2022年8月12日V1.1.1：简化代码和添加新插件（感谢大佬们开发了新功能）
-* 2022年8月13日V1.1.2：添加新插、新增菜单
+* 2022年8月13日V1.1.2：新增插件、新增菜单
+* 2022年8月13日V1.1.3：新增windows助手
 * 2022年8月13日V1.2.0：机器人多开与数据互通（测试版）
 
 ## 五、反馈与交流
