@@ -309,9 +309,7 @@ clear
 echo "柠檬冲水：实力低微，认识不到大佬，非常抱歉！"
 echo "注：该功能需插件作者授权！"
 echo "注：不做推广使用，仅限作者个人使用"
-echo "公告：在此诚找有空写js插件的大佬！"
-echo "公告：在此诚找能合作的朋友！"
-echo "公告：如有意，联系企鹅1715713638，谢谢！"
+echo "群：558505956"
 read -p "任意值返回：" x
 if [ $x = 2 ]
 then 
@@ -400,6 +398,7 @@ echo "更新成就V2：22"
 echo "更新成就V3：23"
 echo "更新闲心V3：33"
 echo "更新修仙V3：43"
+echo "更新碎月V3：53"
 echo "更新插件：0"
 echo "任意值返回！"
 read -p "请选择：" y
@@ -478,6 +477,20 @@ then
 [ -d ${Yunzai33}"/plugins" ] || clear
 [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
 [ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || clear
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || echo " 已安装修仙！"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || cd ${Yunzai33}"/plugins/suiyue"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || git pull
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || break
+cd ${myadress}""
+echo "执行出错啦！"
+fi
+if [ $y = 53 ]
+then
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin"
@@ -501,7 +514,8 @@ echo "回滚图鉴V3：13"
 echo "回滚成就V2：22"
 echo "回滚成就V3：23"
 echo "回滚闲心V3：33"
-echo "回滚修仙V3：43"
+echo "回滚碎月V3：43"
+echo "回滚修仙V3：53"
 echo "回滚插件：0"
 echo "任意值返回！"
 read -p "请选择：" y
@@ -576,6 +590,20 @@ cd ${myadress}""
 echo "执行出错啦！"
 fi 
 if [ $y = 43 ]
+then
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || clear
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || echo " 已安装碎月！"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || cd ${Yunzai33}"/plugins/suiyue"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || git revert
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || break
+cd ${myadress}""
+echo "执行出错啦！"
+fi
+if [ $y = 53 ]
 then
 [ -d ${Yunzai33}"/plugins" ] || clear
 [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
