@@ -40,7 +40,7 @@ echo "提示：您选择了返回！"
 break
 ;;
 
-'帮助管理')
+'help修改')
 clear
 echo "请把V2文件放至同一目录的help/v2文件夹！"
 echo "请把V3文件放至同一目录的help/v3文件夹！"
@@ -49,11 +49,16 @@ echo "11 )下载喵喵help图片"
 echo "12 )上传喵喵help图片"
 echo "21 )下载喵喵help样式"
 echo "22 )上传喵喵help样式"
-read -p "choice：" x
+read -p "back：0，choice：" x
+
+if [ $x = 0 ]
+then
+break
+fi
+
 if [ $x = 11 ]
 then
 read -p "版本：" y
-fi
 read -p "ip：" ip
 scp root@$ip:/home/lighthouse/YunzaiV$y/Yunzai-Bot/plugins/miao-plugin/resources/common/theme/main-01.png /help/v$y/main-01.png
 fi
@@ -84,16 +89,24 @@ fi
 break
 ;;
 
-'V2插件管理')
+'插件管理')
 clear
 echo "请把文件放至同一目录的plugins文件夹！"
 echo "请把文件放至同一目录！"
 echo "1 )上传所有插件"
 echo "2 )单独上传插件"
-read -p "choice：" x
+read -p "back：0，choice：" x
+if [ $x = 0 ]
+then
+break
+fi
 if [ $x = 1 ]
 then
-read -p "版本：" y
+read -p "back：0，版本：" y
+if [ $y = 0 ]
+then
+break
+fi
 if [ $y = 2 ]
 then
 file="lib"
@@ -102,12 +115,20 @@ if [ $y = 3 ]
 then
 file="plugins"
 fi
-read -p "ip：" ip
+read -p "back：0，ip：" ip
+if [ $ip = 0 ]
+then
+break
+fi
 scp plugins/* root@$ip:/home/lighthouse/YunzaiV$y/Yunzai-Bot/$file/example
 fi
 if [ $x = 2 ]
 then
-read -p "版本：" x
+read -p "back：0，版本：" x
+if [ $x = 0 ]
+then
+break
+fi
 if [ $x = 2 ]
 then
 file="lib"
@@ -116,8 +137,16 @@ if [ $x = 3 ]
 then
 file="plugins"
 fi
-read -p "ip：" ip
-read -p "插件命：" name 
+read -p "back：0，ip：" ip
+if [ $ip = 0 ]
+then
+break
+fi
+read -p "back：0，插件名：" name 
+if [ $name = 0 ]
+then
+break
+fi
 scp plugins/$name root@$ip:/home/lighthouse/YunzaiV$x/Yunzai-Bot/$file/example
 fi
 echo "提示：您选择了返回！"
@@ -129,18 +158,29 @@ clear
 echo "请把文件放至同一目录的voice文件夹！"
 echo "派蒙文件名 paimeng.zip"
 echo "角色文件名 china.zip"
-echo "提示：按任意值将返回！"
 echo "1 )上传派蒙"
 echo "2 )上传角色"
-read -p "choice：" x
+read -p "back：0，choice：" x
+if [ $x = 0 ]
+then
+break
+fi
 if [ $x = 1 ]
 then
-read -p "ip：" ip
+read -p "back：0，ip：" ip
+if [ $ip = 0 ]
+then
+break
+fi
 scp voice/paimeng.zip root@$ip:/Yunzai-Bot-Help/Centos/Allfile/vioce/paimeng
 fi
 if [ $x = 2 ]
 then
-read -p "ip：" ip
+read -p "back：0，ip：" ip
+if [ $ip = 0 ]
+then
+break
+fi
 scp voice/china.zip root@$ip:/Yunzai-Bot-Help/Centos/Allfile/vioce/china
 fi
 break
@@ -153,12 +193,28 @@ echo "提示：输入*代表当下所有文件"
 echo "地址案例：/home/lighthouse/YunzaiV3/Yunzai-Bot"
 echo "地址案例：/home/lighthouse/YunzaiV2/Yunzai-Bot"
 echo "1 )上传"
-read -p "choice：" x
+read -p "back：0，choice：" x
+if [ $x = 0 ]
+then
+break
+fi
 if [ $x = 1 ]
 then
-read -p "filename：" filename
-read -p "ip：" ip
-read -p "adress：" adress
+read -p "back：0，filename：" filename
+if [ $x = 0 ]
+then
+break
+fi
+read -p "back：0，ip：" ip
+if [ $x = 0 ]
+then
+break
+fi
+read -p "back：0，adress：" adress
+if [ $x = 0 ]
+then
+break
+fi
 scp $filename root@$ip:$adress
 fi
 break
