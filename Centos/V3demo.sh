@@ -17,12 +17,12 @@ Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
 while true; 
 do
-echo "__________________________________________________"
-echo "欢迎使用《Yunzai-Bot-V3》安装"
-echo "作者：bilibili柠檬冲水UP"
-echo "提示：严格按顺序安装"
-echo "2022年8月13日V1.1.2"
-echo "__________________________________________________"
+echo "________________________________________"
+echo "_______欢迎使用《Yunzai-Bot-V3》安装"
+echo "_______作者：bilibili柠檬冲水UP"
+echo "_______提示：严格按顺序安装"
+echo "_______2022年8月13日V1.1.3"
+echo "______________________"
 fruits4=(
     '安装BotV3' 
     '安装miaoV3' 
