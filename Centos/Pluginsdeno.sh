@@ -23,6 +23,7 @@ echo "__________________________________________________"
 echo "欢迎使用《Yunzai-Bot-Plugins》帮助"
 echo "作者：bilibili柠檬冲水UP"
 echo "提示：未加载的，请先加载依赖"
+echo "提示：V3插件都需要重启Bot"
 echo "2022年8月13日V1.1.2"
 echo "__________________________________________________"
 fruits5=(
@@ -31,7 +32,8 @@ fruits5=(
 '逍遥图鉴' 
 '成就帮助'
 '闲心娱乐'
-'我要修仙'  
+'碎月娱乐'   
+'我要修仙'
 '插件安装'
 '插件删除'
 '选择更新'
@@ -209,13 +211,50 @@ then
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || cd ${Yunzai33}""
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || rm -rf ${Yunzai33}"/plugins/xianxin-plugin"
 clear
-
 echo "命令已执行！"
 cd ${myadress}""
 fi
 echo "您已返回"
 break
 ;;
+'碎月娱乐')
+echo "放入V3碎月：3"
+echo "卸载V3碎月：30"
+echo "任意输入返回"
+read -p "请选择：" y
+if [ $y = 3 ]
+then
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || clear
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || echo " 已安装闲心！"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || break
+clear
+cd ${Yunzai33}""
+git clone https://gitee.com/Acceleratorsky/suiyue.git ./plugins/suiyue/
+echo "命令已执行！"
+cd ${myadress}""
+fi
+if [ $y = 30 ]
+then
+[ -d ${Yunzai33}"/plugins" ] || clear
+[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
+[ -d ${Yunzai33}"/plugins/suiyue" ] || clear
+[ -d ${Yunzai33}"/plugins/suiyue" ] || echo "未安装闲心！"
+[ -d ${Yunzai33}"/plugins/suiyue" ] || break
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || cd ${Yunzai33}""
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || rm -rf ${Yunzai33}"/plugins/suiyue"
+clear
+echo "命令已执行！"
+cd ${myadress}""
+fi
+echo "您已返回"
+break
+;;
+
+
 '我要修仙')
 echo "放入V3修仙：3"
 echo "卸载V3修仙：30"

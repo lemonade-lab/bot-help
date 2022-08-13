@@ -38,7 +38,7 @@ fruits1=(
 select version1 in ${fruits1[@]}
 do
 case $version1 in
-'状态')
+'状态pm2')
 clear
 cd ${myadress}""
 pm2 list
@@ -88,7 +88,7 @@ clear
 [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
 [ ! -d ${Yunzai33}"/plugins" ] || cd ${Yunzai33}""
 [ ! -d ${Yunzai33}"/plugins" ] || npm stop
-[ ! -d ${Yunzai33}"/plugins" ] ||  echo "V3关闭"
+[ ! -d ${Yunzai33}"/plugins" ] || echo "V3关闭"
 cd ${myadress}""
 
 break

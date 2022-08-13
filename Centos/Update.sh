@@ -128,6 +128,9 @@ break
 ;;
 '重装')
 clear
+read -p "任意值返回，输入0确定卸载："
+if [ $x = 0 ]
+then
 sudo su root
 rm -rf ${bot}""
 cd /
@@ -135,6 +138,9 @@ git "https://github.com/ningmengchongshui"${bot}".git"
 cd /Yunzai-Bot-Help/Centos
 chmod +x *.sh
 echo "重装命令已执行！"
+fi
+echo "您取消了卸载！"
+break
 ;;
 '卸载')
 clear
@@ -146,6 +152,7 @@ rm -rf ${bot}""
 echo "卸载成功！"
 fi
 echo "您取消了卸载！"
+break
 ;;
 '返回')
 clear
@@ -153,7 +160,7 @@ exit
 ;;
 *)
 clear
-echo "#您的选择不存在，请重新选择！"
+echo "########您的选择不存在，请重新选择！"
 break
 esac
 done

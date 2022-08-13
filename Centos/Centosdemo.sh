@@ -18,10 +18,11 @@ fruits0=(
  '进程管理' 
  '插件管理' 
  '功能扩展'
- '环境管理' 
+ '环境管理'
  '系统语言' 
  'Help控制'
  'Help帮助'
+ 'Bot多开' 
  'SSH管理' 
  '防火墙' 
  '系统重启'
@@ -112,6 +113,14 @@ echo "cd filename/filename  #打开该目录下的目录"
 echo "vi filename  #编辑文件"
 echo "————————————————————————"
 break
+;;
+'Bot多开')
+clear
+cd "${Centos}"
+echo "该功能涉及服务器性能与pm2"
+echo "不会使用的朋友慎入"
+echo "目前功能处于调试中"
+exit
 ;;
 '防火墙')
 clear
