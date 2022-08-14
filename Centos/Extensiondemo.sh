@@ -45,7 +45,8 @@ echo "放入V2涩涩：2"
 echo "卸载V2涩涩：20"
 echo "任意输入返回"
 read -p "请选择：" y
-if [ $Y = 2 ]
+
+if [ $y = 2 ]
 then
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
 [ -d ${Yunzai22}"/plugins" ] || break
@@ -56,7 +57,8 @@ git clone https://gitee.com/litefen/fen-plugin.git   ./plugins/fen-plugin/
 echo "命令已执行！"
 cd ${myadress}""
 fi
-if [ $Y = 20 ]
+
+if [ $y = 20 ]
 then
 [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
 [ -d ${Yunzai33}"/plugins" ] || break
@@ -67,6 +69,7 @@ then
 echo "命令已执行！"
 cd ${myadress}""
 fi
+
 echo "您已返回"
 break
 ;;

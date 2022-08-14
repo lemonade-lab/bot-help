@@ -11,7 +11,6 @@ echo "_____提示：请先安装环境后使用____________"
 echo "_____2022年8月13日V1.1.3________________"
 echo "________________________________________"
 fruits0=(
- '安装环境'
  '管理V2'  
  '管理V3' 
  '机器控制'
@@ -31,12 +30,6 @@ fruits0=(
 select version0 in ${fruits0[@]}
 do
 case $version0 in
-'安装环境')
-clear
-cd "${Centos}"
-./Nodejsdemo.sh
-break
-;;
 '管理V2')
 clear
 cd "${Centos}"
@@ -117,6 +110,7 @@ break
 'Bot多开')
 clear
 cd "${Centos}"
+./Nodejsdemo.sh
 echo "该功能涉及服务器性能与pm2"
 echo "不会使用的朋友慎入"
 echo "目前功能处于调试中"

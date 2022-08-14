@@ -21,10 +21,10 @@ echo "______作者：bilibili柠檬冲水UP__________"
 echo "______2022年8月13日V1.1.3_______________"
 echo "________________________________________"
 fruits2=(
-'Nodejs版本' 
-'Redis版本' 
-'Git版本' 
-'Redis控制' 
+'查看Nodejs' 
+'查看Redis' 
+'查看看Git' 
+'控制Redis' 
 '安装zip'
 '安装sshpass'
 '返回'
@@ -32,22 +32,22 @@ fruits2=(
 select version2 in ${fruits2[@]}
 do
 case $version2 in
-'Nodejs版本')
+'查看Nodejs')
 clear
 node -v
 break
 ;;
-'Redis版本')
+'查看Redis')
 clear
 redis-server -v
 break
 ;;
-'Git版本')
+'查看看Git')
 clear
 git version
 break
 ;;
-'Redis控制')
+'控制Redis')
 clear
 echo "Redis进程：21"
 echo "杀死Redis：210"

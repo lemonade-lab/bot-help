@@ -46,21 +46,33 @@ if [ $? = 0 ] ; then
 echo "Node.js已安装"
 else
 echo "Node.js未安装"
-break
+echo "正在安装node.js，请耐心等待..."
+yum install -y dnf
+dnf module install nodejs:16 -y
+echo "nodejs安装成功！"
 fi
 redis-server -v
 if [ $? = 0 ] ; then
 echo "Redis已安装"
 else
 echo "Redis未安装"
-break
+echo "正在安装redis，请耐心等待..."
+yum -y install git
+yum -y install redis
+echo "redis安装成功！"
+redis-server --daemonize yes
+echo "redis启动！"
+systemctl enable redis.service
+echo "设置开机自启！"
 fi
 git version
 if [ $? = 0 ] ; then
 echo "Git已安装"
 else
 echo "Git未安装"
-break
+echo "正在安装Git，请耐心等待..."
+yum -y install git
+echo "Git安装成功！"
 fi
 echo "正在安装Yunzai-BotV3，请耐心等待..."
 [ -d ${myadress}"/YunzaiV3" ] || echo "初始化目录失败，退出执行！"

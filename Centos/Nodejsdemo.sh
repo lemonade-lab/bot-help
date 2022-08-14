@@ -16,54 +16,27 @@ PS3="请选择: "
 while true; 
 do
 echo "_______________________________________"
-echo "_____一键《环境》部署___________________"
+echo "_____《Bot多开器》___________________"
 echo "_____作者：bilibili柠檬冲水UP___________"
 echo "_____2022年8月13日V1.1.3________________"
 echo "________________________________________"
 fruits1=(
- '确定'  
+ '安装'  
+ '卸载'  
  '返回'
 )
 select version1 in ${fruits1[@]}
 do
 case $version1 in
-'确定')
+'安装')
 clear
-node -v
-if [ $? = 0 ]
-then
-echo "已安装node.js"
-else
-echo "正在安装node.js，请耐心等待..."
-yum install -y dnf
-dnf module install nodejs:16 -y
-echo "nodejs安装成功！"
-fi
-redis-server -v
-if [ $? = 0 ]
-then
-echo "已安装redis"
-redis-server --daemonize yes
-echo "redis启动！"
-else
-echo "正在安装redis，请耐心等待..."
-yum -y install git
-yum -y install redis
-echo "redis安装成功！"
-redis-server --daemonize yes
-echo "redis启动！"
-systemctl enable redis.service
-echo "设置开机自启！"
-fi
-git version
-if [ $? = 0 ]
-then
-echo "Git已安装"
-else
-echo "正在安装Git，请耐心等待..."
-yum -y install git
-echo "Git安装成功！"
-fi
+read -p "选择开启数目:" x
+
+break
+;;
+'卸载')
+clear
+
 break
 ;;
 '返回')
