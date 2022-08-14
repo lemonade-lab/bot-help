@@ -37,8 +37,8 @@
 `git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`    
 
 ## 三、功能介绍
-* 一键部署环境和安装Yunzai-bot&miao=plugin     
-* 一键启动/重启/更新/停止   
+* 一键部署环境和安装Yunzai-bot&miao-plugin     
+* 一键（启动/重启/更新/停止）   
 * 插件管理（合集）      
 * 运行管理（数据互通&机器人多开）    
 * 功能扩展（美化与娱乐性）   
