@@ -597,12 +597,14 @@ then
 [ -d ${Yunzai33}"/plugins" ] || clear
 [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
 [ -d ${Yunzai33}"/plugins" ] || break
-[ ! -d ${Yunzai33}"/plugins/suiyue" ] || clear
-[ ! -d ${Yunzai33}"/plugins/suiyue" ] || echo " 已安装修仙！"
-[ ! -d ${Yunzai33}"/plugins/suiyue" ] || cd ${Yunzai33}"/plugins/suiyue"
-[ ! -d ${Yunzai33}"/plugins/suiyue" ] || git pull
-[ ! -d ${Yunzai33}"/plugins/suiyue" ] || echo "命令已执行"
-[ ! -d ${Yunzai33}"/plugins/suiyue" ] || break
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || clear
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo " 已安装修仙！"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || git fetch --all
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || git reset --hard main
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || git pull
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "命令已执行"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 cd ${myadress}""
 echo "执行出错啦！"
 fi
