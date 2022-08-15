@@ -31,11 +31,11 @@ fruits5=(
 '插件列表'
 '逍遥图鉴' 
 '成就帮助'
-'闲心娱乐'
-'碎月娱乐'   
-'我要修仙'  
-'逆天改命'
-'插件安装'
+'闲心娱乐V3'
+'碎月娱乐V3'   
+'我要修仙V3'  
+'逆天改命V3'
+'自由安装'
 '插件删除'
 '选择更新'
 '回滚更新'
@@ -182,7 +182,7 @@ fi
 echo "您已返回"
 break
 ;;
-'闲心娱乐')
+'闲心娱乐V3')
 echo "放入V3闲心：3"
 echo "卸载V3闲心：30"
 echo "任意输入返回"
@@ -218,7 +218,7 @@ fi
 echo "您已返回"
 break
 ;;
-'碎月娱乐')
+'碎月娱乐V3')
 echo "放入V3碎月：3"
 echo "卸载V3碎月：30"
 echo "任意输入返回"
@@ -256,7 +256,7 @@ break
 ;;
 
 
-'我要修仙')
+'我要修仙V3')
 echo "放入V3修仙：3"
 echo "卸载V3修仙：30"
 echo "任意输入返回"
@@ -294,7 +294,7 @@ break
 ;;
 
 
-'逆天改命')
+'逆天改命V3')
 echo "道友：1"
 echo "纳戒：2"
 echo "装备: 3"
@@ -424,58 +424,86 @@ break
 ;;
 
 
-'插件安装')
+'自由安装')
 clear
-echo "柠檬冲水：实力低微，认识不到大佬，非常抱歉！"
-echo "注：该功能需插件作者授权！"
-echo "注：不做推广使用，仅限作者个人使用"
-echo "群：558505956"
-read -p "任意值返回：" x
+echo "注：js类型插件需插件作者授权！"
+echo "注：不做推广使用！"
+echo "注：本功能可手动安装自己想要的plugin插件"
+echo "注：您只需按需求输入即可"
+echo "交流反馈群：558505956"
+read -p "任意值返回，选择版本：" x
 if [ $x = 2 ]
 then 
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
 [ -d ${Yunzai22}"/plugins" ] || break
-[ -d /Yunzai-Bot-Help/Allfile/plugins/ ] || echo "Yunzai-Bot-Help版本错误！"
-[ -d /Yunzai-Bot-Help/Allfile/plugins/ ] || break
-cd /Yunzai-Bot-Help/Allfile/plugins
-[ -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || git clone https://gitee.com/nada-plugin/nada-plugin.git
-[ -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || echo "功能失效了，请等待更新！"
-[ -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || break
-[ ! -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || echo "已加载插件！"
-cd /Yunzai-Bot-Help/Allfile/plugins/nada-plugin
-cp v2plugin.zip ${Yunzai22}"/lib/example"
-[ -e ${Yunzai22}"/lib/example/v2plugin.zip" ] || echo "版本插件不存在"
-[ -e ${Yunzai22}"/lib/example/v2plugin.zip" ] || break
-cd ${Yunzai22}"/lib/example"
-unzip v2plugin.zip
+echo "1 )安装"
+echo "2 )更新"
+echo "3 )卸载"
+echo "0 )返回"
+read -p "选择：" choice
+if [ $choice = 1 ]
+echo "链接例子：https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git"
+read -p "插件链接：" y
+cd ${Yunzai22}"/plugins"
+git clone $y
+fi
+if [ $choice = 2 ]
+cd ${Yunzai22}"/plugins"
+ls
+read -p "选择更新：" y
+cd $y""
+git pull
+fi
+if [ $choice = 3 ]
+cd ${Yunzai22}"/plugins"
+ls
+read -p "选择卸载：" y
+rm -rf $y""
+fi
 echo "操作已执行"
 cd ${myadress}
 break
 fi
+
 if [ $x = 3 ]
-then 
+then
 [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
 [ -d ${Yunzai33}"/plugins" ] || break
-[ -d /Yunzai-Bot-Help/Allfile/plugins/ ] || echo "Yunzai-Bot-Help版本错误！"
-[ -d /Yunzai-Bot-Help/Allfile/plugins/ ] || break
-cd /Yunzai-Bot-Help/Allfile/plugins
-[ -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || git clone https://gitee.com/nada-plugin/nada-plugin.git
-[ -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || echo "功能失效了，请等待更新！"
-[ -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || break
-[ ! -e /Yunzai-Bot-Help/Allfile/plugins/nada-plugin/README.md ] || echo "已加载插件！"
-cd /Yunzai-Bot-Help/Allfile/plugins/nada-plugin
-cp v3plugin.zip ${Yunzai33}"/plugins/example"
-[ -e ${Yunzai33}"/plugins/example/v3plugin.zip" ] || echo "版本插件不存在"
-[ -e ${Yunzai33}"/plugins/example/v3plugin.zip" ] || break
-cd ${Yunzai33}"/plugins/example"
-unzip v3plugin.zip
+echo "1 )安装"
+echo "2 )更新"
+echo "3 )卸载"
+echo "0 )返回"
+read -p "选择：" choice
+if [ $choice = 1 ]
+echo "链接例子：https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git"
+read -p "插件链接：" y
+cd ${Yunzai33}"/plugins"
+git clone $y
+fi
+if [ $choice = 2 ]
+cd ${Yunzai33}"/plugins"
+ls
+read -p "选择更新：" y
+cd $y""
+git pull
+fi
+if [ $choice = 3 ]
+cd ${Yunzai33}"/plugins"
+ls
+read -p "选择卸载：" y
+rm -rf $y""
+fi
 echo "操作已执行"
 cd ${myadress}""
 break
 fi
+
 echo "您已返回！"
 break
 ;;
+
+
+
 '插件删除')
 clear
 read -p "选择版本:" x

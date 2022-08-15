@@ -31,7 +31,6 @@ case $version1 in
 '安装')
 clear
 read -p "选择开启数目:" x
-
 break
 ;;
 '卸载')

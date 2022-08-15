@@ -45,7 +45,6 @@ echo "放入V2涩涩：2"
 echo "卸载V2涩涩：20"
 echo "任意输入返回"
 read -p "请选择：" y
-
 if [ $y = 2 ]
 then
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
@@ -57,7 +56,6 @@ git clone https://gitee.com/litefen/fen-plugin.git   ./plugins/fen-plugin/
 echo "命令已执行！"
 cd ${myadress}""
 fi
-
 if [ $y = 20 ]
 then
 [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
@@ -197,8 +195,9 @@ cd ${Yunzai33}"/resources/voice"
 [ -e /Yunzai-Bot-Help/Allfile/voice/paimeng/paimeng.zip ] || echo "Yunzai-Bot-help出错"
 [ -e /Yunzai-Bot-Help/Allfile/voice/paimeng/paimeng.zip ] || break
 cd /Yunzai-Bot-Help/Allfile/voice/paimeng
-cd /Yunzai-Bot-Help/Allfile/voice
-cp paimeng/* ""${Yunzai33}"/resources/voice/paimeng"
+cp paimeng.zip ""${Yunzai33}"/resources/voice/paimeng"
+cd ${Yunzai33}"/resources/voice/paimeng
+unzip paimeng.zip
 [ -e ${Yunzai33}"/plugins/example/派蒙语音v3.js" ] || echo "未安装插件(派梦语音v3.js)"
 [ -e ${Yunzai33}"/plugins/example/派蒙语音v3.js" ] || echo "错误语音的js会导致报错！"
 echo "配置已执行"
