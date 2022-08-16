@@ -24,7 +24,7 @@ echo "_____欢迎使用《Yunzai-Bot-Plugins》帮助"
 echo "_____作者：bilibili柠檬冲水UP___________"
 echo "_____提示：未加载的，请先加载依赖________"
 echo "_____提示：V3插件都需要重启Bot___________"
-echo "_____2022年8月13日V1.1.3________________"
+echo "_____2022年8月16日V1.1.4________________"
 echo "________________________________________"
 fruits5=(
 '加载依赖' 
@@ -432,6 +432,7 @@ echo "注：本功能可手动安装自己想要的plugin插件"
 echo "注：您只需按需求输入即可"
 echo "交流反馈群：558505956"
 read -p "任意值返回，选择版本：" x
+
 if [ $x = 2 ]
 then 
 [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
@@ -441,28 +442,33 @@ echo "2 )更新"
 echo "3 )卸载"
 echo "0 )返回"
 read -p "选择：" choice
+
 if [ $choice = 1 ]
+then
 echo "链接例子：https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git"
 read -p "插件链接：" y
 cd ${Yunzai22}"/plugins"
 git clone $y
 fi
+
 if [ $choice = 2 ]
+then
 cd ${Yunzai22}"/plugins"
 ls
 read -p "选择更新：" y
 cd $y""
 git pull
 fi
+
 if [ $choice = 3 ]
+then
 cd ${Yunzai22}"/plugins"
 ls
 read -p "选择卸载：" y
 rm -rf $y""
 fi
+
 echo "操作已执行"
-cd ${myadress}
-break
 fi
 
 if [ $x = 3 ]
@@ -474,30 +480,37 @@ echo "2 )更新"
 echo "3 )卸载"
 echo "0 )返回"
 read -p "选择：" choice
+
 if [ $choice = 1 ]
+then
 echo "链接例子：https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git"
 read -p "插件链接：" y
 cd ${Yunzai33}"/plugins"
 git clone $y
 fi
+
 if [ $choice = 2 ]
+then
 cd ${Yunzai33}"/plugins"
 ls
 read -p "选择更新：" y
 cd $y""
 git pull
 fi
+
 if [ $choice = 3 ]
+then
 cd ${Yunzai33}"/plugins"
 ls
 read -p "选择卸载：" y
 rm -rf $y""
 fi
+
 echo "操作已执行"
-cd ${myadress}""
-break
 fi
 
+
+cd ${myadress}""
 echo "您已返回！"
 break
 ;;
