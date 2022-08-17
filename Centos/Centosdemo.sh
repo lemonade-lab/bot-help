@@ -91,9 +91,9 @@ break
 ;;
 'Help帮助')
 clear
-echo "《help是手册与常用指令》"
+echo "《help手册与常用指令》"
 echo "————————————————————————"
-echo "1.加权限"
+echo "1.没有权限-加权限"
 echo "cd ${Centos}"
 echo "chmod +x *.sh"
 echo "————————————————————————"

@@ -196,9 +196,9 @@ cd ${Yunzai33}"/resources/voice"
 [ -e /Yunzai-Bot-Help/Allfile/voice/paimeng/paimeng.zip ] || break
 cd /Yunzai-Bot-Help/Allfile/voice/paimeng
 cp paimeng.zip ""${Yunzai33}"/resources/voice/paimeng"
-cd ${Yunzai33}"/resources/voice/paimeng
+cd ${Yunzai33}"/resources/voice/paimeng"
 unzip paimeng.zip
-[ -e ${Yunzai33}"/plugins/example/派蒙语音v3.js" ] || echo "未安装插件(派梦语音v3.js)"
+[ -e ${Yunzai33}"/plugins/example/派蒙语音v3.js" ] || echo "未安装插件-派梦语音v3.js"
 [ -e ${Yunzai33}"/plugins/example/派蒙语音v3.js" ] || echo "错误语音的js会导致报错！"
 echo "配置已执行"
 cd ${myadress}""
