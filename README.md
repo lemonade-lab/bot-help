@@ -68,8 +68,8 @@
 
 >修仙管理   
 >>支持安装、更新     
->>支持修改数据、一键删档     
->>[xiuxian-emulator-plugin]([https://b23.tv/uTguBSj](https://gitee.com/waterfeet/xiuxian-emulator-plugin))  
+>>支持修改数据、一键删档      
+>>[xiuxian-emulator-plugin](https://gitee.com/waterfeet/xiuxian-emulator-plugin)     
 
 ## 七、特别赞助   
 快点击[爱发点](https://afdian.net/@ningmengchongshui)为作者发电吧     
