@@ -1,6 +1,6 @@
 # Yunzai-Bot-Help
 
-是Linux-Centos系统一键安装Yunzai-BotV2&V3脚本   
+是Linux/Centos系统一键安装Yunzai-BotV2&V3脚本   
 
 ## 一、项目介绍   
 一键安装Yunzai-Bot&miao-plugin自动部署环境   
@@ -67,13 +67,10 @@
 ## 六、联动插件   
 
 >修仙管理   
->>支持安装、更新     
->>支持修改数据、一键删档      
->>[xiuxian-emulator-plugin](https://gitee.com/waterfeet/xiuxian-emulator-plugin)     
+>>支持安装、更新、卸载     
+>>支持存档修改、一键删档      
+>>[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)  
 
 ## 七、特别赞助   
-快点击[爱发点](https://afdian.net/@ningmengchongshui)为作者发电吧     
-【以下排名不分先后】    
-`TEIO`   
-`乐`      
-`唯`   
+>>[柠檬冲水](https://afdian.net/@ningmengchongshui)
+>>[水脚脚](https://afdian.net/@waterfeet)  
