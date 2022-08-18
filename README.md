@@ -65,12 +65,11 @@
 柠檬冲水：无进群要求，欢迎各路朋友加入哈   
 
 ## 六、联动插件   
-
->修仙管理   
->>支持安装、更新、卸载     
->>支持存档修改、一键删档      
->>[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)  
+修仙管理   
+>支持安装、更新、卸载     
+>支持存档修改、一键删档      
+>[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)  
 
 ## 七、特别赞助   
->>脚本作者：[柠檬冲水](https://afdian.net/@ningmengchongshui)       
->>插件作者：[水脚脚](https://afdian.net/@waterfeet)  
+>脚本作者：[柠檬冲水](https://afdian.net/@ningmengchongshui)       
+>插件作者：[水脚脚](https://afdian.net/@waterfeet)  
