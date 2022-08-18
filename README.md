@@ -72,5 +72,4 @@
 >>[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)  
 
 ## 七、特别赞助   
->>[柠檬冲水](https://afdian.net/@ningmengchongshui)
->>[水脚脚](https://afdian.net/@waterfeet)  
+>>[柠檬冲水](https://afdian.net/@ningmengchongshui)[水脚脚](https://afdian.net/@waterfeet)  
