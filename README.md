@@ -1,6 +1,6 @@
 # Yunzai-Bot-Help    
 
-xWindows&Linux-Centos/Ubuntux一键安装Yunzai-BotV2&V3图形化系统  
+Windows&Linux-Centos/Ubuntux一键安装Yunzai-BotV2&V3图形化系统  
 
 ## 一、项目介绍     
 一键安装Yunzai-Bot&miao-plugin自动部署环境   
