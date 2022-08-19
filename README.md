@@ -12,22 +12,20 @@
 >>代码复制需装Git     
 
 ### （一）Centos版
- 
-#### 1. 获取Root权限  
-`sudo su root #权限`   
-
-#### 2. 安装git    
+  
+#### 1. 安装git    
+`sudo su root #获取root权限`     
 `yum -y install git #安装Git`   
 
-#### 3. 拷贝项目    
+#### 2. 拷贝项目    
 `cd /         #移步最外层目录`   
 `git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`   
 
-#### 4. 赋予权限    
+#### 3. 赋予权限    
 `cd /Yunzai-Bot-Help/Centos         #移步代码目录`   
 `chmod +x *.sh   #赋予权限`  
 
-#### 5. 运行代码   
+#### 4. 运行代码   
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`     
 
 
