@@ -5,7 +5,7 @@ Centos="/Yunzai-Bot-Help/Centos"
 readonly Centos
 while true
 do
-OPTION=$(whiptail --title "Yunzai-Bot-Help" --menu "上下选择\n左右确定\n$yourv" 15 30 5 \
+OPTION=$(whiptail --title "Yunzai-Bot-Help" --menu "##上下选择左右确定取消##\n$yourv" 15 50 5 \
 "1" "使用帮助" \
 "2" "V2管理" \
 "3" "V3管理"  \
