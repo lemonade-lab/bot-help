@@ -8,7 +8,7 @@
 
 ## 二、安裝教程   
 >温聲提示    
->>手机能装Centos     
+>>手机能装Centos/Ubuntu     
 >>代码复制需装Git     
 
 ### （一）Centos版
@@ -28,26 +28,19 @@
 `chmod +x *.sh   #赋予权限`  
 
 #### 5. 运行代码   
-`sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`    
+`sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`     
 
-#### 6. 强制卸载   
-`rm -rf /Yunzai-Bot-Help   #卸载` 
 
-#### 7. windows助手   
-在管家中下载git并安装    
-右键桌面点击git bash     
+### （二）Ubuntu版    
+
+#### 1. 安装git    
+`apt install git`    
+
+#### 2. 拷贝项目    
+`cd /         #移步最外层目录`     
 `git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`    
 
-### （一）Ubuntu版
-
-#### 1. 安装git
-`apt install git`
-
-#### 2. 拷贝项目
-`cd /         #移步最外层目录`   
-`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`  
-
-#### 3.Ubuntu项目测试中...
+#### 3.Ubuntu测试中...
 
 ## 三、功能介绍
 * 一键部署环境和安装Yunzai-bot&miao-plugin     
@@ -71,6 +64,7 @@
 * 2022/8/13 V1.1.2：新增插件、新增菜单
 * 2022/8/13 V1.1.3：新增windows助手与优化安装
 * 2022/8/16 V1.1.4：细节修复-稳定版
+* 2022/8/21 V1.2.0：Bot-多开-测试中...
 
 ## 五、反馈与交流   
 
