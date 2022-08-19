@@ -54,6 +54,7 @@ fi
 ##redis
 redis-server -v
 if [ $? != 0 ]
+then
 yum -y install git
 yum -y install redis
 redis-server --daemonize yes
@@ -63,6 +64,7 @@ fi
 ##git
 git version
 if [ $? != 0 ]
+then
 yum -y install git
 fi
 
