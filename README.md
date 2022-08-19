@@ -1,6 +1,6 @@
 # Yunzai-Bot-Help
 
-是Linux/Centos系统一键安装Yunzai-BotV2&V3脚本   
+是Linux-Centos/Ubuntu系统一键安装Yunzai-BotV2&V3脚本   
 
 ## 一、项目介绍   
 一键安装Yunzai-Bot&miao-plugin自动部署环境   
@@ -10,31 +10,44 @@
 >温聲提示    
 >>手机能装Centos     
 >>代码复制需装Git     
+
+### （一）Centos版
  
-### 1. 获取Root权限  
+#### 1. 获取Root权限  
 `sudo su root #权限`   
 
-### 2. 安装git    
+#### 2. 安装git    
 `yum -y install git #安装Git`   
 
-### 3. 拷贝项目    
+#### 3. 拷贝项目    
 `cd /         #移步最外层目录`   
 `git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`   
 
-### 4. 赋予权限    
+#### 4. 赋予权限    
 `cd /Yunzai-Bot-Help/Centos         #移步代码目录`   
 `chmod +x *.sh   #赋予权限`  
 
-### 5. 运行代码   
+#### 5. 运行代码   
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`    
 
-### 6. 强制卸载   
+#### 6. 强制卸载   
 `rm -rf /Yunzai-Bot-Help   #卸载` 
 
-### 7. windows助手   
+#### 7. windows助手   
 在管家中下载git并安装    
 右键桌面点击git bash     
 `git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`    
+
+### （一）Ubuntu版
+
+#### 1. 安装git
+`apt install git`
+
+#### 2. 拷贝项目
+`cd /         #移步最外层目录`   
+`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`  
+
+#### 3.Ubuntu项目测试中...
 
 ## 三、功能介绍
 * 一键部署环境和安装Yunzai-bot&miao-plugin     
