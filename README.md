@@ -1,6 +1,6 @@
 # Yunzai-Bot-Help    
 
-是Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3脚本    
+是Windows&Linux-Centos/Ubuntu系统一键安装Yunzai-BotV2&V3图形化系统  
 
 ## 一、项目介绍     
 一键安装Yunzai-Bot&miao-plugin自动部署环境   
