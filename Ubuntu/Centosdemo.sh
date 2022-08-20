@@ -1,5 +1,5 @@
 #!/bin/bash
-yourv=$(cat /etc/redhat-release)
+yourv=$(cat /etc/issue)
 readonly yourv
 Centos="/Yunzai-Bot-Help/Centos"
 readonly Centos
