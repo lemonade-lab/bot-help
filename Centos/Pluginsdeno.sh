@@ -32,7 +32,7 @@ funv3(){
 while true
 do
 OPTION=$(whiptail \
---title "Yunzai-Bot-Help" \
+--title "《Yunzai-Bot-HelpV1.1.5》" \
 --menu "$yourv\n$news" \
 15 50 3 \
 "1" "依赖" \
