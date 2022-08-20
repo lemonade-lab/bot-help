@@ -6,7 +6,7 @@ readonly Centos
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-Help》" \
+--title "《Yunzai-Bot-HelpV1.1.5》" \
 --menu "$yourv\n##上下选择##左右确定取消" \
 15 50 3 \
 "1" "HELP设置" \
