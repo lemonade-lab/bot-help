@@ -1,5 +1,5 @@
 #!/bin/bash
-yourv=$(cat /etc/redhat-release)
+yourv=$(cat /etc/issue)
 readonly yourv
 news="#初次使用先加载依赖"
 
