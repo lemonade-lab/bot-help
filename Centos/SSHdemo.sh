@@ -1,44 +1,46 @@
 #!/bin/bash
+yourv=$(cat /etc/redhat-release)
+readonly yourv
+
+news=""
+
 myadress="/home/lighthouse"
 readonly myadress
-[ -d /home ] || echo "警告：不是Centos系统！退出执行！"
-[ -d /home ] || exit
+
 cd /home
-[ -d ${myadress} ] || mkdir  lighthouse
-[ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}""
-[ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
-[ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
-[ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}""
-PS3="请选择: "
-while true;
+[ -d ${myadress} ] || mkdir lighthouse
+cd "${myadress}"
+[ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
+[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
+[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+cd "${myadress}"
+
+
+while true
 do
-echo "________________________________________"
-echo "_______《SSH协议管理》___________________"
-echo "_______作者：bilibili柠檬冲水UP__________"
-echo "_______提示：系统语言修改完成后重启生效___"
-echo "_______2022年8月16日V1.1.4______________"
-echo "________________________________________"
-fruits2=(
-'SSH初始化' 
-'编辑说明' 
-'编辑SSH' 
-'重启SSH' 
-'SSH状态' 
-'返回'
-)
-select version2 in ${fruits2[@]}
-do
-case $version2 in
-'SSH初始化')
-clear
+OPTION=$(whiptail \
+--title "Yunzai-Bot-Help" \
+--menu "$yourv\n$news" \
+15 50 3 \
+"1" "SSH初始化" \
+"2" "编辑说明" \
+"3" "编辑SSH" \
+"4" "重启SSH" \
+"5" "SSH状态" \
+3>&1 1>&2 2>&3)
+
+x=$?
+if [ $x = 0 ]
+then
+    if [ $OPTION = 1 ]
+    then
+cd "${myadress}"
 yum -y remove openssh-server
 yum -y install openssh-server
-break
-;;
-'编辑说明')
+news="#已执行！"
+    fi
+    if [ $OPTION = 2 ]
+    then
 echo "《文件编辑教程》"
 echo "按i进入修改模式"
 echo "按ESE退出修改模式"
@@ -54,34 +56,25 @@ echo "————————————————————————�
 echo "改#PubkeyAuthentication yes为"
 echo "PubkeyAuthentication yes"
 echo "——————————————————————————————"
-cd ${myadress}""
-break
-;;
-'编辑SSH')
-clear
+read -p "回车并继续..."
+    fi
+    if [ $OPTION = 3 ]
+    then
 vi /etc/ssh/sshd_config
-break
-;;
-'重启SSH')
-clear
+    fi
+    if [ $OPTION = 4 ]
+    then
 systemctl restart sshd.service
-cd ${myadress}""
-break
-;;
-'SSH状态')
-clear
+cd "${myadress}"
+read -p "回车并继续..."
+    fi
+    if [ $OPTION = 5 ]
+    then
 systemctl status sshd.service
-cd ${myadress}""
-break
-;;
-'返回')
-clear
-exit
-;;
-*)
-clear
-echo "#您的选择不存在，请重新选择！"
-break
-esac
-done
+cd "${myadress}"
+read -p "回车并继续..."
+    fi
+else
+    exit
+fi
 done
