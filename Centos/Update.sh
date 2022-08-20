@@ -22,7 +22,7 @@ cd "${myadress}"
 while true
 do
 OPTION=$(whiptail \
---title "Yunzai-Bot-Help" \
+--title "《Yunzai-Bot-HelpV1.1.5》" \
 --menu "$yourv\n$news" \
 15 50 3 \
 "1" "更新" \
@@ -46,15 +46,16 @@ then
 [ ! -e ${Centosdemo} ] || git pull
 [ ! -e ${Centosdemo} ] || news="#执行完成，请重新授权！"
 [ ! -e ${Centosdemo} ] || cd "${myadress}"
+read -p "回车并继续..." y
      fi
      
 #卸载
      if [ $OPTION = 2 ]
      then
 Choise=$(whiptail \
---title "《Yunzai-Bot-Help》" \
+--title "《Yunzai-Bot-HelpV1.1.5》" \
 --menu "$yourv\n##上下选择##左右确定取消" \
-15 50 5 \
+15 50 3 \
 "1" "卸载" \
 3>&1 1>&2 2>&3)
 y=$?
