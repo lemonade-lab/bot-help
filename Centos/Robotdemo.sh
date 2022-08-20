@@ -42,6 +42,7 @@ then
      then
 cd "${myadress}"
 pm2 list
+read -p "回车并继续..." c
      fi
      if [ $OPTION = 2 ]
      then
@@ -50,7 +51,8 @@ pm2 list
 [ ! -e ${Yunzai22}"/config/config.js" ] || cd ${Yunzai22}""
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm stop
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm start
-[ ! -e ${Yunzai22}"/config/config.js" ] || echo "V2后台运行"
+[ ! -e ${Yunzai22}"/config/config.js" ] || news="#V2后台运行"
+read -p "回车并继续..." c
      fi
      if [ $OPTION = 3 ]
      then
@@ -60,6 +62,7 @@ pm2 list
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm stop
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm start
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#V3后台运行"
+read -p "回车并继续..." c
      fi
      if [ $OPTION = 4 ]
      then
@@ -67,6 +70,7 @@ pm2 list
 [ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins" ] || npm stop
 [ ! -d ${Yunzai22}"/plugins" ] || news="#V2关闭"
+read -p "回车并继续..." c
      fi
      if [ $OPTION = 5 ]
      then
@@ -74,6 +78,7 @@ pm2 list
 [ ! -d ${Yunzai33}"/plugins" ] || cd ${Yunzai33}""
 [ ! -d ${Yunzai33}"/plugins" ] || npm stop
 [ ! -d ${Yunzai33}"/plugins" ] || news="#V3关闭"
+read -p "回车并继续..." c
      fi
      if [ $OPTION = 6 ]
      then
@@ -89,6 +94,7 @@ pm2 list
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm stop
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm start
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#V3后台运行"
+read -p "回车并继续..." c
      fi
      if [ $OPTION = 7 ]
      then
@@ -100,6 +106,7 @@ pm2 list
 [ ! -d ${Yunzai33}"/plugins" ] || cd ${Yunzai33}""
 [ ! -d ${Yunzai33}"/plugins" ] || npm stop
 [ ! -d ${Yunzai33}"/plugins" ] || news="#V3关闭"
+read -p "回车并继续..." c
      fi
 else
     exit
