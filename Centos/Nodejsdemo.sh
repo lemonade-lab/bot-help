@@ -1,55 +1,38 @@
 #!/bin/bash
+yourv=$(cat /etc/redhat-release)
+readonly yourv
+
+news=""
+
 myadress="/home/lighthouse"
 readonly myadress
-[ -d /home ] || echo "警告：不是Centos系统！退出执行！"
-[ -d /home ] || exit
+
 cd /home
-[ -d ${myadress} ] || mkdir  lighthouse
-[ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}""
-[ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
-[ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
-[ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}""
-PS3="请选择: "
-while true; 
+[ -d ${myadress} ] || mkdir lighthouse
+cd "${myadress}"
+[ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
+[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
+[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+cd "${myadress}"
+
+
+while true
 do
-echo "_______________________________________"
-echo "_____《Bot多开器》___________________"
-echo "_____作者：bilibili柠檬冲水UP___________"
-echo "_____2022年8月16日V1.1.4________________"
-echo "________________________________________"
-fruits1=(
- '安装'  
- '卸载'  
- '返回'
-)
-select version1 in ${fruits1[@]}
-do
-case $version1 in
-'安装')
-clear
-read -p "选择开启数目:" x
-break
-;;
-'卸载')
-clear
+OPTION=$(whiptail \
+--title "Yunzai-Bot-Help" \
+--menu "$yourv\n$news" \
+15 50 3 \
+"1" "改功能暂未开放" \
+3>&1 1>&2 2>&3)
 
-break
-;;
-'返回')
-clear
-exit
-;;
-*)
-clear
-echo "#您的选择不存在，请重新选择！"
-break
-esac
+x=$?
+if [ $x = 0 ]
+then
+    if [ $OPTION = 1 ]
+    then
+news="#已执行！"
+    fi
+else
+    exit
+fi
 done
-done
-
-
-
-
