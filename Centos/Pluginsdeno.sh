@@ -48,7 +48,7 @@ if [ $x = 0 ]
 then
 
 #依赖
-    if [ $OPTION = 1]
+    if [ $OPTION = 1 ]
     then
 npm i yaml   #依赖 
 npm i superagent   #依赖
@@ -56,7 +56,7 @@ npm i promise-retry  #依赖
     fi
 
 #安装
-    if [ $OPTION = 2]
+    if [ $OPTION = 2 ]
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
@@ -222,7 +222,7 @@ fi
     fi
     
 #回滚
-    if [ $OPTION = 4]
+    if [ $OPTION = 4 ]
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
@@ -306,7 +306,7 @@ fi
     fi
     
 #卸载
-    if [ $OPTION = 5]
+    if [ $OPTION = 5 ]
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
@@ -383,7 +383,7 @@ fi
     fi
     
 #修仙
-    if [ $OPTION = 6]
+    if [ $OPTION = 6 ]
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
