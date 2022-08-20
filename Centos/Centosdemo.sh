@@ -8,7 +8,7 @@ do
 OPTION=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
 --menu "$yourv\n##上下选择##左右确定取消" \
-15 50 5 \
+15 50 3 \
 "1" "HELP设置" \
 "2" "V2管理" \
 "3" "V3管理"  \
