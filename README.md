@@ -2,11 +2,9 @@
 
 Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统  
 
-## 一、项目介绍     
-一键安装Yunzai-Bot&miao-plugin自动部署环境   
->温聲提示     
->>手机能装Centos/Ubuntu       
->>代码复制需装Git       
+## 一、温聲提示    
+>手机能装Centos/Ubuntu       
+>代码复制需装Git       
 
 ## 二、安裝教程    
 
@@ -41,10 +39,10 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 `cd /Yunzai-Bot-Help/Ubuntu   #移步代码目录`    
 `chmod +x *.sh   #赋予权限`    
 
-#### 4. 运行代码（测试中...）   
+#### 4. 运行代码|测试中...   
 `bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`      
 
-### （二）Windows版（测试中...）    
+### （三）Windows版|测试中...    
 
 ## 三、功能介绍
 * 一键部署环境和安装Yunzai-bot&miao-plugin     
@@ -64,11 +62,13 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 * 2022/8/10 V1.0.2：新增pm2运行管理、补充新插件、优化菜单    
 * 2022/8/11 V1.0.3：采用新结构以稳定更新、优化菜单、修复错误显示   
 * 2022/8/12 V1.1.0：稳定且完善需求功能（稳定版）    
-* 2022/812 V1.1.1：简化代码和添加新插件（感谢大佬们开发了新功能）
+* 2022/8/12 V1.1.1：简化代码和添加新插件（感谢大佬们开发了新功能）
 * 2022/8/13 V1.1.2：新增插件、新增菜单
 * 2022/8/13 V1.1.3：新增windows助手与优化安装
 * 2022/8/16 V1.1.4：细节修复-稳定版
-* 2022/8/21 V1.1.5：图形化升级中...
+* 2022/8/20 V1.1.5：初步实现图形化展示，删除Windows助手
+* 2022/8/21 V1.2.0：Ubuntu-测试中...
+* 2022/8/21 V1.2.0：Windows-测试中...
 * 2022/8/21 V1.2.0：Bot-多开-测试中...
 
 ## 五、反馈与交流   
