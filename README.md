@@ -28,19 +28,20 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 
 ### （二）Ubuntu版    
 
-#### 1. 安装git    
-`apt install git`    
+#### 1. 安装whiptail&git  
+`apt-get install whiptail`     
+`apt install git`      
 
 #### 2. 拷贝项目    
-`cd /         #移步最外层目录`     
-`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`     
+`cd /         #移步最外层目录`      
+`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`      
 
-#### 3. 赋予权限    
-`cd /Yunzai-Bot-Help/Ubuntu   #移步代码目录`    
-`chmod +x *.sh   #赋予权限`    
+#### 3. 赋予权限     
+`cd /Yunzai-Bot-Help/Ubuntu   #移步代码目录`     
+`chmod +x *.sh   #赋予权限`     
 
-#### 4. 运行代码|测试中...   
-`bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`      
+#### 4. 运行代码|测试中...    
+`bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`       
 
 ### （三）Windows版|测试中...    
 
