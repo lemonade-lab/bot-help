@@ -1,5 +1,5 @@
 #!/bin/bash
-yourv=$(cat /etc/redhat-release)
+yourv=$(cat /etc/issue)
 readonly yourv
 news=""
 
