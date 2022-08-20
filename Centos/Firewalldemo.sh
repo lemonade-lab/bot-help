@@ -1,62 +1,55 @@
 #!/bin/bash
+yourv=$(cat /etc/redhat-release)
+readonly yourv
+
+news=""
+
 myadress="/home/lighthouse"
 readonly myadress
-[ -d /home ] || echo "警告：不是Centos系统！退出执行！"
-[ -d /home ] || exit
+
 cd /home
-[ -d ${myadress} ] || mkdir  lighthouse
-[ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}""
-[ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
-[ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
-[ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}""
-PS3="请选择: "
-while true; 
+[ -d ${myadress} ] || mkdir lighthouse
+cd "${myadress}"
+[ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
+[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
+[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+cd "${myadress}"
+
+
+while true
 do
-echo "_______________________________________"
-echo "_____一键《防火墙管理》部署______________"
-echo "_____作者：bilibili柠檬冲水UP___________"
-echo "_____2022年8月16日V1.1.4________________"
-echo "________________________________________"
-fruits1=(
- '状态'
- '端口'
- '重启'
- '返回'
-)
-select version1 in ${fruits1[@]}
-do
-case $version1 in
-'状态')
-clear
+OPTION=$(whiptail \
+--title "Yunzai-Bot-Help" \
+--menu "$yourv\n$news" \
+15 50 3 \
+"1" "状态" \
+"2" "端口" \
+"3" "重启" \
+3>&1 1>&2 2>&3)
+
+x=$?
+if [ $x = 0 ]
+then
+    if [ $OPTION = 1 ]
+    then
 firewall-cmd --state
-break
-;;
-'端口')
-clear
+read -p "回车并继续..." y
+    fi
+    if [ $OPTION = 2 ]
+    then
 systemctl start firewalld.service
 read -p "开启端口：" x
 firewall-cmd --zone=public --add-port=$x/tcp --permanent
 systemctl restart firewalld.service
 firewall-cmd --reload
-echo "命令已执行！"
-break
-;;
-'重启')
-clear
+news="#已执行！"
+    fi
+    if [ $OPTION = 3 ]
+    then
 systemctl restart firewalld.service
-break
-;;
-'返回')
-clear
-exit
-;;
-*)
-clear
-echo "#您的选择不存在，请重新选择！"
-break
-esac
-done
+read -p "回车并继续..." y
+    fi
+else
+    exit
+fi
 done
