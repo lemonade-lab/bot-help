@@ -24,7 +24,7 @@ do
 OPTION=$(whiptail \
 --title "Yunzai-Bot-Help" \
 --menu "$yourv\n$news" \
-15 50 5 \
+15 50 3 \
 "1" "更新" \
 "2" "卸载" \
 3>&1 1>&2 2>&3)
