@@ -21,7 +21,7 @@ readonly Yunzai22
 while true
 do
 OPTION=$(whiptail \
---title "Yunzai-Bot-Help" \
+--title "《Yunzai-Bot-HelpV1.1.5》" \
 --menu "$yourv\n$news" \
 15 50 3 \
 "1" "安装" \
@@ -149,9 +149,9 @@ cd ${myadress}""
     if [ $OPTION = 6 ]
     then
 Choise=$(whiptail \
---title "《Yunzai-Bot-Help》" \
+--title "《Yunzai-Bot-HelpV1.1.5》" \
 --menu "$yourv\n##上下选择##左右确定取消" \
-15 50 5 \
+15 50 3 \
 "1" "卸载" \
 3>&1 1>&2 2>&3)
 y=$?
