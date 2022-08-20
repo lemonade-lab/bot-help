@@ -1,139 +1,107 @@
 #!/bin/bash
+yourv=$(cat /etc/redhat-release)
+readonly yourv
+
+news=""
+
 myadress="/home/lighthouse"
 readonly myadress
-[ -d /home ] || echo "警告：不是Centos系统！退出执行！"
-[ -d /home ] || exit
+
 cd /home
-[ -d ${myadress} ] || mkdir  lighthouse
-[ -d ${myadress} ] || echo "初始化lighthouse目录失败！退出执行！"
-cd ${myadress}""
-[ -d ${myadress}"/YunzaiV2" ] || mkdir  YunzaiV2
-[ -d ${myadress}"/YunzaiV3" ] || mkdir  YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "初始化Yunzai目录失败！退出执行！" 
-[ -d ${myadress}"/YunzaiV3" ] || exit
-cd ${myadress}""
+[ -d ${myadress} ] || mkdir lighthouse
+cd "${myadress}"
+[ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
+[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
+[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+cd "${myadress}"
+
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
 readonly Yunzai22
 Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
-PS3="请选择: "
-while true; 
+
+while true
 do
-echo "________________________________________"
-echo "_______《后台Yunzai-Bot控制面板》________"
-echo "_______作者：bilibili柠檬冲水UP__________"
-echo "_______提示：升级维护时不需要停止机器人___"
-echo "_______提示：升级维护时不需要停止机器人___"
-echo "_______提示：运行的机器人数目取决于CPU____"
-echo "_______2022年8月16日V1.1.4______________"
-echo "________________________________________"
-fruits1=(
- '状态pm2' 
- '重启V2' 
- '重启V3'  
- '停止V2' 
- '停止V3'
- '重启V2V3'
- '停止V2V3'
- '返回'
-)
-select version1 in ${fruits1[@]}
-do
-case $version1 in
-'状态pm2')
-clear
-cd ${myadress}""
+OPTION=$(whiptail \
+--title "Yunzai-Bot-Help" \
+--menu "$yourv\n$news" \
+15 50 3 \
+"1" "运行状态" \
+"2" "启动V2" \
+"3" "启动V3" \
+"4" "停止V2" \
+"5" "停止V3" \
+"6" "启动V2V3" \
+"7" "停止V2V3" \
+3>&1 1>&2 2>&3)
+
+x=$?
+if [ $x = 0 ]
+then
+     fi [ $OPTION = 1 ]
+     then
+cd "${myadress}"
 pm2 list
-break
-;;
-'重启V2')
-clear
-
-echo "您的选择是启动V2版本"
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
-[ -e ${Yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ,需要初始化"
+     fi
+     fi [ $OPTION = 2 ]
+     then
+[ -d ${Yunzai22}"/plugins" ] || news="#未安装V2！"
+[ -e ${Yunzai22}"/config/config.js" ] || news="#您未配置机器人V2QQ,需要初始化"
 [ ! -e ${Yunzai22}"/config/config.js" ] || cd ${Yunzai22}""
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm stop
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm start
 [ ! -e ${Yunzai22}"/config/config.js" ] || echo "V2后台运行"
-cd ${myadress}""
-
-break
-;;
-'重启V3')
-clear
-echo "您的选择是启动V3版本"
-[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "您未配置机器人V3QQ"
+     fi
+     fi [ $OPTION = 3 ]
+     then
+[ -d ${Yunzai33}"/plugins" ] || news="#未安装V3！"
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#您未配置机器人V3QQ"
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || cd ${Yunzai33}""
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm stop
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm start
-[ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "V3后台运行"
-cd ${myadress}""
-
-break
-;;
-'停止V2')
-clear
-
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
+[ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#V3后台运行"
+     fi
+     fi [ $OPTION = 4 ]
+     then
+[ -d ${Yunzai22}"/plugins" ] || news="#未安装V2！"
 [ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins" ] || npm stop
-[ ! -d ${Yunzai22}"/plugins" ] ||  echo "V2关闭"
-cd ${myadress}""
-
-
-break
-;;
-'停止V3')
-clear
-[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ ! -d ${Yunzai22}"/plugins" ] || news="#V2关闭"
+     fi
+     fi [ $OPTION = 5 ]
+     then
+[ -d ${Yunzai33}"/plugins" ] || news="#未安装V3！"
 [ ! -d ${Yunzai33}"/plugins" ] || cd ${Yunzai33}""
 [ ! -d ${Yunzai33}"/plugins" ] || npm stop
-[ ! -d ${Yunzai33}"/plugins" ] || echo "V3关闭"
-cd ${myadress}""
-
-break
-;;
-'重启V2V3')
-clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
-[ -e ${Yunzai22}"/config/config.js" ] || echo "您未配置机器人V2QQ,需要初始化"
+[ ! -d ${Yunzai33}"/plugins" ] || news="#V3关闭"
+     fi
+     fi [ $OPTION = 6 ]
+     then
+[ -d ${Yunzai22}"/plugins" ] || news="#未安装V2！"
+[ -e ${Yunzai22}"/config/config.js" ] || news="#您未配置机器人V2QQ,需要初始化"
 [ ! -e ${Yunzai22}"/config/config.js" ] || cd ${Yunzai22}""
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm stop
 [ ! -e ${Yunzai22}"/config/config.js" ] || npm start
-[ ! -e ${Yunzai22}"/config/config.js" ] || echo "V2后台运行"
-[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "您未配置机器人V3QQ,需要初始化"
+[ ! -e ${Yunzai22}"/config/config.js" ] || news="#V2后台运行"
+[ -d ${Yunzai33}"/plugins" ] || news="#未安装V3！"
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#您未配置机器人V3QQ,需要初始化"
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || cd ${Yunzai33}""
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm stop
 [ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm start
-[ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "V3后台运行"
-cd ${myadress}""
-break
-;;
-'停止V2V3')
-clear
-[ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
+[ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#V3后台运行"
+     fi
+     fi [ $OPTION = 7 ]
+     then
+[ -d ${Yunzai22}"/plugins" ] || news="#未安装V2！"
 [ ! -d ${Yunzai22}"/plugins" ] || cd ${Yunzai22}""
 [ ! -d ${Yunzai22}"/plugins" ] || npm stop
-[ ! -d ${Yunzai22}"/plugins" ] ||  echo "V2关闭"
-[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
+[ ! -d ${Yunzai22}"/plugins" ] || news="#V2关闭"
+[ -d ${Yunzai33}"/plugins" ] || news="#未安装V3！"
 [ ! -d ${Yunzai33}"/plugins" ] || cd ${Yunzai33}""
 [ ! -d ${Yunzai33}"/plugins" ] || npm stop
-[ ! -d ${Yunzai33}"/plugins" ] ||  echo "V3关闭"
-cd ${myadress}""
-
-break
-;;
-'返回')
-clear
-exit
-;;
-*)
-clear
-echo "#您的选择不存在，请重新选择！"
-break
-esac
-done
+[ ! -d ${Yunzai33}"/plugins" ] || news="#V3关闭"
+     fi
+else
+    exit
+fi
 done
