@@ -1,5 +1,5 @@
 #!/bin/bash
-yourv=$(cat /etc/redhat-release)
+yourv=$(cat /etc/issue)
 readonly yourv
 
 news=""
@@ -42,30 +42,30 @@ then
 
 ##初始
 cd ${myadress}
+apt-get update -y
+apt-get upgrade -y
 
 ##node
 node -v
 if [ $? != 0 ]
 then
-yum install -y dnf
-dnf module install nodejs:16 -y
+curl -sL https://deb.nodesource.com/setup_17.x | bash
+apt-get install -y nodejs
 fi
 
 ##redis
-redis-server -v
+redis-cli --version
 if [ $? != 0 ]
 then
-yum -y install git
-yum -y install redis
+apt install redis
 redis-server --daemonize yes
-systemctl enable redis.service
 fi
 
 ##git
 git version
 if [ $? != 0 ]
 then
-yum -y install git
+apt install git -y
 fi
 
 ##yunzai
@@ -89,12 +89,8 @@ cd "${Yunzai22}"
 npm install
 
 ##安装Chromium
-yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 -y 
-yum install libdrm libgbm libxshmfence -y
-yum install nss -y
-yum update nss -y
-yum groupinstall fonts -y
-node ./node_modules/puppeteer/install.js
+apt install chromium-browser -y
+apt install -y --force-yes --no-install-recommends fonts-wqy-microhei
 news="#安装成功"
 
 ##返回
