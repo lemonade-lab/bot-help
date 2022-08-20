@@ -1,8 +1,8 @@
 #!/bin/bash
 yourv=$(cat /etc/issue)
 readonly yourv
-Centos="/Yunzai-Bot-Help/Centos"
-readonly Centos
+Ubuntu="/Yunzai-Bot-Help/Ubuntu"
+readonly Ubuntu
 while true
 do
 OPTION=$(whiptail \
@@ -28,57 +28,57 @@ if [ $x = 0 ]
 then
     if [ $OPTION = 1 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./Update.sh
     fi
     if [ $OPTION = 2 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./V2demo.sh
     fi
     if [ $OPTION = 3 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./V3demo.sh
     fi
     if [ $OPTION = 4 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./Robotdemo.sh
     fi
     if [ $OPTION = 5 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./Pm2demo.sh
     fi
     if [ $OPTION = 6 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./Pluginsdeno.sh
     fi
     if [ $OPTION = 7 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./Extensiondemo.sh
     fi
     if [ $OPTION = 8 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./Environmentdemo.sh
     fi
     if [ $OPTION = 9 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./Systemlanguagedemo.sh
     fi
     if [ $OPTION = 10 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./SSHdemo.sh
     fi
     if [ $OPTION = 11 ]
     then
-    cd "${Centos}"
+    cd "${Ubuntu}"
     ./Firewalldemo.sh
     fi
     
