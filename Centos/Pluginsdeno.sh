@@ -16,6 +16,7 @@ cd "${myadress}"
 
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
 readonly Yunzai22
+
 funv2(){
    [ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
    [ -d ${Yunzai22}"/plugins" ] || break
@@ -23,6 +24,7 @@ funv2(){
 
 Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
+
 funv3(){
    [ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"
    [ -d ${Yunzai33}"/plugins" ] || break
@@ -443,7 +445,8 @@ if [ $y = 0 ]
 then
      if [ $Choise = 1 ]
      then
-     funv3
+[ -d ${Yunzai33}"/plugins" ] || news="#未安装V3！"
+[ -d ${Yunzai33}"/plugins" ] || break
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_player"
