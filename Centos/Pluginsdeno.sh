@@ -70,7 +70,6 @@ Choise=$(whiptail \
 "4" "我要修仙" \
 "5" "碎月娱乐" \
 "6" "闲心娱乐" \
-"7" "小雪娱乐" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
@@ -135,16 +134,7 @@ git clone https://gitee.com/xianxincoder/xianxin-plugin.git ./plugins/xianxin-pl
 news="#已执行！"
 read -p "回车并继续..." c
      fi
-     if [ $Choise = 7 ]
-     then
-     funv3
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || news="#已安装！"
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
-cd "${Yunzai33}"
-git clone https://gitee.com/XueWerY/xiaoxue-plugin.git ./plugins/xiaoxue-plugin/
-news="#已执行！"
-read -p "回车并继续..." c
-     fi
+     
 fi
     fi
     
@@ -161,7 +151,6 @@ Choise=$(whiptail \
 "4" "我要修仙" \
 "5" "碎月娱乐" \
 "6" "闲心娱乐" \
-"7" "小雪娱乐" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
@@ -232,17 +221,7 @@ read -p "回车并继续..." c
 news="#请先安装！"
 read -p "回车并继续..." c
      fi
-     if [ $Choise = 7 ]
-     then
-     funv3
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || cd "${Yunzai33}/plugins/xiaoxue-plugin"
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || git pull
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || news="#已执行！"
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || read -p "回车并继续..." c
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
-news="#请先安装！"
-read -p "回车并继续..." c
-     fi
+     
 fi
     fi
     
@@ -259,7 +238,6 @@ Choise=$(whiptail \
 "4" "我要修仙" \
 "5" "碎月娱乐" \
 "6" "闲心娱乐" \
-"7" "小雪娱乐" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
@@ -330,17 +308,7 @@ read -p "回车并继续..." c
 news="#请先安装！"
 read -p "回车并继续..." c
      fi
-     if [ $Choise = 7 ]
-     then
-     funv3
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || cd "${Yunzai33}/plugins/xiaoxue-plugin"
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || git revert
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || news="#已执行！"
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || read -p "回车并继续..." c
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
-news="#请先安装！"
-read -p "回车并继续..." c
-     fi
+     
 fi
     fi
     
@@ -357,7 +325,6 @@ Choise=$(whiptail \
 "4" "我要修仙" \
 "5" "碎月娱乐" \
 "6" "闲心娱乐" \
-"7" "小雪娱乐" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
@@ -416,15 +383,7 @@ read -p "回车并继续..." c
 news="#请先安装！"
 read -p "回车并继续..." c
      fi
-     if [ $Choise = 7 ]
-     then
-     funv3
-[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || rm -rf "${Yunzai33}/plugins/xiaoxue-plugin"
-[ -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || news="#已执行！"
-[ -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
-news="#请先安装！"
-read -p "回车并继续..." c
-     fi
+    
 fi
     fi
     
