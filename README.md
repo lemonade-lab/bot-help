@@ -28,8 +28,9 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 ### （二）Ubuntu版    
 
 #### 1. 安装whiptail&git  
+`apt update` 
 `apt-get install whiptail`     
-`apt install git`      
+`apt-get install git`      
 
 #### 2. 拷贝项目    
 `cd /         #移步最外层目录`      
