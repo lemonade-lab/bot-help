@@ -1,7 +1,9 @@
 #!/bin/bash
+
 yourv=$(cat /etc/redhat-release)
 readonly yourv
-news=""
+
+news="#若卡顿过久可退出重新执行"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -99,6 +101,7 @@ news="#安装成功"
 
 ##返回
 cd "${myadress}"
+read -p "回车并继续..." y
     fi
     
 #启动
@@ -120,7 +123,7 @@ node app.js
 [ -e ${Yunzai33}"/config/config/group.yaml" ] || news="#您未配置"
 [ -e ${Yunzai33}"/config/config/group.yaml" ] || break
 vi ${Yunzai33}"/config/config/group.yaml"
-cd ${myadress}""
+cd "${myadress}"
 news="#修改成功！"
     fi
 
