@@ -1,7 +1,9 @@
 #!/bin/bash
+
 yourv=$(cat /etc/issue)
 readonly yourv
-news=""
+
+news="#若卡顿过久可退出重新执行"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -49,30 +51,36 @@ apt-get upgrade -y
 node -v
 if [ $? != 0 ]
 then
-curl -sL https://deb.nodesource.com/setup_17.x | bash
-apt-get install -y nodejs
+apt-get install nodejs
+apt-get install npm
+npm install -g n
+n stable
+PATH="$PATH"
+node -v
+npm -v
 fi
 
 ##redis
-redis-server -v
+redis-cli --version
 if [ $? != 0 ]
 then
 apt install redis
-redis-server --daemonize yes
+redis-cli --version
 fi
 
 ##git
-git version
+git --version
 if [ $? != 0 ]
 then
-apt install git -y
+apt install git
+git --version
 fi
 
 ##yunzai
 [ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
 [ -d ${myadress}"/YunzaiV3" ] || break
 cd ${myadress}"/YunzaiV3"
-[ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/yoimiya-kokomi/Yunzai-Bot
+[ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
 [ -d ${Yunzai33}"/plugins" ] || rm -rf ${Yunzai33} ""
 [ -d ${Yunzai33}"/plugins" ] || news="#安装失败" 
 [ -d ${Yunzai33}"/plugins" ] || break
@@ -87,14 +95,15 @@ cd "${Yunzai33}"
 ##依赖
 cd "${Yunzai33}"
 npm install
+npm install image-size
 
 ##安装Chromium
 apt install chromium-browser -y
-apt install -y --force-yes --no-install-recommends fonts-wqy-microhei
 news="#安装成功"
 
 ##返回
 cd "${myadress}"
+read -p "回车并继续..." y
     fi
     
 #启动
@@ -116,7 +125,7 @@ node app.js
 [ -e ${Yunzai33}"/config/config/group.yaml" ] || news="#您未配置"
 [ -e ${Yunzai33}"/config/config/group.yaml" ] || break
 vi ${Yunzai33}"/config/config/group.yaml"
-cd ${myadress}""
+cd "${myadress}"
 news="#修改成功！"
     fi
 
@@ -168,7 +177,7 @@ Choise=$(whiptail \
 --title "《Yunzai-Bot-HelpV1.1.5》" \
 --menu "$yourv\n##上下选择##左右确定取消" \
 15 50 3 \
-"1" "再次确认卸载" \
+"1" "卸载" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
@@ -177,10 +186,8 @@ then
 [ -d ${Yunzai33}"/plugins" ] || break
 rm -rf "${Yunzai33}"
 [ -e ${Yunzai33} ] || news="#卸载成功！"
-[ -e ${Yunzai33} ] || read -p "回车并继续..." z
 [ -e ${Yunzai33} ] || break
 news="#卸载失败！"
-read -p "回车并继续..." z
 fi
     fi
     
