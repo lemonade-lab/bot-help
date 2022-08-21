@@ -22,9 +22,12 @@ OPTION=$(whiptail \
 --title "《Yunzai-Bot-HelpV1.1.5》" \
 --menu "$yourv\n$news" \
 15 50 3 \
-"1" "查看版本" \
-"2" "Redis进程" \
-"3" "zip&sshpass" \
+"1" "查看环境" \
+"2" "Redis" \
+"3" "zip" \
+"4" "sshpass" \
+"5" "Python" \
+"6" "ffmpeg" \
 3>&1 1>&2 2>&3)
 
 x=$?
@@ -47,15 +50,38 @@ read -p "回车并继续..." y
     fi
     if [ $OPTION = 3 ]
     then
-#zip
 yum install -y unzip zip
-#ssh
+    fi
+    if [ $OPTION = 4 ]
+    then
 cd "${myadress}"
 wget https://nchc.dl.sourceforge.net/project/sshpass/sshpass/1.06/sshpass-1.06.tar
 tar  zxf sshpass-1.06.tar.gz
 ./configure  --prefix=/usr/local/
 make && make install
 rm -rf sshpass-1.06.tar.gz
+read -p "回车并继续..." y
+    fi
+    if [ $OPTION = 5 ]
+    then
+wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
+tar -zxvf Python-3.9.0.tgz
+rm -rf Python-3.9.0.tgz
+cd Python-3.9.0
+./configure prefix=/usr/local/python3
+make && make install
+ln -s /usr/local/python3/bin/python3.9 /usr/bin/python3
+ln -s /usr/local/python3/bin/pip3.9 /usr/bin/pip3
+read -p "回车并继续..." y
+    fi
+    if [ $OPTION = 6 ]
+    then
+dnf install epel-release
+yum config-manager –set-enabled PowerTools
+yum -y install yum-utils
+yum-config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
+dnf install ffmpeg
+ffmpeg -version
 read -p "回车并继续..." y
     fi
 else
