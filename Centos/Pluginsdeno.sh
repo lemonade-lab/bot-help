@@ -125,6 +125,7 @@ news="#已执行！"
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
 cd ${Yunzai33}""
 git clone https://gitee.com/xianxincoder/xianxin-plugin.git ./plugins/xianxin-plugin/
+news="#已执行！"
      fi
      if [ $Choise = 7 ]
      then
@@ -133,6 +134,7 @@ git clone https://gitee.com/xianxincoder/xianxin-plugin.git ./plugins/xianxin-pl
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
 cd ${Yunzai33}""
 git clone https://gitee.com/XueWerY/xiaoxue-plugin.git ./plugins/xiaoxue-plugin/
+news="#已执行！"
      fi
 fi
     fi
@@ -387,8 +389,8 @@ fi
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
---menu "$yourv\n##上下选择##左右确定取消" \
-15 50 5 \
+--menu "$yourv\n$news" \
+15 50 3 \
 "1" "改存档" \
 "2" "删存档" \
 "3" "改纳戒" \
@@ -402,8 +404,7 @@ then
      funv3
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
-y="xiuxian_player"
-cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_player"
 ls
 read -p "QQ:" qq
 vi $qq".json"
@@ -413,12 +414,10 @@ vi $qq".json"
      funv3
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
-y="xiuxian_player"
-cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_player"
 ls
 read -p "QQ:" qq
 rm -rf $qq".json"
-ls
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_najie"
 rm -rf $qq".json"
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_equipment"
@@ -429,8 +428,7 @@ rm -rf $qq".json"
      funv3
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
-y="xiuxian_najie"
-cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_najie"
 ls
 read -p "QQ:" qq
 vi $qq".json"
@@ -440,8 +438,7 @@ vi $qq".json"
      funv3
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
-y="xiuxian_equipment"
-cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
+cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_equipment"
 ls
 read -p "QQ:" qq
 vi $qq".json"
