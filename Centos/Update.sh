@@ -1,7 +1,9 @@
 #!/bin/bash
+
 yourv=$(cat /etc/redhat-release)
 readonly yourv
-news=""
+
+news="默认强制更新..."
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -54,7 +56,7 @@ read -p "回车并继续..." y
      then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n##上下选择##左右确定取消" \
+--menu "$yourv\n$news" \
 15 50 3 \
 "1" "卸载" \
 3>&1 1>&2 2>&3)
@@ -62,7 +64,8 @@ y=$?
 if [ $y = 0 ]
 then
 sudo su root
-rm -rf ${bot}""
+rm -rf "${bot}"
+read -p "回车并继续..." y
 fi
      fi
 else
