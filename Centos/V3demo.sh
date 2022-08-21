@@ -74,7 +74,7 @@ fi
 [ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
 [ -d ${myadress}"/YunzaiV3" ] || break
 cd ${myadress}"/YunzaiV3"
-[ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/yoimiya-kokomi/Yunzai-Bot
+[ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
 [ -d ${Yunzai33}"/plugins" ] || rm -rf ${Yunzai33} ""
 [ -d ${Yunzai33}"/plugins" ] || news="#安装失败" 
 [ -d ${Yunzai33}"/plugins" ] || break
