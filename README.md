@@ -2,12 +2,13 @@
 # Yunzai-Bot-Help  
 Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统    
 ## 一、温聲提示    
->手机能装Centos/Ubuntu       
+>手机能装Centos/Ubuntu  
+>Centos8.2最奔放
+>Centos9无yun需自行安装     
 >代码复制需装Git       
 
-## 二、安裝教程    
-
-### （一）Centos版   
+## 二、安裝教程     
+### （一）Centos版    
   
 #### 1. 安装git    
 `sudo su root #获取root权限`     
@@ -25,9 +26,17 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`     
 
 
-### （二）Ubuntu版    
-
-#### 1. 安装whiptail&git  
+### （二）Ubuntu版      
+>打开Termux    
+>pkg install proot git python -y      
+>git clone https://gitee.com/Le-niao/termux-install-linux.git      
+>安装Ubuntu     
+>cd termux-install-linux      
+>python termux-linux-install.py      
+>运行Ubuntu     
+>cd ~/Termux-Linux/Ubuntu       
+>./start-ubuntu.sh      
+#### 1. 安装whiptail&git      
 `apt update` 
 `apt-get install whiptail`     
 `apt-get install git`      
