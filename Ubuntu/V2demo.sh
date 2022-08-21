@@ -44,13 +44,19 @@ then
 cd ${myadress}
 apt-get update -y
 apt-get upgrade -y
+apt install curl -y
 
 ##node
 node -v
 if [ $? != 0 ]
 then
-curl -sL https://deb.nodesource.com/setup_17.x | bash
-apt-get install -y nodejs
+apt-get install nodejs
+apt-get install npm
+npm install -g n
+n stable
+PATH="$PATH"
+node -v
+npm -v
 fi
 
 ##redis
