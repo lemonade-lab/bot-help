@@ -130,7 +130,7 @@ read -p "回车并继续..." c
      funv3
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || news="#已安装！"
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
-cd ${Yunzai33}""
+cd "${Yunzai33}"
 git clone https://gitee.com/xianxincoder/xianxin-plugin.git ./plugins/xianxin-plugin/
 news="#已执行！"
 read -p "回车并继续..." c
@@ -140,7 +140,7 @@ read -p "回车并继续..." c
      funv3
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || news="#已安装！"
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
-cd ${Yunzai33}""
+cd "${Yunzai33}"
 git clone https://gitee.com/XueWerY/xiaoxue-plugin.git ./plugins/xiaoxue-plugin/
 news="#已执行！"
 read -p "回车并继续..." c
