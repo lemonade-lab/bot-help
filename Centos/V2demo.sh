@@ -1,8 +1,9 @@
 #!/bin/bash
+
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-news=""
+news="#若安装过程中卡顿可退出重新执行"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -94,11 +95,14 @@ yum install libdrm libgbm libxshmfence -y
 yum install nss -y
 yum update nss -y
 yum groupinstall fonts -y
+
+##再此确认Chromium
 node ./node_modules/puppeteer/install.js
 news="#安装成功"
 
 ##返回
 cd "${myadress}"
+read -p "回车并继续..." y
     fi
     
 #启动
@@ -120,7 +124,7 @@ node app.js
 vi "${Yunzai22}/config/config.js"
     fi
 
-#启动
+#删除
     if [ $OPTION = 4 ]
     then
 [ -d ${Yunzai22}"/plugins" ] || news="#请先安装"
@@ -142,7 +146,7 @@ git pull
 cd ${Yunzai22}"/plugins/miao-plugin"
 git pull
 news="#更新完成"
-cd ${myadress}""
+cd "${myadress}"
     fi
     
 #卸载
