@@ -446,6 +446,7 @@ then
      if [ $Choise = 1 ]
      then
      funv3
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_player"
 ls
 read -p "QQ:" qq
@@ -455,6 +456,7 @@ vi $qq".json"
      if [ $Choise = 2 ]
      then
      funv3
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_player"
 ls
 read -p "QQ:" qq
@@ -468,6 +470,7 @@ rm -rf $qq".json"
      if [ $Choise = 3 ]
      then
      funv3
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_najie"
 ls
 read -p "QQ:" qq
@@ -477,6 +480,7 @@ vi $qq".json"
      if [ $Choise = 4 ]
      then
      funv3
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_equipment"
 ls
 read -p "QQ:" qq
