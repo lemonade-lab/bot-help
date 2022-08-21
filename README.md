@@ -1,7 +1,7 @@
-# Yunzai-Bot-Help    
-
-Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统  
-
+![IMG_0](https://user-images.githubusercontent.com/110824794/185775123-936ea4cf-4e2d-434a-ab6c-ca11ad06006f.PNG)
+![IMG_1](https://user-images.githubusercontent.com/110824794/185775125-069c2327-d968-49de-9c3c-0dc0433cb06e.PNG)
+# Yunzai-Bot-Help  
+Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统    
 ## 一、温聲提示    
 >手机能装Centos/Ubuntu       
 >代码复制需装Git       
