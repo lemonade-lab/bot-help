@@ -53,7 +53,9 @@ if [ $? != 0 ]
 then
 apt-get install nodejs
 apt-get install npm
-npm install -g n
+npm install npm -g@8.1.2
+npm -v
+npm install n -g@16.13.1
 n stable
 PATH="$PATH"
 node -v
