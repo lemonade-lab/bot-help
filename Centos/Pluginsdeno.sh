@@ -60,7 +60,7 @@ npm i promise-retry  #依赖
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
---menu "$yourv\n##上下选择##左右确定取消" \
+--menu "$yourv\n$news" \
 15 50 5 \
 "1" "逍遥图鉴" \
 "2" "成就帮助" \
@@ -81,6 +81,7 @@ then
 cd "${Yunzai33}"
 git clone https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin.git ./plugins/xiaoyao-cvs-plugin/
 news="#已执行！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 2 ]
      then
@@ -90,6 +91,7 @@ news="#已执行！"
 cd "${Yunzai33}"
 git clone https://gitee.com/zolay-poi/achievements-plugin.git ./plugins/achievements-plugin/
 news="#已执行！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 3 ]
      then
@@ -99,6 +101,7 @@ news="#已执行！"
 cd "${Yunzai33}"
 git clone --depth=1 https://gitee.com/Nwflower/flower-plugin.git ./plugins/flower-plugin/
 news="#已执行！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 4 ]
      then
@@ -108,6 +111,7 @@ news="#已执行！"
 cd "${Yunzai33}"
 git clone https://gitee.com/waterfeet/xiuxian-emulator-plugin ./plugins/xiuxian-emulator-plugin/
 news="#已执行！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 5 ]
      then
@@ -117,6 +121,7 @@ news="#已执行！"
 cd "${Yunzai33}"
 git clone https://gitee.com/Acceleratorsky/suiyue.git ./plugins/suiyue/
 news="#已执行！"     
+read -p "回车并继续..." c
      fi
      if [ $Choise = 6 ]
      then
@@ -126,6 +131,7 @@ news="#已执行！"
 cd ${Yunzai33}""
 git clone https://gitee.com/xianxincoder/xianxin-plugin.git ./plugins/xianxin-plugin/
 news="#已执行！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 7 ]
      then
@@ -135,6 +141,7 @@ news="#已执行！"
 cd ${Yunzai33}""
 git clone https://gitee.com/XueWerY/xiaoxue-plugin.git ./plugins/xiaoxue-plugin/
 news="#已执行！"
+read -p "回车并继续..." c
      fi
 fi
     fi
@@ -144,7 +151,7 @@ fi
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
---menu "$yourv\n##上下选择##左右确定取消" \
+--menu "$yourv\n$news" \
 15 50 5 \
 "1" "逍遥图鉴" \
 "2" "成就帮助" \
@@ -163,8 +170,10 @@ then
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || cd "${Yunzai33}/plugins/xiaoyao-cvs-plugin"
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || git pull
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 2 ]
      then
@@ -172,8 +181,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || cd "${Yunzai33}/plugins/achievements-plugin"
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || git pull
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 3 ]
      then
@@ -181,8 +192,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || cd "${Yunzai33}/plugins/flower-plugin"
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || git pull
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 4 ]
      then
@@ -190,8 +203,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || cd "${Yunzai33}/plugins/xiuxian-emulator-plugin"
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || git pull
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 5 ]
      then
@@ -199,8 +214,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/suiyue" ] || cd "${Yunzai33}/plugins/suiyue"
 [ ! -d ${Yunzai33}"/plugins/suiyue" ] || git pull
 [ ! -d ${Yunzai33}"/plugins/suiyue" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/suiyue" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 6 ]
      then
@@ -208,8 +225,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || cd "${Yunzai33}/plugins/xianxin-plugin"
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || git pull
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 7 ]
      then
@@ -217,8 +236,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || cd "${Yunzai33}/plugins/xiaoxue-plugin"
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || git pull
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
 fi
     fi
@@ -228,7 +249,7 @@ fi
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
---menu "$yourv\n##上下选择##左右确定取消" \
+--menu "$yourv\n$news" \
 15 50 5 \
 "1" "逍遥图鉴" \
 "2" "成就帮助" \
@@ -247,8 +268,10 @@ then
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || cd "${Yunzai33}/plugins/xiaoyao-cvs-plugin"
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || git revert
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 2 ]
      then
@@ -256,8 +279,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || cd "${Yunzai33}/plugins/achievements-plugin"
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || git revert
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 3 ]
      then
@@ -265,8 +290,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || cd "${Yunzai33}/plugins/flower-plugin"
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || git revert
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 4 ]
      then
@@ -274,8 +301,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || cd "${Yunzai33}/plugins/xiuxian-emulator-plugin"
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || git revert
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 5 ]
      then
@@ -283,8 +312,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/suiyue" ] || cd "${Yunzai33}/plugins/suiyue"
 [ ! -d ${Yunzai33}"/plugins/suiyue" ] || git revert
 [ ! -d ${Yunzai33}"/plugins/suiyue" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/suiyue" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/suiyue" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 6 ]
      then
@@ -292,8 +323,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || cd "${Yunzai33}/plugins/xianxin-plugin"
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || git revert
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 7 ]
      then
@@ -301,8 +334,10 @@ news="#请先安装！"
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || cd "${Yunzai33}/plugins/xiaoxue-plugin"
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || git revert
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || news="#已执行！"
+[ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
 fi
     fi
@@ -312,7 +347,7 @@ fi
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
---menu "$yourv\n##上下选择##左右确定取消" \
+--menu "$yourv\n$news" \
 15 50 5 \
 "1" "逍遥图鉴" \
 "2" "成就帮助" \
@@ -332,6 +367,7 @@ then
 [ -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || news="#已执行！"
 [ -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 2 ]
      then
@@ -340,6 +376,7 @@ news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/achievements-plugin" ] || news="#已执行！"
 [ -d ${Yunzai33}"/plugins/achievements-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 3 ]
      then
@@ -348,6 +385,7 @@ news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/flower-plugin" ] || news="#已执行！"
 [ -d ${Yunzai33}"/plugins/flower-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 4 ]
      then
@@ -356,6 +394,7 @@ news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#已执行！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 5 ]
      then
@@ -364,6 +403,7 @@ news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/suiyue" ] || news="#已执行！"
 [ -d ${Yunzai33}"/plugins/suiyue" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 6 ]
      then
@@ -372,6 +412,7 @@ news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/xianxin-plugin" ] || news="#已执行！"
 [ -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
      if [ $Choise = 7 ]
      then
@@ -380,6 +421,7 @@ news="#请先安装！"
 [ -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || news="#已执行！"
 [ -d ${Yunzai33}"/plugins/xiaoxue-plugin" ] || break
 news="#请先安装！"
+read -p "回车并继续..." c
      fi
 fi
     fi
