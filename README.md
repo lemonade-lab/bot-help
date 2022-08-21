@@ -27,8 +27,8 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 
 
 ### （二）Ubuntu版      
->打开Termux    
->pkg install proot git python -y      
+>打开Termux     
+>pkg install proot git python -y       
 >git clone https://gitee.com/Le-niao/termux-install-linux.git      
 >安装Ubuntu     
 >cd termux-install-linux      
@@ -37,8 +37,8 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 >cd ~/Termux-Linux/Ubuntu       
 >./start-ubuntu.sh      
 #### 1. 安装whiptail&git      
-`apt update` 
-`apt-get install whiptail`     
+`apt update`     
+`apt-get install whiptail`        
 `apt-get install git`      
 
 #### 2. 拷贝项目    
