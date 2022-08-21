@@ -1,4 +1,3 @@
-![IMG_0](https://user-images.githubusercontent.com/110824794/185775123-936ea4cf-4e2d-434a-ab6c-ca11ad06006f.PNG)
 ![IMG_1](https://user-images.githubusercontent.com/110824794/185775125-069c2327-d968-49de-9c3c-0dc0433cb06e.PNG)
 # Yunzai-Bot-Help  
 Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统    
@@ -68,9 +67,9 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 * 2022/8/13 V1.1.3：新增windows助手与优化安装
 * 2022/8/16 V1.1.4：细节修复-稳定版
 * 2022/8/20 V1.1.5：初步实现图形化展示，删除Windows助手
-* 2022/8/21 V1.2.0：Ubuntu-测试中...
-* 2022/8/21 V1.2.0：Windows-测试中...
-* 2022/8/21 V1.2.0：Bot-多开-测试中...
+* 2022/8/31 V1.2.0：Ubuntu-测试中...
+* 2022/8/31 V1.2.0：Windows-测试中...
+* 2022/8/31 V2.0.0：Bot-多开-测试中...
 
 ## 五、反馈与交流   
 SSH连接工具       
@@ -80,7 +79,6 @@ Windows：Git
 企鹅交流群`558505956`      
 
 ## 六、联动插件   
-修仙管理    
 >支持安装、更新、卸载      
 >支持存档修改、一键删档        
 >[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)      
