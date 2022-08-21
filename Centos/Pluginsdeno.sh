@@ -445,20 +445,16 @@ if [ $y = 0 ]
 then
      if [ $Choise = 1 ]
      then
-[ -d ${Yunzai33}"/plugins" ] || news="#未安装V3！"
-[ -d ${Yunzai33}"/plugins" ] || break
-[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
-[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
+     funv3
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_player"
 ls
 read -p "QQ:" qq
 vi $qq".json"
      fi
+     
      if [ $Choise = 2 ]
      then
      funv3
-[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
-[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_player"
 ls
 read -p "QQ:" qq
@@ -468,26 +464,25 @@ rm -rf $qq".json"
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_equipment"
 rm -rf $qq".json"
      fi
+     
      if [ $Choise = 3 ]
      then
      funv3
-[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
-[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_najie"
 ls
 read -p "QQ:" qq
 vi $qq".json"
      fi
+     
      if [ $Choise = 4 ]
      then
      funv3
-[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
-[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
 cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/xiuxian_equipment"
 ls
 read -p "QQ:" qq
 vi $qq".json"
      fi
+     
 fi
     fi
 else
