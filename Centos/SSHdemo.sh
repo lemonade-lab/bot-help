@@ -2,7 +2,7 @@
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-news=""
+news="#该功能为远程连接服务"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -50,13 +50,15 @@ echo "————————————————————————�
 echo "请编辑SSH"
 echo "寻找并更改以下参数"
 echo "——————————————————————————————"
-echo "改#port 22为"
+echo "改#port 22为" 
 echo "port 22"
 echo "——————————————————————————————"
 echo "改#PubkeyAuthentication yes为"
 echo "PubkeyAuthentication yes"
 echo "——————————————————————————————"
-read -p "回车并继续..."
+echo "修改后重启生效..."
+echo "——————————————————————————————"
+read -p "回车并继续..." x
     fi
     if [ $OPTION = 3 ]
     then
@@ -66,13 +68,13 @@ vi /etc/ssh/sshd_config
     then
 systemctl restart sshd.service
 cd "${myadress}"
-read -p "回车并继续..."
+read -p "回车并继续..." x
     fi
     if [ $OPTION = 5 ]
     then
 systemctl status sshd.service
 cd "${myadress}"
-read -p "回车并继续..."
+read -p "回车并继续..." x
     fi
 else
     exit
