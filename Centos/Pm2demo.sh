@@ -2,7 +2,7 @@
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-news=""
+news="#pm2为性能均能器"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -43,25 +43,25 @@ then
     then
 cd "${myadress}"
 npm i pm2 -g
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 2 ]
     then
 cd "${myadress}"
 pm2 list
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 3 ]
     then
 cd "${myadress}"
 pm2 monit    
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 4 ]
     then
 cd "${myadress}"
 pm2 start all    
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 5 ]
     then
@@ -70,13 +70,13 @@ read -p "进程ID：" x
 pm2 list
 cd ${myadress}""
 pm2 stop $x    
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 6 ]
     then
 cd "${myadress}"
 pm2 stop all    
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 7 ]
     then
@@ -85,13 +85,13 @@ read -p "进程ID：" x
 cd ${myadress}""
 pm2 list
 pm2 restart $x    
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 8 ]
     then
 cd "${myadress}"
 pm2 restart all    
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 9 ]
     then
@@ -99,19 +99,19 @@ cd "${myadress}"
 read -p "进程ID：" x
 cd ${myadress}""
 pm2 restart $x    
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
      if [ $OPTION = 10 ]
     then
 cd "${myadress}"
 pm2 delete all   
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
      if [ $OPTION = 11 ]
     then
 cd "${myadress}"
 pm2 logs    
-read -p "回车并继续..."
+read -p "回车并继续..." c
     fi
 else
     exit
