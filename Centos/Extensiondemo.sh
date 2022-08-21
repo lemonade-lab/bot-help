@@ -73,7 +73,7 @@ Choise=$(whiptail \
 y=$?
 if [ $y = 0 ]
 then
-    fi [ $Choise = 1 ]
+    if [ $Choise = 1 ]
     then
 [ -d ${Yunzai22}"/plugins" ] || news="#未安装V2！"
 [ -d ${Yunzai22}"/plugins" ] || break
@@ -89,7 +89,7 @@ cp icon.png ${Yunzai22}"/plugins/miao-plugin/resources/help"
 cp main-01.png ${Yunzai22}"/plugins/miao-plugin/resources/common/theme"
 news="#已执行替换"
     fi
-    fi [ $Choise = 2 ]
+    if [ $Choise = 2 ]
     then
 [ -d ${Yunzai33}"/plugins" ] || news="#未安装V3！"
 [ -d ${Yunzai33}"/plugins" ] || break
@@ -121,14 +121,14 @@ Choise=$(whiptail \
 y=$?
 if [ $y = 0 ]
 then
-    fi [ $Choise = 1 ]
+    if [ $Choise = 1 ]
     then
 [ -d ${Yunzai22}"/plugins" ] || news="#未安装V2！"
 [ ! -d ${Yunzai22}"/plugins" ] || cd "${Yunzai22}/lib/example"
 [ ! -d ${Yunzai22}"/plugins" ] || ls
 read -p "回车并继续..." y
     fi
-    fi [ $Choise = 2 ]
+    if [ $Choise = 2 ]
     then
 [ -d ${Yunzai33}"/plugins" ] || news="#未安装V3！"
 [ ! -d ${Yunzai33}"/plugins" ] || cd "${Yunzai33}/plugins/example"
@@ -151,7 +151,7 @@ Choise=$(whiptail \
 y=$?
 if [ $y = 0 ]
 then
-    fi [ $Choise = 1 ]
+    if [ $Choise = 1 ]
     then
 [ -d ${Yunzai22}"/plugins" ] || news="#未安装V2！"
 [ -d ${Yunzai22}"/plugins" ] || break
@@ -163,7 +163,7 @@ then
 [ -e ${Yunzai22}"/lib/example/${y}.js" ] || rm -rf "${y}.js"
 [ -e ${Yunzai22}"/lib/example/${y}.js" ] || news="已执行"
     fi
-    fi [ $Choise = 2 ]
+    if [ $Choise = 2 ]
     then
 [ -d ${Yunzai33}"/plugins" ] || news="#未安装V2！"
 [ -d ${Yunzai33}"/plugins" ] || break
