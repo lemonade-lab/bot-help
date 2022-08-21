@@ -2,7 +2,7 @@
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-news=""
+news="#若发现占用端口可使用进程管理杀死"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -17,6 +17,7 @@ cd "${myadress}"
 
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
 readonly Yunzai22
+
 Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
 
