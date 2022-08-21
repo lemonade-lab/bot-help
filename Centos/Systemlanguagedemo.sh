@@ -1,8 +1,9 @@
 #!/bin/bash
+
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-news=""
+news="#不会安装的请先看教程"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -38,6 +39,7 @@ cd "${myadress}"
 dnf install langpacks-zh_CN
 nf install -y ibus-libpinyin.x86_64
 news="#已执行！"
+read -p "回车并继续..."
     fi
     if [ $OPTION = 2 ]
     then
@@ -52,8 +54,9 @@ read -p "回车并继续..."
     if [ $OPTION = 4 ]
     then
 echo "__________________________________________________"
-echo "请查所有语言，找到zh_CN.utf8类似字眼则说明支持中文包"
-echo "记住自己的中文包名字，选择编辑时，改为中文即可"
+echo "先下载语言包后查看语音"
+echo "找到zh_CN.utf8类似字眼则说明支持中文包"
+echo "复制包名，编辑时，改为中文即可"
 echo "__________________________________________________"
 echo "《文件编辑教程》"
 echo "按i进入修改模式"
