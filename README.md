@@ -27,7 +27,7 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 
 
 ### （二）Ubuntu版      
->打开Termux     
+>Adroid打开Termux下载（采用开发者原教程）      
 >pkg install proot git python -y       
 >git clone https://gitee.com/Le-niao/termux-install-linux.git      
 >安装Ubuntu     
