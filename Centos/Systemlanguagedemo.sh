@@ -39,17 +39,17 @@ cd "${myadress}"
 dnf install langpacks-zh_CN
 nf install -y ibus-libpinyin.x86_64
 news="#已执行！"
-read -p "回车并继续..."
-    fi
+read -p "回车并继续..." x
+    fi 
     if [ $OPTION = 2 ]
     then
 locale -a
-read -p "回车并继续..."
+read -p "回车并继续..." x
     fi
     if [ $OPTION = 3 ]
     then
 echo $LANG
-read -p "回车并继续..."
+read -p "回车并继续..." x
     fi
     if [ $OPTION = 4 ]
     then
@@ -63,7 +63,7 @@ echo "按i进入修改模式"
 echo "按ESE退出修改模式"
 echo "输入:wq!强制保存"
 echo "按CTRL+Z退出文件"
-read -p "回车并继续..."
+read -p "回车并继续..." x
     fi
     if [ $OPTION = 5 ]
     then
