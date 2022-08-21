@@ -73,15 +73,18 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 * 2022/8/21 V1.2.0：Bot-多开-测试中...
 
 ## 五、反馈与交流   
-
-企鹅交流群`558505956`    
+SSH连接工具       
+IOS：Termius    
+Adtroid：JuiceSSH     
+Windows：Git    
+企鹅交流群`558505956`      
 
 ## 六、联动插件   
-修仙管理   
->支持安装、更新、卸载     
->支持存档修改、一键删档      
->[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)  
+修仙管理    
+>支持安装、更新、卸载      
+>支持存档修改、一键删档        
+>[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)      
 
-## 七、特别赞助   
+## 七、特别赞助     
 >脚本作者：[柠檬冲水](https://afdian.net/@ningmengchongshui)       
 >插件作者：[水脚脚](https://afdian.net/@waterfeet)  
