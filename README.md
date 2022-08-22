@@ -1,18 +1,19 @@
 ![IMG_1](https://user-images.githubusercontent.com/110824794/185775125-069c2327-d968-49de-9c3c-0dc0433cb06e.PNG)
 # Yunzai-Bot-Help  
 Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统    
-## 一、温聲提示    
->手机能装Centos/Ubuntu  
->Centos8.2最奔放
->Centos9无yun需自行安装     
->代码复制需装Git       
+
+## 一、温聲提示      
+>手机能装Centos/Ubuntu      
+>可参考开发者教程      
 
 ## 二、安裝教程     
-### （一）Centos版    
-  
-#### 1. 安装git    
-`sudo su root #获取root权限`     
-`yum -y install git #安装Git`   
+### （一）Centos版      
+>Centos7 待测试（开发者的版本7.7）      
+>Centos8.2最奔放（稳定无误）     
+>Centos9 中无yun需自行安装      
+#### 1. 安装git      
+`sudo su root #获取root权限`       
+`yum -y install git #安装Git`     
 
 #### 2. 拷贝项目    
 `cd /         #移步最外层目录`   
@@ -27,19 +28,21 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 
 
 ### （二）Ubuntu版      
->Adroid打开Termux下载（采用开发者原教程）      
+>Adroid打开Termux
+>下载脚本（采用开发者原教程）       
 >pkg install proot git python -y       
->git clone https://gitee.com/Le-niao/termux-install-linux.git      
->安装Ubuntu     
+>git clone https://gitee.com/Le-niao/termux-install-linux.git       
+>启动脚本并选择安装Ubuntu    
 >cd termux-install-linux      
 >python termux-linux-install.py      
 >运行Ubuntu     
 >cd ~/Termux-Linux/Ubuntu       
 >./start-ubuntu.sh      
-#### 1. 安装whiptail&git      
-`apt update`     
-`apt-get install whiptail`        
-`apt-get install git`      
+#### 1. 安装whiptail&git    
+`cd ~`        
+`apt update`         
+`apt-get install whiptail`         
+`apt-get install git`        
 
 #### 2. 拷贝项目    
 `cd /         #移步最外层目录`      
