@@ -24,10 +24,8 @@
 ### （二）Ubuntu版    
 >推荐Ubuntu18.04镜像       
 >推荐Ubuntu20.04镜像        
-#### 1. 安装whiptail&git
-`sudo su root #获取root|已经是root就不用执行`      
-`apt update     #apt更新`         
-`apt-get install whiptail    #安装图形化`         
+#### 1. 安装git
+`sudo su root #获取root|已经是root就不用执行`          
 `apt-get install git   #安装git`        
 
 #### 2. 拷贝项目    
@@ -39,13 +37,17 @@
 `chmod +x *.sh   #赋予权限`     
 
 #### 4. 运行代码    
-`bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`    
-
-#### 5. 其他内容       
->[Android安装Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程       
->Android的启动无效就多跑几次安装|会自动检索缺失部分        
->Android的有点盗版的感觉|缺失很多东西        
->服务器的安装进度被锁住可以重启后继续安装   
+`bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`       
+>安装进度被锁住可以重启后继续安装       
+   
+#### 5. 重要内容补充         
+>[Android安装Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程         
+>Android的Ubuntu有点盗版的感觉
+>真是太太太老了，缺失很多东西         
+>需要先执行下面的命令行来更新和补充
+`apt update     #apt更新`         
+`apt-get install whiptail    #安装图形化`           
+>Android的启动无效就多跑几次安装|会自动检索缺失部分    
 
 ### （三）Windows版    
 #### 1. 安装git&chrome&Nodejs&redis    
