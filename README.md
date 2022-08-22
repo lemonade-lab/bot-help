@@ -42,9 +42,9 @@
    
 #### 5. 重要内容补充         
 >[Android安装Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程         
->Android的Ubuntu有点盗版的感觉
+>Android的Ubuntu有点盗版的感觉        
 >真是太太太老了，缺失很多东西         
->需要先执行下面的命令行来更新和补充
+>需要先执行下面的命令行来更新和补充        
 `apt update     #apt更新`         
 `apt-get install whiptail    #安装图形化`           
 >Android的启动无效就多跑几次安装|会自动检索缺失部分    
