@@ -1,8 +1,9 @@
 #!/bin/bash
+
 yourv=$(cat /etc/issue)
 readonly yourv
 
-news=""
+news="#若卡顿过久可退出重新执行"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -15,6 +16,7 @@ cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
 cd "${myadress}"
 
+
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
 readonly Yunzai22
 
@@ -22,14 +24,15 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n$news" \
+--menu "$yourv\n#BotV2$news" \
 15 50 3 \
 "1" "安装" \
 "2" "启动" \
 "3" "修改配置" \
-"4" "删除配置" \
-"5" "更新" \
-"6" "卸载" \
+"4" "修改主人" \
+"5" "删除QQ" \
+"6" "更新" \
+"7" "卸载" \
 3>&1 1>&2 2>&3)
 
 x=$?
@@ -42,33 +45,32 @@ then
 
 ##初始
 cd ${myadress}
-apt-get update -y
-apt-get upgrade -y
-apt install curl -y
 
 ##node
 node -v
 if [ $? != 0 ]
 then
-apt-get install nodejs
-apt-get install npm
-npm install -g n
-n stable
-PATH="$PATH"
-node -v
-npm -v
+curl -sL https://deb.nodesource.com/setup_17.x | bash -
+apt-get install -y nodejs
 fi
 
 ##redis
 redis-cli --version
 if [ $? != 0 ]
 then
-apt install redis
+apt-get install redis -y
 redis-server --daemonize yes
 fi
 
+##安装Chromium
+apt install chromium-browser -y
+
+
+##安装语言包
+apt install -y --force-yes --no-install-recommends fonts-wqy-microhei
+
 ##git
-git version
+git --version
 if [ $? != 0 ]
 then
 apt install git -y
@@ -79,7 +81,7 @@ fi
 [ -d ${myadress}"/YunzaiV2" ] || break
 cd ${myadress}"/YunzaiV2"
 [ -d ${Yunzai22}"/plugins" ] || git clone https://gitee.com/yoimiya-kokomi/Yunzai-Bot
-[ -d ${Yunzai22}"/plugins" ] || rm -rf ${Yunzai22} ""
+[ -d ${Yunzai22}"/plugins" ] || rm -rf "${Yunzai22}"
 [ -d ${Yunzai22}"/plugins" ] || news="#安装失败" 
 [ -d ${Yunzai22}"/plugins" ] || break
 
@@ -93,14 +95,12 @@ cd "${Yunzai22}"
 ##依赖
 cd "${Yunzai22}"
 npm install
-
-##安装Chromium
-apt install chromium-browser -y
-apt install -y --force-yes --no-install-recommends fonts-wqy-microhei
-news="#安装成功"
+npm install image-size
+news="#执行完成"
 
 ##返回
 cd "${myadress}"
+read -p "回车并继续..." y
     fi
     
 #启动
@@ -111,31 +111,51 @@ cd "${myadress}"
 cd "${Yunzai22}"
 node app.js
     fi
-
-#修改
+    
+#修改配置
     if [ $OPTION = 3 ]
     then
-[ -d ${Yunzai22}"/plugins" ] || news="#请先安装"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -e ${Yunzai22}"/config/config.js" ] || news="#您未配置"
-[ -e ${Yunzai22}"/config/config.js" ] || break
-vi "${Yunzai22}/config/config.js"
+[ -d ${Yunzai22}"/plugins/example" ] || news="#请先安装"
+[ -d ${Yunzai22}"/plugins/example" ] || break
+[ -e ${Yunzai22}"/config/config/qq.yaml" ] || news="#您未配置"
+[ -e ${Yunzai22}"/config/config/qq.yaml" ] || break
+[ -e ${Yunzai22}"/config/config/group.yaml" ] || news="#您未配置"
+[ -e ${Yunzai22}"/config/config/group.yaml" ] || break
+vi ${Yunzai22}"/config/config/group.yaml"
+cd "${myadress}"
+news="#修改成功！"
     fi
 
-#启动
+#修改主人
     if [ $OPTION = 4 ]
     then
-[ -d ${Yunzai22}"/plugins" ] || news="#请先安装"
-[ -d ${Yunzai22}"/plugins" ] || break
-[ -e ${Yunzai22}"/config/config.js" ] || news="#您未配置"
-[ -e ${Yunzai22}"/config/config.js" ] || break
-rm -rf "${Yunzai22}/config/config.js"
-[ -e ${Yunzai22}"/config/config.js" ] || news="#配置删除"
-[ -e ${Yunzai22}"/config/config.js" ] || break
+[ -d ${Yunzai22}"/plugins/example" ] || news="#请先安装"
+[ -d ${Yunzai22}"/plugins/example" ] || break
+[ -e ${Yunzai22}"/config/config/qq.yaml" ] || news="#您未配置"
+[ -e ${Yunzai22}"/config/config/qq.yaml" ] || break
+[ -e ${Yunzai22}"/config/config/other.yaml" ] || news="#您未配置"
+[ -e ${Yunzai22}"/config/config/other.yaml" ] || break
+vi ${Yunzai22}"/config/config/other.yaml"
+cd ${myadress}""
+news="#修改成功！"
+    fi
+    
+#删除QQ
+    if [ $OPTION = 5 ]
+    then
+[ -d ${Yunzai22}"/plugins/example" ] || news="#请先安装"
+[ -d ${Yunzai22}"/plugins/example" ] || break
+[ -e ${Yunzai22}"/config/config/qq.yaml" ] || news="#您未配置"
+[ -e ${Yunzai22}"/config/config/qq.yaml" ] || break
+rm -rf ${Yunzai22}"/config/config/qq.yaml"
+[ -e ${Yunzai22}"/config/config/qq.yaml" ] || news="#配置删除成功！"
+[ -e ${Yunzai22}"/config/config/qq.yaml" ] || break
+cd ${myadress}""
+news="#配置删除失败！"
     fi
     
 #更新
-    if [ $OPTION = 5 ]
+    if [ $OPTION = 6 ]
     then
 [ -d ${Yunzai22}"/plugins/miao-plugin" ] || news="#请先安装"
 [ -d ${Yunzai22}"/plugins/miao-plugin" ] || break
@@ -148,7 +168,7 @@ cd ${myadress}""
     fi
     
 #卸载
-    if [ $OPTION = 6 ]
+    if [ $OPTION = 7 ]
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-HelpV1.1.5》" \
