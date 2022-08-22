@@ -20,6 +20,14 @@
 #### 4. 运行代码   
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`     
 
+#### 5. 重要内容补充         
+>[Android安装Centos](https://gitee.com/Le-niao/termux-install-linux)教程      
+>Android的系统老的要死，啥也么有，建议不玩          
+>其他镜像版本或者盗版的，自行百度来修补             
+>比如少yum，或者没找到nodejs跟npm执行          
+>可以百度版本号加上内容        
+>后期有空再补充这方面的缺漏吧        
+
 
 ### （二）Ubuntu版    
 >推荐Ubuntu18.04镜像       
@@ -49,12 +57,11 @@
 `apt-get install whiptail    #安装图形化`           
 >Android的启动无效就多跑几次安装|会自动检索缺失部分    
 
-### （三）Windows版    
+### （三）Windows版（测试中）    
 #### 1. 安装git&chrome&Nodejs&redis    
 点击阅读[Windows部署环境](https://b23.tv/JYcRjS0)教程   
 #### 2. 打开要安装的目录&右键选择gitbash        
-`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`             
-#### 3. 测试中.......
+`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`   
 
 ### （四）SSH远程连接工具      
 >IOS：Termius      
@@ -84,9 +91,8 @@
 * 2022/8/13 V1.1.3：新增windows助手与优化安装    
 * 2022/8/16 V1.1.4：细节修复-稳定版   
 * 2022/8/20 V1.1.5：初步实现图形化展示，删除Windows助手    
-* 2022/8/22 V1.1.6：Ubuntu已初步适配     
-* 2022/8/31 V1.2.0：Windows-测试中...     
-* 2022/8/31 V1.3.0：Bot-多开-测试中...     
+* 2022/8/22 V1.1.6：Ubuntu系统已基本适配
+* 2022/8/31 V1.1.7：Windows版测试中...
 
 ## 四、反馈与交流     
 >企鹅交流群`558505956`      
