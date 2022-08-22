@@ -45,20 +45,19 @@ then
 ##初始
 cd ~
 ##下载cult
+
 apt install cult -y
 
 ##node
 node -v
 nodev=$(node -v)
-if [ $nodev != 17. ]
+if [ $nodev != v17.9.0 ]
 then
-read -p "不相等"
-fi
-
-if [ $? != 0 ]
-then
+read -p "不相等" v
 curl -sL https://deb.nodesource.com/setup_17.x | bash -
 apt-get install -y nodejs
+else
+read -p "相等" v
 fi
 
 ##redis
