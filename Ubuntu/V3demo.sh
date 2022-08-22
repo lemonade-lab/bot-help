@@ -44,6 +44,7 @@ then
 
 ##初始
 cd ${myadress}
+apt install cult -y
 
 ##node
 node -v
