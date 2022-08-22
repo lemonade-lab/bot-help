@@ -43,15 +43,18 @@ then
     then
 
 ##初始
-cd ${myadress}
-
+cd ~
 ##下载cult
 apt install cult -y
-curl -sL https://deb.nodesource.com/setup_17.x | bash -
-apt-get install -y nodejs
 
 ##node
 node -v
+nodev=$(node -v)
+if [ $nodev != 17. ]
+then
+read -p "不相等"
+fi
+
 if [ $? != 0 ]
 then
 curl -sL https://deb.nodesource.com/setup_17.x | bash -
