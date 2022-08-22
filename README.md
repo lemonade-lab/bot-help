@@ -4,7 +4,11 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 
 ## 一、温聲提示      
 >手机能装Centos/Ubuntu      
->可参考开发者教程      
+点击阅读[Adroid安装Centos/Ubuntu](http://)教程         
+>SSH连接工具       
+IOS：Termius    
+Adtroid：JuiceSSH     
+Windows：Git  
 
 ## 二、安裝教程     
 ### （一）Centos版      
@@ -27,17 +31,7 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`     
 
 
-### （二）Ubuntu版      
->Adroid打开Termux
->下载脚本（采用开发者原教程）       
->pkg install proot git python -y       
->git clone https://gitee.com/Le-niao/termux-install-linux.git       
->启动脚本并选择安装Ubuntu    
->cd termux-install-linux      
->python termux-linux-install.py      
->运行Ubuntu     
->cd ~/Termux-Linux/Ubuntu       
->./start-ubuntu.sh      
+### （二）Ubuntu版     
 #### 1. 安装whiptail&git    
 `cd ~    #移动到root位置`        
 `apt update     #更新包`         
@@ -53,10 +47,19 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 `chmod +x *.sh   #赋予权限`     
 
 #### 4. 运行代码    
-`bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`       
-因Ubuntu比较烂，若安装后启动无效，就再次选择安装
+`bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`        
+因Ubuntu比较烂      
+若安装yunzai后启动无效       
+就再次选择安装       
+若miao安装后无法使用        
+可卸载后重新安装       
+脚本会自动检索缺少部分          
 
-### （三）Windows版|测试中...    
+### （三）Windows版
+#### 1. 安装git&chrome&Nodejs&redis           
+#### 2. 右键桌面选择gitbash        
+`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制` redis           
+#### 3. 测试中.......
 
 ## 三、功能介绍
 * 一键部署环境和安装Yunzai-bot&miao-plugin     
@@ -85,11 +88,7 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 * 2022/8/31 V1.2.0：Windows-测试中...
 * 2022/8/31 V2.0.0：Bot-多开-测试中...
 
-## 五、反馈与交流   
-SSH连接工具       
-IOS：Termius    
-Adtroid：JuiceSSH     
-Windows：Git    
+## 五、反馈与交流     
 企鹅交流群`558505956`      
 
 ## 六、联动插件   
