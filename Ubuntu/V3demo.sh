@@ -44,7 +44,7 @@ then
 
 ##初始
 cd ~
-##下载cult
+##安装cult
 apt install curl -y
 
 ##node
@@ -52,6 +52,11 @@ node -v
 if [ $? != 0 ]
 then
 read -p "未安装nodejs，回车并继续" v
+#兼容服务器版
+rm -rf /var/lib/dpkg/lock-frontend       
+rm -rf /var/lib/dpkg/lock
+rm -rf /var/cache/apt/archives/lock
+apt-get update
 curl -sL https://deb.nodesource.com/setup_17.x | bash -
 apt-get install -y nodejs
 else
