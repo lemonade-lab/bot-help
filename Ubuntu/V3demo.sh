@@ -44,38 +44,35 @@ then
 
 ##初始
 cd ${myadress}
-apt-get update -y
-apt-get upgrade -y
 
 ##node
 node -v
 if [ $? != 0 ]
 then
-apt-get install nodejs
-apt-get install npm
-npm install npm -g@8.1.2
-npm -v
-npm install n -g@16.13.1
-n stable
-PATH="$PATH"
-node -v
-npm -v
+curl -sL https://deb.nodesource.com/setup_17.x | bash -
+apt-get install -y nodejs
 fi
 
 ##redis
 redis-cli --version
 if [ $? != 0 ]
 then
-apt install redis
-redis-cli --version
+apt-get install redis -y
+redis-server --daemonize yes
 fi
+
+##安装Chromium
+apt install chromium-browser -y
+
+
+##安装语言包
+apt install -y --force-yes --no-install-recommends fonts-wqy-microhei
 
 ##git
 git --version
 if [ $? != 0 ]
 then
-apt install git
-git --version
+apt install git -y
 fi
 
 ##yunzai
@@ -83,7 +80,7 @@ fi
 [ -d ${myadress}"/YunzaiV3" ] || break
 cd ${myadress}"/YunzaiV3"
 [ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
-[ -d ${Yunzai33}"/plugins" ] || rm -rf ${Yunzai33} ""
+[ -d ${Yunzai33}"/plugins" ] || rm -rf "${Yunzai33}"
 [ -d ${Yunzai33}"/plugins" ] || news="#安装失败" 
 [ -d ${Yunzai33}"/plugins" ] || break
 
@@ -98,10 +95,7 @@ cd "${Yunzai33}"
 cd "${Yunzai33}"
 npm install
 npm install image-size
-
-##安装Chromium
-apt install chromium-browser -y
-news="#安装成功"
+news="#执行完成"
 
 ##返回
 cd "${myadress}"
