@@ -12,8 +12,8 @@ Windows：Git
 
 ## 二、安裝教程     
 ### （一）Centos版      
->Centos7 待测试（开发者的版本7.7）      
->Centos8.2最奔放（稳定无误）     
+>Centos7.7 待测试     
+>Centos8.2 最奔放（稳定无误）     
 >Centos9 中无yun需自行安装      
 #### 1. 安装git      
 `sudo su root #获取root用户|有显示root即为成功`        
