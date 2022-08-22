@@ -4,10 +4,10 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 
 ## 一、温聲提示      
 >手机能装Centos/Ubuntu      
-点击阅读[Adroid安装Centos/Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程         
->SSH连接工具       
+点击阅读[Android安装Centos/Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程         
+>【SSH连接工具】       
 IOS：Termius    
-Adtroid：JuiceSSH     
+Androidd：JuiceSSH     
 Windows：Git  
 
 ## 二、安裝教程     
