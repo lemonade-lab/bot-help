@@ -52,6 +52,11 @@ apt install curl -y
 node -v
 if [ $? != 0 ]
 then
+#兼容服务器版
+rm -rf /var/lib/dpkg/lock-frontend       
+rm -rf /var/lib/dpkg/lock
+rm -rf /var/cache/apt/archives/lock
+apt-get update
 read -p "未安装nodejs，回车并继续" v
 curl -sL https://deb.nodesource.com/setup_17.x | bash -
 apt-get install -y nodejs
