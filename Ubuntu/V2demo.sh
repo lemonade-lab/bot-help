@@ -46,7 +46,7 @@ then
 ##初始
 cd ~
 ##下载cult
-apt install cult -y
+apt install curl -y
 
 ##node
 node -v
