@@ -6,7 +6,7 @@
 ### （一）Centos版       
 >推荐Centos8.2镜像      
 #### 1. 安装git      
-`sudo su root #获取root用户|有显示root即为成功`        
+`sudo su root #获取root|已经是root就不用执行`        
 `yum -y install git #安装Git`     
 
 #### 2. 拷贝项目    
@@ -22,11 +22,11 @@
 
 
 ### （二）Ubuntu版
->推荐Ubuntu18.04镜像    
->点击阅读[Android安装Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程       
-#### 1. 安装whiptail&git    
+>推荐Ubuntu18.04镜像       
+#### 1. 安装whiptail&git
+`sudo su root #获取root|已经是root就不用执行`      
 `apt update     #apt更新`         
-`apt-get install whiptail    #安装脚本图形化`         
+`apt-get install whiptail    #安装图形化`         
 `apt-get install git   #安装git`        
 
 #### 2. 拷贝项目    
@@ -39,7 +39,12 @@
 
 #### 4. 运行代码    
 `bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`    
->启动无效就多跑几次安装|会自动检索缺失部分    
+
+#### 5. 其他内容       
+>点击阅读[Android安装Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程       
+>Android的启动无效就多跑几次安装|会自动检索缺失部分        
+>Android的有点盗版的感觉|缺失很多东西       
+>服务器的镜像就比较好一些       
 
 ### （三）Windows版    
 #### 1. 安装git&chrome&Nodejs&redis    
