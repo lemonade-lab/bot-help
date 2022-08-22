@@ -12,7 +12,7 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 >Centos8.2最奔放（稳定无误）     
 >Centos9 中无yun需自行安装      
 #### 1. 安装git      
-`sudo su root #获取root权限`       
+`sudo su root #获取root用户|有显示root即为成功`        
 `yum -y install git #安装Git`     
 
 #### 2. 拷贝项目    
@@ -39,10 +39,10 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 >cd ~/Termux-Linux/Ubuntu       
 >./start-ubuntu.sh      
 #### 1. 安装whiptail&git    
-`cd ~`        
-`apt update`         
-`apt-get install whiptail`         
-`apt-get install git`        
+`cd ~    #移动到root位置`        
+`apt update     #更新包`         
+`apt-get install whiptail    #安装脚本图形化`         
+`apt-get install git   #安装git`        
 
 #### 2. 拷贝项目    
 `cd /         #移步最外层目录`      
@@ -52,8 +52,9 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 `cd /Yunzai-Bot-Help/Ubuntu   #移步代码目录`     
 `chmod +x *.sh   #赋予权限`     
 
-#### 4. 运行代码|测试中...    
+#### 4. 运行代码    
 `bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`       
+因Ubuntu比较烂，若安装后启动无效，就再次选择安装
 
 ### （三）Windows版|测试中...    
 
