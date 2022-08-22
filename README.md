@@ -1,6 +1,6 @@
 ![IMG_1](https://user-images.githubusercontent.com/110824794/185775125-069c2327-d968-49de-9c3c-0dc0433cb06e.PNG)    
 # Yunzai-Bot-Help   
-Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统     
+>Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统     
 
 ## 一、安裝教程        
 ### （一）Centos版       
@@ -23,7 +23,7 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 
 ### （二）Ubuntu版
 >推荐Ubuntu18.04镜像    
-点击阅读[Android安装Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程       
+>点击阅读[Android安装Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程       
 #### 1. 安装whiptail&git    
 `apt update     #apt更新`         
 `apt-get install whiptail    #安装脚本图形化`         
@@ -39,7 +39,7 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 
 #### 4. 运行代码    
 `bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`    
-启动无效就多跑几次安装|会自动检索缺失部分    
+>启动无效就多跑几次安装|会自动检索缺失部分    
 
 ### （三）Windows版    
 #### 1. 安装git&chrome&Nodejs&redis    
@@ -81,7 +81,7 @@ Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统
 * 2022/8/31 V1.3.0：Bot-多开-测试中...     
 
 ## 四、反馈与交流     
-企鹅交流群`558505956`      
+>企鹅交流群`558505956`      
 
 ## 五、联动插件   
 >支持安装、更新、卸载      
