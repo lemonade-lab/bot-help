@@ -48,14 +48,22 @@ cd ~
 apt install cult -y
 
 ##node
-nodev=$(node -v)
-if [ $nodev != v17.9.0 ]
+node -v
+if [ $? != 0 ]
 then
-read -p "node版本不适配，回车并继续更新版本！" v
+read -p "未安装nodejs，回车并继续" v
 curl -sL https://deb.nodesource.com/setup_17.x | bash -
 apt-get install -y nodejs
 else
-read -p "node版本适配，回车并继续..." v
+    nodev=$(node -v)
+    if [ $nodev != v17.9.0 ]
+    then
+    read -p "node版本不适配，回车并继续更新版本！" v
+    curl -sL https://deb.nodesource.com/setup_17.x | bash -
+    apt-get install -y nodejs
+    else
+    read -p "node版本适配，回车并继续..." v
+    fi
 fi
 
 ##redis
