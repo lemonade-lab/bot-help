@@ -44,7 +44,11 @@ then
 
 ##初始
 cd ${myadress}
+
+##下载cult
 apt install cult -y
+curl -sL https://deb.nodesource.com/setup_17.x | bash -
+apt-get install -y nodejs
 
 ##node
 node -v
