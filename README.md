@@ -52,10 +52,10 @@
 >启动无效就多跑几次安装    
 >会自动检索缺失部分      
 
-### （四）SSH远程连接工具      
+### （三）SSH远程连接工具      
 >IOS：Termius      
->Android：JuiceSSH     
->Windows：Git  
+>Android：JuiceSSH      
+>Windows：Git    
  
 ## 二、功能介绍    
 * 一键部署环境和安装Yunzai-bot&miao-plugin     
