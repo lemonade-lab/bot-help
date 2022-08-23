@@ -55,6 +55,8 @@ then
 npm i yaml   #依赖 
 npm i superagent   #依赖
 npm i promise-retry  #依赖
+npm add superagent -w
+npm add promise-retry -w
     fi
 
 #安装
