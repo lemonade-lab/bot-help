@@ -43,19 +43,20 @@ export const helpList = [{
     { "icon": 53, "title": "#夜阑天赋 #胡桃命座", "desc": "查看角色的天赋与命座资料" }, { "title": "#设置某某别名", "desc": "#设置凌华名称", "icon": 36 }]
 },
 {
-    "group": "插件展示——需要授权与安装", "list": [
-        { "title": "cos", "desc": "原神cos图 cos图 原神图", "icon": 4 },
-        { "title": "二次元", "desc": "银发 兽儿 壁纸 星空", "icon": 4 },
-        { "title": "发病文学", "desc": "发病凌华", "icon": 4 },
-        { "title": "群友老婆", "desc": "今日群友老婆", "icon": 4 },
-        { "title": "塔罗牌", "desc": "塔罗牌", "icon": 4 },
-        { "title": "点歌", "desc": "点歌温柔", "icon": 4 },
-        { "title": "重生", "desc": "同归于尽 重生", "icon": 4 },
-        { "title": "头像表情包", "desc": "表情帮", "icon": 4 }]
-}, {
+    "group": "plugin展示", "list": [
+        { "title": "miao-plugin", "desc": "#喵喵帮助 #喵喵设置", "icon": 4 },
+        { "title": "xiuxian-emulator-plugin", "desc": "#修仙帮助 #踏入仙途", "icon": 4 },
+        { "title": "xianxin-plugin", "desc": "#闲心功能 #闲心版本", "icon": 4 },
+        { "title": "suiyue", "desc": "搜番", "icon": 4 },
+        { "title": "achievements-plugin", "desc": "#成就帮助", "icon": 4 },
+        { "title": "xiaoyao-cvs-plugin", "desc": "#图鉴帮助 #图鉴设置", "icon": 4 },
+        { "title": "flower-plugin", "desc": "#设置抽卡", "icon": 4 }]
+},
+  {
     "group": "插件管理", "list": [
         { "title": "插件帮助", "desc": "查看所有命令", "icon": 10 },
-        { "title": "插件列表", "desc": "查看所有插件", "icon": 75 }], "auth": "master"
+        { "title": "插件列表", "desc": "查看所有插件", "icon": 75 },
+        { "title": "隐藏列表", "desc": "被隐藏起来的插件", "icon": 40 }], "auth": "master"
 }, {
     "group": "插件设置", "list": [
         { "icon": 29, "title": "#喵喵设置", "desc": "配置喵喵功能" },
