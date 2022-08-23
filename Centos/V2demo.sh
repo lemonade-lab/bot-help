@@ -51,6 +51,11 @@ then
 yum install -y dnf
 dnf module install nodejs:16 -y
 fi
+node -v
+if [ $? != 0 ]
+then
+yum install -y nodejs
+fi
 
 ##redis
 redis-server -v
