@@ -55,6 +55,7 @@ node -v
 if [ $? != 0 ]
 then
 yum install -y nodejs
+yum install -y npm
 fi
 
 ##redis
