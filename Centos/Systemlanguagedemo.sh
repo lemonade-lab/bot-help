@@ -37,7 +37,7 @@ then
     then
 cd "${myadress}"
 dnf install langpacks-zh_CN
-nf install -y ibus-libpinyin.x86_64
+dnf install -y ibus-libpinyin.x86_64
 news="#已执行！"
 read -p "回车并继续..." x
     fi 
