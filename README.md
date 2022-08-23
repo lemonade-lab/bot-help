@@ -4,8 +4,9 @@
 
 ## 一、安裝教程        
 ### （一）Centos版               
->推荐Centos stream 8镜像    
->推荐Centos8.0镜像             
+>支持Centos 7.6镜像       
+>支持Centos stream 8镜像    
+>支持Centos8.0镜像             
 >推荐Centos8.2镜像      
 #### 1. 安装git      
 `sudo su root #获取root|已经是root就不用执行`        
@@ -30,7 +31,7 @@
 
 ### （二）Ubuntu版    
 >推荐Ubuntu18.04镜像       
->推荐Ubuntu20.04镜像        
+>支持Ubuntu20.04镜像        
 #### 1. 安装git
 `sudo su root #获取root|已经是root就不用执行`          
 `apt-get install git   #安装git`        
