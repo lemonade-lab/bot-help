@@ -1,6 +1,6 @@
 ![IMG_1](https://user-images.githubusercontent.com/110824794/185775125-069c2327-d968-49de-9c3c-0dc0433cb06e.PNG)    
 # Yunzai-Bot-Help   
->Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统     
+>Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统     
 
 ## 一、安裝教程        
 ### （一）Centos版               
@@ -23,11 +23,6 @@
 #### 4. 运行代码   
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`     
 
-#### 5. 重要内容补充                
->其他镜像版本或者盗版的        
->发现如少yum的请自行安装          
->可以搜Centos+版本号+内容            
-
 
 ### （二）Ubuntu版    
 >推荐Ubuntu18.04镜像       
@@ -48,20 +43,14 @@
 `bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`       
 >安装进度被锁住可以重启后继续安装       
    
-#### 5. 重要内容补充         
->[Android安装Ubuntu](https://gitee.com/Le-niao/termux-install-linux)教程         
->Android的太老，缺失很多东西    
->需要先执行下面的命令来更新     
+#### 5. Android安装Ubuntu         
+>[安装Ubuntu教程](https://gitee.com/Le-niao/termux-install-linux)         
+>国光的太老，缺失很多东西，简直像盗版      
+>需要先执行下面的命令来更新        
 `apt update     #apt更新`         
 `apt-get install whiptail `           
->Android的启动无效就多跑几次安装
->会自动检索缺失部分    
-
-### （三）Windows版（测试中）    
-#### 1. 安装git&chrome&Nodejs&redis    
-点击阅读[Windows部署环境](https://b23.tv/JYcRjS0)教程   
-#### 2. 打开要安装的目录&右键选择gitbash        
-`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`   
+>启动无效就多跑几次安装    
+>会自动检索缺失部分      
 
 ### （四）SSH远程连接工具      
 >IOS：Termius      
@@ -88,11 +77,10 @@
 * 2022/8/12 V1.1.0：稳定且完善需求功能（稳定版）    
 * 2022/8/12 V1.1.1：简化代码和添加新插件（感谢大佬们开发了新功能）   
 * 2022/8/13 V1.1.2：新增插件、新增菜单   
-* 2022/8/13 V1.1.3：新增windows助手与优化安装    
+* 2022/8/13 V1.1.3：优化安装    
 * 2022/8/16 V1.1.4：细节修复-稳定版   
-* 2022/8/20 V1.1.5：初步实现图形化展示，删除Windows助手    
+* 2022/8/20 V1.1.5：初步实现图形化展示   
 * 2022/8/22 V1.1.6：Ubuntu系统已基本适配
-* 2022/8/31 V1.1.7：Windows版测试中...
 
 ## 四、反馈与交流     
 >企鹅交流群`558505956`      
