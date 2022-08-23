@@ -3,7 +3,8 @@
 >Windows&Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统     
 
 ## 一、安裝教程        
-### （一）Centos版      
+### （一）Centos版               
+>推荐Centos stream 8镜像    
 >推荐Centos8.0镜像             
 >推荐Centos8.2镜像      
 #### 1. 安装git      
