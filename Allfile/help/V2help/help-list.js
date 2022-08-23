@@ -4,7 +4,6 @@ export const helpCfg = {
     subTitle: "Yunzai-Bot&柠檬冲水&特别编辑",
 }
 
-
 export const helpList = [{
     "group": "个人信息——绑定|查询|签到", "desc": "需要绑定cookie", "list": [
         { "title": "#cookie配置（必须）", "desc": "私发cookie自动绑定uid", "icon": 16 },
@@ -42,45 +41,7 @@ export const helpList = [{
     { "icon": 57, "title": "#老婆  #老婆设置凌华", "desc": "设置老婆，查看老婆信息卡片" }, { "icon": 88, "title": "#老婆照片 #甘雨照片", "desc": "查看指定角色的图片" },
     { "icon": 53, "title": "#夜阑天赋 #胡桃命座", "desc": "查看角色的天赋与命座资料" }, { "title": "#设置某某别名", "desc": "#设置凌华名称", "icon": 36 }]
 },
-{
-    "group": "插件展示——需要授权与安装", "list": [
-        { "title": "#猜角色", "desc": "#猜角色困难模式", "icon": 4 },
-        { "title": "#猜数字", "desc": "获取数字并判定是否正确", "icon": 4 },
-        { "title": "#成语接龙", "desc": "有难度", "icon": 4 },
-        { "title": "#吃", "desc": "#早餐吃什么", "icon": 4 },
-        { "title": "#答案之书", "desc": "#二次元的我", "icon": 4 },
-        { "title": "#夸夸我", "desc": "夸夸", "icon": 4 },
-        { "title": "#毒鸡汤", "desc": "鸡汤", "icon": 4 },
-        { "title": "#土味情话", "desc": "情话", "icon": 4 },
-        { "title": "#颜值鉴定", "desc": "发送图片鉴定", "icon": 4 },
-        { "title": "#猜语音", "desc": "#凌华语音", "icon": 4 },
-        { "title": "#数字炸弹", "desc": "获取数字并判断是否正确", "icon": 4 },
-        { "title": "谁是卧底", "desc": "发起会是卧底", "icon": 4 },
-        { "title": "星座运势", "desc": "金牛运势", "icon": 4 },
-        { "title": "二次元抱枕", "desc": "老婆抱枕", "icon": 4 },
-        { "title": "话痨统计", "desc": "#水逼统计", "icon": 4 },
-        { "title": "讲个笑话", "desc": "#来个笑话", "icon": 4 },
-        { "title": "发病文学", "desc": "发病凌华", "icon": 4 },
-        { "title": "点歌", "desc": "#点歌温柔", "icon": 4 },
-        { "title": "群友老公", "desc": "#今日群友老公", "icon": 4 },
-        { "title": "群友老婆", "desc": "#今日群友老婆", "icon": 4 },
-        { "title": "今日冤种", "desc": "#今日冤种", "icon": 4 },
-        { "title": "猜成语", "desc": "#来个成语", "icon": 4 },
-        { "title": "轮盘转", "desc": "发起轮盘转", "icon": 4 },
-        { "title": "群龙王", "desc": "#哪个叼毛是龙王", "icon": 4 },
-        { "title": "群笨蛋", "desc": "#哪个群友是笨蛋", "icon": 4 },
-        { "title": "#漂流瓶", "desc": "#捡一个漂流瓶 #仍一个漂流瓶", "icon": 4 },
-        { "title": "群管", "desc": "#禁言 #解禁 #肃静 #嗨起来", "icon": 4 },
-        { "title": "人品运势", "desc": "人品运势原神", "icon": 4 },
-        { "title": "重开", "desc": "#人生重开", "icon": 4 },
-        { "title": "头衔", "desc": "#设置头衔老六", "icon": 4 },
-        { "title": "踢人", "desc": "#踢@傻逼", "icon": 4 },
-        { "title": "日记", "desc": "#添狗日记", "icon": 4 },
-        { "title": "问答", "desc": "#原神答题", "icon": 4 },
-        { "title": "五子棋", "desc": "#开一把五子棋", "icon": 4 },
-        { "title": "贤者", "desc": "#说爱我 #浪一下 #逗我笑 #来渣我", "icon": 4 },
-        { "title": "壁纸", "desc": "#原神壁纸图", "icon": 4 }]
-}, {
+   {
     "group": "插件管理", "list": [
         { "title": "插件帮助", "desc": "查看所有命令", "icon": 10 },
         { "title": "插件列表", "desc": "查看所有插件", "icon": 75 },
