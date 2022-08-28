@@ -28,9 +28,10 @@ OPTION=$(whiptail \
 "2" "启动" \
 "3" "修改配置" \
 "4" "修改主人" \
-"5" "删除QQ" \
-"6" "更新" \
-"7" "卸载" \
+"5" "修改QQ" \
+"6" "删除QQ" \
+"7" "更新" \
+"8" "卸载" \
 3>&1 1>&2 2>&3)
 
 x=$?
@@ -155,8 +156,23 @@ vi "${Yunzai33}/config/config/group.yaml"
 vi "${Yunzai33}/config/config/other.yaml"
     fi
     
-#删除QQ
+#修改QQ
     if [ $OPTION = 5 ]
+    then
+[ -d ${Yunzai33}"/plugins/example" ] || echo "#请先安装"
+[ -d ${Yunzai33}"/plugins/example" ] || read -p "回车并继续..." y
+[ -d ${Yunzai33}"/plugins/example" ] || break
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
+[ -e ${Yunzai33}"/config/config/other.yaml" ] || echo "#您未配置"
+[ -e ${Yunzai33}"/config/config/other.yaml" ] || read -p "回车并继续..." y
+[ -e ${Yunzai33}"/config/config/other.yaml" ] || break
+vi "${Yunzai33}/config/config/qq.yaml"
+    fi
+    
+#删除QQ
+    if [ $OPTION = 6 ]
     then
 [ -d ${Yunzai33}"/plugins/example" ] || echo "#请先安装"
 [ -d ${Yunzai33}"/plugins/example" ] || read -p "回车并继续..." y
@@ -174,7 +190,7 @@ read -p "回车并继续..." y
     fi
     
 #更新
-    if [ $OPTION = 6 ]
+    if [ $OPTION = 7 ]
     then
 [ -d ${Yunzai33}"/plugins/miao-plugin" ] || echo "#请先安装"
 [ -d ${Yunzai33}"/plugins/miao-plugin" ] || read -p "回车并继续..." y
@@ -188,7 +204,7 @@ cd ${myadress}""
     fi
     
 #卸载
-    if [ $OPTION = 7 ]
+    if [ $OPTION = 8 ]
     then
 [ -d ${Yunzai33}"/plugins" ] || echo "#请先安装"
 [ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." y
