@@ -67,6 +67,7 @@ npm add promise-retry -w
     funv3
 cd "${Yunzai33}/plugins"
 ls
+read -p "回车并继续..." x
     fi
 
 #安装
