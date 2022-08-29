@@ -10,8 +10,8 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n##上下选择##左右移动#回车选中" \
-15 50 3 \
+--menu "$yourv" \
+15 50 5 \
 "1" "HELP设置" \
 "2" "机器管理" \
 "3" "运行管理" \
