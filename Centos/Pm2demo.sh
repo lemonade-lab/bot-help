@@ -2,7 +2,6 @@
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-news="#pm2为性能均能器"
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -20,8 +19,8 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n$news" \
-15 50 3 \
+--menu "$yourv" \
+15 50 5 \
 "1" "安装PM2" \
 "2" "查看进程列表" \
 "3" "监视所有进程" \
