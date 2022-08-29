@@ -124,6 +124,7 @@ read -p "回车并继续..." y
 [ -d ${Yunzai33}"/plugins" ] || break
 cd "${Yunzai33}"
 node app.js
+read -p "回车并继续..." y
     fi
     
 #修改配置
@@ -200,6 +201,7 @@ git pull
 cd "${Yunzai33}/plugins/miao-plugin"
 git pull
 echo "#更新完成"
+read -p "回车并继续..." y
 cd ${myadress}""
     fi
     
