@@ -23,13 +23,13 @@ git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-H
 
 #### 3. 赋予权限    
 ```
-cd /Yunzai-Bot-Help/Centos    #移步代码目录
-chmod +x *.sh   #赋予权限
+cd /Yunzai-Bot-Help/Centos
+chmod +x *.sh
 ```
 
 #### 4. 运行代码   
 ```
-sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动
+sh /Yunzai-Bot-Help/Centos/Centosdemo.sh
 ```     
 
 #### 5. Android安装Centos                 
@@ -39,11 +39,13 @@ sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动
 >推荐Ubuntu18.04镜像       
 >支持Ubuntu20.04镜像        
 #### 1. 安装git
+>获取root|已是root用户可不用执行    
 ```
-sudo su root #获取root|已是root用户可不用执行      
+sudo su root   
 ``` 
+>安装git|已安装可不用执行支持Ubuntu20.04镜像
 ```      
-apt-get install git   #安装git|已安装可不用执行    
+apt-get install git      
 ```        
 
 #### 2. 拷贝项目    
@@ -53,13 +55,13 @@ git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-H
 
 #### 3. 赋予权限     
 ```
-cd /Yunzai-Bot-Help/Ubuntu   #移步代码目录
-chmod +x *.sh   #赋予权限
+cd /Yunzai-Bot-Help/Ubuntu
+chmod +x *.sh
 ```
 
 #### 4. 运行代码    
 ```
-bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh   #启动
+bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
 ```   
 >安装进度被锁住可以重启后继续安装       
    
@@ -68,7 +70,7 @@ bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh   #启动
 >国光的太老，缺失很多东西，像盗版      
 >需要先执行下面的命令来更新        
 ```
-apt update     #apt更新
+apt update     
 apt-get install whiptail
 ```
 >启动无效就多跑几次安装    
