@@ -2,8 +2,6 @@
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-news="#该功能为远程连接服务"
-
 myadress="/home/lighthouse"
 readonly myadress
 
@@ -13,15 +11,17 @@ cd "${myadress}"
 [ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
-cd "${myadress}"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..."
+[ -d ${myadress}"/YunzaiV3" ] || exit
 
+cd "${myadress}"
 
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n$news" \
-15 50 3 \
+--title "《Yunzai-Bot-HelpV1.2.0》" \
+--menu "$yourv" \
+15 50 5 \
 "1" "SSH初始化" \
 "2" "编辑说明" \
 "3" "编辑SSH" \
@@ -37,7 +37,8 @@ then
 cd "${myadress}"
 yum -y remove openssh-server
 yum -y install openssh-server
-news="#已执行！"
+echo "#已执行！"
+read -p "回车并继续..." x
     fi
     if [ $OPTION = 2 ]
     then
@@ -47,7 +48,8 @@ echo "按ESE退出修改模式"
 echo "输入:wq!并回车强制保存"
 echo "按CTRL+Z退出文件"
 echo "——————————————————————————————"
-echo "请编辑SSH"
+echo "请先初始化"
+echo "而后编辑SSH"
 echo "寻找并更改以下参数"
 echo "——————————————————————————————"
 echo "改#port 22为" 
@@ -67,15 +69,14 @@ vi /etc/ssh/sshd_config
     if [ $OPTION = 4 ]
     then
 systemctl restart sshd.service
-cd "${myadress}"
 read -p "回车并继续..." x
     fi
     if [ $OPTION = 5 ]
     then
 systemctl status sshd.service
-cd "${myadress}"
 read -p "回车并继续..." x
     fi
+cd "${myadress}"
 else
     exit
 fi
