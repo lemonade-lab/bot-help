@@ -19,7 +19,7 @@ cd "${myadress}"
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.2.0》" \
+--title "《Help-SSH》" \
 --menu "$yourv" \
 15 50 5 \
 "1" "SSH初始化" \
