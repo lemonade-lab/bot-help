@@ -22,7 +22,7 @@ readonly Yunzai33
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
+--title "《Yunzai-Bot-V3》" \
 --menu "$yourv" \
 15 50 5 \
 "1" "安装" \
@@ -113,7 +113,6 @@ node ./node_modules/puppeteer/install.js
 echo "#安装成功"
 
 ##返回
-cd "${myadress}"
 read -p "回车并继续..." y
     fi
     
@@ -186,7 +185,6 @@ rm -rf ${Yunzai33}"/config/config/qq.yaml"
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#配置删除成功！"
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-cd "${myadress}"
 echo "#配置删除失败！"
 read -p "回车并继续..." y
     fi
@@ -203,7 +201,6 @@ cd "${Yunzai33}/plugins/miao-plugin"
 git pull
 echo "#更新完成"
 read -p "回车并继续..." y
-cd ${myadress}""
     fi
     
 #卸载
@@ -213,7 +210,7 @@ cd ${myadress}""
 [ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." y
 [ -d ${Yunzai33}"/plugins" ] || break
 Choise=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
+--title "《Yunzai-Bot-V3》" \
 --menu "$yourv" \
 15 50 3 \
 "1" "卸载" \
@@ -229,7 +226,7 @@ echo "#卸载失败！"
 read -p "回车并继续..." y
 fi
     fi
-    
+cd "${myadress}"
 else
     exit
 fi
