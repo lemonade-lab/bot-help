@@ -19,7 +19,7 @@ cd "${myadress}"
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.2.0》" \
+--title "《System-language》" \
 --menu "$yourv" \
 15 50 5 \
 "1" "编辑教程" \
