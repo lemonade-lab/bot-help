@@ -26,7 +26,7 @@ do
 OPTION=$(whiptail \
 --title "《Help-Udate》" \
 --menu "$yourv" \
-15 50 3 \
+15 50 5 \
 "1" "更新" \
 "2" "卸载" \
 3>&1 1>&2 2>&3)
