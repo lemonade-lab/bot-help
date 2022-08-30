@@ -2,7 +2,6 @@
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-
 myadress="/home/lighthouse"
 readonly myadress
 
@@ -11,14 +10,16 @@ cd /home
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
+[ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
 
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
+--title "《Help-SSH》" \
 --menu "$yourv" \
 15 50 5 \
 "1" "安装PM2" \
@@ -37,78 +38,64 @@ OPTION=$(whiptail \
 x=$?
 if [ $x = 0 ]
 then
-
+cd "${myadress}"
     if [ $OPTION = 1 ]
     then
-cd "${myadress}"
 npm i pm2 -g
 read -p "回车并继续..." c
     fi
     if [ $OPTION = 2 ]
     then
-cd "${myadress}"
 pm2 list
 read -p "回车并继续..." c
     fi
     if [ $OPTION = 3 ]
     then
-cd "${myadress}"
 pm2 monit    
 read -p "回车并继续..." c
     fi
     if [ $OPTION = 4 ]
     then
-cd "${myadress}"
 pm2 start all    
 read -p "回车并继续..." c
     fi
     if [ $OPTION = 5 ]
     then
-cd "${myadress}"
 read -p "进程ID：" x
 pm2 list
-cd ${myadress}""
 pm2 stop $x    
 read -p "回车并继续..." c
     fi
     if [ $OPTION = 6 ]
     then
-cd "${myadress}"
 pm2 stop all    
 read -p "回车并继续..." c
     fi
     if [ $OPTION = 7 ]
     then
-cd "${myadress}"
 read -p "进程ID：" x
-cd ${myadress}""
 pm2 list
 pm2 restart $x    
 read -p "回车并继续..." c
     fi
     if [ $OPTION = 8 ]
     then
-cd "${myadress}"
 pm2 restart all    
 read -p "回车并继续..." c
     fi
     if [ $OPTION = 9 ]
     then
-cd "${myadress}"
 read -p "进程ID：" x
-cd ${myadress}""
 pm2 restart $x    
 read -p "回车并继续..." c
     fi
      if [ $OPTION = 10 ]
     then
-cd "${myadress}"
 pm2 delete all   
 read -p "回车并继续..." c
     fi
      if [ $OPTION = 11 ]
     then
-cd "${myadress}"
 pm2 logs    
 read -p "回车并继续..." c
     fi
