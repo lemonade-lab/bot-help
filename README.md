@@ -9,19 +9,27 @@
 >支持Centos8.0镜像             
 >推荐Centos8.2镜像      
 #### 1. 安装git      
-`sudo su root #获取root|已经是root就不用执行`        
-`yum -y install git #安装Git`     
+```
+sudo su root #获取root|已经是root就不用执行        
+yum -y install git #安装Git        
+```      
 
 #### 2. 拷贝项目    
-`cd /         #移步最外层目录`   
-`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`   
+```
+cd /         #移步最外层目录
+git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制
+```
 
 #### 3. 赋予权限    
-`cd /Yunzai-Bot-Help/Centos    #移步代码目录`   
-`chmod +x *.sh   #赋予权限`  
+```
+cd /Yunzai-Bot-Help/Centos    #移步代码目录
+chmod +x *.sh   #赋予权限
+```
 
 #### 4. 运行代码   
-`sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`     
+```
+sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动
+```     
 
 #### 5. Android安装Centos                 
 >B站搜索相关词即可看到教程          
@@ -30,27 +38,37 @@
 >推荐Ubuntu18.04镜像       
 >支持Ubuntu20.04镜像        
 #### 1. 安装git
-`sudo su root #获取root|已经是root就不用执行`          
-`apt-get install git   #安装git`        
+```
+sudo su root #获取root|已经是root就不用执行          
+apt-get install git   #安装git
+```        
 
 #### 2. 拷贝项目    
-`cd /         #移步最外层目录`      
-`git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制`      
+```
+cd /         #移步最外层目录
+git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制
+```
 
 #### 3. 赋予权限     
-`cd /Yunzai-Bot-Help/Ubuntu   #移步代码目录`     
-`chmod +x *.sh   #赋予权限`     
+```
+cd /Yunzai-Bot-Help/Ubuntu   #移步代码目录
+chmod +x *.sh   #赋予权限
+```
 
 #### 4. 运行代码    
-`bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh   #启动`       
+```
+bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh   #启动
+```   
 >安装进度被锁住可以重启后继续安装       
    
 #### 5. Android安装Ubuntu         
 >[安装Ubuntu教程](https://gitee.com/Le-niao/termux-install-linux)         
 >国光的太老，缺失很多东西，像盗版      
 >需要先执行下面的命令来更新        
-`apt update     #apt更新`         
-`apt-get install whiptail `           
+```
+apt update     #apt更新
+apt-get install whiptail
+```
 >启动无效就多跑几次安装    
 >会自动检索缺失部分      
 
@@ -85,7 +103,7 @@
 * 2022/8/22 V1.1.6：Ubuntu系统已基本适配
 
 ## 四、反馈与交流     
->企鹅交流群`558505956`      
+>企鹅交流群```558505956```      
 
 ## 五、联动插件   
 >支持安装、更新、卸载      
