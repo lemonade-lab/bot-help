@@ -24,7 +24,7 @@ cd "${myadress}"
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
+--title "《Help-Udate》" \
 --menu "$yourv" \
 15 50 3 \
 "1" "更新" \
@@ -54,7 +54,7 @@ read -p "回车并继续..." y
      if [ $OPTION = 2 ]
      then
 Choise=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
+--title "《Help-Delete》" \
 --menu "$yourv\n$news" \
 15 50 3 \
 "1" "卸载" \
