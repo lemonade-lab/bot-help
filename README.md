@@ -10,14 +10,15 @@
 >推荐Centos8.2镜像      
 #### 1. 安装git      
 ```
-sudo su root #获取root|已经是root就不用执行        
-yum -y install git #安装Git        
+sudo su root #获取root|已是root用户可不用执行   
+```  
+```     
+yum -y install git #安装Git|已安装可不用执行        
 ```      
 
 #### 2. 拷贝项目    
 ```
-cd /         #移步最外层目录
-git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制
+git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-Help
 ```
 
 #### 3. 赋予权限    
@@ -39,14 +40,15 @@ sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动
 >支持Ubuntu20.04镜像        
 #### 1. 安装git
 ```
-sudo su root #获取root|已经是root就不用执行          
-apt-get install git   #安装git
+sudo su root #获取root|已是root用户可不用执行      
+``` 
+```      
+apt-get install git   #安装git|已安装可不用执行    
 ```        
 
 #### 2. 拷贝项目    
 ```
-cd /         #移步最外层目录
-git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git   #复制
+git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-Help
 ```
 
 #### 3. 赋予权限     
