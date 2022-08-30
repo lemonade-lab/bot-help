@@ -1,37 +1,33 @@
 ![IMG_1](https://user-images.githubusercontent.com/110824794/185775125-069c2327-d968-49de-9c3c-0dc0433cb06e.PNG)    
 # Yunzai-Bot-Help   
 >Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统     
-
 ## 一、安裝教程        
 ### （一）Centos版               
 >支持Centos 7.6镜像       
 >支持Centos stream 8镜像    
 >支持Centos8.0镜像             
 >推荐Centos8.2镜像      
-#### 1. 安装git      
+#### 1. 安装git   
+>获取root|已是root用户可不用执
 ```
-sudo su root #获取root|已是root用户可不用执行   
+sudo su root    
 ```  
+>安装Git|已安装可不用执行
 ```     
-yum -y install git #安装Git|已安装可不用执行        
+yum -y install git        
 ```      
-
 #### 2. 拷贝项目    
 ```
 git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-Help
 ```
-
 #### 3. 赋予权限    
 ```
-cd /Yunzai-Bot-Help/Centos
-chmod +x *.sh
+chmod +x /Yunzai-Bot-Help/Centos/*.sh
 ```
-
 #### 4. 运行代码   
 ```
 sh /Yunzai-Bot-Help/Centos/Centosdemo.sh
 ```     
-
 #### 5. Android安装Centos                 
 >B站搜索相关词即可看到教程          
 
@@ -43,22 +39,18 @@ sh /Yunzai-Bot-Help/Centos/Centosdemo.sh
 ```
 sudo su root   
 ``` 
->安装git|已安装可不用执行支持Ubuntu20.04镜像
+>安装git|已安装可不用执行
 ```      
 apt-get install git      
 ```        
-
 #### 2. 拷贝项目    
 ```
 git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-Help
 ```
-
 #### 3. 赋予权限     
 ```
-cd /Yunzai-Bot-Help/Ubuntu
-chmod +x *.sh
+chmod +x /Yunzai-Bot-Help/Ubuntu/*.sh
 ```
-
 #### 4. 运行代码    
 ```
 bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
@@ -80,7 +72,6 @@ apt-get install whiptail
 >IOS：Termius      
 >Android：JuiceSSH      
 >Windows：Git    
- 
 ## 二、功能介绍    
 * 一键部署环境和安装Yunzai-bot&miao-plugin     
 * 一键（启动/重启/更新/停止）   
@@ -91,7 +82,6 @@ apt-get install whiptail
 * 系统语言(可设置中文)    
 * 一键修改与删除配置（快速修改）    
 * 一键脚本自更新自配置（快速更新）    
-
 ## 三、更新记录   
 * 2022/8/8 V0.0.0：首发测试、补充功能、优化代码逻辑、修复更新功能    
 * 2022/8/8 V1.0.0：修改与整合菜单、优化菜单交互、修复错误显示    
@@ -105,18 +95,15 @@ apt-get install whiptail
 * 2022/8/16 V1.1.4：细节修复-稳定版   
 * 2022/8/20 V1.1.5：初步实现图形化展示   
 * 2022/8/22 V1.1.6：Ubuntu系统已基本适配
-
 ## 四、反馈与交流     
 >企鹅讨论聚集地
 ```
 558505956
 ```      
-
 ## 五、联动插件   
 >支持安装、更新、卸载      
 >支持存档修改、一键删档        
 >[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)      
-
 ## 六、特别赞助     
 >脚本作者：[柠檬冲水](https://afdian.net/@ningmengchongshui)       
 >插件作者：[水脚脚](https://afdian.net/@waterfeet)  
