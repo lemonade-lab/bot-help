@@ -22,7 +22,7 @@ readonly Yunzai22
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
+--title "《Yunzai-Bot-V2》" \
 --menu "$yourv" \
 15 50 5 \
 "1" "安装" \
@@ -111,7 +111,6 @@ node ./node_modules/puppeteer/install.js
 echo "#安装成功"
 
 ##返回
-cd "${myadress}"
 read -p "回车并继续..." y
     fi
     
@@ -167,7 +166,6 @@ cd "${Yunzai22}/plugins/miao-plugin"
 git pull
 echo "#更新完成"
 read -p "回车并继续..." y
-cd ${myadress}""
     fi
     
 #卸载
@@ -177,7 +175,7 @@ cd ${myadress}""
 [ -d ${Yunzai22}"/plugins" ] || read -p "回车并继续..." y
 [ -d ${Yunzai22}"/plugins" ] || break
 Choise=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
+--title "《Yunzai-Bot-V2》" \
 --menu "$yourv" \
 15 50 3 \
 "1" "卸载" \
@@ -193,7 +191,7 @@ echo "#卸载失败！"
 read -p "回车并继续..." y
 fi
     fi
-    
+cd "${myadress}"
 else
     exit
 fi
