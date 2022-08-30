@@ -23,6 +23,8 @@
 #### 4. 运行代码   
 `sh /Yunzai-Bot-Help/Centos/Centosdemo.sh   #启动`     
 
+#### 5. Android安装Centos                 
+>B站搜索相关词即可看到教程          
 
 ### （二）Ubuntu版    
 >推荐Ubuntu18.04镜像       
@@ -40,12 +42,12 @@
 `chmod +x *.sh   #赋予权限`     
 
 #### 4. 运行代码    
-`bash /Yunzai-Bot-Help/Ubuntu/Centosdemo.sh   #启动`       
+`bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh   #启动`       
 >安装进度被锁住可以重启后继续安装       
    
 #### 5. Android安装Ubuntu         
 >[安装Ubuntu教程](https://gitee.com/Le-niao/termux-install-linux)         
->国光的太老，缺失很多东西，简直像盗版      
+>国光的太老，缺失很多东西，像盗版      
 >需要先执行下面的命令来更新        
 `apt update     #apt更新`         
 `apt-get install whiptail `           
