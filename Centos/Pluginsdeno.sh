@@ -348,7 +348,7 @@ read -p "回车并继续..." c
      if [ $Choise = 4 ]
      then
      funv3
-[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || rm -rf "${Yunzai33}/plugins/xiuxian-emulator-plugin
+[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || rm -rf "${Yunzai33}/plugins/xiuxian-emulator-plugin"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || echo "#已执行！"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
 echo "#请先安装！"
