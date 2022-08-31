@@ -2,8 +2,6 @@
 yourv=$(cat /etc/issue)
 readonly yourv
 
-news=""
-
 myadress="/home/lighthouse"
 readonly myadress
 
@@ -12,15 +10,15 @@ cd /home
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
 cd "${myadress}"
 
 
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n$news" \
+--title "《Help-PM2》" \
+--menu "$yourv" \
 15 50 3 \
 "1" "安装PM2" \
 "2" "查看进程列表" \
