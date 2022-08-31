@@ -323,6 +323,7 @@ then
      funv3
 [ ! -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || rm -rf "${Yunzai33}/plugins/xiaoyao-cvs-plugin"
 [ -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || echo "#已执行！"
+[ -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins/xiaoyao-cvs-plugin" ] || break
 echo "#请先安装！"
 read -p "回车并继续..." c
@@ -332,6 +333,7 @@ read -p "回车并继续..." c
      funv3
 [ ! -d ${Yunzai33}"/plugins/achievements-plugin" ] || rm -rf "${Yunzai33}/plugins/achievements-plugin"
 [ -d ${Yunzai33}"/plugins/achievements-plugin" ] || echo "#已执行！"
+[ -d ${Yunzai33}"/plugins/achievements-plugin" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins/achievements-plugin" ] || break
 echo "#请先安装！"
 read -p "回车并继续..." c
@@ -341,6 +343,7 @@ read -p "回车并继续..." c
      funv3
 [ ! -d ${Yunzai33}"/plugins/flower-plugin" ] || rm -rf "${Yunzai33}/plugins/flower-plugin"
 [ -d ${Yunzai33}"/plugins/flower-plugin" ] || echo "#已执行！"
+[ -d ${Yunzai33}"/plugins/flower-plugin" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins/flower-plugin" ] || break
 echo "#请先安装！"
 read -p "回车并继续..." c
@@ -350,6 +353,7 @@ read -p "回车并继续..." c
      funv3
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || rm -rf "${Yunzai33}/plugins/xiuxian-emulator-plugin"
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || echo "#已执行！"
+[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 echo "#请先安装！"
 read -p "回车并继续..." c
@@ -360,6 +364,7 @@ read -p "回车并继续..." c
      funv3
 [ ! -d ${Yunzai33}"/plugins/xianxin-plugin" ] || rm -rf "${Yunzai33}/plugins/xianxin-plugin"
 [ -d ${Yunzai33}"/plugins/xianxin-plugin" ] || echo "#已执行！"
+[ -d ${Yunzai33}"/plugins/xianxin-plugin" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins/xianxin-plugin" ] || break
 echo "#请先安装！"
 read -p "回车并继续..." c
