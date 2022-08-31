@@ -32,6 +32,8 @@ funv3(){
    [ -d ${Yunzai33}"/plugins" ] || break
 }
 
+
+
 while true
 do
 OPTION=$(whiptail \
@@ -214,8 +216,9 @@ fi
 y=$?
 if [ $y = 0 ]
 then
-     ##存档设置
-      if [ $Choise = 1 ]
+ 
+ ##存档设置
+    if [ $Choise = 1 ]
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
@@ -270,43 +273,10 @@ vi $qq".json"
      fi
 fi
     fi
-    ##修仙设置
-    if [ $Choise = 2 ]
-    then
-Choise=$(whiptail \
---title "《Yunzai-Bot-Help》" \
---menu "$yourv" \
-15 50 5 \
-"1" "改丹药" \
-"2" "改装备" \
-"3" "改道具" \
-"4" "改功法" \
-"5" "改商品" \
-"6" "改地点" \
-"7" "改境界" \
-"8" "改怪物" \
-"9" "改灵根" \
-"10" "改药草" \
-3>&1 1>&2 2>&3)
-y=$?
-if [ $y = 0 ]
-then
-    echo "待实现！"
-    read -p "回车并继续..." x
-else
+##/存档设置    
 fi
     fi
-    ##修仙教程
-    if [ $Choise = 3 ]
-    then
-    echo "待实现！"
-    read -p "回车并继续..." x
-    fi
-else
-    echo "请选择！"
-    read -p "回车并继续..." x
-fi
-    fi
+##/逆天改命    
 else
     exit
 fi
