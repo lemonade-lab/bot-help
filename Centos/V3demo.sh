@@ -220,10 +220,7 @@ y=$?
 if [ $y = 0 ]
 then
 rm -rf "${Yunzai33}"
-[ -e ${Yunzai33} ] || echo "#卸载成功！"
-[ -e ${Yunzai33} ] || read -p "回车并继续..." y
-[ -e ${Yunzai33} ] || break
-echo "#卸载失败！"
+echo "#卸载成功！"
 read -p "回车并继续..." y
 fi
     fi
