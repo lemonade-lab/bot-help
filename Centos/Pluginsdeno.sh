@@ -366,8 +366,5 @@ read -p "回车并继续..." c
      fi 
 fi
     fi
-    
-else
-    exit
 fi
 done
