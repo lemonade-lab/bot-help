@@ -2,7 +2,6 @@
 yourv=$(cat /etc/issue)
 readonly yourv
 
-news=""
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -12,15 +11,17 @@ cd /home
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
+[ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
 
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n$news" \
+--title "《Help-SSH》" \
+--menu "$yourv" \
 15 50 3 \
 "1" "SSH初始化" \
 "2" "编辑说明" \
@@ -34,10 +35,8 @@ if [ $x = 0 ]
 then
     if [ $OPTION = 1 ]
     then
-cd "${myadress}"
-yum -y remove openssh-server
-yum -y install openssh-server
-news="#已执行！"
+echo "功能等实现"
+read -p "回车并继续..." c
     fi
     if [ $OPTION = 2 ]
     then
