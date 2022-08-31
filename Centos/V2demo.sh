@@ -19,6 +19,12 @@ cd "${myadress}"
 Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
 readonly Yunzai22
 
+funv2(){
+   [ -d ${Yunzai22}"/plugins" ] || echo "#未安装V2！"
+   [ -d ${Yunzai22}"/plugins" ] || read -p "回车并继续..." x
+   [ -d ${Yunzai22}"/plugins" ] || break
+}
+
 while true
 do
 OPTION=$(whiptail \
@@ -117,9 +123,7 @@ read -p "回车并继续..." y
 #启动
     if [ $OPTION = 2 ]
     then
-[ -d ${Yunzai22}"/plugins" ] || echo "#请先安装"
-[ -d ${Yunzai22}"/plugins" ] || read -p "回车并继续..." y
-[ -d ${Yunzai22}"/plugins" ] || break
+funv2
 cd "${Yunzai22}"
 node app.js
 read -p "回车并继续..." y
@@ -129,9 +133,7 @@ read -p "回车并继续..." y
 #修改
     if [ $OPTION = 3 ]
     then
-[ -d ${Yunzai22}"/plugins" ] || echo "#请先安装"
-[ -d ${Yunzai22}"/plugins" ] || read -p "回车并继续..." y
-[ -d ${Yunzai22}"/plugins" ] || break
+funv2
 [ -e ${Yunzai22}"/config/config.js" ] || echo "#您未配置"
 [ -e ${Yunzai22}"/config/config.js" ] || read -p "回车并继续..." y
 [ -e ${Yunzai22}"/config/config.js" ] || break
@@ -141,9 +143,7 @@ vi "${Yunzai22}/config/config.js"
 #删除
     if [ $OPTION = 4 ]
     then
-[ -d ${Yunzai22}"/plugins" ] || echo "#请先安装"
-[ -d ${Yunzai22}"/plugins" ] || read -p "回车并继续..." y
-[ -d ${Yunzai22}"/plugins" ] || break
+funv2
 [ -e ${Yunzai22}"/config/config.js" ] || echo "#您未配置"
 [ -e ${Yunzai22}"/config/config.js" ] || read -p "回车并继续..." y
 [ -e ${Yunzai22}"/config/config.js" ] || break
@@ -157,11 +157,12 @@ read -p "回车并继续..." y
 #更新
     if [ $OPTION = 5 ]
     then
+    funv2
+    cd "${Yunzai22}"
+    git pull
 [ -d ${Yunzai22}"/plugins/miao-plugin" ] || echo "#请先安装"
 [ -d ${Yunzai22}"/plugins/miao-plugin" ] || read -p "回车并继续..." y
 [ -d ${Yunzai22}"/plugins/miao-plugin" ] || break
-cd "${Yunzai22}"
-git pull
 cd "${Yunzai22}/plugins/miao-plugin"
 git pull
 echo "#更新完成"
@@ -171,9 +172,7 @@ read -p "回车并继续..." y
 #卸载
     if [ $OPTION = 6 ]
     then
-[ -d ${Yunzai22}"/plugins" ] || echo "#请先安装"
-[ -d ${Yunzai22}"/plugins" ] || read -p "回车并继续..." y
-[ -d ${Yunzai22}"/plugins" ] || break
+    funv2
 Choise=$(whiptail \
 --title "《Yunzai-Bot-V2》" \
 --menu "$yourv" \
@@ -184,10 +183,7 @@ y=$?
 if [ $y = 0 ]
 then
 rm -rf "${Yunzai22}"
-[ -e ${Yunzai22} ] || echo "#卸载成功！"
-[ -e ${Yunzai22} ] || read -p "回车并继续..." y
-[ -e ${Yunzai22} ] || break
-echo "#卸载失败！"
+echo "#卸载成功！"
 read -p "回车并继续..." y
 fi
     fi
