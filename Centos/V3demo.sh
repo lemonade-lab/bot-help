@@ -16,8 +16,16 @@ cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
+
 Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
+
+funv3(){
+   [ -d ${Yunzai33}"/plugins" ] || echo "#未安装V3！"
+   [ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." x
+   [ -d ${Yunzai33}"/plugins" ] || break
+}
+
 
 while true
 do
@@ -145,9 +153,7 @@ vi "${Yunzai33}/config/config/group.yaml"
 #修改主人
     if [ $OPTION = 4 ]
     then
-[ -d ${Yunzai33}"/plugins/example" ] || echo "#请先安装"
-[ -d ${Yunzai33}"/plugins/example" ] || read -p "回车并继续..." y
-[ -d ${Yunzai33}"/plugins/example" ] || break
+    funv3
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
@@ -160,9 +166,7 @@ vi "${Yunzai33}/config/config/other.yaml"
 #修改QQ
     if [ $OPTION = 5 ]
     then
-[ -d ${Yunzai33}"/plugins/example" ] || echo "#请先安装"
-[ -d ${Yunzai33}"/plugins/example" ] || read -p "回车并继续..." y
-[ -d ${Yunzai33}"/plugins/example" ] || break
+    funv3
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
@@ -175,9 +179,7 @@ vi "${Yunzai33}/config/config/qq.yaml"
 #删除QQ
     if [ $OPTION = 6 ]
     then
-[ -d ${Yunzai33}"/plugins/example" ] || echo "#请先安装"
-[ -d ${Yunzai33}"/plugins/example" ] || read -p "回车并继续..." y
-[ -d ${Yunzai33}"/plugins/example" ] || break
+    funv3
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
@@ -192,11 +194,12 @@ read -p "回车并继续..." y
 #更新
     if [ $OPTION = 7 ]
     then
+    funv3
+cd "${Yunzai33}"
+git pull
 [ -d ${Yunzai33}"/plugins/miao-plugin" ] || echo "#请先安装"
 [ -d ${Yunzai33}"/plugins/miao-plugin" ] || read -p "回车并继续..." y
 [ -d ${Yunzai33}"/plugins/miao-plugin" ] || break
-cd "${Yunzai33}"
-git pull
 cd "${Yunzai33}/plugins/miao-plugin"
 git pull
 echo "#更新完成"
@@ -206,9 +209,7 @@ read -p "回车并继续..." y
 #卸载
     if [ $OPTION = 8 ]
     then
-[ -d ${Yunzai33}"/plugins" ] || echo "#请先安装"
-[ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." y
-[ -d ${Yunzai33}"/plugins" ] || break
+    funv3
 Choise=$(whiptail \
 --title "《Yunzai-Bot-V3》" \
 --menu "$yourv" \
