@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 yourv=$(cat /etc/issue)
 readonly yourv
 
