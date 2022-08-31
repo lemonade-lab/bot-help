@@ -3,8 +3,6 @@
 yourv=$(cat /etc/issue)
 readonly yourv
 
-news="#若卡顿过久可退出重新执行"
-
 myadress="/home/lighthouse"
 readonly myadress
 
@@ -13,17 +11,26 @@ cd /home
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
+[ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
+
 
 Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
 
+funv3(){
+   [ -d ${Yunzai33}"/plugins" ] || echo "#未安装V3！"
+   [ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." x
+   [ -d ${Yunzai33}"/plugins" ] || break
+}
+
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n$news" \
+--title "《Yunzai-Bot-V3》" \
+--menu "$yourv" \
 15 50 3 \
 "1" "安装" \
 "2" "启动" \
@@ -94,37 +101,36 @@ apt install git -y
 fi
 
 ##yunzai
-[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
 [ -d ${myadress}"/YunzaiV3" ] || break
 cd ${myadress}"/YunzaiV3"
 [ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
 [ -d ${Yunzai33}"/plugins" ] || rm -rf "${Yunzai33}"
-[ -d ${Yunzai33}"/plugins" ] || news="#安装失败" 
+[ -d ${Yunzai33}"/plugins" ] || echo "#安装失败" 
+[ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins" ] || break
 
 ##miao
 cd "${Yunzai33}"
 [ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
 [ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || rm -rf ${Yunzai33}"/plugins/miao-plugin"
-[ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || news="#安装失败"
+[ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || echo "#安装失败"
+[ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || break
 
 ##依赖
 cd "${Yunzai33}"
 npm install
 npm install image-size
-news="#执行完成"
-
-##返回
-cd "${myadress}"
-read -p "回车并继续..." y
+echo "#执行完成"
+read -p "回车并继续..." c
     fi
     
 #启动
     if [ $OPTION = 2 ]
     then
-[ -d ${Yunzai33}"/plugins" ] || news="#请先安装"
-[ -d ${Yunzai33}"/plugins" ] || break
+funv3
 cd "${Yunzai33}"
 node app.js
     fi
@@ -132,79 +138,78 @@ node app.js
 #修改配置
     if [ $OPTION = 3 ]
     then
-[ -d ${Yunzai33}"/plugins/example" ] || news="#请先安装"
-[ -d ${Yunzai33}"/plugins/example" ] || break
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#您未配置"
+funv3
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." c
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-[ -e ${Yunzai33}"/config/config/group.yaml" ] || news="#您未配置"
+[ -e ${Yunzai33}"/config/config/group.yaml" ] || echo "#您未配置"
+[ -e ${Yunzai33}"/config/config/group.yaml" ] || read -p "回车并继续..." c
 [ -e ${Yunzai33}"/config/config/group.yaml" ] || break
 vi ${Yunzai33}"/config/config/group.yaml"
-cd "${myadress}"
-news="#修改成功！"
     fi
 
 #修改主人
     if [ $OPTION = 4 ]
     then
-[ -d ${Yunzai33}"/plugins/example" ] || news="#请先安装"
-[ -d ${Yunzai33}"/plugins/example" ] || break
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#您未配置"
+funv3
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." c
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-[ -e ${Yunzai33}"/config/config/other.yaml" ] || news="#您未配置"
+[ -e ${Yunzai33}"/config/config/other.yaml" ] || echo "#您未配置"
+[ -e ${Yunzai33}"/config/config/other.yaml" ] || read -p "回车并继续..." c
 [ -e ${Yunzai33}"/config/config/other.yaml" ] || break
 vi ${Yunzai33}"/config/config/other.yaml"
-cd ${myadress}""
-news="#修改成功！"
     fi
     
 #删除QQ
     if [ $OPTION = 5 ]
     then
-[ -d ${Yunzai33}"/plugins/example" ] || news="#请先安装"
-[ -d ${Yunzai33}"/plugins/example" ] || break
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#您未配置"
+funv3
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." c
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
 rm -rf ${Yunzai33}"/config/config/qq.yaml"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || news="#配置删除成功！"
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#配置删除成功！"
+[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." c
 [ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-cd ${myadress}""
-news="#配置删除失败！"
+echo "#配置删除失败！"
+read -p "回车并继续..." c
     fi
     
 #更新
     if [ $OPTION = 6 ]
     then
-[ -d ${Yunzai33}"/plugins/miao-plugin" ] || news="#请先安装"
+    funv3
+    cd "${Yunzai33}"
+    git pull
+[ -d ${Yunzai33}"/plugins/miao-plugin" ] || echo "#请先安装"
+[ -d ${Yunzai33}"/plugins/miao-plugin" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins/miao-plugin" ] || break
-cd "${Yunzai33}"
-git pull
 cd ${Yunzai33}"/plugins/miao-plugin"
 git pull
-news="#更新完成"
-cd ${myadress}""
+echo "#更新完成"
+read -p "回车并继续..." c
     fi
     
 #卸载
     if [ $OPTION = 7 ]
     then
+    funv3 
 Choise=$(whiptail \
---title "《Yunzai-Bot-HelpV1.1.5》" \
---menu "$yourv\n##上下选择##左右确定取消" \
+--title "《Yunzai-Bot-Delete》" \
+--menu "$yourv" \
 15 50 3 \
 "1" "卸载" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
 then
-[ -d ${Yunzai33}"/plugins" ] || news="#请先安装"
-[ -d ${Yunzai33}"/plugins" ] || break
 rm -rf "${Yunzai33}"
-[ -e ${Yunzai33} ] || news="#卸载成功！"
-[ -e ${Yunzai33} ] || break
-news="#卸载失败！"
+echo "#卸载成功！"
+read -p "回车并继续..." c    
 fi
     fi
-    
+   cd "${myadress}"
 else
     exit
 fi
