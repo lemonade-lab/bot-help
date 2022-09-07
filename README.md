@@ -52,9 +52,8 @@ bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
 >安装进度被锁住可以重启后继续安装       
    
 #### 5. Android安装Ubuntu         
->[安装Ubuntu教程](https://gitee.com/Le-niao/termux-install-linux)         
->国光的太老，缺失很多东西      
->需要先执行下面的命令来更新        
+>[完美搭建视频](https://b23.tv/csz4oAS)         
+>搭建时更新指令        
 ```
 apt update     
 apt-get install whiptail
