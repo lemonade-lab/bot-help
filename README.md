@@ -100,5 +100,5 @@ apt-get install whiptail
 >插件作者：[赞助水脚脚](https://afdian.net/@waterfeet)  
 ### （三）企鹅讨论聚集地
 `
-558505956
+806943302
 `   
