@@ -133,6 +133,7 @@ news="#执行完成"
 [ -d ${Yunzai22}"/plugins" ] || echo "#请先安装"
 [ -d ${Yunzai22}"/plugins" ] || read -p "回车并继续..." c
 [ -d ${Yunzai22}"/plugins" ] || break
+redis-server --daemonize yes
 cd "${Yunzai22}"
 node app.js
     fi
