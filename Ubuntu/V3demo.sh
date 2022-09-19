@@ -131,6 +131,7 @@ read -p "回车并继续..." c
     if [ $OPTION = 2 ]
     then
 funv3
+redis-server --daemonize yes
 cd "${Yunzai33}"
 node app.js
     fi
