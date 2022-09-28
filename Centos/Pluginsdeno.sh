@@ -15,15 +15,6 @@ cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
-Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
-readonly Yunzai22
-
-funv2(){
-   [ -d ${Yunzai22}"/plugins" ] || echo "#未安装V2！"
-   [ -d ${Yunzai22}"/plugins" ] || read -p "回车并继续..." x
-   [ -d ${Yunzai22}"/plugins" ] || break
-}
-
 Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
 
