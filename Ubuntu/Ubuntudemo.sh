@@ -40,27 +40,8 @@ then
 #机器管理
     if [ $OPTION = 2 ]
     then
-Choise=$(whiptail \
---title "《Yunzai-Bot-Help》" \
---menu "$yourv\n#请选择版本..." \
-15 50 3 \
-"1" "进入V2管理" \
-"2" "进入V3管理" \
-3>&1 1>&2 2>&3)
-y=$?
-if [ $y = 0 ]
-then
-     if [ $Choise = 1 ]
-     then
-cd "${Ubuntu}"
-./V2demo.sh
-     fi
-     if [ $Choise = 2 ]
-     then
-cd "${Ubuntu}"
-./V3demo.sh
-     fi
-fi    
+    cd "${Ubuntu}"
+    ./V3demo.sh
     fi
 
 #运行管理
