@@ -12,9 +12,9 @@ OPTION=$(whiptail \
 --title "《Yunzai-Bot-HelpV1.2.0》" \
 --menu "$yourv" \
 15 50 5 \
-"1" "HELP设置" \
-"2" "机器管理" \
-"3" "运行管理" \
+"1" "HELP更新" \
+"2" "机器配置" \
+"3" "后台运行" \
 "4" "进程管理" \
 "5" "插件管理" \
 "6" "扩展功能" \
@@ -38,28 +38,8 @@ then
 
 #机器管理
     if [ $OPTION = 2 ]
-    then
-Choise=$(whiptail \
---title "《Yunzai-Bot-Help》" \
---menu "$yourv\n#请选择版本..." \
-15 50 3 \
-"1" "进入V2管理" \
-"2" "进入V3管理" \
-3>&1 1>&2 2>&3)
-y=$?
-if [ $y = 0 ]
-then
-     if [ $Choise = 1 ]
-     then
-cd "${Centos}"
-./V2demo.sh
-     fi
-     if [ $Choise = 2 ]
-     then
-cd "${Centos}"
-./V3demo.sh
-     fi
-fi    
+    cd "${Centos}"
+    ./V3demo.sh
     fi
 
 #运行管理
