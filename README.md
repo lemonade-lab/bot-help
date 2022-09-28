@@ -1,6 +1,6 @@
 ![IMG_1](https://user-images.githubusercontent.com/110824794/185775125-069c2327-d968-49de-9c3c-0dc0433cb06e.PNG)    
 # Yunzai-Bot-Help   
->Linux-Centos/Ubuntu一键安装Yunzai-BotV2&V3图形化系统     
+>Centos/Ubuntu系统轻型一键安装Yunzai-BotV3图形化系统     
 ## 一、安裝教程
 >获取root|已是root用户可不用执
 ```
@@ -69,7 +69,7 @@ apt-get install whiptail
 * 一键部署环境和安装Yunzai-bot&miao-plugin     
 * 一键（启动/重启/更新/停止）   
 * 插件管理（开源插件合集）      
-* 运行管理（V2&V3双开）    
+* 后台运行（一建开启与关闭）    
 * 功能扩展（美化与娱乐性）      
 * SSH开通帮助（远程连接）    
 * 系统语言(可设置中文)    
