@@ -15,31 +15,31 @@ cd "${myadress}"
 
 while true
 do
-OPTION=$(whiptail \
---title "《Yunzai-Bot》" \
---menu "$yourv" \
-15 50 3 \
-"1" "查看版本" \
-"2" "Redis进程" \
-"3" "zip&sshpass" \
-3>&1 1>&2 2>&3)
+	OPTION=$(whiptail \
+		--title "《Yunzai-Bot》" \
+		--menu "$yourv" \
+		15 50 3 \
+		"1" "查看版本" \
+		"2" "Redis进程" \
+		"3" "zip&sshpass" \
+		3>&1 1>&2 2>&3)
 
-x=$?
-if [ $x = 0 ]
-then
-    if [ $OPTION = 1 ]
-    then
-read -p "回车并继续..." y
-    fi
-    if [ $OPTION = 2 ]
-    then
-read -p "回车并继续..." y
-    fi
-    if [ $OPTION = 3 ]
-    then
-read -p "回车并继续..." y
-    fi
-else
-    exit
-fi
+	x=$?
+	if [ $x = 0 ]
+	then
+		if [ $OPTION = 1 ]
+		then
+			read -p "回车并继续..." y
+		fi
+		if [ $OPTION = 2 ]
+		then
+			read -p "回车并继续..." y
+		fi
+		if [ $OPTION = 3 ]
+		then
+			read -p "回车并继续..." y
+		fi
+	else
+		exit
+	fi
 done

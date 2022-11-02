@@ -20,21 +20,21 @@ cd "${myadress}"
 
 while true
 do
-OPTION=$(whiptail \
---title "《Yunzai-Bot》" \
---menu "$yourv" \
-15 50 3 \
-"1" "改功能暂未开放" \
-3>&1 1>&2 2>&3)
+	OPTION=$(whiptail \
+		--title "《Yunzai-Bot》" \
+		--menu "$yourv" \
+		15 50 3 \
+		"1" "改功能暂未开放" \
+		3>&1 1>&2 2>&3)
 
-x=$?
-if [ $x = 0 ]
-then
-    if [ $OPTION = 1 ]
-    then
-news="#已执行！"
-    fi
-else
-    exit
-fi
+	x=$?
+	if [ $x = 0 ]
+	then
+		if [ $OPTION = 1 ]
+		then
+			news="#已执行！"
+		fi
+	else
+		exit
+	fi
 done
