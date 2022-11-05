@@ -38,6 +38,7 @@ then
 
 #机器管理
     if [ $OPTION = 2 ]
+    then
     cd "${Centos}"
     ./V3demo.sh
     fi
