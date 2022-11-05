@@ -120,6 +120,10 @@ read -p "回车并继续..." c
 [ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 cd "${Yunzai33}"
 git clone https://gitee.com/waterfeet/xiuxian-emulator-plugin ./plugins/xiuxian-emulator-plugin/
+cd "${Yunzai33}/config/config"
+sed -i 's/enable:          #只启用功能，配置后只有该功能才响应/enable: 欢迎新人   #只启用功能，配置后只有该功能才响应/g' group.yaml
+cd "${Yunzai33}/config/default_config"
+sed -i 's/enable:          #只启用功能，配置后只有该功能才响应/enable: 欢迎新人   #只启用功能，配置后只有该功能才响应/g' group.yaml
 echo "#已执行！"
 read -p "回车并继续..." c
      fi
