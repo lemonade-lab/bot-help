@@ -73,6 +73,8 @@ Choise=$(whiptail \
 "3" "抽卡设置" \
 "4" "我要修仙" \
 "5" "闲心娱乐" \
+"6" "喵喵练度" \
+"7" "喵喵修仙" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
@@ -134,6 +136,24 @@ echo "#已执行！"
 read -p "回车并继续..." c
      fi
      
+     if [ $Choise = 6 ]
+     then
+     funv3
+[ ! -d ${Yunzai33}"/plugins/miao-plugin" ] || echo "#已安装！"
+[ ! -d ${Yunzai33}"/plugins/miao-plugin" ] || read -p "回车并继续..." x
+[ ! -d ${Yunzai33}"/plugins/miao-plugin" ] || break
+     echo "下载喵喵"
+cd "${Yunzai33}"
+git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
+echo "#已执行！"
+read -p "回车并继续..." c
+     fi
+
+     if [ $Choise = 7]
+     then
+     echo "下载喵喵和修仙"
+     fi
+
 fi
     fi
     
