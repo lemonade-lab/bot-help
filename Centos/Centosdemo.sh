@@ -3,7 +3,7 @@
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
-Centos="/Yunzai-Bot-Help/Centos"
+Centos="../../Yunzai-Bot-Help/Centos"
 readonly Centos
 
 while true
