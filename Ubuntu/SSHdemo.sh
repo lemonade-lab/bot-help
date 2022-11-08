@@ -63,13 +63,13 @@ do
 		fi
 		if [ $OPTION = 4 ]
 		then
-			systemctl restart sshd.service
+			systemctl restart ssh.service
 			cd "${myadress}"
 			read -p "回车并继续..."
 		fi
 		if [ $OPTION = 5 ]
 		then
-			systemctl status sshd.service
+			systemctl status ssh.service
 			cd "${myadress}"
 			read -p "回车并继续..."
 		fi
