@@ -8,12 +8,11 @@ readonly myadress
 bot="/Yunzai-Bot-Help"
 readonly bot
 
-Centosdemo="${bot}/Centos/Centosdemo.sh"
+Ubuntudemo="${bot}/Centos/Ubuntudemo.sh"
 
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
 [ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
@@ -39,14 +38,15 @@ if [ $OPTION = 1 ]
 then
 	[ -d ${bot} ] || cd /
 	[ -d ${bot} ] || "https://github.com/ningmengchongshui"${bot}".git"
-	[ -e ${Centosdemo} ] || rm -rf "${bot}"
-	[ -e ${Centosdemo} ] || echo "#操作失败了，请重新执行！"
-	[ ! -e ${Centosdemo} ] || cd "${bot}"
-	[ ! -e ${Centosdemo} ] || git fetch --all
-	[ ! -e ${Centosdemo} ] || git reset --hard main
-	[ ! -e ${Centosdemo} ] || git pull
-	[ ! -e ${Centosdemo} ] || echo "##执行完成，请重新授权！"
-	[ ! -e ${Centosdemo} ] || cd "${myadress}"
+	[ -e ${Ubuntudemo} ] || rm -rf "${bot}"
+	[ -e ${Ubuntudemo} ] || echo "#操作失败了，请重新执行！"
+	[ ! -e ${Ubuntudemo} ] || cd "${bot}"
+	[ ! -e ${Ubuntudemo} ] || git fetch --all
+	[ ! -e ${Ubuntudemo} ] || git reset --hard main
+	[ ! -e ${Ubuntudemo} ] || git pull
+	[ ! -e ${Ubuntudemo} ] || chmod +x /Yunzai-Bot-Help/Ubuntu/*.sh
+	[ ! -e ${Ubuntudemo} ] || echo "##执行完成，请重新授权！"
+	[ ! -e ${Ubuntudemo} ] || cd "${myadress}"
 fi
 
 #卸载
