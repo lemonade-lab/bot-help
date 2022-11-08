@@ -43,8 +43,7 @@ then
 	[ ! -e ${Ubuntudemo} ] || cd "${bot}"
 	[ ! -e ${Ubuntudemo} ] || git fetch --all
 	[ ! -e ${Ubuntudemo} ] || git reset --hard main
-	[ ! -e ${Ubuntudemo} ] || git pull
-	[ ! -e ${Ubuntudemo} ] || chmod +x /Yunzai-Bot-Help/Ubuntu/*.sh
+	[ ! -e ${Ubuntudemo} ] || git pull || chmod +x /Yunzai-Bot-Help/Ubuntu/*.sh
 	[ ! -e ${Ubuntudemo} ] || echo "##执行完成，请重新授权！"
 	[ ! -e ${Ubuntudemo} ] || cd "${myadress}"
 fi
