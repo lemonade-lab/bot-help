@@ -38,7 +38,7 @@ if [ $OPTION = 1 ]
 then
 	[ -d ${bot} ] || cd /
 	[ -d ${bot} ] || "https://github.com/ningmengchongshui"${bot}".git"
-	[ -e ${Ubuntudemo} ] || rm -rf "${bot}"
+	# [ -e ${Ubuntudemo} ] || rm -rf "${bot}"
 	[ -e ${Ubuntudemo} ] || echo "#操作失败了，请重新执行！"
 	[ ! -e ${Ubuntudemo} ] || cd "${bot}"
 	[ ! -e ${Ubuntudemo} ] || git fetch --all
