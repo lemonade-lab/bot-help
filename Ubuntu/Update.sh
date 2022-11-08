@@ -46,14 +46,18 @@ then
 	#	[ ! -e ${Ubuntudemo} ] || git pull || chmod +x /Yunzai-Bot-Help/Ubuntu/*.sh
 	#	[ ! -e ${Ubuntudemo} ] || echo "##执行完成，请重新授权！"
 	#	[ ! -e ${Ubuntudemo} ] || cd "${myadress}"
-	cd "${bot}"
+	# 还需要加入gitee网络判断
+	[ ! -e ${Ubuntudemo} ] || cd "${bot}"
 	BRANCH=main
 	LOCAL=$(git log $BRANCH -n 1 --pretty=format:"%H")
 	REMOTE=$(git log remotes/origin/$BRANCH -n 1 --pretty=format:"%H")
 	if [ $LOCAL = $REMOTE ]; then
-		echo "Up-to-date"
+		echo "无需更新"
 	else
-		echo "Need update"
+		[ ! -e ${Ubuntudemo} ] || git fetch --all
+		[ ! -e ${Ubuntudemo} ] || git reset --hard main
+		[ ! -e ${Ubuntudemo} ] || git pull
+		echo "更新完成"
 	fi
 fi
 
