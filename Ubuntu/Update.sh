@@ -46,7 +46,7 @@ then
 	#	[ ! -e ${Ubuntudemo} ] || git pull || chmod +x /Yunzai-Bot-Help/Ubuntu/*.sh
 	#	[ ! -e ${Ubuntudemo} ] || echo "##执行完成，请重新授权！"
 	#	[ ! -e ${Ubuntudemo} ] || cd "${myadress}"
-	cd "$(bot)"
+	cd "${bot}"
 	LOCAL=$(git log $BRANCH -n 1 --pretty=format:"%H")
 	REMOTE=$(git log remotes/origin/$BRANCH -n 1 --pretty=format:"%H")
 	if [ $LOCAL = $REMOTE ]; then
