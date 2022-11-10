@@ -47,17 +47,17 @@ then
 	#	[ ! -e ${Ubuntudemo} ] || echo "##执行完成，请重新授权！"
 	#	[ ! -e ${Ubuntudemo} ] || cd "${myadress}"
 	# 还需要加入gitee网络判断
-	[ ! -e ${Ubuntudemo} ] || cd "${bot}"
+	cd "${bot}"
 	BRANCH=main
 	LOCAL=$(git log $BRANCH -n 1 --pretty=format:"%H")
 	REMOTE=$(git log remotes/origin/$BRANCH -n 1 --pretty=format:"%H")
 	if [ $LOCAL = $REMOTE ]; then
 		echo "无需更新"
 	else
-		[ ! -e ${Ubuntudemo} ] || git fetch --all
-		[ ! -e ${Ubuntudemo} ] || git reset --hard main
-		[ ! -e ${Ubuntudemo} ] || git pull
-		echo "更新完成"
+		git fetch --all
+		git reset --hard main
+		git pull
+		echo "更新完成，退出重启生效"
 	fi
 fi
 
