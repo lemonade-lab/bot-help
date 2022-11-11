@@ -1,6 +1,5 @@
-![IMG_1](https://user-images.githubusercontent.com/110824794/185775125-069c2327-d968-49de-9c3c-0dc0433cb06e.PNG)    
 # Yunzai-Bot-Help   
->Centos/Ubuntu系统轻型一键安装Yunzai-BotV3图形化系统     
+>Centos/Ubuntu系统轻量型安装图形化工具    
 ## 一、安裝教程
 >获取root|已是root用户可不用执
 ```
@@ -10,7 +9,7 @@ sudo su root
 >支持Centos 7.6镜像       
 >支持Centos stream 8镜像    
 >支持Centos8.0镜像             
->推荐Centos8.2镜像      
+>支持Centos8.2镜像      
 #### 1. 安装git    
 ```     
 yum -y install git        
@@ -28,11 +27,11 @@ chmod +x /Yunzai-Bot-Help/Centos/*.sh
 sh /Yunzai-Bot-Help/Centos/Centosdemo.sh
 ```     
 #### 5. Android安装Centos                 
->B站搜索相关词即可看到教程          
+>B站搜索相关词即可找到专栏教程          
 
 ### （二）Ubuntu版    
 >推荐Ubuntu18.04镜像       
->支持Ubuntu20.04镜像        
+>推荐Ubuntu20.04镜像        
 #### 1. 安装git
 ```      
 apt-get install git      
@@ -64,17 +63,17 @@ apt-get install whiptail
 ### （三）SSH远程连接工具    
 >Android：JuiceSSH         
 >IOS：Termius     
->Windows：Termius    
+>Windows：Termius、MobaXterm   
 ## 二、功能介绍    
-* 一键部署环境和安装Yunzai-bot&miao-plugin     
+* 一键安装和部署环境     
 * 一键（启动/重启/更新/停止）   
-* 插件管理（开源插件合集）      
+* 插件管理（开源插件合集）        
 * 后台运行（一建开启与关闭）    
+* 修改与删除配置（快速修改）    
 * 功能扩展（美化与娱乐性）      
-* SSH开通帮助（远程连接）    
-* 系统语言(可设置中文)    
-* 一键修改与删除配置（快速修改）    
-* 一键脚本自更新自配置（快速更新）    
+* SSH开通帮助（远程连接）   
+* 系统语言(可设置中文)   
+* 桌面安装(入门必备)      
 ## 三、更新记录   
 * 2022/8/8 V0.0.0：首发测试、补充功能、优化代码逻辑、修复更新功能    
 * 2022/8/8 V1.0.0：修改与整合菜单、优化菜单交互、修复错误显示    
@@ -82,22 +81,14 @@ apt-get install whiptail
 * 2022/8/10 V1.0.2：新增pm2运行管理、补充新插件、优化菜单    
 * 2022/8/11 V1.0.3：采用新结构以稳定更新、优化菜单、修复错误显示   
 * 2022/8/12 V1.1.0：稳定且完善需求功能（稳定版）    
-* 2022/8/12 V1.1.1：简化代码和添加新插件（感谢大佬们开发了新功能）   
+* 2022/8/12 V1.1.1：简化代码和添加新插件    
 * 2022/8/13 V1.1.2：新增插件、新增菜单   
 * 2022/8/13 V1.1.3：优化安装    
 * 2022/8/16 V1.1.4：细节修复-稳定版   
 * 2022/8/20 V1.1.5：初步实现图形化展示   
 * 2022/8/22 V1.1.6：Ubuntu系统已基本适配
 * 2022/8/22 V1.2.0：Centos&Ubuntu稳定版     
-## 四、结语        
-### （一）开发不易     
->脚本作者：[赞助柠檬冲水](https://afdian.net/@ningmengchongshui)     
-### （二）联动插件     
->支持安装、更新、卸载      
->支持存档修改、一键删档        
->[xiuxian-emulator-plugin仓库](https://gitee.com/waterfeet/xiuxian-emulator-plugin)      
->插件作者：[赞助水脚脚](https://afdian.net/@waterfeet)  
-### （三）企鹅讨论聚集地
+## 四、企鹅讨论聚集地      
 `
 806943302
 `   
