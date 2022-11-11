@@ -1,5 +1,5 @@
 # Yunzai-Bot-Help   
->Centos/Ubuntu系统轻量型安装图形化工具    
+>Centos/Ubuntu系统轻量型图形化工具    
 ## 一、安裝教程
 >获取root|已是root用户可不用执
 ```
