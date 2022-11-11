@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# 安装nodejs
+node_install(){
+	apt-get install -y curl
+	curl -sL https://deb.nodesource.com/setup_18.x | bash -
+	apt-get install -y nodejs npm
+	nodeb=$(node -v)
+	npmb=$(npm -v)
+	echo -e "nodejs版本:${nodeb}\nnpm版本:${npmb}\n"
+	read -p "安装完成，回车并继续..." v
+}
+
 yourv=$(cat /etc/issue)
 readonly yourv
 
@@ -50,40 +61,62 @@ then
 
 ##初始
 cd ~
-##安装cult
-apt install curl -y
 
 ##node
-node -v
-if [ $? != 0 ]
-then
-	read -p "未安装nodejs，回车并继续" v
-	#兼容服务器版
-	rm -rf /var/lib/dpkg/lock-frontend       
-	rm -rf /var/lib/dpkg/lock
-	rm -rf /var/cache/apt/archives/lock
-	apt-get update
-	curl -sL https://deb.nodesource.com/setup_17.x | bash -
-	apt-get install -y nodejs
+#兼容服务器版
+rm -rf /var/lib/dpkg/lock-frontend
+rm -rf /var/lib/dpkg/lock
+rm -rf /var/cache/apt/archives/lock
+if ! [ -x "$(command -v node)" ];then
+	read -p "检测到未安装nodejs，回车安装nodejs" v
+	node_install
 else
-	nodev=$(node -v)
-	if [ $nodev != v17.9.0 ]
-	then
-		read -p "node版本不适配，回车并继续更新版本！" v
-		curl -sL https://deb.nodesource.com/setup_17.x | bash -
-		apt-get install -y nodejs
+	node=$(node -v)
+	node_b=${node:1:2}
+	if [ "$node_b" -lt 17 ];then
+		read -p "node版本不适配,需要重装nodejs，回车更新版本！" v
+		apt-get remove -y nodejs npm
+		echo "卸载完成，正在安装新版"
+		node_install
 	else
-		read -p "node版本适配，回车并继续..." v
+		echo -e "node版本适配，无需重装nodejs\n"
+		read -p "回车并继续..." v
 	fi
 fi
+#node -v
+#if [ $? != 0 ]
+#then
+#	read -p "未安装nodejs，回车并继续" v
+#	#兼容服务器版
+#	rm -rf /var/lib/dpkg/lock-frontend       
+#	rm -rf /var/lib/dpkg/lock
+#	rm -rf /var/cache/apt/archives/lock
+#	apt-get update
+#	curl -sL https://deb.nodesource.com/setup_17.x | bash -
+#	apt-get install -y nodejs
+#else
+#	nodev=$(node -v)
+#	if [ $nodev != v17.9.0 ]
+#	then
+#		read -p "node版本不适配，回车并继续更新版本！" v
+#		curl -sL https://deb.nodesource.com/setup_17.x | bash -
+#		apt-get install -y nodejs
+#	else
+#		read -p "node版本适配，回车并继续..." v
+#	fi
+#fi
 
 ##redis
-redis-cli --version
-if [ $? != 0 ]
-then
-	apt-get install redis -y
-	redis-server --daemonize yes
+if ! [ -x "$(command -v redis-server)" ];then
+	echo "正在安装redis"
+	apt-get install -y redis
 fi
+#redis-cli --version
+#if [ $? != 0 ]
+#then
+#	apt-get install redis -y
+#	redis-server --daemonize yes
+#fi
 
 ##安装Chromium
 apt install chromium-browser -y
@@ -124,7 +157,7 @@ npm install
 npm install image-size
 echo "#执行完成"
 read -p "回车并继续..." c
-fi
+	fi
 
 #启动
 if [ $OPTION = 2 ]
