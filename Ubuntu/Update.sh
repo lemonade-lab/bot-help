@@ -8,7 +8,7 @@ readonly myadress
 bot="/Yunzai-Bot-Help"
 readonly bot
 
-Ubuntudemo="${bot}/Centos/Ubuntudemo.sh"
+Ubuntudemo="${bot}/Ubuntu/Ubuntudemo.sh"
 
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
