@@ -52,7 +52,7 @@ then
 	BRANCH=main
 	LOCAL=$(git log $BRANCH -n 1 --pretty=format:"%H")
 	REMOTE=$(git log remotes/origin/$BRANCH -n 1 --pretty=format:"%H")
-	if [ $LOCAL = $REMOTE ]; then
+	if [ $LOCAL != $REMOTE ]; then
 		git reset --hard main
 		git pull
 		echo "更新完成，退出重启生效"
