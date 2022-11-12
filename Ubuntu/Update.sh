@@ -48,11 +48,11 @@ then
 	#	[ ! -e ${Ubuntudemo} ] || cd "${myadress}"
 	# 还需要加入gitee网络判断
 	cd "${bot}"
+	git fetch --all
 	BRANCH=main
 	LOCAL=$(git log $BRANCH -n 1 --pretty=format:"%H")
 	REMOTE=$(git log remotes/origin/$BRANCH -n 1 --pretty=format:"%H")
-	if [ $LOCAL -ne $REMOTE ]; then
-		git fetch --all
+	if [ $LOCAL = $REMOTE ]; then
 		git reset --hard main
 		git pull
 		echo "更新完成，退出重启生效"
