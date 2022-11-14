@@ -1,5 +1,13 @@
 # Yunzai-Bot-Help   
 >Centos/Ubuntu系统轻量型图形化工具    
+#### 附：【测试版一键安装脚本】<br>
+测试版适配Ubuntu和CentOS<br>
+测试版适配性:Ubuntu>CentOS<br>
+建议Ubuntu18.04或CentOS7.6
+>测试版脚本
+```
+curl -o ybot.sh 10vps.top/ybot.sh && chmod 777 ybot.sh && ./ybot.sh
+```
 ## 一、安装教程
 >获取root|已是root用户可不用执
 ```
