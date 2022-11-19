@@ -70,6 +70,7 @@ do
 			echo -e "\n可以在运行云崽的时候Ctrl+C退出运行"
 			echo "回到管理界面"
 			echo -e "\033[31m！！注意：使用Ctrl+C之后不会云崽将不会运行！！\033[0m\n"
+			echo -e "\033[32m>>可以运行管理后台启动哦qwq<<\033[0m\n"
 			redis-server --daemonize yes
 			cd "${YunzaiV3}"
 			node app.js
