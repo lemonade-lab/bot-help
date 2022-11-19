@@ -6,6 +6,23 @@ readonly yourv
 myadress="/home/lighthouse"
 readonly myadress
 
+export YunzaiV3="${myadress}/YunzaiV3/XiuXianV3"
+
+funv3(){
+	if ! [ -d "${YunzaiV3}/plugins" ];then
+		echo "未安装修仙版云崽"
+		read -p "回车并退出..." x
+	fi
+	break
+}
+funqq(){
+	if ! [ -e "${YunzaiV3}/config/config/qq.yaml" ];then
+		echo "请先启动修仙版云崽在配置qwq"
+	       read -p "回车并退出..." x
+	fi
+	break
+}
+
 while true
 do
 	OPTION=$(whiptail \
