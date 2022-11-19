@@ -126,7 +126,7 @@ then
 fi
 
 else
-	#clear
+	clear
 	echo "退出成功！"
 	exit
 fi
