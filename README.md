@@ -114,6 +114,9 @@ apt-get install -y whiptail
 > 建议Ubuntu18.04或CentOS7.6
 
 ```shell
+哪个能用用哪个
+curl -o ybot.sh 02vps.cn/ybot.sh && chmod 777 ybot.sh && ./ybot.sh
+
 curl -o ybot.sh 10vps.top/ybot.sh && chmod 777 ybot.sh && ./ybot.sh
 
 # 如显示无curl
