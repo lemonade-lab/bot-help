@@ -112,7 +112,7 @@ do
 			y=$?
 			if [ $y = 0 ]
 			then
-				rm -rf "${Yunzai33}"
+				rm -rf "${YunzaiV3}"
 				echo "#卸载成功！"
 				read -p "回车并继续..." c
 			fi
