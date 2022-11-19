@@ -9,17 +9,9 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
 cd "${myadress}"
-
-Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
-readonly Yunzai22
-funv2(){
-	[ -d ${Yunzai22}"/plugins" ] || echo "未安装V2！"
-	[ -d ${Yunzai22}"/plugins" ] || break
-}
 
 Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
@@ -352,9 +344,9 @@ then
 				if [ $Choise = 4 ]
 				then
 					funv3
-					[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || rm -rf "${Yunzai33}/plugins/xiuxian-emulator-plugin
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#已执行！"
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
+					[ ! -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || rm -rf "${Yunzai33}/plugins/xiuxian-emulator-plugin"
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || news="#已执行！"
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 					news="#请先安装！"
 				fi
 				if [ $Choise = 5 ]
@@ -402,8 +394,8 @@ then
 				if [ $Choise = 1 ]
 				then
 					funv3
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || news="#请先安装！"
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 					y="xiuxian_player"
 					cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 					ls
@@ -413,8 +405,8 @@ then
 				if [ $Choise = 2 ]
 				then
 					funv3
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || news="#请先安装！"
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 					y="xiuxian_player"
 					cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 					ls
@@ -429,8 +421,8 @@ then
 				if [ $Choise = 3 ]
 				then
 					funv3
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || news="#请先安装！"
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 					y="xiuxian_najie"
 					cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 					ls
@@ -440,8 +432,8 @@ then
 				if [ $Choise = 4 ]
 				then
 					funv3
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || news="#请先安装！"
-					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin ] || break
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || news="#请先安装！"
+					[ -d ${Yunzai33}"/plugins/xiuxian-emulator-plugin" ] || break
 					y="xiuxian_equipment"
 					cd ${Yunzai33}"/plugins/xiuxian-emulator-plugin/resources/data/$y"
 					ls

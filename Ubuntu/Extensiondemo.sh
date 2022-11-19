@@ -8,11 +8,8 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
 cd "${myadress}"
-Yunzai22="${myadress}/YunzaiV2/Yunzai-Bot"
-readonly Yunzai22
 Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
 
@@ -56,41 +53,19 @@ do
 		fi
 		if [ $OPTION = 2 ]
 		then
-			echo "V2:2"
-			echo "V3:3"
-			read -p "请选择版本：" z
-			if [ $z = 2 ]
-			then
-				[ -d ${Yunzai22}"/plugins" ] || echo "#未安装V2！"
-				[ -d ${Yunzai22}"/plugins" ] || break
-				[ -d ${Yunzai22}"/plugins/miao-plugin/resources/help" ] || echo "#未安装miao"
-				[ -d ${Yunzai22}"/plugins/miao-plugin/resources/help" ] || break
-				[ -d ${Yunzai22}"/plugins/miao-plugin/resources/common/theme" ] || echo "#未安装miao"
-				[ -d ${Yunzai22}"/plugins/miao-plugin/resources/common/theme" ] || break
-				[ -d /Yunzai-Bot-Help/Allfile/help ] || echo "#Yunzai-Bot-help出错"
-				[ -d /Yunzai-Bot-Help/Allfile/help ] || break
-				cd /Yunzai-Bot-Help/Allfile/help/V2help
-				cp help-list.js ${Yunzai22}"/plugins/miao-plugin/resources/help"
-				cp icon.png ${Yunzai22}"/plugins/miao-plugin/resources/help"
-				cp main-01.png ${Yunzai22}"/plugins/miao-plugin/resources/common/theme"
-				echo "#已执行替换"
-			fi
-			if [ $z = 3 ]
-			then
-				[ -d ${Yunzai33}"/plugins" ] || echo "#未安装V3！"
-				[ -d ${Yunzai33}"/plugins" ] || break
-				[ -d ${Yunzai33}"/plugins/miao-plugin/resources/help" ] || echo "#未安装miao"
-				[ -d ${Yunzai33}"/plugins/miao-plugin/resources/help" ] || break
-				[ -d ${Yunzai33}"/plugins/miao-plugin/resources/common/theme" ] || echo "#未安装miao"
-				[ -d ${Yunzai33}"/plugins/miao-plugin/resources/common/theme" ] || break
-				[ -d "/Yunzai-Bot-Help/Allfile/help" ] || echo "#Yunzai-Bot-help出错"
-				[ -d "/Yunzai-Bot-Help/Allfile/help" ] || break
-				cd /Yunzai-Bot-Help/Allfile/help/V3help
-				cp help-list.js ${Yunzai33}"/plugins/miao-plugin/resources/help"
-				cp icon.png ${Yunzai33}"/plugins/miao-plugin/resources/help"
-				cp main-01.png ${Yunzai33}"/plugins/miao-plugin/resources/common/theme"
-				echo "#已执行替换"
-			fi
+			[ -d ${Yunzai33}"/plugins" ] || echo "#未安装V3！"
+			[ -d ${Yunzai33}"/plugins" ] || break
+			[ -d ${Yunzai33}"/plugins/miao-plugin/resources/help" ] || echo "#未安装miao"
+			[ -d ${Yunzai33}"/plugins/miao-plugin/resources/help" ] || break
+			[ -d ${Yunzai33}"/plugins/miao-plugin/resources/common/theme" ] || echo "#未安装miao"
+			[ -d ${Yunzai33}"/plugins/miao-plugin/resources/common/theme" ] || break
+			[ -d "/Yunzai-Bot-Help/Allfile/help" ] || echo "#Yunzai-Bot-help出错"
+			[ -d "/Yunzai-Bot-Help/Allfile/help" ] || break
+			cd /Yunzai-Bot-Help/Allfile/help/V3help
+			cp help-list.js ${Yunzai33}"/plugins/miao-plugin/resources/help"
+			cp icon.png ${Yunzai33}"/plugins/miao-plugin/resources/help"
+			cp main-01.png ${Yunzai33}"/plugins/miao-plugin/resources/common/theme"
+			echo "#已执行替换"
 			read -p "回车并继续..." y
 		fi
 		if [ $OPTION = 3 ]
