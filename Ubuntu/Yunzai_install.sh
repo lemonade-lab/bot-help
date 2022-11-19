@@ -13,14 +13,14 @@ funv3(){
 		echo "未安装云崽V3"
 		read -p "回车并退出..." x
 	fi
-	break
+	break > /dev/null 2>&1
 }
 funqq(){
 	if ! [ -e "${YunzaiV3}/config/config/qq.yaml" ];then
 		echo "请先启动云崽在配置qwq"
 	       read -p "回车并退出..." x
 	fi
-	break
+	break > /dev/null 2>&1
 }
 while true
 do
@@ -101,20 +101,10 @@ do
 
 		fi
 		if [ $OPTION = 7 ];then
-			funv3
-			Choise=$(whiptail \
-				--title "《Yunzai-Bot-Delete》" \
-				--menu "$yourv" \
-				15 50 3 \
-				"1" "卸载" \
-				3>&1 1>&2 2>&3)
-
-			y=$?
-			if [ $y = 0 ]
-			then
+			if (whiptail --title "卸载" --yesno "确定要卸载云崽嘛qwq" 15 50);then
 				rm -rf "${YunzaiV3}"
-				echo "#卸载成功！"
-				read -p "回车并继续..." c
+				echo "卸载成功！感谢使用！"
+				read -p "回车并退出..." c
 			fi
 		fi
 	else
