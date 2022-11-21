@@ -69,7 +69,7 @@ apt-get install -y whiptail
 ### （三）SSH远程连接工具    
 > Android：JuiceSSH         
 > IOS：Termius     
-> Windows：Termius、MobaXterm
+> Windows：Termius、MobaXterm     
 > [Termux开启SSH](https://www.bilibili.com/read/cv19908310)
 
 ## 二、功能介绍    
