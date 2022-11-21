@@ -58,6 +58,7 @@ bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
 
 #### 5. Android安装Ubuntu
 >[完美搭建视频](https://b23.tv/csz4oAS)         
+>[Termux开启SSH](https://www.bilibili.com/read/cv19908310)         
 >搭建时更新指令        
 ```shell
 apt update     
@@ -70,7 +71,6 @@ apt-get install -y whiptail
 > Android：JuiceSSH         
 > IOS：Termius     
 > Windows：Termius、MobaXterm     
-> [Termux开启SSH](https://www.bilibili.com/read/cv19908310)
 
 ## 二、功能介绍    
 > * 一键安装和部署环境     
