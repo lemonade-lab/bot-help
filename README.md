@@ -69,7 +69,9 @@ apt-get install -y whiptail
 ### （三）SSH远程连接工具    
 > Android：JuiceSSH         
 > IOS：Termius     
-> Windows：Termius、MobaXterm   
+> Windows：Termius、MobaXterm
+> 
+> 电脑局域网SSH手机termux：[地址]([url](https://www.bilibili.com/read/cv19908310))
 
 ## 二、功能介绍    
 > * 一键安装和部署环境     
