@@ -70,7 +70,6 @@ apt-get install -y whiptail
 > Android：JuiceSSH         
 > IOS：Termius     
 > Windows：Termius、MobaXterm
-> 
 > [Termux开启SSH](https://www.bilibili.com/read/cv19908310)
 
 ## 二、功能介绍    
