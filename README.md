@@ -71,7 +71,7 @@ apt-get install -y whiptail
 > IOS：Termius     
 > Windows：Termius、MobaXterm
 > 
-> 电脑局域网SSH手机termux：[地址]([url](https://www.bilibili.com/read/cv19908310))
+> [Termux开启SSH](https://www.bilibili.com/read/cv19908310)
 
 ## 二、功能介绍    
 > * 一键安装和部署环境     
