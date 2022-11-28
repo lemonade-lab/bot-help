@@ -34,7 +34,7 @@ do
 		"3" "修改配置" \
 		"4" "修改主人" \
 		"5" "删除QQ" \
-		"6" "更新" \
+		"6" "强制更新" \
 		"7" "卸载" \
 		3>&1 1>&2 2>&3)
 
@@ -83,7 +83,7 @@ do
 		fi
 		if [ $OPTION = 2 ];then
 			funv3
-			echo -e "\n可以在运行云崽的时候Ctrl+C退出运行回到管理界面"
+			echo -e "\n可以在运行云崽的时候Ctrl+C退出运行回到管理界面\n"
 			echo -e "\033[31m！！注意：使用Ctrl+C之后不会云崽将不会运行！！\033[0m\n"
 			echo -e "\033[32m>>可以运行管理后台启动哦qwq<<\033[0m\n"
 			redis-server --daemonize yes
@@ -111,8 +111,12 @@ do
 		fi
 		if [ $OPTION = 6 ];then
 			funv3
-			echo "私聊机器人发送#全部更新"
-			read -p "回车并退出..." c
+			if (whiptail --title "强制更新" --yesno "是否因不可抗因素强制更新" 15 50);then
+				cd "${YunzaiV3}"
+				git  checkout . && git  pull
+				echo "强制更新成功！"
+				read -p "回车并退出..." c
+			fi
 		fi
 		if [ $OPTION = 7 ];then
 			if (whiptail --title "卸载" --yesno "确定要卸载修仙云崽嘛qwq" 15 50);then
