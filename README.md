@@ -128,3 +128,4 @@ apt-get install -y curl
 yum -y install curl
 ```
 
+[爱发电](https://afdian.net/a/WinterChocolates)
