@@ -49,11 +49,11 @@ do
 			else
 				# 调用云崽安装脚本
 				./Install.sh
-				# 喵喵插件的安装
+				# 修仙插件的安装
 				cd "${YunzaiV3}"
-				if ! [ -d "${YunzaiV3}/plugins/xiuxian-emulator-plugin/" ];then
+				if ! [ -d "${YunzaiV3}/plugins/Xiuxian-Plugin-Box/" ];then
 					echo -e "\n正在下载修仙插件..."
-					git clone  https://gitee.com/ningmengchongshui/xiuxian-emulator-plugin.git ./plugins/xiuxian-emulator-plugin/
+					git clone  https://gitee.com/ningmengchongshui/Xiuxian-Plugin-Box.git ./plugins/Xiuxian-Plugin-Box/
 				fi
 				echo -e "修仙插件已安装\n"
 				# 云崽依赖的安装
