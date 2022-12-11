@@ -26,7 +26,7 @@ do
 	OPTION=$(whiptail \
 		--title "《Yunzai-Bot-HelpV1.1.5》" \
 		--menu "$yourv\n$news" \
-		15 50 3 \
+		15 50 5 \
 		"1" "依赖" \
 		"2" "安装" \
 		"3" "更新" \
