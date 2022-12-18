@@ -1,5 +1,5 @@
 #!/bin/bash
-#quanxue 2022.12.18 17:15 update 2nd
+#quanxue 2022.12.18 17:19 update 2nd
 yourv=$(cat /etc/redhat-release)
 readonly yourv
 
