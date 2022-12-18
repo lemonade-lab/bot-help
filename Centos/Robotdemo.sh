@@ -17,7 +17,7 @@ cd "${myadress}"
 
 
 YunzaiV3="${myadress}/YunzaiV3/Yunzai-Bot"
-readonly Yunzai33
+readonly YunzaiV3
 XiuxianV3="${myadress}/YunzaiV3/XiuXianV3"
 readonly XiuxianV3
 
