@@ -16,13 +16,13 @@ cd "${myadress}"
 cd "${myadress}"
 
 
-Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
+YunzaiV3="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
 XiuxianV3="${myadress}/YunzaiV3/XiuXianV3"
 readonly XiuxianV3
 
 funv3(){
-   [ -d ${Yunzai33}"/plugins" ] || echo "#未安装V3！"
+   [ -d ${YunzaiV3}"/plugins" ] || echo "#未安装V3！"
 }
 
 while true
@@ -76,12 +76,12 @@ do
 		fi
 		if [ $OPTION = 2 ]
 		then
-			[ -d ${Yunzai33}"/plugins" ] || echo "#未安装V3！"
-			[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
-			[ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || cd ${YunzaiV3}""
-			[ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm stop
-			[ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || npm start
-			[ ! -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#V3后台运行"
+			[ -d ${YunzaiV3}"/plugins" ] || echo "#未安装V3！"
+			[ -e ${YunzaiV3}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
+			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || cd ${YunzaiV3}""
+			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || npm stop
+			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || npm start
+			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || echo "#V3后台运行"
 			read -p "回车并继续..." c
 		fi
 		if [ $OPTION = 3 ]
