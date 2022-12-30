@@ -1,64 +1,24 @@
 # Yunzai-Bot-Help   
 >Centos/Ubuntu系统轻量型图形化工具V1.2    
 ## 一、安装教程
+#### （一）Centos版指令  
+>切换ROOT&&更新yum&&安装Git&&
 ```
-sudo su root
+sudo su root && yum updata -y && yum -y install git        
 ```
-### 1. 服务器安装
->Ubuntu Centos 脚本自动判断
-```shell
-curl -o yhelp.sh https://10vps.top/yhelp.sh && chmod +x yhelp.sh && ./yhelp.sh
+#### （二）Ubuntu版指令   
+>切换ROOT&&更新apt&&安装Git&&安装whiptail
 ```
-### 2. Android安装
->[完美搭建视频](https://b23.tv/csz4oAS)         
->[Termux开启SSH](https://www.bilibili.com/read/cv19908310)         
->搭建时更新指令        
-```shell
-apt update     
-```
-### 3. 手动安装
-#### （一）Centos版  
->安装git    
-```
-yum -y install git        
-```
->拷贝项目    
-```
-git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-Help
-```
->赋予权限    
-```
-chmod +x /Yunzai-Bot-Help/Centos/*.sh
-```
->运行代码   
-```
-sh /Yunzai-Bot-Help/Centos/Centosdemo.sh
-```
-#### （二）Ubuntu版   
->安装whiptail
-```
-apt-get install -y whiptail  
+sudo su root && apt update   && apt-get install git  && apt-get install -y whiptail
 ``` 
->安装git
+#### （三）启动项目
 ```
-apt-get install git      
+git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-Help && chmod +x /Yunzai-Bot-Help/*/*.sh
 ```
->拷贝项目    
-```shell
-git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-Help
+>运行
 ```
->赋予权限     
-```shell
-chmod +x /Yunzai-Bot-Help/Ubuntu/*.sh
+sh /Yunzai-Bot-Help/install.sh
 ```
->运行代码    
-```shell
-bash /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
-```
->若发现安装进度被卡住后      
->可以重启后继续执行安装
->启动无效就多跑几次安装    
->会自动检索缺失部分      
 
 ## 二、SSH远程连接工具    
 > Android：JuiceSSH         
