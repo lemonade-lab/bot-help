@@ -7,7 +7,7 @@ sudo su root
 ### 1. 服务器安装
 >Ubuntu Centos 脚本自动判断
 ```shell
-curl -o yhelp.sh https://02vps.cn/yhelp.sh && chmod +x yhelp.sh && ./yhelp.sh
+curl -o yhelp.sh https://10vps.top/yhelp.sh && chmod +x yhelp.sh && ./yhelp.sh
 ```
 ### 2. Android安装
 >[完美搭建视频](https://b23.tv/csz4oAS)         
