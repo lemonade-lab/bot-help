@@ -59,8 +59,14 @@ then
     
     if [ $OPTION = 5 ]
     then
-    cd "${Centos}"
-    ./Pluginsdeno.sh
+    #cd "${Centos}"
+    #./Pluginsdeno.sh
+    Choise=$(whiptail \
+        --title "《Yunzai-Bot-Help》" \
+        --menu "$yourv\n##上下选择##左右确定取消" \
+        15 50 5 \
+        "提示" "插件功能由锅巴负责，烦请移步锅巴下载" \
+        3>&1 1>&2 2>&3)
     fi
     
     if [ $OPTION = 6 ]
