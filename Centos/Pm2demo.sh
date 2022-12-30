@@ -9,8 +9,8 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
+[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "Enter and continue回车并继续..." c
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
@@ -41,62 +41,62 @@ cd "${myadress}"
     if [ $OPTION = 1 ]
     then
 npm i pm2 -g
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 2 ]
     then
 pm2 list
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 3 ]
     then
 pm2 monit    
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 4 ]
     then
 pm2 start all    
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 5 ]
     then
 read -p "进程ID：" x
 pm2 list
 pm2 stop $x    
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 6 ]
     then
 pm2 stop all    
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 7 ]
     then
 read -p "进程ID：" x
 pm2 list
 pm2 restart $x    
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 8 ]
     then
 pm2 restart all    
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 9 ]
     then
 read -p "进程ID：" x
 pm2 restart $x    
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
      if [ $OPTION = 10 ]
     then
 pm2 delete all   
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
      if [ $OPTION = 11 ]
     then
 pm2 logs    
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
 else
     exit

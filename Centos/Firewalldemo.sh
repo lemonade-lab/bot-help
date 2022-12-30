@@ -10,8 +10,8 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
+[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "Enter and continue回车并继续..." c
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
@@ -34,7 +34,7 @@ then
     then
 firewall-cmd --state
 echo "#已执行！"
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 2 ]
     then
@@ -44,12 +44,12 @@ firewall-cmd --zone=public --add-port=$x/tcp --permanent
 systemctl restart firewalld.service
 firewall-cmd --reload
 echo "#已执行！"
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
     if [ $OPTION = 3 ]
     then
 systemctl restart firewalld.service
-read -p "回车并继续..." c
+read -p "Enter and continue回车并继续..." c
     fi
 else
     exit

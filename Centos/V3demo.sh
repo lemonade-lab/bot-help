@@ -10,8 +10,8 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "#回车并继续..." c
+[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "#Enter and continue回车并继续..." c
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
@@ -20,8 +20,8 @@ Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
 readonly Yunzai33
 
 funv3(){
-   [ -d ${Yunzai33}"/plugins" ] || echo "#未安装V3！"
-   [ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." x
+   [ -d ${Yunzai33}"/plugins" ] || echo "Not installed#未安装V3！"
+   [ -d ${Yunzai33}"/plugins" ] || read -p "Enter and continue回车并继续..." x
    [ -d ${Yunzai33}"/plugins" ] || break
 }
 
@@ -84,30 +84,30 @@ fi
 
 
 ##yunzai
-[ -d ${myadress}"/YunzaiV3" ] || echo "#回车并继续..."
-[ -d ${myadress}"/YunzaiV3" ] || read -p "#回车并继续..." c
+[ -d ${myadress}"/YunzaiV3" ] || echo "#Enter and continue回车并继续..."
+[ -d ${myadress}"/YunzaiV3" ] || read -p "#Enter and continue回车并继续..." c
 [ -d ${myadress}"/YunzaiV3" ] || break
 cd ${myadress}"/YunzaiV3"
 [ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
 [ -d ${Yunzai33}"/plugins" ] || rm -rf ${Yunzai33} ""
-[ -d ${Yunzai33}"/plugins" ] || echo "#安装失败" 
-[ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." c
+[ -d ${Yunzai33}"/plugins" ] || echo "Installation failed安装失败" 
+[ -d ${Yunzai33}"/plugins" ] || read -p "Enter and continue回车并继续..." c
 [ -d ${Yunzai33}"/plugins" ] || break
 
 ##miao
 cd "${Yunzai33}"
 [ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
 [ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || rm -rf ${Yunzai33}"/plugins/miao-plugin"
-[ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || echo "#安装失败,已清除残留"
-[ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || read -p "回车并继续..." c
+[ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || echo "Installation failed安装失败,已清除残留"
+[ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || read -p "Enter and continue回车并继续..." c
 [ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || break
 
 ##guoba
 cd "${Yunzai33}"
 [ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
 [ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || rm -rf ${Yunzai33}"/plugins/Guoba-Plugin"
-[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || echo "#安装失败,已清除残留"
-[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || read -p "回车并继续..." c
+[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || echo "Installation failed安装失败,已清除残留"
+[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || read -p "Enter and continue回车并继续..." c
 [ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || break
 
 ##依赖
@@ -126,18 +126,18 @@ node ./node_modules/puppeteer/install.js
 echo "#安装成功"
 
 ##返回
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
     fi
     
 #启动
     if [ $OPTION = 2 ]
     then
 [ -d ${Yunzai33}"/plugins" ] || echo "#请先安装"
-[ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." y
+[ -d ${Yunzai33}"/plugins" ] || read -p "Enter and continue回车并继续..." y
 [ -d ${Yunzai33}"/plugins" ] || break
 cd "${Yunzai33}"
 node app.js
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
     fi   
     
 #更新
@@ -147,12 +147,12 @@ read -p "回车并继续..." y
 cd "${Yunzai33}"
 git pull
 [ -d ${Yunzai33}"/plugins/miao-plugin" ] || echo "#请先安装"
-[ -d ${Yunzai33}"/plugins/miao-plugin" ] || read -p "回车并继续..." y
+[ -d ${Yunzai33}"/plugins/miao-plugin" ] || read -p "Enter and continue回车并继续..." y
 [ -d ${Yunzai33}"/plugins/miao-plugin" ] || break
 cd "${Yunzai33}/plugins/miao-plugin"
 git pull
 echo "#更新完成"
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
     fi
     
 #卸载
@@ -170,7 +170,7 @@ if [ $y = 0 ]
 then
 rm -rf "${Yunzai33}"
 echo "#卸载成功！"
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
 fi
     fi
 
@@ -178,7 +178,7 @@ fi
     if [ $OPTION = 4 ]
     then
 [ -d ${Yunzai33}"/plugins" ] || echo "#请先安装"
-[ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." y
+[ -d ${Yunzai33}"/plugins" ] || read -p "Enter and continue回车并继续..." y
 [ -d ${Yunzai33}"/plugins" ] || break
 cd "${Yunzai33}"
 npm login run

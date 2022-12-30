@@ -9,8 +9,8 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..."
+[ -d ${myadress}"/YunzaiV3" ] || news="initialization failed初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "Enter and continue回车并继续..."
 [ -d ${myadress}"/YunzaiV3" ] || exit
 
 cd "${myadress}"
@@ -37,7 +37,7 @@ cd "${myadress}"
 yum -y remove openssh-server
 yum -y install openssh-server
 echo "#已执行！"
-read -p "回车并继续..." x
+read -p "Enter and continue回车并继续..." x
     fi
     if [ $OPTION = 2 ]
     then
@@ -59,7 +59,7 @@ echo "PubkeyAuthentication yes"
 echo "——————————————————————————————"
 echo "修改后重启生效..."
 echo "——————————————————————————————"
-read -p "回车并继续..." x
+read -p "Enter and continue回车并继续..." x
     fi
     if [ $OPTION = 3 ]
     then
@@ -68,12 +68,12 @@ vi /etc/ssh/sshd_config
     if [ $OPTION = 4 ]
     then
 systemctl restart sshd.service
-read -p "回车并继续..." x
+read -p "Enter and continue回车并继续..." x
     fi
     if [ $OPTION = 5 ]
     then
 systemctl status sshd.service
-read -p "回车并继续..." x
+read -p "Enter and continue回车并继续..." x
     fi
 cd "${myadress}"
 else

@@ -61,9 +61,9 @@ then
     #cd "${Centos}"
     Choise=$(whiptail \
         --title "《Yunzai-Bot-Help》" \
-        --menu "$yourv\n##上下选择##左右确定取消" \
+        --menu "$yourv\nTo be updated功能正在施工中" \
         15 50 5 \
-        "提示" "功能正在施工中" \
+        "Tips提示" "To be updated功能正在施工中" \
         3>&1 1>&2 2>&3)
     fi
     
@@ -95,9 +95,9 @@ then
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
---menu "$yourv\n#请确认是否确定重启..." \
+--menu "$yourv\n#Are you sure to restart是否确定重启?" \
 15 50 3 \
-"1" "重启" \
+"1" "restart重启" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
@@ -108,7 +108,7 @@ fi
     
 else
     clear
-    echo "退出成功！"
+    echo "Exit succeeded退出成功"
     exit
 fi
 done

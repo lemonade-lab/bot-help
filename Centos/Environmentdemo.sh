@@ -9,8 +9,8 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..."
+[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败initialization failed"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "Enter and continue回车并继续..."
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
@@ -40,12 +40,12 @@ echo "redis"
 redis-server -v
 echo "git"
 git version
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
     fi
     if [ $OPTION = 2 ]
     then
 ps -aux | grep redis
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
     fi
     if [ $OPTION = 3 ]
     then
@@ -59,7 +59,7 @@ tar  zxf sshpass-1.06.tar.gz
 ./configure  --prefix=/usr/local/
 make && make install
 rm -rf sshpass-1.06.tar.gz
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
     fi
     if [ $OPTION = 5 ]
     then
@@ -71,7 +71,7 @@ cd Python-3.9.0
 make && make install
 ln -s /usr/local/python3/bin/python3.9 /usr/bin/python3
 ln -s /usr/local/python3/bin/pip3.9 /usr/bin/pip3
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
     fi
     if [ $OPTION = 6 ]
     then
@@ -81,7 +81,7 @@ yum -y install yum-utils
 yum-config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
 dnf install ffmpeg
 ffmpeg -version
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
     fi
 else
     exit

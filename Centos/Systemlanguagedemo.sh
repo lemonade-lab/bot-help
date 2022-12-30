@@ -10,8 +10,8 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." x
+[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "Enter and continue回车并继续..." x
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
@@ -43,7 +43,7 @@ echo "按i进入修改模式"
 echo "按ESE退出修改模式"
 echo "输入:wq!强制保存"
 echo "按CTRL+Z退出文件"
-read -p "回车并继续..." x
+read -p "Enter and continue回车并继续..." x
     fi
     if [ $OPTION = 2 ]
     then
@@ -51,17 +51,17 @@ cd "${myadress}"
 dnf install langpacks-zh_CN
 dnf install -y ibus-libpinyin.x86_64
 echo "#已执行！"
-read -p "回车并继续..." x
+read -p "Enter and continue回车并继续..." x
     fi 
     if [ $OPTION = 3 ]
     then
 locale -a
-read -p "回车并继续..." x
+read -p "Enter and continue回车并继续..." x
     fi
     if [ $OPTION = 4 ]
     then
 echo $LANG
-read -p "回车并继续..." x
+read -p "Enter and continue回车并继续..." x
     fi
     if [ $OPTION = 5 ]
     then

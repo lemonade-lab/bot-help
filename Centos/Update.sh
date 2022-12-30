@@ -15,19 +15,19 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "#回车并继续..." c
+[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败"
+[ -d ${myadress}"/YunzaiV3" ] || read -p "#Enter and continue回车并继续..." c
 [ -d ${myadress}"/YunzaiV3" ] || exit
 cd "${myadress}"
 
 while true
 do
 OPTION=$(whiptail \
---title "《Help-Udate》" \
+--title "《HelpManage》" \
 --menu "$yourv" \
 15 50 5 \
-"1" "更新" \
-"2" "卸载" \
+"1" "update工具更新" \
+"2" "uninstall工具卸载" \
 3>&1 1>&2 2>&3)
 
 x=$?
@@ -46,7 +46,7 @@ then
 [ ! -e ${Centosdemo} ] || git reset --hard main
 [ ! -e ${Centosdemo} ] || git pull
 [ ! -e ${Centosdemo} ] || echo "#执行完成，请重新授权！"
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
      fi
      
 #卸载
@@ -56,7 +56,7 @@ Choise=$(whiptail \
 --title "《Help-Delete》" \
 --menu "$yourv\n$news" \
 15 50 3 \
-"1" "卸载" \
+"1" "uninstall卸载" \
 3>&1 1>&2 2>&3)
 y=$?
 if [ $y = 0 ]
@@ -64,7 +64,7 @@ then
 sudo su root
 rm -rf "${bot}"
 echo "#执行完成"
-read -p "回车并继续..." y
+read -p "Enter and continue回车并继续..." y
 fi
      fi
 else
