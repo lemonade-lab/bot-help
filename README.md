@@ -1,15 +1,19 @@
 # Yunzai-Bot-Help   
 >Centos/Ubuntu系统轻量型图形化工具V1.2    
 ## 一、安装教程
+>切换root用户
+```
+sudo su root      
+```
 #### （一）Centos版指令  
 >切换ROOT&&更新yum&&安装Git&&
 ```
-sudo su root && yum updata -y && yum -y install git        
+yum install updata -y && yum -y install git        
 ```
 #### （二）Ubuntu版指令   
 >切换ROOT&&更新apt&&安装Git&&安装whiptail
 ```
-sudo su root && apt update   && apt-get install git  && apt-get install -y whiptail
+apt install update -y && apt-get install git  && apt-get install -y whiptail
 ``` 
 #### （三）启动项目
 ```
