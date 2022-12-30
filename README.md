@@ -1,5 +1,5 @@
 # Yunzai-Bot-Help   
->Centos/Ubuntu系统轻量型图形化工具V1.2    
+>Centos/Ubuntu系统轻量型图形化工具V1.3    
 ## 一、安装教程
 #### （一）切换用户
 >必须root用户模式
