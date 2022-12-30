@@ -42,5 +42,6 @@ sh /Yunzai-Bot-Help/install.sh
 ## 四、企鹅讨论聚集地      
 群名  | 群号  |  群主 
 ------------- | -------------  | -------------    
-| [BotHelp](https://afdian.net/a/WinterChocolates) | 806943302 | [@冬季巧克力](https://gitee.com/djqkl_znje) |  
+| [BotHelp](https://afdian.net/a/WinterChocolates) | 806943302 | [@冬季巧克力](https://gitee.com/djqkl_znje) | 
+ 
 [爱发电](https://afdian.net/a/WinterChocolates)    
