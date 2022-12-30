@@ -17,7 +17,7 @@ OPTION=$(whiptail \
 "3" "BackControl运行管理" \
 "4" "ProcessManage进程管理" \
 "5" "DesktopInstall桌面安装" \
-"6" "EnvironmentalManage环境管理" \
+"6" "EnvironManage环境管理" \
 "7" "SystemLanguage系统语言" \
 "8" "SSHManige远程管理" \
 "9" "firewall防火墙" \
