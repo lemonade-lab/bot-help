@@ -9,7 +9,7 @@ readonly Centos
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.2.0》" \
+--title "《Yunzai-Bot-HelpV2.0.0》" \
 --menu "$yourv" \
 15 50 5 \
 "1" "HELP更新" \
