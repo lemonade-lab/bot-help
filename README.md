@@ -8,7 +8,7 @@ sudo su root
 #### （二）初始化
 >1.centos版初始化
 ```
-yum updata -y && yum install git -y    
+yum update -y && yum install git -y    
 ```
 >2.Ubuntu版初始化   
 ```
