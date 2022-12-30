@@ -5,7 +5,7 @@
 sudo su root
 ```
 ### 1. 服务器安装
-Ubuntu Centos
+>Ubuntu Centos 脚本会自动判断
 ```shell
 curl -o yhelp.sh https://02vps.cn/yhelp.sh && chmod +x yhelp.sh && ./yhelp.sh
 ```
