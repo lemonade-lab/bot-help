@@ -41,31 +41,14 @@ fi
 if [ $OPTION = 2 ]
 then
 	cd "${Ubuntu}"
-	INSTALL=$(whiptail \
-		--title "《Yunzai-Bot云崽》" \
-		--menu "$yourv" \
-		15 50 2 \
-		"1" "云崽V3" \
-		"2" "修仙V3" \
-		3>&1 1>&2 2>&3)
-
-	z=$?
-	if [ $z = 0 ]
-	then
-		if [ $INSTALL = 1 ];then
-			./Yunzai_install.sh
-		fi
-		if [ $INSTALL = 2 ];then
-			./Xiuxian_install.sh
-		fi
-	fi
+	./Yunzai_install.sh
 fi
 #运行管理
 if [ $OPTION = 3 ]
 then
 	cd "${Ubuntu}"
 	./Robotdemo.sh
-	fi
+fi
 
 #插件管理
 if [ $OPTION = 4 ]
@@ -129,5 +112,5 @@ else
 	clear
 	echo "退出成功！"
 	exit
-fi
+	fi
 done
