@@ -9,7 +9,6 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-#[ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
 [ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
 [ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
 [ -d ${myadress}"/YunzaiV3" ] || read -p "#回车并继续..." c
@@ -33,10 +32,11 @@ OPTION=$(whiptail \
 --title "《Yunzai-Bot-V3》" \
 --menu "$yourv" \
 15 50 5 \
-"1" "安装" \
-"2" "启动" \
-"3" "更新" \
-"4" "卸载" \
+"1" "install快捷安装" \
+"2" "startUp启动账号" \
+"3" "toUpdate机器更新" \
+"4" "unInstall机器卸载" \
+"5" "reLogin重新登录" \
 3>&1 1>&2 2>&3)
 
 x=$?
@@ -173,6 +173,17 @@ echo "#卸载成功！"
 read -p "回车并继续..." y
 fi
     fi
+
+#登录
+    if [ $OPTION = 4 ]
+    then
+[ -d ${Yunzai33}"/plugins" ] || echo "#请先安装"
+[ -d ${Yunzai33}"/plugins" ] || read -p "回车并继续..." y
+[ -d ${Yunzai33}"/plugins" ] || break
+cd "${Yunzai33}"
+npm login run
+    fi   
+
 cd "${myadress}"
 else
     exit

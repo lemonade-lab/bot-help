@@ -9,19 +9,19 @@ readonly Centos
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-HelpV1.2.0》" \
+--title "《Yunzai-Bot-Help》" \
 --menu "$yourv" \
 15 50 5 \
-"1" "HELP更新" \
-"2" "机器配置" \
-"3" "后台运行" \
-"4" "进程管理" \
-"5" "桌面安装" \
-"6" "环境管理" \
-"7" "系统语言" \
-"8" "SSH管理" \
-"9" "防火墙" \
-"10" "系统重启" \
+"1" "HelpManage工具管理" \
+"2" "administrat机器管理" \
+"3" "BackControl运行管理" \
+"4" "ProcessManage进程管理" \
+"5" "DesktopInstall桌面安装" \
+"6" "EnvironmentalManage环境管理" \
+"7" "SystemLanguage系统语言" \
+"8" "SSHManige远程管理" \
+"9" "firewall防火墙" \
+"10" "restart系统重启" \
 3>&1 1>&2 2>&3)
 
 x=$?

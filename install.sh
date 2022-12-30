@@ -21,12 +21,13 @@ fi
 check_sys
 if [ "${release}" == "CentOS" ]; then
 echo -e "CentOS"
-./Centos/Centosdemo.sh
+/Yunzai-Bot-Help/Centos/Centosdemo.sh
 fi
 if [ "${release}" == "Ubuntu" ]; then
 echo -e "Ubuntu"
-./Ubuntu/Ubuntudemo.sh
+/Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
 fi
 if [ "${release}" == "Debian" ]; then
 echo -e "Debian"
+read -p "Debian版本待施工...:"
 fi
