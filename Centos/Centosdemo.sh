@@ -17,12 +17,11 @@ OPTION=$(whiptail \
 "3" "后台运行" \
 "4" "进程管理" \
 "5" "插件管理" \
-"6" "扩展功能" \
-"7" "环境管理" \
-"8" "系统语言" \
-"9" "SSH管理" \
-"10" "防火墙" \
-"11" "系统重启" \
+"6" "环境管理" \
+"7" "系统语言" \
+"8" "SSH管理" \
+"9" "防火墙" \
+"10" "系统重启" \
 3>&1 1>&2 2>&3)
 
 x=$?
@@ -69,37 +68,37 @@ then
         3>&1 1>&2 2>&3)
     fi
     
-    if [ $OPTION = 6 ]
-    then
-    cd "${Centos}"
-    ./Extensiondemo.sh
-    fi
+    # if [ $OPTION = 6 ]
+    # then
+    # cd "${Centos}"
+    # ./Extensiondemo.sh
+    # fi
     
-    if [ $OPTION = 7 ]
+    if [ $OPTION = 6 ]
     then
     cd "${Centos}"
     ./Environmentdemo.sh
     fi
     
-    if [ $OPTION = 8 ]
+    if [ $OPTION = 7 ]
     then
     cd "${Centos}"
     ./Systemlanguagedemo.sh
     fi
     
-    if [ $OPTION = 9 ]
+    if [ $OPTION = 8 ]
     then
     cd "${Centos}"
     ./SSHdemo.sh
     fi
     
-    if [ $OPTION = 10 ]
+    if [ $OPTION = 9 ]
     then
     cd "${Centos}"
     ./Firewalldemo.sh
     fi
     
-    if [ $OPTION = 11 ]
+    if [ $OPTION = 10 ]
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \

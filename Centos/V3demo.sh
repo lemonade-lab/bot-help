@@ -35,12 +35,8 @@ OPTION=$(whiptail \
 15 50 5 \
 "1" "安装" \
 "2" "启动" \
-"3" "修改配置" \
-"4" "修改主人" \
-"5" "修改QQ" \
-"6" "删除QQ" \
-"7" "更新" \
-"8" "卸载" \
+"3" "更新" \
+"4" "卸载" \
 3>&1 1>&2 2>&3)
 
 x=$?
@@ -142,66 +138,10 @@ read -p "回车并继续..." y
 cd "${Yunzai33}"
 node app.js
 read -p "回车并继续..." y
-    fi
-    
-#修改配置
-    if [ $OPTION = 3 ]
-    then
-[ -d ${Yunzai33}"/plugins/example" ] || echo "#请先安装"
-[ -d ${Yunzai33}"/plugins/example" ] || read -p "回车并继续..." y
-[ -d ${Yunzai33}"/plugins/example" ] || break
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-[ -e ${Yunzai33}"/config/config/group.yaml" ] || echo "#您未配置"
-[ -e ${Yunzai33}"/config/config/group.yaml" ] || read -p "回车并继续..." y
-[ -e ${Yunzai33}"/config/config/group.yaml" ] || break
-vi "${Yunzai33}/config/config/group.yaml"
-    fi
-
-#修改主人
-    if [ $OPTION = 4 ]
-    then
-    funv3
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-[ -e ${Yunzai33}"/config/config/other.yaml" ] || echo "#您未配置"
-[ -e ${Yunzai33}"/config/config/other.yaml" ] || read -p "回车并继续..." y
-[ -e ${Yunzai33}"/config/config/other.yaml" ] || break
-vi "${Yunzai33}/config/config/other.yaml"
-    fi
-    
-#修改QQ
-    if [ $OPTION = 5 ]
-    then
-    funv3
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-[ -e ${Yunzai33}"/config/config/other.yaml" ] || echo "#您未配置"
-[ -e ${Yunzai33}"/config/config/other.yaml" ] || read -p "回车并继续..." y
-[ -e ${Yunzai33}"/config/config/other.yaml" ] || break
-vi "${Yunzai33}/config/config/qq.yaml"
-    fi
-    
-#删除QQ
-    if [ $OPTION = 6 ]
-    then
-    funv3
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#您未配置"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-rm -rf ${Yunzai33}"/config/config/qq.yaml"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || echo "#配置删除成功！"
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || read -p "回车并继续..." y
-[ -e ${Yunzai33}"/config/config/qq.yaml" ] || break
-echo "#配置删除失败！"
-read -p "回车并继续..." y
-    fi
+    fi   
     
 #更新
-    if [ $OPTION = 7 ]
+    if [ $OPTION = 3 ]
     then
     funv3
 cd "${Yunzai33}"
@@ -216,7 +156,7 @@ read -p "回车并继续..." y
     fi
     
 #卸载
-    if [ $OPTION = 8 ]
+    if [ $OPTION = 4 ]
     then
     funv3
 Choise=$(whiptail \
