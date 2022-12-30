@@ -106,10 +106,19 @@ cd "${Yunzai33}"
 [ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || read -p "回车并继续..." c
 [ -d ${Yunzai33}"/plugins/miao-plugin/resources" ] || break
 
+##guoba
+cd "${Yunzai33}"
+[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
+[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || rm -rf ${Yunzai33}"/plugins/Guoba-Plugin"
+[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || echo "#安装失败,已清除残留"
+[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || read -p "回车并继续..." c
+[ -d ${Yunzai33}"/plugins/Guoba-Plugin/resources" ] || break
+
 ##依赖
 cd "${Yunzai33}"
 npm install
 npm install image-size
+npm install express multer body-parser jsonwebtoken
 
 ##安装Chromium
 yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 -y 
