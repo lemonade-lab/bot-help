@@ -21,11 +21,11 @@ OPTION=$(whiptail \
 --title "《Help-SSH》" \
 --menu "$yourv" \
 15 50 5 \
-"1" "SSH初始化" \
-"2" "编辑说明" \
-"3" "编辑SSH" \
-"4" "重启SSH" \
-"5" "SSH状态" \
+"1" "initialize SSH SSH初始化" \
+"2" "edit instruction 编辑说明" \
+"3" "edit SSH 编辑SSH" \
+"4" "restart SSH 重启SSH" \
+"5" "status SSH状态" \
 3>&1 1>&2 2>&3)
 
 x=$?
