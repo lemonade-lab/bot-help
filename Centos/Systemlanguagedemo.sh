@@ -21,11 +21,11 @@ OPTION=$(whiptail \
 --title "《System-language》" \
 --menu "$yourv" \
 15 50 5 \
-"1" "编辑教程" \
-"2" "下载语言包" \
-"3" "语言列表" \
-"4" "当前语言" \
-"5" "编辑语言" \
+"1" "instruction编辑教程" \
+"2" "download packages of language下载语言包" \
+"3" "language list语言列表" \
+"4" "current language当前语言" \
+"5" "edit language编辑语言" \
 3>&1 1>&2 2>&3)
 
 x=$?
