@@ -22,7 +22,7 @@ OPTION=$(whiptail \
 --title "《Help-system》" \
 --menu "$yourv" \
 15 50 3 \
-"1" "该功能暂未开放" \
+"1" "please wait for update该功能暂未开放" \
 3>&1 1>&2 2>&3)
 
 x=$?
