@@ -21,17 +21,17 @@ OPTION=$(whiptail \
 --title "《Help-SSH》" \
 --menu "$yourv" \
 15 50 5 \
-"1" "安装PM2" \
-"2" "查看进程列表" \
-"3" "监视所有进程" \
-"4" "运行所有进程" \
-"5" "停止指定进程" \
-"6" "停止所有进程" \
-"7" "重启指定进程" \
-"8" "重启所有进程" \
-"9" "杀死特定进程" \
-"10" "杀死所有进程" \
-"11" "显示进程日记" \
+"1" "install PM2安装PM2" \
+"2" "view the list of processes查看进程列表" \
+"3" "moniter all processes监视所有进程" \
+"4" "run all processes运行所有进程" \
+"5" "stop specific process停止指定进程" \
+"6" "stop all processes停止所有进程" \
+"7" "restart specific process重启指定进程" \
+"8" "restart all processes重启所有进程" \
+"9" "kill specific process杀死特定进程" \
+"10" "kill all processes杀死所有进程" \
+"11" "show diary显示进程日记" \
 3>&1 1>&2 2>&3)
 
 x=$?
