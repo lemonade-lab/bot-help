@@ -31,9 +31,9 @@ do
         --title "《Yunzai-Bot》" \
         --menu "$yourv" \
         15 50 5 \
-        "1" "运行状态" \
-		"2" "启动云崽V3" \
-		"3" "停止云崽V3" \
+        "1" "status运行状态" \
+		"2" "run Yunzai-Bot启动云崽V3" \
+		"3" "stop Yunzai-Bot停止云崽V3" \
         3>&1 1>&2 2>&3)
     x=$?
 	if [ $x = 0 ]
