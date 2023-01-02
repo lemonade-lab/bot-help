@@ -11,7 +11,6 @@ cd /home
 cd "${myadress}"
 [ -d ${myadress}"/centos" ] || mkdir centos
 [ -d ${myadress}"/centos" ] || exit
-cd "${myadress}"
 
 while true
 do

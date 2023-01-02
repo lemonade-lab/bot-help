@@ -12,7 +12,6 @@ cd /home
 cd "${myadress}"
 [ -d ${myadress}"/centos" ] || mkdir centos
 [ -d ${myadress}"/centos" ] || exit
-cd "${myadress}"
 
 yunzaiverification(){
    [ -d ${centos}"/plugins" ] || echo "Not installed#未安装V3！"
