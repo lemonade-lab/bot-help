@@ -1,6 +1,6 @@
 #!/bin/bash
-yourv=$(cat /etc/redhat-release)
-readonly yourv
+version=$(cat /etc/redhat-release)
+readonly version
 
 
 myadress="/home/lighthouse"
@@ -20,7 +20,7 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Help-Firewall》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 3 \
 "1" "状态" \
 "2" "端口" \

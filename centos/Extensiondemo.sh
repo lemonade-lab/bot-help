@@ -1,6 +1,6 @@
 #!/bin/bash
-yourv=$(cat /etc/redhat-release)
-readonly yourv
+version=$(cat /etc/redhat-release)
+readonly version
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -30,7 +30,7 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Help-Extension》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 5 \
 "1" "逆天改命" \
 "2" "miaoHelp" \
@@ -102,7 +102,7 @@ read -p "Enter and continue回车并继续..." y
     funv3
     Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 5 \
 "1" "存档设置" \
 "2" "修仙设置" \
@@ -117,7 +117,7 @@ then
     then
 Choise=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 5 \
 "1" "改存档" \
 "2" "删存档" \

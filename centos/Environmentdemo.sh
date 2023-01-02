@@ -1,6 +1,6 @@
 #!/bin/bash
-yourv=$(cat /etc/redhat-release)
-readonly yourv
+version=$(cat /etc/redhat-release)
+readonly version
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -19,7 +19,7 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Help-Environment》" \
---menu "$yourv\n$news" \
+--menu "$version\n$news" \
 15 50 5 \
 "1" "查看环境" \
 "2" "Redis" \

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-yourv=$(cat /etc/redhat-release)
-readonly yourv
+version=$(cat /etc/redhat-release)
+readonly version
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -19,7 +19,7 @@ while true
 do
 OPTION=$(whiptail \
 --title "《System-language》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 5 \
 "1" "instruction编辑教程" \
 "2" "download packages of language下载语言包" \

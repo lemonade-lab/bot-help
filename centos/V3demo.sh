@@ -1,7 +1,7 @@
 #!/bin/bash
 
-yourv=$(cat /etc/redhat-release)
-readonly yourv
+version=$(cat /etc/redhat-release)
+readonly version
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -30,7 +30,7 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Yunzai-Bot-V3》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 5 \
 "1" "install快捷安装" \
 "2" "startUp启动账号" \
@@ -161,7 +161,7 @@ read -p "Enter and continue回车并继续..." y
     funv3
 Choise=$(whiptail \
 --title "《Yunzai-Bot-V3》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 3 \
 "1" "卸载" \
 3>&1 1>&2 2>&3)

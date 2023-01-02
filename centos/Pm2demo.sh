@@ -1,6 +1,6 @@
 #!/bin/bash
-yourv=$(cat /etc/redhat-release)
-readonly yourv
+version=$(cat /etc/redhat-release)
+readonly version
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -19,7 +19,7 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Help-SSH》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 5 \
 "1" "install PM2安装PM2" \
 "2" "view the list of processes查看进程列表" \

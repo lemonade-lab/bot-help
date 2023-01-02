@@ -1,7 +1,7 @@
 #!/bin/bash
 #quanxue 2022.12.30 10:26 update 3rd
-yourv=$(cat /etc/redhat-release)
-readonly yourv
+version=$(cat /etc/redhat-release)
+readonly version
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -29,7 +29,7 @@ while true
 do
     OPTION=$(whiptail \
         --title "《Yunzai-Bot》" \
-        --menu "$yourv" \
+        --menu "$version" \
         15 50 5 \
         "1" "status运行状态" \
 		"2" "run Yunzai-Bot启动云崽V3" \

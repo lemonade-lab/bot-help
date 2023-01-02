@@ -1,5 +1,4 @@
 #!/bin/bash
-
 version=$(cat /etc/redhat-release)
 readonly version
 
@@ -24,88 +23,69 @@ OPTION=$(whiptail \
 "10" "系统重启restart" \
 3>&1 1>&2 2>&3)
 
-x=$?
-if [ $x = 0 ]
+feedback=$?
+
+if [ $feedback = 0 ]
 then
 
-#HELP设置
+#工具管理HelpManage
     if [ $OPTION = 1 ]
-    then
-    sh "${Centos}/Update.sh"
+    then sh "${Centos}/Update.sh"
     fi
 
-#机器管理
+#机器管理administrat
     if [ $OPTION = 2 ]
-    then
-    sh "${Centos}/V3demo.sh"
+    then sh "${Centos}/V3demo.sh"
     fi
 
-#运行管理
+#运行管理BackControl
     if [ $OPTION = 3 ]
-    then
-    sh "${Centos}/Robotdemo.sh"
+    then sh "${Centos}/Robotdemo.sh"
     fi
   
-#插件管理
+#进程管理ProcessManage
     if [ $OPTION = 4 ]
-    then
-    cd "${Centos}"
-    ./Pm2demo.sh
+    then sh "${Centos}/Pm2demo.sh"
     fi
-    
+
+#桌面安装DesktopInstall
     if [ $OPTION = 5 ]
     then
-    #cd "${Centos}"
     Choise=$(whiptail \
         --title "《Yunzai-Bot-Help》" \
-        --menu "$version\nTo be updated功能正在施工中" \
+        --menu "$version\n功能正在施工中To be updated" \
         15 50 5 \
-        "Tips提示" "To be updated功能正在施工中" \
+        "Tips提示" "功能正在施工中To be updated" \
         3>&1 1>&2 2>&3)
     fi
-    
+
+#环境管理EnvironManage
     if [ $OPTION = 6 ]
-    then
-    cd "${Centos}"
-    ./Environmentdemo.sh
+    then sh "${Centos}/Environmentdemo.sh"
     fi
-    
+
+#系统语言SystemLanguage
     if [ $OPTION = 7 ]
-    then
-    cd "${Centos}"
-    ./Systemlanguagedemo.sh
+    then sh "${Centos}/Systemlanguagedemo.sh"
     fi
-    
+
+#远程管理SSHManage
     if [ $OPTION = 8 ]
-    then
-    cd "${Centos}"
-    ./SSHdemo.sh
+    then sh "${Centos}/SSHdemo.sh"
     fi
-    
+
+#防火设置firewall
     if [ $OPTION = 9 ]
-    then
-    cd "${Centos}"
-    ./Firewalldemo.sh
+    then sh "${Centos}/Firewalldemo.sh"
     fi
-    
+
+#系统重启restart
     if [ $OPTION = 10 ]
-    then
-Choise=$(whiptail \
---title "《Yunzai-Bot-Help》" \
---menu "$version\n#Are you sure to restart是否确定重启?" \
-15 50 3 \
-"1" "restart重启" \
-3>&1 1>&2 2>&3)
-y=$?
-if [ $y = 0 ]
-then
-shutdown -r now
-fi
+    then shutdown -r now
     fi
-    
 else
     clear
-    echo "Exit succeeded退出成功"
+    echo "退出成功Exit succeeded"
     exit
 fi
 done

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-yourv=$(cat /etc/redhat-release)
-readonly yourv
+version=$(cat /etc/redhat-release)
+readonly version
 
 myadress="/home/lighthouse"
 readonly myadress
@@ -24,7 +24,7 @@ while true
 do
 OPTION=$(whiptail \
 --title "《HelpManage》" \
---menu "$yourv" \
+--menu "$version" \
 15 50 5 \
 "1" "update工具更新" \
 "2" "uninstall工具卸载" \
@@ -54,7 +54,7 @@ read -p "Enter and continue回车并继续..." y
      then
 Choise=$(whiptail \
 --title "《Help-Delete》" \
---menu "$yourv\n$news" \
+--menu "$version\n$news" \
 15 50 3 \
 "1" "uninstall卸载" \
 3>&1 1>&2 2>&3)
