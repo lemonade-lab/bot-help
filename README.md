@@ -1,4 +1,4 @@
-# Yunzai-Bot-Help   
+# yunzai-bot-help   
 >Centos/Ubuntu系统轻量型图形化工具V1.3    
 ## 一、安装教程
 #### （一）切换用户
@@ -18,11 +18,11 @@ apt update -y && apt-get install git -y && apt-get install  whiptail -y
 #### （三）项目
 >克隆并启动
 ```
-git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-Help && chmod +x /Yunzai-Bot-Help/*/*.sh && sh /Yunzai-Bot-Help/install.sh
+git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-help && chmod +x /yunzai-bot-help/*/*.sh && sh /yunzai-bot-help/install.sh
 ```
 >日常启动
 ```
-sh /Yunzai-Bot-Help/install.sh
+sh /yunzai-bot-help/install.sh
 ```
 ## 二、手机搭建
 [安卓7以上下载APK](https://f-droid.org/packages/com.termux/)
