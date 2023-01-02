@@ -13,17 +13,17 @@ do
 		--title "《Yunzai-Bot-HelpV1.1.6》" \
 		--menu "$version" \
 		15 50 5 \
-		"1" "HELP设置" \
-		"2" "机器管理" \
-		"3" "运行管理" \
-		"4" "进程管理" \
+		"1" "工具管理HelpManage" \
+        "2" "机器管理administrat" \
+        "3" "运行管理BackControl" \
+        "4" "进程管理ProcessManage" \
 		"5" "插件管理" \
 		"6" "扩展功能" \
-		"7" "环境管理" \
-		"8" "系统语言" \
-		"9" "SSH管理" \
-		"10" "防火墙" \
-		"11" "系统重启" \
+        "7" "环境管理EnvironManage" \
+        "8" "系统语言SystemLanguage" \
+        "9" "远程管理SSHManage" \
+        "10" "防火设置firewall" \
+        "11" "系统重启restart" \
 		3>&1 1>&2 2>&3)
 
 	x=$?

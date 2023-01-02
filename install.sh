@@ -20,7 +20,7 @@ if [ ${release}="centos" ]
 then
 sh "${appname}/centos/index.sh"
 fi
-if [ ${release}="ubantu" ]
+if [ ${release}="ubuntu" ]
 then
 sh "${appname}/ubuntu/index.sh"
 fi
