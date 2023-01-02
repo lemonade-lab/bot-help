@@ -25,7 +25,7 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-h
 sh /yunzai-bot-help/install.sh
 ```
 ## 二、手机搭建
-[安卓7以上下载APK](https://f-droid.org/packages/com.termux/)
+[手机点击APK下载并安装](https://f-droid.org/packages/com.termux/)
 >安装git、py与系统安装脚本
 ```
 pkg install proot git python -y
@@ -33,11 +33,11 @@ git clone https://gitee.com/Le-niao/termux-install-linux.git
 ```
 >启动脚本并回复1安装ubantu系统
 ```
-python termux-install-linux/termux-linux-install.py
+python ~/termux-install-linux/termux-linux-install.py
 ```
 >启动ubantu系统
 ```
-sh ~/Termux-Linux/Ubuntu/start-ubuntu.sh
+~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 >步骤回到安装教程二三步即可
 
