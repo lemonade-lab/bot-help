@@ -47,24 +47,24 @@ do
 		    then yunzaiverification
 			    if [ $? = "0" ]
 				then 
-			[ -e ${centos}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
-			[ ! -e ${centos}"/config/config/qq.yaml" ] || cd "${centos}"
-			[ ! -e ${centos}"/config/config/qq.yaml" ] || npm stop
-			[ ! -e ${centos}"/config/config/qq.yaml" ] || npm start
-			[ ! -e ${centos}"/config/config/qq.yaml" ] || echo "后台运行"
-	 		read -p "Enter and continue回车并继续..." c
-				if
+	    		[ -e ${centos}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
+	      		[ ! -e ${centos}"/config/config/qq.yaml" ] || cd "${centos}"
+	    		[ ! -e ${centos}"/config/config/qq.yaml" ] || npm stop
+	    		[ ! -e ${centos}"/config/config/qq.yaml" ] || npm start
+	    		[ ! -e ${centos}"/config/config/qq.yaml" ] || echo "后台运行"
+	     		read -p "Enter and continue回车并继续..." c
+				fi
 	     	fi
 
 	    	if [ $OPTION = 3 ]
 	    	then yunzaiverification
 			    if [ $? = "0" ]
 				then 
-			[ ! -d ${centos}"/plugins" ] || cd "${centos}"
-			[ ! -d ${centos}"/plugins" ] || npm stop
-			[ ! -d ${centos}"/plugins" ] || echo "关闭"
-			read -p "Enter and continue回车并继续..." c
-				if
+		     	[ ! -d ${centos}"/plugins" ] || cd "${centos}"
+		    	[ ! -d ${centos}"/plugins" ] || npm stop
+		    	[ ! -d ${centos}"/plugins" ] || echo "关闭"
+	    		read -p "Enter and continue回车并继续..." c
+		 		fi
 		    fi
     else
         exit

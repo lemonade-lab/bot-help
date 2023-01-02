@@ -120,7 +120,7 @@ then
     #启动
     if [ $OPTION = 2 ]
     then yunzaiverification
-        if [ $? = "0"]
+        if [ $? = "0" ]
         then
         cd "${yunzai}"
         node app.js
@@ -130,7 +130,7 @@ then
     #登录
     if [ $OPTION = 3 ]
     then yunzaiverification
-        if [ $? = "0"]
+        if [ $? = "0" ]
         then
         cd "${yunzai}"
         npm login run
@@ -140,7 +140,7 @@ then
     #更新
     if [ $OPTION = 4 ]
     then yunzaiverification
-        if [ $? = "0"]
+        if [ $? = "0" ]
         then
         cd "${yunzai}"
         git pull
@@ -153,7 +153,7 @@ then
     #卸载
     if [ $OPTION = 5 ]
     then yunzaiverification
-        if [ $? = "0"]
+        if [ $? = "0" ]
         then
         rm -rf "${yunzai}"
         read -p "卸载完成Enter and continue回车并继续..." Enter
