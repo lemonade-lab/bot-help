@@ -1,4 +1,6 @@
 #!/bin/bash
+appname="/yunzai-bot-help"
+readonly appname
 if [ -f /etc/redhat-release ]; then
                 release="centose"
 elif cat /etc/issue | grep -q -E -i "debian"; then
@@ -16,13 +18,13 @@ elif cat /proc/version | grep -q -E -i "centos|red hat|redhat"; then
 fi
 if [ ${release}="centos" ]
 then
-sh /yunzai-bot-help/centos/index.sh
+sh "${appname}/centos/index.sh"
 fi
 if [ ${release}="ubantu" ]
 then
-sh /yunzai-bot-help/ubuntu/index.sh
+sh "${appname}/ubuntu/index.sh"
 fi
 if [ ${release}="debian" ]
 then
-sh /yunzai-bot-help/debian/index.sh
+sh "${appname}/debian/index.sh"
 fi
