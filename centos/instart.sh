@@ -124,7 +124,7 @@ then
         then
         cd "${yunzai}"
         node app.js
-        if
+        fi
     fi   
 
     #登录
@@ -134,7 +134,7 @@ then
         then
         cd "${yunzai}"
         npm login run
-        if
+        fi
     fi   
     
     #更新
@@ -147,7 +147,7 @@ then
         cd "${yunzai}/plugins/miao-plugin"
         git pull
         read -p "更新完成Enter and continue回车并继续..." Enter
-        if
+        fi
     fi
     
     #卸载
@@ -157,7 +157,7 @@ then
         then
         rm -rf "${yunzai}"
         read -p "卸载完成Enter and continue回车并继续..." Enter
-        if
+        fi
     fi
 
     #返回
