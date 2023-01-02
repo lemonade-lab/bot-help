@@ -114,7 +114,10 @@ then
     node ./node_modules/puppeteer/install.js
 
     ##返回
-    read -p "安装成功Enter and continue回车并继续..." Enter
+    echo "安装成功"
+    echo "#喵喵帮助"
+    echo "#锅巴登录"
+    read -p "回车并继续Enter and continue..." Enter
     fi
     
     #启动
