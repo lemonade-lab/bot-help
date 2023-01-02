@@ -50,13 +50,7 @@ then
 
 #桌面安装DesktopInstall
     if [ $OPTION = 5 ]
-    then
-    Choise=$(whiptail \
-        --title "《Yunzai-Bot-Help》" \
-        --menu "$version\n功能正在施工中To be updated" \
-        15 50 5 \
-        "Tips提示" "功能正在施工中To be updated" \
-        3>&1 1>&2 2>&3)
+    then read -p "待施工Enter and continue回车并继续..." Enter
     fi
 
 #环境管理EnvironManage

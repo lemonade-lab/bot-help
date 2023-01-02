@@ -9,10 +9,8 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "Enter and continue回车并继续..." x
-[ -d ${myadress}"/YunzaiV3" ] || exit
+[ -d ${myadress}"/centos" ] || mkdir centos
+[ -d ${myadress}"/centos" ] || exit
 cd "${myadress}"
 
 while true

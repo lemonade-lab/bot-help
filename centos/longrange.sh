@@ -9,8 +9,6 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/centos" ] || mkdir centos
-[ -d ${myadress}"/centos" ] || news="initialization failed初始化失败"
-[ -d ${myadress}"/centos" ] || read -p "Enter and continue回车并继续..."
 [ -d ${myadress}"/centos" ] || exit
 
 cd "${myadress}"

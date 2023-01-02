@@ -1,25 +1,18 @@
 #!/bin/bash
-#quanxue 2022.12.30 10:26 update 3rd
+
 version=$(cat /etc/redhat-release)
 readonly version
-
 myadress="/home/lighthouse"
 readonly myadress
+centos="${myadress}/centos/Yunzai-Bot"
+readonly centos
 
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/centos" ] || mkdir centos
-[ -d ${myadress}"/centos" ] || echo "initialization failed初始化失败"
-[ -d ${myadress}"/centos" ] || read -p "Enter and continue回车并继续..."
 [ -d ${myadress}"/centos" ] || exit
 cd "${myadress}"
-
-
-centos="${myadress}/centos/Yunzai-Bot"
-readonly centos
-XiuxianV3="${myadress}/centos/XiuXianV3"
-readonly XiuxianV3
 
 yunzaiverification(){
    [ -d ${centos}"/plugins" ] || echo "Not installed#未安装V3！"
