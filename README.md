@@ -24,13 +24,31 @@ git clone https://gitee.com/ningmengchongshui/Yunzai-Bot-Help.git  /Yunzai-Bot-H
 ```
 sh /Yunzai-Bot-Help/install.sh
 ```
+## 二、手机搭建
+[安卓7以上下载APK](https://f-droid.org/packages/com.termux/)
+>安装git、py与系统安装脚本
+```
+pkg install proot git python -y
+git clone https://gitee.com/Le-niao/termux-install-linux.git
+```
+>启动脚本并回复1安装ubantu系统
+```
+cd termux-install-linux
+python termux-linux-install.py
+```
+>启动ubantu系统
+```
+cd ~/Termux-Linux/Ubuntu
+./start-ubuntu.sh
+```
+>步骤回到安装教程二三步即可
 
-## 二、SSH远程连接工具    
+## 三、SSH远程连接工具    
 > Android：JuiceSSH         
 > IOS：Termius     
 > Windows：MobaXterm汉化、Termius    
 
-## 三、功能介绍    
+## 四、功能介绍    
 > * 一键安装和部署环境     
 > * 启动/重启/更新/停止
 > * 后台运行/重新登录  
@@ -39,7 +57,7 @@ sh /Yunzai-Bot-Help/install.sh
 > * 系统语言(可设置中文)   
 > * 桌面安装(入门必备)      
 
-## 四、企鹅讨论聚集地      
+## 五、企鹅讨论聚集地      
 群名  | 群号  |  群主 
 ------------- | -------------  | -------------    
 | [BotHelp](https://afdian.net/a/WinterChocolates) | 806943302 | [@冬季巧克力](https://gitee.com/djqkl_znje) | 
