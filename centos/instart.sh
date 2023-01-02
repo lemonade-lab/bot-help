@@ -76,32 +76,31 @@ then
     [ -d "${yunzaiplugin}" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
     [ -d "${yunzaiplugin}" ] || rm -rf "${yunzai}"
     [ -d "${yunzaiplugin}" ] || echo "Installation failed安装失败" 
-    [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." c
+    [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." Enter
     [ -d "${yunzaiplugin}" ] || break
 
-    ##miao
     cd "${yunzai}"
+    ##miao
     yunzaimiao="${yunzai}/plugins/miao-plugin/resources"
     [ -d "${yunzaimiao}" ] || git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
     [ -d "${yunzaimiao}" ] || rm -rf "${yunzai}/plugins/miao-plugin"
     [ -d "${yunzaimiao}" ] || echo "Installation failed安装失败"
-    [ -d "${yunzaimiao}" ] || read -p "Enter and continue回车并继续..." c
+    [ -d "${yunzaimiao}" ] || read -p "Enter and continue回车并继续..." Enter
     [ -d "${yunzaimiao}" ] || break
 
     ##guoba
-    cd "${yunzai}"
     yunzaiGuoba="${yunzai}/plugins/Guoba-Plugin/resources"
     [ -d "${yunzaiGuoba}" ] || git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
     [ -d "${yunzaiGuoba}" ] || rm -rf "${yunzai}/plugins/Guoba-Plugin"
     [ -d "${yunzaiGuoba}" ] || echo "Installation failed安装失败"
-    [ -d "${yunzaiGuoba}" ] || read -p "Enter and continue回车并继续..." c
+    [ -d "${yunzaiGuoba}" ] || read -p "Enter and continue回车并继续..." Enter
     [ -d "${yunzaiGuoba}" ] || break
 
     ##依赖
-    cd "${yunzai}"
     npm install
     npm install image-size
     npm install express multer body-parser jsonwebtoken
+    
     ##安装Chromium
     yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 -y 
     yum install libdrm libgbm libxshmfence -y
@@ -109,51 +108,38 @@ then
     yum update nss -y
     yum groupinstall fonts -y
     node ./node_modules/puppeteer/install.js
-    echo "#安装成功"
+
     ##返回
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "安装成功Enter and continue回车并继续..." Enter
     fi
     
-   #启动
+    #启动
     if [ $OPTION = 2 ]
-    then
-    yunzaiverification
+    then yunzaiverification
     cd "${yunzai}"
     node app.js
     fi   
     
     #更新
     if [ $OPTION = 3 ]
-    then
-    yunzaiverification
+    then yunzaiverification
     cd "${yunzai}"
     git pull
     cd "${yunzai}/plugins/miao-plugin"
     git pull
-    read -p "更新完成Enter and continue回车并继续..." y
+    read -p "更新完成Enter and continue回车并继续..." Enter
     fi
     
     #卸载
     if [ $OPTION = 4 ]
-    then
-    yunzaiverification
-    Choise=$(whiptail \
-    --title "《Yunzai-Bot-V3》" \
-    --menu "$version" \
-    15 50 3 \
-    "1" "卸载" \
-    3>&1 1>&2 2>&3)
-    y=$?
-    
-    if [ $y = 0 ]
-    then rm -rf "${yunzai}"
-    read -p "卸载成功Enter and continue回车并继续..." y
-    fi
+    then yunzaiverification
+    rm -rf "${yunzai}"
     fi
 
     #登录
     if [ $OPTION = 5 ]
-    then cd "${yunzai}"
+    then yunzaiverification
+    cd "${yunzai}"
     npm login run
     fi   
 
