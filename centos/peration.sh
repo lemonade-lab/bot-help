@@ -21,7 +21,7 @@ readonly centos
 XiuxianV3="${myadress}/centos/XiuXianV3"
 readonly XiuxianV3
 
-funv3(){
+yunzaiverification(){
    [ -d ${centos}"/plugins" ] || echo "Not installed#未安装V3！"
 }
 
