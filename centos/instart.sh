@@ -26,7 +26,8 @@ cd "${myadress}"
 yunzaiverification(){
    [ -d "${yunzaiplugin}" ] || echo "Not installed未安装"
    [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." Enter
-   [ -d "${yunzaiplugin}" ] || break
+   [ -d "${yunzaiplugin}" ] || return "1"
+   return "0"
 }
 
 while true
@@ -118,33 +119,46 @@ then
     
     #启动
     if [ $OPTION = 2 ]
-    then yunzaiverification
-    cd "${yunzai}"
-    node app.js
+    then 
+        if [ yunzaiverification = "0" ]
+        then 
+        cd "${yunzai}"
+        node app.js
+        fi
     fi   
 
     #登录
     if [ $OPTION = 3 ]
-    then yunzaiverification
-    cd "${yunzai}"
-    npm login run
+    then 
+        if [ yunzaiverification = "0" ]
+        then 
+        cd "${yunzai}"
+        npm login run
+        fi
     fi   
     
     #更新
     if [ $OPTION = 4 ]
-    then yunzaiverification
+    then 
+        if [ yunzaiverification = "0" ]
+        then 
     cd "${yunzai}"
     git pull
     cd "${yunzai}/plugins/miao-plugin"
     git pull
     read -p "更新完成Enter and continue回车并继续..." Enter
+        fi
     fi
     
     #卸载
     if [ $OPTION = 5 ]
-    then yunzaiverification
+    then 
+    
+        if [ yunzaiverification = "0" ]
+        then 
     rm -rf "${yunzai}"
     read -p "卸载完成Enter and continue回车并继续..." Enter
+        fi
     fi
 
     #返回
