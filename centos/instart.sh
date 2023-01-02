@@ -29,7 +29,7 @@ funv3(){
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-V3》" \
+--title "《Yunzai-Bot》" \
 --menu "$version" \
 15 50 5 \
 "1" "install快捷安装" \

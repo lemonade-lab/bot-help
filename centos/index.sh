@@ -31,17 +31,17 @@ then
 
 #工具管理HelpManage
     if [ $OPTION = 1 ]
-    then sh "${centos}/Update.sh"
+    then sh "${centos}/shellupdata.sh"
     fi
 
 #机器管理administrat
     if [ $OPTION = 2 ]
-    then sh "${centos}/V3demo.sh"
+    then sh "${centos}/instart.sh"
     fi
 
 #运行管理BackControl
     if [ $OPTION = 3 ]
-    then sh "${centos}/Robotdemo.sh"
+    then sh "${centos}/peration.sh"
     fi
   
 #进程管理ProcessManage

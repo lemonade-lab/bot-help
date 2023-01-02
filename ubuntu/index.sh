@@ -10,7 +10,7 @@ readonly Ubuntu
 while true
 do
 	OPTION=$(whiptail \
-		--title "《Yunzai-Bot-HelpV1.1.6》" \
+		--title "《Yunzai-Bot-Help》" \
 		--menu "$version" \
 		15 50 5 \
 		"1" "工具管理HelpManage" \
