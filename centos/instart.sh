@@ -146,7 +146,7 @@ then
         git pull
         cd "${yunzai}/plugins/miao-plugin"
         git pull
-        read -p "更新完成Enter and continue回车并继续..." Enter
+        read -p "更新完成" Enter
         fi
     fi
     
@@ -156,7 +156,7 @@ then
         if [ $? = "0" ]
         then
         rm -rf "${yunzai}"
-        read -p "卸载完成Enter and continue回车并继续..." Enter
+        read -p "卸载完成" Enter
         fi
     fi
 

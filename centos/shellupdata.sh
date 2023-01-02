@@ -43,7 +43,7 @@ then
 [ ! -e ${Centosdemo} ] || git fetch --all
 [ ! -e ${Centosdemo} ] || git reset --hard main
 [ ! -e ${Centosdemo} ] || git pull
-[ ! -e ${Centosdemo} ] || echo "#执行完成,请重写启动工具"
+[ ! -e ${Centosdemo} ] || echo "#执行完成,请重启启动工具"
 read -p "Enter and continue回车并继续..." y
      fi
      

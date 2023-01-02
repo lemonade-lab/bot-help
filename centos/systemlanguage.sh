@@ -36,10 +36,10 @@ echo "找到zh_CN.utf8类似字眼则说明支持中文包"
 echo "复制包名，编辑时，改为中文即可"
 echo "__________________________________________________"
 echo "《文件编辑教程》"
-echo "按i进入修改模式"
-echo "按ESE退出修改模式"
+echo "按i进入插入模式"
+echo "按ESE进入命令模式"
 echo "输入:wq!强制保存"
-echo "按CTRL+Z退出文件"
+echo "输入:q!退出文件"
 read -p "Enter and continue回车并继续..." x
     fi
     if [ $OPTION = 2 ]
