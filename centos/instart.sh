@@ -24,8 +24,8 @@ cd "${myadress}"
 cd "${myadress}"
 
 yunzaiverification(){
-   [ -d "${yunzaiplugin}" ] || echo "Not installed#未安装"
-   [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." x
+   [ -d "${yunzaiplugin}" ] || echo "Not installed未安装"
+   [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." Enter
    [ -d "${yunzaiplugin}" ] || break
 }
 
