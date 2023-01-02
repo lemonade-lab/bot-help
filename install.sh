@@ -1,31 +1,28 @@
 #!/bin/bash
-function check_sys(){
-if [[ -f /etc/redhat-release ]]; then
-	release="CentOS"
+if [ -f /etc/redhat-release ]; then
+                release="centose"
 elif cat /etc/issue | grep -q -E -i "debian"; then
-	release="Debian"
+                release="debian"
 elif cat /etc/issue | grep -q -E -i "ubuntu"; then
-	release="Ubuntu"
+                release="ubuntu"
 elif cat /etc/issue | grep -q -E -i "centos|red hat|redhat"; then
-	release="CentOS"
+                release="centos"
 elif cat /proc/version | grep -q -E -i "debian"; then
-	release="Debian"
+                release="debian"
 elif cat /proc/version | grep -q -E -i "ubuntu"; then
-	release="Ubuntu"
+                release="ubuntu"
 elif cat /proc/version | grep -q -E -i "centos|red hat|redhat"; then
-	release="CentOS"
+                release="centos"
 fi
-}
-check_sys
-if [ "${release}" == "CentOS" ]; then
-echo -e "CentOS"
-sh /Yunzai-Bot-Help/Centos/Centosdemo.sh
-fi
-if [ "${release}" == "Ubuntu" ]; then
-echo -e "Ubuntu"
+if [ ${release}="centos" ]
+then
 sh /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
 fi
-if [ "${release}" == "Debian" ]; then
-echo -e "Debian"
-read -p "Debian版本待施工..."
+if [ ${release}="ubantu" ]
+then
+sh /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
+fi
+if [ ${release}="debian" ]
+then
+echo "待施工"
 fi
