@@ -33,13 +33,11 @@ git clone https://gitee.com/Le-niao/termux-install-linux.git
 ```
 >启动脚本并回复1安装ubantu系统
 ```
-cd termux-install-linux
-python termux-linux-install.py
+python termux-install-linux/termux-linux-install.py
 ```
 >启动ubantu系统
 ```
-cd ~/Termux-Linux/Ubuntu
-./start-ubuntu.sh
+sh ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 >步骤回到安装教程二三步即可
 
