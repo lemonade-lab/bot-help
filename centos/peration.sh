@@ -18,6 +18,8 @@ cd "${myadress}"
 yunzaiverification(){
    [ -d "${yunzaiplugin}" ] || echo "Not installed未安装"
    [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." Enter
+   [ -d "${yunzaiplugin}" ] || return "1"
+   return "0"
 }
 
 while true
@@ -43,20 +45,26 @@ do
 
 		    if [ $OPTION = 2 ]
 		    then yunzaiverification
+			    if [ $? = "0" ]
+				then 
 			[ -e ${centos}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
 			[ ! -e ${centos}"/config/config/qq.yaml" ] || cd "${centos}"
 			[ ! -e ${centos}"/config/config/qq.yaml" ] || npm stop
 			[ ! -e ${centos}"/config/config/qq.yaml" ] || npm start
 			[ ! -e ${centos}"/config/config/qq.yaml" ] || echo "后台运行"
 	 		read -p "Enter and continue回车并继续..." c
+				if
 	     	fi
 
 	    	if [ $OPTION = 3 ]
 	    	then yunzaiverification
+			    if [ $? = "0" ]
+				then 
 			[ ! -d ${centos}"/plugins" ] || cd "${centos}"
 			[ ! -d ${centos}"/plugins" ] || npm stop
 			[ ! -d ${centos}"/plugins" ] || echo "关闭"
 			read -p "Enter and continue回车并继续..." c
+				if
 		    fi
     else
         exit

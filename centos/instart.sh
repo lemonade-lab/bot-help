@@ -119,46 +119,45 @@ then
     
     #启动
     if [ $OPTION = 2 ]
-    then 
-        if [ yunzaiverification = "0" ]
-        then 
+    then yunzaiverification
+        if [ $? = "0"]
+        then
         cd "${yunzai}"
         node app.js
-        fi
+        if
     fi   
 
     #登录
     if [ $OPTION = 3 ]
-    then 
-        if [ yunzaiverification = "0" ]
-        then 
+    then yunzaiverification
+        if [ $? = "0"]
+        then
         cd "${yunzai}"
         npm login run
-        fi
+        if
     fi   
     
     #更新
     if [ $OPTION = 4 ]
-    then 
-        if [ yunzaiverification = "0" ]
-        then 
-    cd "${yunzai}"
-    git pull
-    cd "${yunzai}/plugins/miao-plugin"
-    git pull
-    read -p "更新完成Enter and continue回车并继续..." Enter
-        fi
+    then yunzaiverification
+        if [ $? = "0"]
+        then
+        cd "${yunzai}"
+        git pull
+        cd "${yunzai}/plugins/miao-plugin"
+        git pull
+        read -p "更新完成Enter and continue回车并继续..." Enter
+        if
     fi
     
     #卸载
     if [ $OPTION = 5 ]
-    then 
-    
-        if [ yunzaiverification = "0" ]
-        then 
-    rm -rf "${yunzai}"
-    read -p "卸载完成Enter and continue回车并继续..." Enter
-        fi
+    then yunzaiverification
+        if [ $? = "0"]
+        then
+        rm -rf "${yunzai}"
+        read -p "卸载完成Enter and continue回车并继续..." Enter
+        if
     fi
 
     #返回
