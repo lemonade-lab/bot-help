@@ -1,25 +1,12 @@
 #!/bin/bash
+
 version=$(cat /etc/redhat-release)
 readonly version
-
-
-myadress="/home/lighthouse"
-readonly myadress
-
-cd /home
-[ -d ${myadress} ] || mkdir lighthouse
-cd "${myadress}"
-[ -d ${myadress}"/centos" ] || mkdir centos
-[ -d ${myadress}"/centos" ] || echo "initialization failed初始化失败"
-[ -d ${myadress}"/centos" ] || read -p "Enter and continue回车并继续..." c
-[ -d ${myadress}"/centos" ] || exit
-cd "${myadress}"
-
 
 while true
 do
 OPTION=$(whiptail \
---title "《Help-Firewall》" \
+--title "《Firewall》" \
 --menu "$version" \
 15 50 3 \
 "1" "状态" \
@@ -27,29 +14,24 @@ OPTION=$(whiptail \
 "3" "重启" \
 3>&1 1>&2 2>&3)
 
-x=$?
-if [ $x = 0 ]
+feedback=$?
+if [ $feedback = 0 ]
 then
     if [ $OPTION = 1 ]
-    then
-firewall-cmd --state
-echo "#已执行！"
-read -p "Enter and continue回车并继续..." c
+    then firewall-cmd --state
+    read -p "已执行,回车并继续Enter and continue..." c
     fi
     if [ $OPTION = 2 ]
-    then
-systemctl start firewalld.service
-read -p "开启端口：" x
-firewall-cmd --zone=public --add-port=$x/tcp --permanent
-systemctl restart firewalld.service
-firewall-cmd --reload
-echo "#已执行！"
-read -p "Enter and continue回车并继续..." c
+    then systemctl start firewalld.service
+    read -p "开启端口:" x
+    firewall-cmd --zone=public --add-port=$x/tcp --permanent
+    systemctl restart firewalld.service
+    firewall-cmd --reload
+    read -p "已执行,回车并继续Enter and continue..." c
     fi
     if [ $OPTION = 3 ]
-    then
-systemctl restart firewalld.service
-read -p "Enter and continue回车并继续..." c
+    then systemctl restart firewalld.service
+    read -p "已执行,回车并继续Enter and continue..." c
     fi
 else
     exit

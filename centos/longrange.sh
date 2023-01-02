@@ -28,8 +28,8 @@ OPTION=$(whiptail \
 "5" "status SSH状态" \
 3>&1 1>&2 2>&3)
 
-x=$?
-if [ $x = 0 ]
+feedback=$?
+if [ $feedback = 0 ]
 then
     if [ $OPTION = 1 ]
     then

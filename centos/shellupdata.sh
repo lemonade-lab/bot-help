@@ -31,8 +31,8 @@ OPTION=$(whiptail \
 "2" "uninstall工具卸载" \
 3>&1 1>&2 2>&3)
 
-x=$?
-if [ $x = 0 ]
+feedback=$?
+if [ $feedback = 0 ]
 then
 
 #更新

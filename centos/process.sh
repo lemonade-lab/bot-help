@@ -34,8 +34,8 @@ OPTION=$(whiptail \
 "11" "show diary显示进程日记" \
 3>&1 1>&2 2>&3)
 
-x=$?
-if [ $x = 0 ]
+feedback=$?
+if [ $feedback = 0 ]
 then
 cd "${myadress}"
     if [ $OPTION = 1 ]

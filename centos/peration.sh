@@ -35,8 +35,8 @@ do
 		"2" "run Yunzai-Bot启动云崽V3" \
 		"3" "stop Yunzai-Bot停止云崽V3" \
         3>&1 1>&2 2>&3)
-    x=$?
-	if [ $x = 0 ]
+    feedback=$?
+	if [ $feedback = 0 ]
 	then
 		if [ $OPTION = 1 ]
 		then

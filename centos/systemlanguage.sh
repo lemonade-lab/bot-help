@@ -28,8 +28,8 @@ OPTION=$(whiptail \
 "5" "edit language编辑语言" \
 3>&1 1>&2 2>&3)
 
-x=$?
-if [ $x = 0 ]
+feedback=$?
+if [ $feedback = 0 ]
 then
     if [ $OPTION = 1 ]
     then

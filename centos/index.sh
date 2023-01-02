@@ -23,7 +23,6 @@ OPTION=$(whiptail \
 "9" "防火设置firewall" \
 "10" "系统重启restart" \
 3>&1 1>&2 2>&3)
-
 feedback=$?
 
 if [ $feedback = 0 ]
