@@ -12,12 +12,12 @@ OPTION=$(whiptail \
 --title "《Help-Environment》" \
 --menu "$version\n$news" \
 15 50 5 \
-"1" "查看环境" \
-"2" "Redis" \
-"3" "zip" \
-"4" "sshpass" \
-"5" "Python" \
-"6" "ffmpeg" \
+"1" "环境search" \
+"2" "安装Redis" \
+"3" "安装zip" \
+"4" "安装sshpass" \
+"5" "安装Python" \
+"6" "安装ffmpeg" \
 3>&1 1>&2 2>&3)
 feedback=$?
 
@@ -71,7 +71,7 @@ then
     if [ $OPTION = 6 ]
     then
     dnf install epel-release
-    yum config-manager –set-enabled PowerTools
+    yum config-manager -set-enabled PowerTools
     yum -y install yum-utils
     yum-config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
     dnf install ffmpeg
