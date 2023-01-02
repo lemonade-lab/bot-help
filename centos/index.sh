@@ -1,9 +1,10 @@
 #!/bin/bash
+#centos启动
 version=$(cat /etc/redhat-release)
 readonly version
 
-Centos="/yunzai-bot-help/centos"
-readonly Centos
+centos="/yunzai-bot-help/centos"
+readonly centos
 
 while true
 do
@@ -30,22 +31,22 @@ then
 
 #工具管理HelpManage
     if [ $OPTION = 1 ]
-    then sh "${Centos}/Update.sh"
+    then sh "${centos}/Update.sh"
     fi
 
 #机器管理administrat
     if [ $OPTION = 2 ]
-    then sh "${Centos}/V3demo.sh"
+    then sh "${centos}/V3demo.sh"
     fi
 
 #运行管理BackControl
     if [ $OPTION = 3 ]
-    then sh "${Centos}/Robotdemo.sh"
+    then sh "${centos}/Robotdemo.sh"
     fi
   
 #进程管理ProcessManage
     if [ $OPTION = 4 ]
-    then sh "${Centos}/Pm2demo.sh"
+    then sh "${centos}/Pm2demo.sh"
     fi
 
 #桌面安装DesktopInstall
@@ -61,22 +62,22 @@ then
 
 #环境管理EnvironManage
     if [ $OPTION = 6 ]
-    then sh "${Centos}/Environmentdemo.sh"
+    then sh "${centos}/Environmentdemo.sh"
     fi
 
 #系统语言SystemLanguage
     if [ $OPTION = 7 ]
-    then sh "${Centos}/Systemlanguagedemo.sh"
+    then sh "${centos}/Systemlanguagedemo.sh"
     fi
 
 #远程管理SSHManage
     if [ $OPTION = 8 ]
-    then sh "${Centos}/SSHdemo.sh"
+    then sh "${centos}/SSHdemo.sh"
     fi
 
 #防火设置firewall
     if [ $OPTION = 9 ]
-    then sh "${Centos}/Firewalldemo.sh"
+    then sh "${centos}/Firewalldemo.sh"
     fi
 
 #系统重启restart

@@ -1,4 +1,5 @@
 #!/bin/bash
+#环境管理
 version=$(cat /etc/redhat-release)
 readonly version
 
