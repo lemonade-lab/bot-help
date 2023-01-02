@@ -18,83 +18,91 @@ OPTION=$(whiptail \
 --title "《Help-SSH》" \
 --menu "$version" \
 15 50 5 \
-"1" "install PM2安装PM2" \
-"2" "view the list of processes查看进程列表" \
-"3" "moniter all processes监视所有进程" \
-"4" "run all processes运行所有进程" \
-"5" "stop specific process停止指定进程" \
-"6" "stop all processes停止所有进程" \
-"7" "restart specific process重启指定进程" \
-"8" "restart all processes重启所有进程" \
-"9" "kill specific process杀死特定进程" \
-"10" "kill all processes杀死所有进程" \
-"11" "show diary显示进程日记" \
+"1" "安装installPM2" \
+"2" "查看进程view the list of processes" \
+"3" "监视进程moniter all processes" \
+"4" "运行进程run all processes" \
+"5" "停止指定stop specific process" \
+"6" "停止所有stop all processes" \
+"7" "重启指定restart specific process" \
+"8" "重启所有restart all processes" \
+"9" "杀死特定kill specific process" \
+"10" "杀死所有kill all processes" \
+"11" "显示日记show diary" \
 3>&1 1>&2 2>&3)
-
 feedback=$?
+
 if [ $feedback = 0 ]
 then
-cd "${myadress}"
+   
+    cd "${myadress}"
     if [ $OPTION = 1 ]
-    then
-npm i pm2 -g
-read -p "Enter and continue回车并继续..." c
+    then npm i pm2 -g
+    read -p "Enter and continue回车并继续..." Enter
     fi
+
     if [ $OPTION = 2 ]
-    then
-pm2 list
-read -p "Enter and continue回车并继续..." c
+    then pm2 list
+    read -p "Enter and continue回车并继续..." Enter
     fi
+
     if [ $OPTION = 3 ]
-    then
-pm2 monit    
-read -p "Enter and continue回车并继续..." c
+    then pm2 monit    
+    read -p "Enter and continue回车并继续..." Enter
     fi
+
     if [ $OPTION = 4 ]
     then
-pm2 start all    
-read -p "Enter and continue回车并继续..." c
+    pm2 start all    
+    read -p "Enter and continue回车并继续..." Enter
     fi
+
     if [ $OPTION = 5 ]
     then
-read -p "进程ID：" x
-pm2 list
-pm2 stop $x    
-read -p "Enter and continue回车并继续..." c
+    read -p "进程ID：" x
+    pm2 list
+    pm2 stop $x    
+    read -p "Enter and continue回车并继续..." Enter
     fi
+
     if [ $OPTION = 6 ]
-    then
-pm2 stop all    
-read -p "Enter and continue回车并继续..." c
+    then pm2 stop all    
+    read -p "Enter and continue回车并继续..." Enter
     fi
+
     if [ $OPTION = 7 ]
     then
-read -p "进程ID：" x
-pm2 list
-pm2 restart $x    
-read -p "Enter and continue回车并继续..." c
+    read -p "进程ID：" x
+    pm2 list
+    pm2 restart $x    
+    read -p "Enter and continue回车并继续..." Enter
     fi
+
     if [ $OPTION = 8 ]
     then
-pm2 restart all    
-read -p "Enter and continue回车并继续..." c
+    pm2 restart all    
+    read -p "Enter and continue回车并继续..." Enter
     fi
+
     if [ $OPTION = 9 ]
     then
-read -p "进程ID：" x
-pm2 restart $x    
-read -p "Enter and continue回车并继续..." c
+    read -p "进程ID：" x
+    pm2 restart $x    
+    read -p "Enter and continue回车并继续..." Enter
     fi
-     if [ $OPTION = 10 ]
+
+    if [ $OPTION = 10 ]
     then
-pm2 delete all   
-read -p "Enter and continue回车并继续..." c
+    pm2 delete all   
+    read -p "Enter and continue回车并继续..." Enter
     fi
-     if [ $OPTION = 11 ]
+
+    if [ $OPTION = 11 ]
     then
-pm2 logs    
-read -p "Enter and continue回车并继续..." c
+    pm2 logs    
+    read -p "Enter and continue回车并继续..." Enter
     fi
+    
 else
     exit
 fi

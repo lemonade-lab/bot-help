@@ -18,52 +18,56 @@ OPTION=$(whiptail \
 --title "《System-language》" \
 --menu "$version" \
 15 50 5 \
-"1" "instruction编辑教程" \
-"2" "download packages of language下载语言包" \
-"3" "language list语言列表" \
-"4" "current language当前语言" \
-"5" "edit language编辑语言" \
+"1" "编辑教程instruction" \
+"2" "下载语言downloadlanguage" \
+"3" "语言列表languagelist" \
+"4" "编辑语言editlanguage" \
+"5" "当前语言currentlanguage" \
 3>&1 1>&2 2>&3)
 
 feedback=$?
 if [ $feedback = 0 ]
 then
+
     if [ $OPTION = 1 ]
     then
-echo "__________________________________________________"
-echo "先下载语言包后查看语音"
-echo "找到zh_CN.utf8类似字眼则说明支持中文包"
-echo "复制包名，编辑时，改为中文即可"
-echo "__________________________________________________"
-echo "《文件编辑教程》"
-echo "按i进入插入模式"
-echo "按ESE进入命令模式"
-echo "输入:wq!强制保存"
-echo "输入:q!退出文件"
-read -p "Enter and continue回车并继续..." x
+    echo "__________________________________________________"
+    echo "第一步：下载语言"
+    echo "第二步：语言列表"
+    echo "找到zh_CN.utf8类似字眼并复制"
+    echo "第三步：编辑语言"
+    echo "__________________________________________________"
+    echo "按i进入插入模式"
+    echo "按ESE进入命令模式"
+    echo "输入:wq!保存"
+    echo "输入:q!退出"
+    read -p "Enter and continue回车并继续..." x
     fi
+
     if [ $OPTION = 2 ]
     then
-cd "${myadress}"
-dnf install langpacks-zh_CN
-dnf install -y ibus-libpinyin.x86_64
-echo "#已执行！"
-read -p "Enter and continue回车并继续..." x
+    cd "${myadress}"
+    dnf install langpacks-zh_CN
+    dnf install -y ibus-libpinyin.x86_64
+    read -p "已执行Enter and continue回车并继续..." x
     fi 
+
     if [ $OPTION = 3 ]
-    then
-locale -a
-read -p "Enter and continue回车并继续..." x
+    then locale -a
+    read -p "Enter and continue回车并继续..." x
     fi
+
+
     if [ $OPTION = 4 ]
-    then
-echo $LANG
-read -p "Enter and continue回车并继续..." x
+    then vi /etc/locale.conf
     fi
+    
     if [ $OPTION = 5 ]
-    then
-vi /etc/locale.conf
+    then echo $LANG
+    read -p "Enter and continue回车并继续..." x
     fi
+
+
 else
     exit
 fi
