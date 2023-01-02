@@ -24,5 +24,5 @@ sh /Yunzai-Bot-Help/Ubuntu/index.sh
 fi
 if [ ${release}="debian" ]
 then
-echo "待施工"
+sh /Yunzai-Bot-Help/debian/index.sh
 fi
