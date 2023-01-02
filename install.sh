@@ -19,6 +19,10 @@ elif cat /proc/version | grep -q -E -i "centos|red hat|redhat"
 then release="centos"
 fi
 
+if [ ${release} = "centose" ]
+then sh "${appname}/centos/index.sh"
+fi
+
 if [ ${release} = "centos" ]
 then sh "${appname}/centos/index.sh"
 fi
