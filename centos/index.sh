@@ -62,7 +62,7 @@ then
 
 #环境管理EnvironManage
     if [ $OPTION = 6 ]
-    then sh "${centos}/Environ.sh"
+    then sh "${centos}/environ.sh"
     fi
 
 #系统语言SystemLanguage
