@@ -16,11 +16,11 @@ elif cat /proc/version | grep -q -E -i "centos|red hat|redhat"; then
 fi
 if [ ${release}="centos" ]
 then
-sh /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
+sh /Yunzai-Bot-Help/Ubuntu/index.sh
 fi
 if [ ${release}="ubantu" ]
 then
-sh /Yunzai-Bot-Help/Ubuntu/Ubuntudemo.sh
+sh /Yunzai-Bot-Help/Ubuntu/index.sh
 fi
 if [ ${release}="debian" ]
 then
