@@ -23,10 +23,15 @@ cd "${myadress}"
 [ -d ${myadress}"/centos" ] || exit
 cd "${myadress}"
 
+verification="0"
+readonly verification
+
 yunzaiverification(){
-   [ -d "${yunzaiplugin}" ] || echo "Not installed未安装"
-   [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." Enter
-   [ -d "${yunzaiplugin}" ] || break
+    verification="0"
+    [ -d "${yunzaiplugin}" ] || echo "Not installed未安装"
+    [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." Enter
+    [ -d "${yunzaiplugin}" ] || verification="1"
+    [ -d "${yunzaiplugin}" ] || break
 }
 
 while true
@@ -119,32 +124,48 @@ then
     #启动
     if [ $OPTION = 2 ]
     then yunzaiverification
+         if [ ${verification} = "1" ]
+         then break
+         else
     cd "${yunzai}"
     node app.js
+         fi
     fi   
 
     #登录
     if [ $OPTION = 3 ]
     then yunzaiverification
+         if [ ${verification} = "1" ]
+         then break
+         else
     cd "${yunzai}"
     npm login run
+         fi
     fi   
     
     #更新
     if [ $OPTION = 4 ]
     then yunzaiverification
+         if [ ${verification} = "1" ]
+         then break
+         else
     cd "${yunzai}"
     git pull
     cd "${yunzai}/plugins/miao-plugin"
     git pull
     read -p "更新完成Enter and continue回车并继续..." Enter
+         fi
     fi
     
     #卸载
     if [ $OPTION = 5 ]
     then yunzaiverification
-    rm -rf "${yunzai}"
-    read -p "卸载完成Enter and continue回车并继续..." Enter
+         if [ ${verification} = "1" ]
+         then break
+         else
+         rm -rf "${yunzai}"
+         read -p "卸载完成Enter and continue回车并继续..." Enter
+         fi
     fi
 
     #返回
