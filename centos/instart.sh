@@ -9,14 +9,14 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "#Enter and continue回车并继续..." c
-[ -d ${myadress}"/YunzaiV3" ] || exit
+[ -d ${myadress}"/centos" ] || mkdir centos
+[ -d ${myadress}"/centos" ] || echo "initialization failed初始化失败"
+[ -d ${myadress}"/centos" ] || read -p "#Enter and continue回车并继续..." c
+[ -d ${myadress}"/centos" ] || exit
 cd "${myadress}"
 
 
-Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
+Yunzai33="${myadress}/centos/Yunzai-Bot"
 readonly Yunzai33
 
 funv3(){
@@ -84,10 +84,10 @@ fi
 
 
 ##yunzai
-[ -d ${myadress}"/YunzaiV3" ] || echo "#Enter and continue回车并继续..."
-[ -d ${myadress}"/YunzaiV3" ] || read -p "#Enter and continue回车并继续..." c
-[ -d ${myadress}"/YunzaiV3" ] || break
-cd ${myadress}"/YunzaiV3"
+[ -d ${myadress}"/centos" ] || echo "#Enter and continue回车并继续..."
+[ -d ${myadress}"/centos" ] || read -p "#Enter and continue回车并继续..." c
+[ -d ${myadress}"/centos" ] || break
+cd ${myadress}"/centos"
 [ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
 [ -d ${Yunzai33}"/plugins" ] || rm -rf ${Yunzai33} ""
 [ -d ${Yunzai33}"/plugins" ] || echo "Installation failed安装失败" 

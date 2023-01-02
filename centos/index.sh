@@ -46,7 +46,7 @@ then
   
 #进程管理ProcessManage
     if [ $OPTION = 4 ]
-    then sh "${centos}/Pm2demo.sh"
+    then sh "${centos}/process.sh"
     fi
 
 #桌面安装DesktopInstall
@@ -62,22 +62,22 @@ then
 
 #环境管理EnvironManage
     if [ $OPTION = 6 ]
-    then sh "${centos}/Environmentdemo.sh"
+    then sh "${centos}/Environ.sh"
     fi
 
 #系统语言SystemLanguage
     if [ $OPTION = 7 ]
-    then sh "${centos}/Systemlanguagedemo.sh"
+    then sh "${centos}/systemlanguage.sh"
     fi
 
 #远程管理SSHManage
     if [ $OPTION = 8 ]
-    then sh "${centos}/SSHdemo.sh"
+    then sh "${centos}/longrange.sh"
     fi
 
 #防火设置firewall
     if [ $OPTION = 9 ]
-    then sh "${centos}/Firewalldemo.sh"
+    then sh "${centos}/firewall.sh"
     fi
 
 #系统重启restart

@@ -9,20 +9,20 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "initialization failed初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "Enter and continue回车并继续..."
-[ -d ${myadress}"/YunzaiV3" ] || exit
+[ -d ${myadress}"/centos" ] || mkdir centos
+[ -d ${myadress}"/centos" ] || echo "initialization failed初始化失败"
+[ -d ${myadress}"/centos" ] || read -p "Enter and continue回车并继续..."
+[ -d ${myadress}"/centos" ] || exit
 cd "${myadress}"
 
 
-YunzaiV3="${myadress}/YunzaiV3/Yunzai-Bot"
-readonly YunzaiV3
-XiuxianV3="${myadress}/YunzaiV3/XiuXianV3"
+centos="${myadress}/centos/Yunzai-Bot"
+readonly centos
+XiuxianV3="${myadress}/centos/XiuXianV3"
 readonly XiuxianV3
 
 funv3(){
-   [ -d ${YunzaiV3}"/plugins" ] || echo "Not installed#未安装V3！"
+   [ -d ${centos}"/plugins" ] || echo "Not installed#未安装V3！"
 }
 
 while true
@@ -46,20 +46,20 @@ do
 		fi
 		if [ $OPTION = 2 ]
 		then
-			[ -d ${YunzaiV3}"/plugins" ] || echo "Not installed#未安装V3！"
-			[ -e ${YunzaiV3}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
-			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || cd "${YunzaiV3}"
-			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || npm stop
-			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || npm start
-			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || echo "#V3后台运行"
+			[ -d ${centos}"/plugins" ] || echo "Not installed#未安装V3！"
+			[ -e ${centos}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
+			[ ! -e ${centos}"/config/config/qq.yaml" ] || cd "${centos}"
+			[ ! -e ${centos}"/config/config/qq.yaml" ] || npm stop
+			[ ! -e ${centos}"/config/config/qq.yaml" ] || npm start
+			[ ! -e ${centos}"/config/config/qq.yaml" ] || echo "#V3后台运行"
 			read -p "Enter and continue回车并继续..." c
 		fi
 		if [ $OPTION = 3 ]
 		then
-			[ -d ${YunzaiV3}"/plugins" ] || echo "Not installed#未安装V3！"
-			[ ! -d ${YunzaiV3}"/plugins" ] || cd "${YunzaiV3}"
-			[ ! -d ${YunzaiV3}"/plugins" ] || npm stop
-			[ ! -d ${YunzaiV3}"/plugins" ] || echo "#V3关闭"
+			[ -d ${centos}"/plugins" ] || echo "Not installed#未安装V3！"
+			[ ! -d ${centos}"/plugins" ] || cd "${centos}"
+			[ ! -d ${centos}"/plugins" ] || npm stop
+			[ ! -d ${centos}"/plugins" ] || echo "#V3关闭"
 			read -p "Enter and continue回车并继续..." c
 		fi
     else
