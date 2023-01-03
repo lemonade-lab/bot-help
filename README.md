@@ -27,7 +27,25 @@ sh /yunzai-bot-help/install.sh
 ## 二、手机搭建
 [打开Termux下载地址]([https://f-droid.org/packages/com.termux/](https://github.com/termux/termux-app/releases)
 >选择下载arm64版
-### （1）教程1
+### (1) 新教程
+>安装git
+```
+pkg install git -y
+```
+>安装脚本
+```
+git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  ~/yunzai-bot-help && chmod +x ~/yunzai-bot-help/android.sh
+```
+>启动脚本|选择amd64|选择ubuntu系统|选择bionc
+```
+~/yunzai-bot-help/android.sh
+```
+>启动ubuntu系统
+```
+~/start-ubuntu.sh
+```
+>步骤回到安装教程二三步即可
+### （2）旧教程
 >安装proot、git、python
 ```
 pkg install proot git python -y
@@ -36,7 +54,7 @@ pkg install proot git python -y
 ```
 git clone https://gitee.com/Le-niao/termux-install-linux.git
 ```
->启动脚本并回复1安装ubantu系统
+>启动脚本|选择ubuntu系统
 ```
 python ~/termux-install-linux/termux-linux-install.py
 ```
@@ -45,20 +63,6 @@ python ~/termux-install-linux/termux-linux-install.py
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 >步骤回到安装教程二三步即可
-### (2)教程2
->安装git
-```
-pkg install git -y
-```
->安装脚本
-```
-git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  ~/yunzai-bot-help && chmod +x ~/yunzai-bot-help/*/*.sh
-```
->启动脚本|选择amd64|选择ubuntu系统|选择bionc
-```
-~/yunzai-bot-help/android.sh
-```
-
 
 ## 三、SSH远程连接工具    
 > Android：JuiceSSH         
