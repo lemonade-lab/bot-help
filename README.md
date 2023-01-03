@@ -27,7 +27,7 @@ sh /yunzai-bot-help/install.sh
 ## 二、手机搭建
 [打开Termux下载地址](https://github.com/termux/termux-app/releases)
 >选择下载arm64版
-### (1) 新教程
+### （1）新教程
 >安装git
 ```
 pkg install git -y
