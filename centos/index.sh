@@ -50,7 +50,7 @@ then
 
 #桌面安装DesktopInstall
     if [ $OPTION = 5 ]
-    then read -p "待施工Enter回车并继续..." Enter
+    then sh "${centos}/desktop.sh"
     fi
 
 #环境管理EnvironManage
@@ -78,8 +78,6 @@ then
     then shutdown -r now
     fi
 else
-    clear
-    echo "退出成功Exit succeeded"
     exit
 fi
 done
