@@ -24,10 +24,10 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-h
 ```
 sh /yunzai-bot-help/install.sh
 ```
-## 二、手机搭建
+## 二、手机搭建系统
 [打开Termux下载地址](https://github.com/termux/termux-app/releases)
 >选择下载arm64版
-### （1）新教程
+### （1）Help新版
 >安装git
 ```
 pkg install git -y
@@ -44,8 +44,7 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  ~/yunzai-bot-
 ```
 ~/start-ubuntu.sh
 ```
->步骤回到安装教程二三步即可
-### （2）旧教程
+### （2）乐鸟君原版
 >安装proot、git、python
 ```
 pkg install proot git python -y
@@ -62,7 +61,6 @@ python ~/termux-install-linux/termux-linux-install.py
 ```
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
->步骤回到安装教程二三步即可
 
 ## 三、SSH远程连接工具    
 > Android：JuiceSSH         
