@@ -52,6 +52,7 @@ then
     then
     apt update && apt install -y curl
     curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && apt-get install -y nodejs
+    apt install -y nodejs npm
     redis-server -v
         if [ $? != 0 ]
         then
