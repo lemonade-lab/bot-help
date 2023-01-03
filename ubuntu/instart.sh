@@ -50,6 +50,7 @@ then
 #安装
     if [ $OPTION = 1 ]
     then
+    apt update && apt install -y curl
     curl -fsSL https://deb.nodesource.com/setup_16.x | -E bash - && apt-get install -y nodejs
     redis-server -v
         if [ $? != 0 ]
