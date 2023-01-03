@@ -100,9 +100,7 @@ then
         fi
 
     ##依赖
-    npm install -g nrm
-    nrm use taobao
-    npm config get registry
+    npm config set registry https://registry.npmmirror.com/
     npm install
     npm install image-size
     npm install express multer body-parser jsonwebtoken
@@ -116,7 +114,7 @@ then
     ##返回
     read -p "安装成功,请启动账号,回车并继续Enter..." Enter
     fi
-    
+
     #启动
     if [ $OPTION = 2 ]
     then yunzaiverification
