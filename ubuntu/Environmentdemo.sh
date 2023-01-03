@@ -8,7 +8,7 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
+[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
 cd "${myadress}"
 
 

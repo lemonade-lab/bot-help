@@ -6,17 +6,17 @@ readonly yourv
 myadress="/home/lighthouse"
 readonly myadress
 
-export YunzaiV3="${myadress}/YunzaiV3/Yunzai-Bot"
+export ubuntu="${myadress}/ubuntu/Yunzai-Bot"
 
 funv3(){
-	if ! [ -d "${YunzaiV3}/plugins" ];then
+	if ! [ -d "${ubuntu}/plugins" ];then
 		echo "未安装云崽V3"
 		read -p "回车并退出..." x
 	fi
 	break > /dev/null 2>&1
 }
 funqq(){
-	if ! [ -e "${YunzaiV3}/config/config/qq.yaml" ];then
+	if ! [ -e "${ubuntu}/config/config/qq.yaml" ];then
 		echo "请先启动云崽在配置qwq"
 	       read -p "回车并退出..." x
 	fi
@@ -41,7 +41,7 @@ do
 	if [ $x = 0 ]
 	then
 		if [ $OPTION = 1 ];then
-			if [ -d "${YunzaiV3}/plugins" ];then
+			if [ -d "${ubuntu}/plugins" ];then
 				echo "已经安装了云崽了呢..."
 				read -p "回车并退出..."
 				break
@@ -49,8 +49,8 @@ do
 				# 调用云崽安装脚本
 				./Install.sh
 				# 喵喵插件的安装
-				cd "${YunzaiV3}"
-				if ! [ -d "${YunzaiV3}/plugins/miao-plugin" ];then
+				cd "${ubuntu}"
+				if ! [ -d "${ubuntu}/plugins/miao-plugin" ];then
 					echo -e "\n正在下载喵喵插件..."
 					git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
 				fi
@@ -71,33 +71,33 @@ do
 			echo -e "\033[31m！！注意：使用Ctrl+C之后不会云崽将不会运行！！\033[0m"
 			echo -e "\033[32m>>可以运行管理后台启动哦qwq<<\033[0m"
 			redis-server --daemonize yes
-			cd "${YunzaiV3}"
+			cd "${ubuntu}"
 			node app.js
 		fi
 		if [ $OPTION = 3 ];then
 			funv3
 			funqq
-			vi ${YunzaiV3}"/config/config/group.yaml"
+			vi ${ubuntu}"/config/config/group.yaml"
 			read -p "回车并退出..." c
 
 		fi
 		if [ $OPTION = 4 ];then
 			funv3
 			funqq
-			vi ${YunzaiV3}"/config/config/other.yaml"
+			vi ${ubuntu}"/config/config/other.yaml"
 			read -p "回车并退出..." c
 		fi
 		if [ $OPTION = 5 ];then
 			funv3
 			funqq
-			rm -rf ${YunzaiV3}"/config/config/qq.yaml"
+			rm -rf ${ubuntu}"/config/config/qq.yaml"
 			echo "删除成功！"
 			read -p "回车并退出..." c
 		fi
 		if [ $OPTION = 6 ];then
 			funv3
 			if (whiptail --title "强制更新" --yesno "是否因不可抗因素强制更新" 15 50);then
-				cd "${YunzaiV3}"
+				cd "${ubuntu}"
 				git  checkout . && git  pull
 				echo "强制更新成功！"
 				read -p "回车并退出..." c
@@ -105,7 +105,7 @@ do
 		fi
 		if [ $OPTION = 7 ];then
 			if (whiptail --title "卸载" --yesno "确定要卸载云崽嘛qwq" 15 50);then
-				rm -rf "${YunzaiV3}"
+				rm -rf "${ubuntu}"
 				echo "卸载成功！感谢使用！"
 				read -p "回车并退出..." c
 			fi

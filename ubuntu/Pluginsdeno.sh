@@ -9,11 +9,11 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || news="#初始化失败"
+[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
+[ -d ${myadress}"/ubuntu" ] || news="#初始化失败"
 cd "${myadress}"
 
-Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
+Yunzai33="${myadress}/ubuntu/Yunzai-Bot"
 readonly Yunzai33
 funv3(){
 	[ -d ${Yunzai33}"/plugins" ] || echo "未安装V3！"

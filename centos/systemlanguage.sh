@@ -41,7 +41,7 @@ then
     echo "按ESE进入命令模式"
     echo "输入:wq!保存"
     echo "输入:q!退出"
-    read -p "Enter and continue回车并继续..." x
+    read -p "Enter回车并继续..." x
     fi
 
     if [ $OPTION = 2 ]
@@ -49,12 +49,12 @@ then
     cd "${myadress}"
     dnf install langpacks-zh_CN
     dnf install -y ibus-libpinyin.x86_64
-    read -p "已执行Enter and continue回车并继续..." x
+    read -p "已执行Enter回车并继续..." x
     fi 
 
     if [ $OPTION = 3 ]
     then locale -a
-    read -p "Enter and continue回车并继续..." x
+    read -p "Enter回车并继续..." x
     fi
 
 
@@ -64,7 +64,7 @@ then
     
     if [ $OPTION = 5 ]
     then echo $LANG
-    read -p "Enter and continue回车并继续..." x
+    read -p "Enter回车并继续..." x
     fi
 
 

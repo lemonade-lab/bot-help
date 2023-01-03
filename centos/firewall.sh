@@ -19,7 +19,7 @@ if [ $feedback = 0 ]
 then
     if [ $OPTION = 1 ]
     then firewall-cmd --state
-    read -p "已执行,回车并继续Enter and continue..." c
+    read -p "已执行,回车并继续Enter..." c
     fi
     if [ $OPTION = 2 ]
     then systemctl start firewalld.service
@@ -27,11 +27,11 @@ then
     firewall-cmd --zone=public --add-port=$x/tcp --permanent
     systemctl restart firewalld.service
     firewall-cmd --reload
-    read -p "已执行,回车并继续Enter and continue..." c
+    read -p "已执行,回车并继续Enter..." c
     fi
     if [ $OPTION = 3 ]
     then systemctl restart firewalld.service
-    read -p "已执行,回车并继续Enter and continue..." c
+    read -p "已执行,回车并继续Enter..." c
     fi
 else
     exit

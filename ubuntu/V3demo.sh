@@ -20,14 +20,14 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
-[ -d ${myadress}"/YunzaiV3" ] || exit
+[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
+[ -d ${myadress}"/ubuntu" ] || echo "#初始化失败"
+[ -d ${myadress}"/ubuntu" ] || read -p "回车并继续..." c
+[ -d ${myadress}"/ubuntu" ] || exit
 cd "${myadress}"
 
 
-Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
+Yunzai33="${myadress}/ubuntu/Yunzai-Bot"
 readonly Yunzai33
 
 funv3(){
@@ -133,10 +133,10 @@ then
 fi
 
 ##yunzai
-[ -d ${myadress}"/YunzaiV3" ] || echo "#初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
-[ -d ${myadress}"/YunzaiV3" ] || break
-cd ${myadress}"/YunzaiV3"
+[ -d ${myadress}"/ubuntu" ] || echo "#初始化失败"
+[ -d ${myadress}"/ubuntu" ] || read -p "回车并继续..." c
+[ -d ${myadress}"/ubuntu" ] || break
+cd ${myadress}"/ubuntu"
 [ -d ${Yunzai33}"/plugins" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
 [ -d ${Yunzai33}"/plugins" ] || rm -rf "${Yunzai33}"
 [ -d ${Yunzai33}"/plugins" ] || echo "#安装失败" 

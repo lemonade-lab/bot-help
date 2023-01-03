@@ -10,13 +10,13 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
+[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
 cd "${myadress}"
 
-YunzaiV3="${myadress}/YunzaiV3/Yunzai-Bot"
-readonly YunzaiV3
+ubuntu="${myadress}/ubuntu/Yunzai-Bot"
+readonly ubuntu
 
-XiuxianV3="${myadress}/YunzaiV3/XiuXianV3"
+XiuxianV3="${myadress}/ubuntu/XiuXianV3"
 readonly XiuxianV3
 
 while true
@@ -41,12 +41,12 @@ do
 		fi
 		if [ $OPTION = 2 ]
 		then
-			[ -d ${YunzaiV3}"/plugins" ] || echo "#未安装V3！"
-			[ -e ${YunzaiV3}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
-			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || cd ${YunzaiV3}""
-			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || npm stop
-			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || npm start
-			[ ! -e ${YunzaiV3}"/config/config/qq.yaml" ] || echo "#V3后台运行"
+			[ -d ${ubuntu}"/plugins" ] || echo "#未安装V3！"
+			[ -e ${ubuntu}"/config/config/qq.yaml" ] || echo "#您未配置机器人V3QQ"
+			[ ! -e ${ubuntu}"/config/config/qq.yaml" ] || cd ${ubuntu}""
+			[ ! -e ${ubuntu}"/config/config/qq.yaml" ] || npm stop
+			[ ! -e ${ubuntu}"/config/config/qq.yaml" ] || npm start
+			[ ! -e ${ubuntu}"/config/config/qq.yaml" ] || echo "#V3后台运行"
 			read -p "回车并继续..." c
 		fi
 		if [ $OPTION = 3 ]

@@ -45,7 +45,7 @@ then
     echo "输入:q!退出"
     echo "第三步：重启"
     echo "——————————————————————————————"
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
     
     if [ $OPTION = 2 ]
@@ -53,7 +53,7 @@ then
     cd "${myadress}"
     yum -y remove openssh-server
     yum -y install openssh-server
-    read -p "已执行Enter and continue回车并继续..." Enter
+    read -p "已执行Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 3 ]
@@ -62,12 +62,12 @@ then
     
     if [ $OPTION = 4 ]
     then systemctl restart sshd.service
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
     
     if [ $OPTION = 5 ]
     then systemctl status sshd.service
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
     
     cd "${myadress}"

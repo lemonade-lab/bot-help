@@ -10,7 +10,7 @@ while true
 do
 OPTION=$(whiptail \
 --title "《Help-Environment》" \
---menu "$version\n$news" \
+--menu "$version" \
 15 50 5 \
 "1" "环境search" \
 "2" "安装Redis" \
@@ -32,12 +32,12 @@ then
     redis-server -v
     echo "git"
     git version
-    read -p "Enter and continue回车并继续..." y
+    read -p "回车并继续Enter..." y
     fi
 
     if [ $OPTION = 2 ]
     then ps -aux | grep redis
-    read -p "Enter and continue回车并继续..." y
+    read -p "回车并继续Enter..." y
     fi
 
     if [ $OPTION = 3 ]
@@ -52,7 +52,7 @@ then
     ./configure  --prefix=/usr/local/
     make && make install
     rm -rf sshpass-1.06.tar.gz
-    read -p "Enter and continue回车并继续..." y
+    read -p "回车并继续Enter..." y
     fi
 
     if [ $OPTION = 5 ]
@@ -65,7 +65,7 @@ then
     make && make install
     ln -s /usr/local/python3/bin/python3.9 /usr/bin/python3
     ln -s /usr/local/python3/bin/pip3.9 /usr/bin/pip3
-    read -p "Enter and continue回车并继续..." y
+    read -p "回车并继续Enter..." y
     fi
 
     if [ $OPTION = 6 ]
@@ -76,7 +76,7 @@ then
     yum-config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
     dnf install ffmpeg
     ffmpeg -version
-    read -p "Enter and continue回车并继续..." y
+    read -p "回车并继续Enter..." y
     fi
 
 else

@@ -50,7 +50,7 @@ then
 
 #桌面安装DesktopInstall
     if [ $OPTION = 5 ]
-    then read -p "待施工Enter and continue回车并继续..." Enter
+    then read -p "待施工Enter回车并继续..." Enter
     fi
 
 #环境管理EnvironManage

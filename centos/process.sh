@@ -38,23 +38,23 @@ then
     cd "${myadress}"
     if [ $OPTION = 1 ]
     then npm i pm2 -g
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 2 ]
     then pm2 list
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 3 ]
     then pm2 monit    
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 4 ]
     then
     pm2 start all    
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 5 ]
@@ -62,12 +62,12 @@ then
     read -p "进程ID：" x
     pm2 list
     pm2 stop $x    
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 6 ]
     then pm2 stop all    
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 7 ]
@@ -75,32 +75,32 @@ then
     read -p "进程ID：" x
     pm2 list
     pm2 restart $x    
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 8 ]
     then
     pm2 restart all    
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 9 ]
     then
     read -p "进程ID：" x
     pm2 restart $x    
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 10 ]
     then
     pm2 delete all   
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
 
     if [ $OPTION = 11 ]
     then
     pm2 logs    
-    read -p "Enter and continue回车并继续..." Enter
+    read -p "Enter回车并继续..." Enter
     fi
     
 else

@@ -19,7 +19,7 @@ cd "${myadress}"
 
 yunzaiverification(){
    [ -d "${yunzaiplugin}" ] || echo "Not installed未安装"
-   [ -d "${yunzaiplugin}" ] || read -p "Enter and continue回车并继续..." Enter
+   [ -d "${yunzaiplugin}" ] || read -p "Enter回车并继续..." Enter
    [ -d "${yunzaiplugin}" ] || return "1"
    return "0"
 }
@@ -42,7 +42,7 @@ do
 		    then
 			cd "${myadress}"
 			pm2 list
-			read -p "Enter and continue回车并继续..." c
+			read -p "Enter回车并继续..." c
 	     	fi
 
 		    if [ $OPTION = 2 ]
@@ -54,7 +54,7 @@ do
 	    		[ ! -e "${yunzaiqq}" ] || npm stop
 	    		[ ! -e "${yunzaiqq}" ] || npm start
 	    		[ ! -e "${yunzaiqq}" ] || echo "后台运行"
-	     		read -p "Enter and continue回车并继续..." c
+	     		read -p "Enter回车并继续..." c
 				fi
 	     	fi
 
@@ -65,7 +65,7 @@ do
 		     	[ ! -d "${yunzaiplugin}" ] || cd "${yunzai}"
 		    	[ ! -d "${yunzaiplugin}" ] || npm stop
 		    	[ ! -d "${yunzaiplugin}" ] || echo "关闭"
-	    		read -p "Enter and continue回车并继续..." c
+	    		read -p "Enter回车并继续..." c
 		 		fi
 		    fi
     else

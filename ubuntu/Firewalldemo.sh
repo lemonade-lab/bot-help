@@ -9,10 +9,10 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 [ -d ${myadress}"/YunzaiV2" ] || mkdir YunzaiV2
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
-[ -d ${myadress}"/YunzaiV3" ] || echo "初始化失败"
-[ -d ${myadress}"/YunzaiV3" ] || read -p "回车并继续..." c
-[ -d ${myadress}"/YunzaiV3" ] || exit
+[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
+[ -d ${myadress}"/ubuntu" ] || echo "初始化失败"
+[ -d ${myadress}"/ubuntu" ] || read -p "回车并继续..." c
+[ -d ${myadress}"/ubuntu" ] || exit
 cd "${myadress}"
 
 while true

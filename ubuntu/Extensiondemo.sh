@@ -8,9 +8,9 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/YunzaiV3" ] || mkdir YunzaiV3
+[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
 cd "${myadress}"
-Yunzai33="${myadress}/YunzaiV3/Yunzai-Bot"
+Yunzai33="${myadress}/ubuntu/Yunzai-Bot"
 readonly Yunzai33
 
 while true

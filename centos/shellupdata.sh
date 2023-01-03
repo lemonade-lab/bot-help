@@ -44,7 +44,7 @@ then
      [ ! -e ${Centosdemo} ] || git reset --hard main
      [ ! -e ${Centosdemo} ] || git pull
      [ ! -e ${Centosdemo} ] || echo "#执行完成,请重启工具"
-     read -p "Enter and continue回车并继续..." y
+     read -p "Enter回车并继续..." y
      fi
      
 #卸载
@@ -52,7 +52,7 @@ then
      then
      sudo su root
      rm -rf "${bot}"
-     read -p "执行完成Enter and continue回车并继续..." y
+     read -p "执行完成Enter回车并继续..." y
      fi
 
 else

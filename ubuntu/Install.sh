@@ -78,18 +78,18 @@ fi
 echo -e "字体已安装完成\n"
 
 # Yunzai-Bot的安装
-##YunzaiV3来自前一个文件定义的全局变量
+##ubuntu来自前一个文件定义的全局变量
 ##myadress="/home/lighthouse"
-##YunzaiV3="${myadress}/YunzaiV3/Yunzai-Bot"
-if ! [ -d "${YunzaiV3}/plugins" ];then
-	mkdir -p "${YunzaiV3}"
+##ubuntu="${myadress}/ubuntu/Yunzai-Bot"
+if ! [ -d "${ubuntu}/plugins" ];then
+	mkdir -p "${ubuntu}"
 	echo -e "\n正在下载云崽..."
-	git clone https://gitee.com/Le-niao/Yunzai-Bot.git "${YunzaiV3}"
+	git clone https://gitee.com/Le-niao/Yunzai-Bot.git "${ubuntu}"
 fi
 echo -e "云崽已安装\n"
 
-if ! [ -d "${YunzaiV3}/plugins/Guoba-Plugin/apps" ];then
-	cd "${YunzaiV3}"
+if ! [ -d "${ubuntu}/plugins/Guoba-Plugin/apps" ];then
+	cd "${ubuntu}"
 	echo -e "\n正在下载锅巴插件..."
 	git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
 fi
