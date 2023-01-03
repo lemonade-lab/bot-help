@@ -30,12 +30,12 @@ do
 	    
 		#HELP设置
 	    if [ $OPTION = 1 ]
-		then sh "${Ubuntu}/Update.sh"
+		then sh "${Ubuntu}/shellupdata.sh"
 		fi
 		
 		#机器管理
 		if [ $OPTION = 2 ]
-		then sh "${Ubuntu}/Yunzai_install.sh"
+		then sh "${Ubuntu}/robotinstall.sh"
 		fi
 		
 		#运行管理

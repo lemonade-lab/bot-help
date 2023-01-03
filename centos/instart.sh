@@ -80,25 +80,37 @@ then
     ##yunzai
     cd "${myadress}/centos"
     [ -d "${yunzaiplugin}" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
-    [ -d "${yunzaiplugin}" ] || rm -rf "${yunzai}"
-    [ -d "${yunzaiplugin}" ] || echo "Installation failed安装失败" 
-    [ -d "${yunzaiplugin}" ] || read -p "Enter回车并继续..." Enter
-    [ -d "${yunzaiplugin}" ] || break
+
+        if [ ! -d "${yunzaiplugin}" ]
+        then
+        rm -rf "${yunzai}"
+        echo "安装失败Installation failed" 
+        read -p "Enter回车并继续..." Enter
+        break
+        if
 
     cd "${yunzai}"
     ##miao
     [ -d "${yunzaimiao}" ] || git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
-    [ -d "${yunzaimiao}" ] || rm -rf "${yunzai}/plugins/miao-plugin"
-    [ -d "${yunzaimiao}" ] || echo "Installation failed安装失败"
-    [ -d "${yunzaimiao}" ] || read -p "Enter回车并继续..." Enter
-    [ -d "${yunzaimiao}" ] || break
+
+        if [ ! -d "${yunzaimiao}" ] 
+        then 
+        rm -rf "${yunzai}/plugins/miao-plugin"
+        echo "安装失败Installation failed"
+        read -p "Enter回车并继续..." Enter
+        break
+        if
 
     ##guoba
     [ -d "${yunzaiGuoba}" ] || git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
-    [ -d "${yunzaiGuoba}" ] || rm -rf "${yunzai}/plugins/Guoba-Plugin"
-    [ -d "${yunzaiGuoba}" ] || echo "Installation failed安装失败"
-    [ -d "${yunzaiGuoba}" ] || read -p "Enter回车并继续..." Enter
-    [ -d "${yunzaiGuoba}" ] || break
+    
+        if [ ! -d "${yunzaiGuoba}" ] 
+        then 
+        rm -rf "${yunzai}/plugins/Guoba-Plugin"
+        echo "安装失败Installation failed"
+        read -p "Enter回车并继续..." Enter
+        break
+        if
 
     ##依赖
     npm install
