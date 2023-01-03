@@ -57,8 +57,6 @@ then
         then
         apt install -y git
         apt install -y redis-server redis
-        redis-server --daemonize yes
-        systemctl enable redis.service
         fi
     git version
         if [ $? != 0 ]
@@ -102,6 +100,9 @@ then
         fi
 
     ##依赖
+    npm install -g nrm
+    nrm use taobao
+    npm config get registry
     npm install
     npm install image-size
     npm install express multer body-parser jsonwebtoken
@@ -121,6 +122,7 @@ then
     then yunzaiverification
         if [ $? = "0" ]
         then
+	redis-server --daemonize yes
         cd "${yunzai}"
         node app.js
         fi
