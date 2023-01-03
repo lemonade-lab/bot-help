@@ -87,7 +87,7 @@ then
         echo "安装失败Installation failed" 
         read -p "Enter回车并继续..." Enter
         break
-        if
+        fi
 
     cd "${yunzai}"
     ##miao
@@ -99,7 +99,7 @@ then
         echo "安装失败Installation failed"
         read -p "Enter回车并继续..." Enter
         break
-        if
+        fi
 
     ##guoba
     [ -d "${yunzaiGuoba}" ] || git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
@@ -110,7 +110,7 @@ then
         echo "安装失败Installation failed"
         read -p "Enter回车并继续..." Enter
         break
-        if
+        fi
 
     ##依赖
     npm install
