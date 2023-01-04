@@ -36,19 +36,12 @@ pkg install proot git python -y
 ```
 >安装系统脚本
 ```
-git clone https://gitee.com/Le-niao/termux-install-linux.git
+git clone https://gitee.com/Le-niao/termux-install-linux.git ~/termux-install-linux
 ```
 >启动系统脚本|选择ubuntu系统
 ```
-python ~/termux-install-linux/termux-linux-install.py
-```
->复制脚本
-```
-cp ~/termux-install-linux/ubuntu/start-ubuntu.sh ~/Termux-Linux/Ubuntu/start-ubuntu.sh
-```
->授予权限
-```
-chmod +x ~/Termux-Linux/Ubuntu/start-ubuntu.sh
+cd ~/termux-install-linux
+python termux-linux-install.py
 ```
 >启动系统
 ```
