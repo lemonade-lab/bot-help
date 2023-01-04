@@ -100,7 +100,7 @@ then
         fi
 
     ##依赖
-    npm config set registry https://registry.npmmirror.com/
+    # npm config set registry https://registry.npmmirror.com/
     npm install
     npm install image-size
     npm install express multer body-parser jsonwebtoken
