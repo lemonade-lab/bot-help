@@ -7,12 +7,6 @@ cd /home/lighthouse/centos/Yunzai-Bot
 ```
 cd /home/lighthouse/centos/Yunzai-Bot/plugins
 ```
-
-
->npm转换成pnpm
-```
-npm install pnpm -g
-```
 # 手动安装
 安装nodejs
 ```
