@@ -1,4 +1,4 @@
-# centos系统文档
+# Ubuntu系统文档
 >机器人目录
 ```
 cd /home/lighthouse/ubuntu/Yunzai-Bot
