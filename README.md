@@ -7,12 +7,12 @@ UpdateTime:2023/1/5_V1.4
 ```
 sudo su root      
 ```
-#### （二）环境初始化
->1.`Centos`版初始化☞[Centos更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/centos/README.md)
+#### （二）环境准备
+>1.`Centos`系统初始化☞[Centos更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/centos/README.md)
 ```
 yum update -y && yum install git -y    
 ```
->2.`Ubuntu`版初始化☞[Ubuntu更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/ubuntu/README.md)  
+>2.`Ubuntu`系统初始化☞[Ubuntu更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/ubuntu/README.md)  
 ```
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
 ``` 
