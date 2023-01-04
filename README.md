@@ -30,7 +30,7 @@ sh /yunzai-bot-help/install.sh
 >选择下载`arm64`版    
 >[☞Linux安装文档](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/debian/README.md)
 
-## 三、SSH远程连接工具    
+## 三、远程连接工具    
 > Android：`JuiceSSH`         
 > IOS：`Termius`     
 > Windows：`MobaXterm汉化`、`Termius`    
