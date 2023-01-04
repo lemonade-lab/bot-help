@@ -1,5 +1,6 @@
 # yunzai-bot-help   
->Centos/Ubuntu系统轻量型图形化工具V1.3    
+>Centos/Ubuntu系统轻量型图形化工具     
+2023/1/4_V1.4 
 ## 一、安装教程
 #### （一）切换用户
 >必须root用户模式
@@ -15,7 +16,6 @@ yum update -y && yum install git -y
 ```
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
 ``` 
-
 #### （三）项目
 >克隆并启动
 ```
@@ -25,7 +25,6 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-h
 ```
 sh /yunzai-bot-help/install.sh
 ```
-
 ## 二、手机搭建系统
 [打开Termux下载地址](https://github.com/termux/termux-app/releases)
 >选择下载arm64版
@@ -47,7 +46,6 @@ python termux-linux-install.py
 ```
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
-
 ### （2）备用版本
 >安装git
 ```
@@ -65,12 +63,10 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  ~/yunzai-bot-
 ```
 ~/start-ubuntu.sh
 ```
-
 ## 三、SSH远程连接工具    
 > Android：JuiceSSH         
 > IOS：Termius     
 > Windows：MobaXterm汉化、Termius    
-
 ## 四、功能介绍    
 > * 一键安装和部署环境     
 > * 启动/重启/更新/停止
@@ -79,10 +75,9 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  ~/yunzai-bot-
 > * SSH开通帮助（远程连接）   
 > * 系统语言(可设置中文)   
 > * 桌面安装(入门必备)      
-
 ## 五、企鹅讨论聚集地      
 群名  | 群号  |  群主 
 ------------- | -------------  | -------------    
 | [BotHelp](https://afdian.net/a/WinterChocolates) | 806943302 | [@冬季巧克力](https://gitee.com/djqkl_znje) | 
- 
+
 [爱发电](https://afdian.net/a/WinterChocolates)    
