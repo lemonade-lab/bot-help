@@ -101,9 +101,10 @@ then
 
     ##依赖
     npm config set registry https://registry.npmmirror.com
-    npm install
-    npm install image-size
-    npm install express multer body-parser jsonwebtoken
+    npm install pnpm -g
+    pnpm install -P
+    pnpm install --filter=guoba-plugin
+    pnpm add image-size -w
 
     ##环境准备
     apt install -y chromium-browser
