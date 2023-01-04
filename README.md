@@ -1,13 +1,13 @@
-# yunzai-bot-help   
+# Yunzai-Bot-Help   
 >Centos&&Ubuntu系统轻量型图形化工具     
 UpdateTime:2023/1/5_V1.4 
 ## 一、安装教程 
-#### （一）切换用户
+#### （1）切换用户
 >必须`ROOT`模式
 ```
 sudo su root      
 ```
-#### （二）环境准备
+#### （2）环境准备
 >1.`Centos`系统初始化☞[Centos更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/centos/README.md)
 ```
 yum update -y && yum install git -y    
@@ -16,7 +16,7 @@ yum update -y && yum install git -y
 ```
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
 ``` 
-#### （三）项目拉取
+#### （3）项目拉取
 >克隆启动
 ```
 git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-help && chmod +x /yunzai-bot-help/*/*.sh && sh /yunzai-bot-help/install.sh
@@ -42,9 +42,9 @@ sh /yunzai-bot-help/install.sh
 - [x] SSH开通帮助（远程连接）   
 - [x] 系统语言(可设置中文)   
 - [x] 桌面安装(入门必备)      
-## 五、企鹅讨论聚集地      
+## 五、企鹅讨论      
 群名  | 群号  |  群主 
 ------------- | -------------  | -------------    
 | [BotHelp](https://afdian.net/a/WinterChocolates) | 806943302 | [@冬季巧克力](https://gitee.com/djqkl_znje) | 
 
-[爱发电](https://afdian.net/a/WinterChocolates)    
+[☞爱发电](https://afdian.net/a/WinterChocolates)    
