@@ -50,14 +50,23 @@ then
 #安装
     if [ $OPTION = 1 ]
     then
-    apt update && apt install -y curl
-    curl -fsSL https://deb.nodesource.com/setup_17.x | bash - && apt-get install -y nodejs
+    node -v
+        if [ $? != 0 ]
+        then
+        apt install -y curl
+        curl -fsSL https://deb.nodesource.com/setup_17.x | bash
+        apt-get install -y nodejs
+        fi
+	
+    #redis
     redis-server -v
         if [ $? != 0 ]
         then
         apt install -y git
         apt install -y redis-server redis
         fi
+	
+    #git
     git version
         if [ $? != 0 ]
         then
