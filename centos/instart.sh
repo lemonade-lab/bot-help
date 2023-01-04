@@ -79,7 +79,7 @@ then
     
     ##yunzai
     cd "${myadress}/centos"
-    [ -d "${yunzaiplugin}" ] || git clone https://gitee.com/Le-niao/Yunzai-Bot.git
+    [ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
 
         if [ ! -d "${yunzaiplugin}" ]
         then
@@ -91,7 +91,7 @@ then
 
     cd "${yunzai}"
     ##miao
-    [ -d "${yunzaimiao}" ] || git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
+    [ -d "${yunzaimiao}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
 
         if [ ! -d "${yunzaimiao}" ] 
         then 
