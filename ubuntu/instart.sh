@@ -55,7 +55,7 @@ then
         if [ $? != 0 ]
         then
 	apt install -y curl
-        curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
+	curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
 	apt-get install -y nodejs
         fi
 	
