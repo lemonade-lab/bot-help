@@ -8,11 +8,11 @@
 sudo su root      
 ```
 #### （二）初始化
->1.centos版初始化
+>1.Centos版初始化☞[Centos更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/centos/README.md)
 ```
 yum update -y && yum install git -y    
 ```
->2.Ubuntu版初始化   
+>2.Ubuntu版初始化☞[Ubuntu更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/centos/README.md)  
 ```
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
 ``` 
@@ -26,9 +26,10 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-h
 sh /yunzai-bot-help/install.sh
 ```
 ## 二、手机搭建系统
->[打开Termux下载地址](https://github.com/termux/termux-app/releases)     
+>[☞Termux下载地址](https://github.com/termux/termux-app/releases)     
 >选择下载arm64版    
->[打开教程文档](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/debian/README.md)
+>[☞Linux安装文档](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/debian/README.md)
+
 ## 三、SSH远程连接工具    
 > Android：JuiceSSH         
 > IOS：Termius     
