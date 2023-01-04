@@ -38,24 +38,24 @@ pkg install proot git python -y
 ```
 git clone https://gitee.com/Le-niao/termux-install-linux.git
 ```
->启动脚本|选择ubuntu系统
+>启动系统脚本|选择ubuntu系统
 ```
 python ~/termux-install-linux/termux-linux-install.py
 ```
->移动启动脚本
+>复制脚本
 ```
-mv ~/termux-install-linux/ubuntu/start-ubuntu.sh ~/Termux-linux/Ubuntu/
+cp ~/termux-install-linux/ubuntu/start-ubuntu.sh ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 >授予权限
 ```
 chmod +x ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
->启动ubuntu系统
+>启动系统
 ```
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 
-### （2）help备用版本
+### （2）备用版本
 >安装git
 ```
 pkg install git -y
@@ -68,7 +68,7 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  ~/yunzai-bot-
 ```
 ~/yunzai-bot-help/android.sh
 ```
->启动ubuntu系统
+>启动系统
 ```
 ~/start-ubuntu.sh
 ```
