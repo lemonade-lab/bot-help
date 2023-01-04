@@ -1,4 +1,4 @@
-### （1）国光版教程
+### 国光教程
 >安装proot、git、python
 ```
 pkg install proot git python -y
@@ -16,7 +16,7 @@ python termux-linux-install.py
 ```
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
-### （2）备用版教程
+### 备用教程
 >安装git
 ```
 pkg install proot git -y
