@@ -19,7 +19,7 @@ python termux-linux-install.py
 ### （2）备用版教程
 >安装git
 ```
-pkg install git -y
+pkg install proot git -y
 ```
 >安装脚本
 ```
