@@ -15,6 +15,7 @@ yum update -y && yum install git -y
 ```
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
 ``` 
+
 #### （三）项目
 >克隆并启动
 ```
@@ -24,10 +25,37 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-h
 ```
 sh /yunzai-bot-help/install.sh
 ```
+
 ## 二、手机搭建系统
 [打开Termux下载地址](https://github.com/termux/termux-app/releases)
 >选择下载arm64版
-### （1）Help新版
+### （1）国光版教程
+>安装proot、git、python
+```
+pkg install proot git python -y
+```
+>安装系统脚本
+```
+git clone https://gitee.com/Le-niao/termux-install-linux.git
+```
+>启动脚本|选择ubuntu系统
+```
+python ~/termux-install-linux/termux-linux-install.py
+```
+>移动启动脚本
+```
+mv ~/termux-install-linux/ubuntu/start-ubuntu.sh ~/Termux-linux/Ubuntu/
+```
+>授予权限
+```
+chmod +x ~/Termux-Linux/Ubuntu/start-ubuntu.sh
+```
+>启动ubuntu系统
+```
+~/Termux-Linux/Ubuntu/start-ubuntu.sh
+```
+
+### （2）help备用版本
 >安装git
 ```
 pkg install git -y
@@ -43,23 +71,6 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  ~/yunzai-bot-
 >启动ubuntu系统
 ```
 ~/start-ubuntu.sh
-```
-### （2）乐鸟君原版
->安装proot、git、python
-```
-pkg install proot git python -y
-```
->安装系统脚本
-```
-git clone https://gitee.com/Le-niao/termux-install-linux.git
-```
->启动脚本|选择ubuntu系统
-```
-python ~/termux-install-linux/termux-linux-install.py
-```
->启动ubantu系统
-```
-~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 
 ## 三、SSH远程连接工具    
