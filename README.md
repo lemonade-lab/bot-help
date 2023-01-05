@@ -4,25 +4,25 @@ UpdateTime:2023/1/5_V1.4
 ## 一、安装教程 
 #### （1）切换用户
 >必须`ROOT`模式
-```
+```sh
 sudo su root      
 ```
 #### （2）环境准备
 >1.`Centos`系统初始化☞[Centos更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/centos/README.md)
-```
+```sh
 yum update -y && yum install git -y    
 ```
 >2.`Ubuntu`系统初始化☞[Ubuntu更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/ubuntu/README.md)  
-```
+```sh
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
 ``` 
 #### （3）项目拉取
 >克隆启动
-```
+```sh
 git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-help && chmod +x /yunzai-bot-help/*/*.sh && sh /yunzai-bot-help/install.sh
 ```
 >日常启动
-```
+```sh
 sh /yunzai-bot-help/install.sh
 ```
 ## 二、手机搭建系统
