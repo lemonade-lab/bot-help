@@ -33,7 +33,7 @@ sh /yunzai-bot-help/install.sh
 ## 三、远程连接工具    
 > Android：`JuiceSSH`         
 > IOS：`Termius`     
-> Windows：`MobaXterm汉化`、`Termius`    
+> Windows：`MobaXterm`、`Termius`    
 ## 四、功能介绍    
 - [x]  一键安装和部署环境     
 - [x] 启动/重启/更新/停止
@@ -42,9 +42,7 @@ sh /yunzai-bot-help/install.sh
 - [x] SSH开通帮助（远程连接）   
 - [x] 系统语言(可设置中文)   
 - [x] 桌面安装(入门必备)      
-## 五、企鹅讨论      
+## 五、企鹅讨论[☞为作者发电](https://afdian.net/a/WinterChocolates)      
 群名  | 群号  |  群主 
 ------------- | -------------  | -------------    
 | [BotHelp](https://afdian.net/a/WinterChocolates) | 806943302 | [@冬季巧克力](https://gitee.com/djqkl_znje) | 
-
-[☞爱发电](https://afdian.net/a/WinterChocolates)    
