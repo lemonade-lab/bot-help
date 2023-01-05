@@ -18,7 +18,7 @@ apt install -y nodejs
 npm install pnpm -g
 ```
 
-> pnpm换源**（建议执行）**
+> pnpm换源 **（建议执行）**
 
 ```shell
 pnpm config set registry https://registry.npmmirror.com
@@ -30,7 +30,7 @@ pnpm config set registry https://registry.npmmirror.com
 apt install -y git redis-server redis chromium-browser
 ```
 
-> 安装字体**（可以自行百度导入）**
+> 安装字体 **（可以自行百度导入）**
 
 ```shell
 apt-get install -y --force-yes --no-install-recommends fonts-wqy-microhei
@@ -42,27 +42,27 @@ apt-get install -y --force-yes --no-install-recommends fonts-wqy-microhei
 git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
 ```
 
-> 安装[喵喵插件](https://gitee.com/yoimiya-kokomi/miao-plugin)**（注意：需要云崽目录里执行）**
+> 安装[喵喵插件](https://gitee.com/yoimiya-kokomi/miao-plugin) **（注意：需要云崽目录里执行）**
 
 ```shell
 cd Yunzai-Bot
 git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
 ```
 
-> 喵喵插件依赖安装**（注意：需要云崽目录里执行）**
+> 喵喵插件依赖安装 **（注意：需要云崽目录里执行）**
 
 ```shell
 pnpm add image-size -w
 ```
 
-> 安装[锅巴插件](https://gitee.com/guoba-yunzai/guoba-plugin)**（注意：需要云崽目录里执行）**
+> 安装[锅巴插件](https://gitee.com/guoba-yunzai/guoba-plugin) **（注意：需要云崽目录里执行）**
 
 ```shell
 cd Yunzai-Bot
 git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
 ```
 
-> 锅巴插件依赖安装**（注意：需要云崽目录里执行）**
+> 锅巴插件依赖安装 **（注意：需要云崽目录里执行）**
 
 ```shell
 pnpm install --filter=guoba-plugin
