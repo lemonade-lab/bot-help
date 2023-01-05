@@ -70,6 +70,12 @@ then
         then
         apt install -y git
         fi
+	
+    ##环境准备
+    #文字安装
+    apt install -y --force-yes --no-install-recommends fonts-wqy-microhei
+    #安装Chromium
+    apt install -y chromium-browser
     
     ##yunzai
     cd "${myadress}/ubuntu"
@@ -105,7 +111,7 @@ then
         read -p "Enter回车并继续..." Enter
         break
         fi
-
+    
     ##依赖
     npm config set registry https://registry.npmmirror.com
     npm install pnpm -g
@@ -113,12 +119,6 @@ then
     pnpm install -P
     pnpm install --filter=guoba-plugin
     pnpm add image-size -w
-
-    ##环境准备
-    apt install -y chromium-browser
-    #文字安装
-    apt-get install -y --force-yes --no-install-recommends fonts-wqy-microhei
-    #安装Chromium
 
     ##返回
     read -p "安装成功,请启动账号,回车并继续Enter..." Enter
