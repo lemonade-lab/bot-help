@@ -68,7 +68,7 @@ then
     git version
         if [ $? != 0 ]
         then
-        apt install -t git
+        apt install -y git
         fi
     
     ##yunzai
@@ -109,6 +109,7 @@ then
     ##依赖
     npm config set registry https://registry.npmmirror.com
     npm install pnpm -g
+    pnpm config set registry https://registry.npmmirror.com
     pnpm install -P
     pnpm install --filter=guoba-plugin
     pnpm add image-size -w
