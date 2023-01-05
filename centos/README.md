@@ -2,13 +2,13 @@
 
 > 机器人目录
 
-```
+```sh
 cd /home/lighthouse/centos/Yunzai-Bot
 ```
 
 > 插件目录
 
-```
+```sh
 cd /home/lighthouse/centos/Yunzai-Bot/plugins
 ```
 
