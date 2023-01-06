@@ -78,7 +78,7 @@ then
     read -p "回车并继续Enter..." y
     fi
 
-    if [ $OPTION =7 ]
+    if [ $OPTION = 7 ]
     then
     apt remove -y git
     apt update && apt install -y gcc make gzip tar wget libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
