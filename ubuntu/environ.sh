@@ -90,6 +90,8 @@ then
     make && make install
     echo "export PATH=/usr/local/git/bin/:$PATH" > /etc/profile.d/git.sh
     source /etc/profile
+    git --version
+    rm -rf /usr/local/src/*
     read -p "回车并继续Enter..." y
     fi
 
