@@ -141,7 +141,7 @@ then
         if [ $? = "0" ]
         then
         cd "${yunzai}"
-        npm login run
+        npm run login
         fi
     fi   
     
