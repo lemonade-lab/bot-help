@@ -30,47 +30,47 @@ then
 
 #工具管理HelpManage
     if [ $OPTION = 1 ]
-    then sh "${ubuntu}/shellupdata.sh"
+    then bash "${ubuntu}/shellupdata.sh"
     fi
 
 #机器管理administrat
     if [ $OPTION = 2 ]
-    then sh "${ubuntu}/instart.sh"
+    then bash "${ubuntu}/instart.sh"
     fi
 
 #运行管理BackControl
     if [ $OPTION = 3 ]
-    then sh "${ubuntu}/peration.sh"
+    then bash "${ubuntu}/peration.sh"
     fi
   
 #进程管理ProcessManage
     if [ $OPTION = 4 ]
-    then sh "${ubuntu}/process.sh"
+    then bash "${ubuntu}/process.sh"
     fi
 
 #桌面安装DesktopInstall
     if [ $OPTION = 5 ]
-    then sh "${ubuntu}/desktop.sh"
+    then bash "${ubuntu}/desktop.sh"
     fi
 
 #环境管理EnvironManage
     if [ $OPTION = 6 ]
-    then sh "${ubuntu}/environ.sh"
+    then bash "${ubuntu}/environ.sh"
     fi
 
 #系统语言SystemLanguage
     if [ $OPTION = 7 ]
-    then sh "${ubuntu}/systemlanguage.sh"
+    then bash "${ubuntu}/systemlanguage.sh"
     fi
 
 #远程管理SSHManage
     if [ $OPTION = 8 ]
-    then sh "${ubuntu}/longrange.sh"
+    then bash "${ubuntu}/longrange.sh"
     fi
 
 #防火设置firewall
     if [ $OPTION = 9 ]
-    then sh "${ubuntu}/firewall.sh"
+    then bash "${ubuntu}/firewall.sh"
     fi
 
 #系统重启restart
