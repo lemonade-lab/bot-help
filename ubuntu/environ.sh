@@ -59,15 +59,18 @@ then
 
     if [ $OPTION = 5 ]
     then
-    apt update && apt install -y gcc build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev sqlite3 libsqlite3-dev tk-dev uuid-dev libgdbm-compat-dev
+    apt remove -y python3
+    apt update && apt install -y gcc make build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev sqlite3 libsqlite3-dev tk-dev uuid-dev libgdbm-compat-dev
     wget https://repo.huaweicloud.com/python/3.9.0/Python-3.9.0.tgz
     tar -zxvf Python-3.9.0.tgz
     rm -rf Python-3.9.0.tgz
     cd Python-3.9.0
-    ./configure prefix=/usr/local/python3
+    ./configure --prefix=/usr/local/python3
     make && make install
     ln -s /usr/local/python3/bin/python3.9 /usr/bin/python3
     ln -s /usr/local/python3/bin/pip3.9 /usr/bin/pip3
+    python3 --version
+    pip3 --version
     read -p "回车并继续Enter..." y
     fi
 
