@@ -80,6 +80,7 @@ then
 
     if [ $OPTION =7 ]
     then
+    apt remove -y git
     apt update && apt install -y gcc make gzip tar wget libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
     wget -P /usr/local/src https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.9.5.tar.xz
     cd /usr/local/src/
