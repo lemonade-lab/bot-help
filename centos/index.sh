@@ -12,16 +12,17 @@ OPTION=$(whiptail \
 --title "《Yunzai-Bot-Help》" \
 --menu "$version" \
 15 50 5 \
-"1" "工具管理HelpManage" \
+"1" "工具管理helpManage" \
 "2" "机器管理administrat" \
-"3" "运行管理BackControl" \
-"4" "进程管理ProcessManage" \
-"5" "桌面安装DesktopInstall" \
-"6" "环境管理EnvironManage" \
-"7" "系统语言SystemLanguage" \
-"8" "远程管理SSHManage" \
-"9" "防火设置firewall" \
-"10" "系统重启restart" \
+"3" "运行管理backControl" \
+"4" "进程管理processManage" \
+"5" "负载管理loadManage" \
+"6" "桌面安装desktopInstall" \
+"7" "环境管理environManage" \
+"8" "系统语言systemLanguage" \
+"9" "远程管理sshManage" \
+"10" "防火设置firewall" \
+"11" "系统重启restart" \
 3>&1 1>&2 2>&3)
 feedback=$?
 
@@ -42,39 +43,44 @@ then
     if [ $OPTION = 3 ]
     then sh "${centos}/peration.sh"
     fi
-  
-#进程管理ProcessManage
+    
+#进程管理processManage
     if [ $OPTION = 4 ]
     then sh "${centos}/process.sh"
     fi
+  
+#负载管理loadManage
+    if [ $OPTION = 5 ]
+    then sh "${centos}/load.sh"
+    fi
 
 #桌面安装DesktopInstall
-    if [ $OPTION = 5 ]
+    if [ $OPTION = 6 ]
     then sh "${centos}/desktop.sh"
     fi
 
 #环境管理EnvironManage
-    if [ $OPTION = 6 ]
+    if [ $OPTION = 7 ]
     then sh "${centos}/environ.sh"
     fi
 
 #系统语言SystemLanguage
-    if [ $OPTION = 7 ]
+    if [ $OPTION = 8 ]
     then sh "${centos}/systemlanguage.sh"
     fi
 
 #远程管理SSHManage
-    if [ $OPTION = 8 ]
+    if [ $OPTION = 9 ]
     then sh "${centos}/longrange.sh"
     fi
 
 #防火设置firewall
-    if [ $OPTION = 9 ]
+    if [ $OPTION = 10 ]
     then sh "${centos}/firewall.sh"
     fi
 
 #系统重启restart
-    if [ $OPTION = 10 ]
+    if [ $OPTION = 11 ]
     then shutdown -r now
     fi
 else
