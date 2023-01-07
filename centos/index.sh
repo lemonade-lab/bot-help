@@ -15,7 +15,7 @@ OPTION=$(whiptail \
 "1" "工具管理HelpManage" \
 "2" "机器管理administrat" \
 "3" "运行管理BackControl" \
-"4" "进程管理ProcessManage" \
+"4" "负载管理ProcessManage" \
 "5" "桌面安装DesktopInstall" \
 "6" "环境管理EnvironManage" \
 "7" "系统语言SystemLanguage" \
@@ -43,7 +43,7 @@ then
     then sh "${centos}/peration.sh"
     fi
   
-#进程管理ProcessManage
+#负载管理ProcessManage
     if [ $OPTION = 4 ]
     then sh "${centos}/process.sh"
     fi
