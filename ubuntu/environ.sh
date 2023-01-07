@@ -91,8 +91,7 @@ then
     cd /usr/local/src/git-2.9.5
     ./configure --prefix=/usr/local/git
     make && make install
-    echo "export PATH=/usr/local/git/bin/:$PATH" > /etc/profile.d/git.sh
-    source /etc/profile
+    ln -s /usr/local/git/bin/git /usr/local/bin/git
     git --version
     rm -rf /usr/local/src/*
     read -p "回车并继续Enter..." y
