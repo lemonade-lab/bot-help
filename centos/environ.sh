@@ -31,13 +31,16 @@ then
     redis-server -v
     echo "git"
     git version
-    read -p "回车并继续Enter..." y
+    read -p "回车并继续Enter..." Enter
     fi
    
 #更新
     if [ $OPTION = 2 ]
-    then yum update -y
-    read -p "回车并继续Enter..." y
+    then 
+    yum remove git -y
+    yum update -y
+    yum install git -y
+    read -p "回车并继续Enter..." Enter
     fi
     
 #安装
@@ -45,7 +48,7 @@ then
     then        
     #安装zip
     yum install -y unzip zip
-    read -p "回车并sshpass继续Enter..." y
+    read -p "回车并sshpass继续Enter..." Enter
     #安装sshpass
     cd "${myadress}"
     wget https://nchc.dl.sourceforge.net/project/sshpass/sshpass/1.06/sshpass-1.06.tar
@@ -53,7 +56,7 @@ then
     ./configure  --prefix=/usr/local/
     make && make install
     rm -rf sshpass-1.06.tar.gz
-    read -p "回车并py继续Enter..." y
+    read -p "回车并py继续Enter..." Enter
     #安装py
     wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
     tar -zxvf Python-3.9.0.tgz
@@ -63,7 +66,7 @@ then
     make && make install
     ln -s /usr/local/python3/bin/python3.9 /usr/bin/python3
     ln -s /usr/local/python3/bin/pip3.9 /usr/bin/pip3
-    read -p "回车并ffmpeg继续Enter..." y
+    read -p "回车并ffmpeg继续Enter..." Enter
     #安装ffmpeg
     dnf install epel-release
     yum config-manager -set-enabled PowerTools
@@ -71,13 +74,13 @@ then
     yum-config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
     dnf install ffmpeg
     ffmpeg -version
-    read -p "回车并继续Enter..." y
+    read -p "回车并继续Enter..." Enter
     fi
 
 #卸载
     if [ $OPTION = 4 ]
     then 
-    read -p "回车并继续Enter..." y
+    read -p "回车并继续Enter..." Enter
     fi
     
 else
