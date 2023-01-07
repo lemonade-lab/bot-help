@@ -15,14 +15,14 @@ cd "${myadress}"
 while true
 do
 OPTION=$(whiptail \
---title "《Help-SSH》" \
+--title "《PM2》" \
 --menu "$version" \
 15 50 5 \
 "1" "安装installPM2" \
-"2" "查看进程view the list of processes" \
-"3" "监视进程moniter all processes" \
-"4" "运行进程run all processes" \
-"5" "停止指定stop specific process" \
+"2" "查看运行view the list of processes" \
+"3" "监视运行moniter all processes" \
+"4" "运行所有run all processes" \
+"5" "停止运行stop specific process" \
 "6" "停止所有stop all processes" \
 "7" "重启指定restart specific process" \
 "8" "重启所有restart all processes" \
@@ -86,8 +86,8 @@ then
 
     if [ $OPTION = 9 ]
     then
-    read -p "进程ID：" x
-    pm2 restart $x    
+    read -p "选择ID：" ID
+    pm2 restart $ID    
     read -p "Enter回车并继续..." Enter
     fi
 
