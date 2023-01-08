@@ -69,8 +69,8 @@ do
 					cd Python-3.9.0
 					./configure --prefix=/usr/local/python3
 					make && make install
-					ln -s /usr/local/python3/bin/python3.9 /usr/bin/python3
-					ln -s /usr/local/python3/bin/pip3.9 /usr/bin/pip3
+					echo -e '# python3.9.0\nexport PYTHON_HOME=/usr/local/python3\nexport PATH=$PYTHON_HOME/bin:$PATH' >> /etc/profile
+					source /etc/profile
 					python3 --version
 					pip3 --version
 					rm -rf /usr/local/src/*
@@ -80,8 +80,13 @@ do
 				if [ $OPTIONPY = 2 ]
 				then
 					rm -rf /usr/local/python3
+					sed -i '/# python3.9.0/d' /etc/profile
+					sed -i '/PYTHON_HOME/d' /etc/profile
+					rm -rf /etc/profile.d/python3.sh
+					rm -rf /usr/local/bin/pip3
+					rm -rf /usr/local/bin/python3
 					rm -rf /usr/bin/python3
-					rm -rf /usr/bin/pip3
+                                        rm -rf /usr/bin/pip3
 					source /etc/profile
 					echo "卸载成功"
 					read -p "回车并继续Enter..." y
@@ -117,7 +122,8 @@ do
 					cd /usr/local/src/git-2.9.5
 					./configure --prefix=/usr/local/git
 					make && make install
-					ln -s /usr/local/git/bin/git /usr/local/bin/git
+					echo -e '# Git2.9.5\nexport PATH=/usr/local/git/bin:$PATH' >> /etc/profile
+					source /etc/profile
 					git --version
 					rm -rf /usr/local/src/*
 					echo "安装成功"
@@ -126,7 +132,10 @@ do
 				if [ $OPTIONGIT = 2 ]
 				then
 					rm -rf /usr/local/git
+					rm -rf /etc/profile.d/git.sh
 					rm -rf /usr/local/bin/git
+					sed -i '/# Git2.9.5/d' /etc/profile
+					sed -i '/git/d' /etc/profile
 					source /etc/profile
 					echo "卸载成功"
 					read -p "回车并继续Enter..." y
