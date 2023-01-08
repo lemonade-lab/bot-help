@@ -58,14 +58,14 @@ then
     rm -rf sshpass-1.06.tar.gz
     read -p "回车并py继续Enter..." Enter
     #安装py
-    wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
+    wget https://repo.huaweicloud.com/python/3.9.0/Python-3.9.0.tgz
     tar -zxvf Python-3.9.0.tgz
     rm -rf Python-3.9.0.tgz
     cd Python-3.9.0
     ./configure prefix=/usr/local/python3
     make && make install
-    ln -s /usr/local/python3/bin/python3.9 /usr/bin/python3
-    ln -s /usr/local/python3/bin/pip3.9 /usr/bin/pip3
+    echo -e '# python3.9.0\nexport PYTHON_HOME=/usr/local/python3\nexport PATH=$PYTHON_HOME/bin:$PATH' >> /etc/profile
+    source /etc/profile
     read -p "回车并ffmpeg继续Enter..." Enter
     #安装ffmpeg
     dnf install epel-release
