@@ -169,14 +169,15 @@ rm -rf Python-3.9.10
 
 **PyPI镜像加速站**
 
+> 腾讯云PyPI镜像加速站 **（都可以用）**：http://mirrors.tencent.com/pypi/simple/
+>
+> 华为云PyPi镜像加速站 **（都可以用）**：https://repo.huaweicloud.com/repository/pypi/simple/
+>
 > 阿里云PyPI公网镜像加速站 **（服务器用这个）**：https://mirrors.aliyun.com/pypi/simple/
 >
 > 阿里云PyPI内网镜像加速站 **（termux用这个）**：https://mirrors.cloud.aliyuncs.com/pypi/simple/
 >
-> 华为云PyPi镜像加速站 **（都可以用）**：https://repo.huaweicloud.com/repository/pypi/simple/
->
-> 腾讯云PyPI镜像加速站 **（都可以用）**：http://mirrors.tencent.com/pypi/simple
->
+
 > 还有其他的大学镜像站，例如：清华，中科大，南大，交大等等
 
 > 配置如下：
