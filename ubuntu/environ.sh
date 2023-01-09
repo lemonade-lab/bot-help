@@ -103,11 +103,11 @@ do
 		if [ $OPTION = 6 ]
 		then
 			OPTIONGIT=$(whiptail \
-				--title "安装Git2.9.5" \
+				--title "安装Git2.39.0" \
 				--menu "$version" \
 				15 50 5 \
-				"1" "安装Git2.9.5" \
-				"2" "卸载Git2.9.5" \
+				"1" "安装Git2.39.0" \
+				"2" "卸载Git2.39.0" \
 				3>&1 1>&2 2>&3)
 			feedback=$?
 			if [ $feedback = 0 ]
@@ -116,13 +116,13 @@ do
 				then
 					apt remove -y git
 					apt update && apt install -y gcc make gzip tar wget libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
-					wget -P /usr/local/src https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.9.5.tar.xz
+					wget -P /usr/local/src https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.39.0.tar.xz
 					cd /usr/local/src/
-					tar -xf git-2.9.5.tar.xz
-					cd /usr/local/src/git-2.9.5
+					tar -xf git-2.39.0.tar.xz
+					cd /usr/local/src/git-2.39.0
 					./configure --prefix=/usr/local/git
 					make && make install
-					echo -e '# Git2.9.5\nexport PATH=/usr/local/git/bin:$PATH' >> /etc/profile
+					echo -e '# Git2.39.0\nexport PATH=/usr/local/git/bin:$PATH' >> /etc/profile
 					source /etc/profile
 					git --version
 					rm -rf /usr/local/src/*
@@ -134,7 +134,7 @@ do
 					rm -rf /usr/local/git
 					rm -rf /etc/profile.d/git.sh
 					rm -rf /usr/local/bin/git
-					sed -i '/# Git2.9.5/d' /etc/profile
+					sed -i '/# Git2.39.0/d' /etc/profile
 					sed -i '/git/d' /etc/profile
 					source /etc/profile
 					echo "卸载成功"
