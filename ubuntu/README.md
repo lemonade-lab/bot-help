@@ -177,7 +177,6 @@ rm -rf Python-3.9.10
 >
 > 阿里云PyPI内网镜像加速站 **（termux用这个）**：https://mirrors.cloud.aliyuncs.com/pypi/simple/
 >
-
 > 还有其他的大学镜像站，例如：清华，中科大，南大，交大等等
 
 > 配置如下：
