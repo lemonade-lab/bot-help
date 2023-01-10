@@ -8,8 +8,8 @@ readonly myadress
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/centos" ] || mkdir centos
-[ -d ${myadress}"/centos" ] || exit
+[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
+[ -d ${myadress}"/ubuntu" ] || exit
 
 
 while true

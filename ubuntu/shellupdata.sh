@@ -9,7 +9,7 @@ readonly myadress
 bot="/yunzai-bot-help"
 readonly bot
 
-Centosdemo="${bot}/ubuntu/index.sh"
+Ubuntudemo="${bot}/ubuntu/index.sh"
 readonly Ubuntudemo
 
 cd /home
