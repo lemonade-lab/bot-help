@@ -15,7 +15,7 @@ yum update -y && yum install git -y
 >2.`Ubuntu`系统初始化☞[Ubuntu更多详细](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/ubuntu/README.md)  
 ```sh
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
-``` 
+```
 #### （3）项目拉取
 >克隆启动
 ```sh
@@ -28,7 +28,62 @@ sh /yunzai-bot-help/install.sh
 ## 二、手机搭建系统
 >[☞Termux下载地址](https://github.com/termux/termux-app/releases)     
 >选择下载`arm64`版    
->[☞Linux安装文档](https://gitee.com/ningmengchongshui/yunzai-bot-help/blob/main/debian/README.md)
+
+### 国光教程
+
+>安装proot、git、python
+
+```shell
+pkg install proot git python -y
+```
+
+>安装系统脚本
+
+```shell
+git clone https://gitee.com/Le-niao/termux-install-linux.git ~/termux-install-linux
+```
+
+>启动系统脚本|选择ubuntu系统
+
+```shell
+cd ~/termux-install-linux
+python termux-linux-install.py
+```
+
+>启动系统
+
+```shell
+~/Termux-Linux/Ubuntu/start-ubuntu.sh
+```
+
+### 备用教程
+
+>安装git
+
+```shell
+pkg install proot git -y
+```
+
+>安装脚本
+
+```
+git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  ~/yunzai-bot-help && chmod +x ~/yunzai-bot-help/android.sh
+```
+
+>启动脚本|选择amd64|选择ubuntu系统|选择bionc
+
+```shell
+~/yunzai-bot-help/android.sh
+```
+
+>启动系统
+
+```shell
+~/start-ubuntu.sh
+```
+
+
+
 
 ## 三、远程连接工具    
 > Android：`JuiceSSH`         
