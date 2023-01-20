@@ -16,6 +16,16 @@ readonly yunzaimiao
 yunzaiGuoba="${yunzai}/plugins/Guoba-Plugin/resources"    
 readonly yunzaiGuoba
 
+aaarch(){
+        case $(arch) in
+                x86_64) aarch="x64";;
+                aarch64) aarch="arm64";;
+                *)
+                        read -p "$(echo -e "暂不支持armv71,s390x等架构\n手动安装参考Ubuntu详细\n回车退出")"
+                        exit;;
+        esac
+}
+
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
@@ -50,68 +60,70 @@ then
 #安装
     if [ $OPTION = 1 ]
     then
-    
+    aaarch
     node -v
-        if [ $? != 0 ]
-        then
-	apt install -y curl
-	curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
-	apt-get install -y nodejs
-        fi
-	
+    if [ $? != 0 ]
+    then
+	    wget -P "${myadress}" https://repo.huaweicloud.com/nodejs/v17.9.0/node-v17.9.0-linux-${aarch}.tar.gz
+	    mkdir /usr/local/node-v17.9.0
+	    tar -xf "${myadress}"/node-v17.9.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v17.9.0
+	    echo -e '#node v17.9.0\nexport PATH=/usr/local/node-v17.9.0/bin:$PATH' > /etc/profile.d/node.sh
+	    source /etc/profile
+	    rm -rf node-v17.9.0-linux-${aarch}.tar.gz
+    fi
     redis-server -v
-        if [ $? != 0 ]
-        then
-        apt install -y git
-        apt install -y redis-server redis
-        fi
+    if [ $? != 0 ]
+    then
+	    apt install -y git
+	    apt install -y redis-server redis
+    fi
     git version
-        if [ $? != 0 ]
-        then
-        apt install -y git
-        fi
-	
+    if [ $? != 0 ]
+    then
+	    apt install -y git
+    fi
+
     ##环境准备
     #文字安装
     apt install -y --force-yes --no-install-recommends fonts-wqy-microhei
     #安装Chromium
     apt install -y chromium-browser
-    
+
     ##yunzai
     cd "${myadress}/ubuntu"
     [ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
 
-        if [ ! -d "${yunzaiplugin}" ]
-        then
-        rm -rf "${yunzai}"
-        echo "安装失败Installation failed" 
-        read -p "Enter回车并继续..." Enter
-        break
-        fi
+    if [ ! -d "${yunzaiplugin}" ]
+    then
+	    rm -rf "${yunzai}"
+	    echo "安装失败Installation failed" 
+	    read -p "Enter回车并继续..." Enter
+	    break
+    fi
 
     cd "${yunzai}"
     ##miao
     [ -d "${yunzaimiao}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
 
-        if [ ! -d "${yunzaimiao}" ] 
-        then 
-        rm -rf "${yunzai}/plugins/miao-plugin"
-        echo "安装失败Installation failed"
-        read -p "Enter回车并继续..." Enter
-        break
-        fi
+    if [ ! -d "${yunzaimiao}" ] 
+    then 
+	    rm -rf "${yunzai}/plugins/miao-plugin"
+	    echo "安装失败Installation failed"
+	    read -p "Enter回车并继续..." Enter
+	    break
+    fi
 
     ##guoba
     [ -d "${yunzaiGuoba}" ] || git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
-    
-        if [ ! -d "${yunzaiGuoba}" ] 
-        then 
-        rm -rf "${yunzai}/plugins/Guoba-Plugin"
-        echo "安装失败Installation failed"
-        read -p "Enter回车并继续..." Enter
-        break
-        fi
-    
+
+    if [ ! -d "${yunzaiGuoba}" ] 
+    then 
+	    rm -rf "${yunzai}/plugins/Guoba-Plugin"
+	    echo "安装失败Installation failed"
+	    read -p "Enter回车并继续..." Enter
+	    break
+    fi
+
     ##依赖
     npm config set registry https://registry.npmmirror.com
     npm install pnpm -g
@@ -127,50 +139,50 @@ then
     #启动
     if [ $OPTION = 2 ]
     then yunzaiverification
-        if [ $? = "0" ]
-        then
-	redis-server --daemonize yes
-        cd "${yunzai}"
-        node app.js
-        fi
+	    if [ $? = "0" ]
+	    then
+		    redis-server --daemonize yes
+		    cd "${yunzai}"
+		    node app.js
+	    fi
     fi   
 
     #登录
     if [ $OPTION = 3 ]
     then yunzaiverification
-        if [ $? = "0" ]
-        then
-        cd "${yunzai}"
-        npm run login
-        fi
+	    if [ $? = "0" ]
+	    then
+		    cd "${yunzai}"
+		    npm run login
+	    fi
     fi   
-    
+
     #更新
     if [ $OPTION = 4 ]
     then yunzaiverification
-        if [ $? = "0" ]
-        then
-        cd "${yunzai}"
-        git pull
-        cd "${yunzai}/plugins/miao-plugin"
-        git pull
-        read -p "更新完成" Enter
-        fi
+	    if [ $? = "0" ]
+	    then
+		    cd "${yunzai}"
+		    git pull
+		    cd "${yunzai}/plugins/miao-plugin"
+		    git pull
+		    read -p "更新完成" Enter
+	    fi
     fi
-    
+
     #卸载
     if [ $OPTION = 5 ]
     then yunzaiverification
-        if [ $? = "0" ]
-        then
-        rm -rf "${yunzai}"
-        read -p "卸载完成" Enter
-        fi
+	    if [ $? = "0" ]
+	    then
+		    rm -rf "${yunzai}"
+		    read -p "卸载完成" Enter
+	    fi
     fi
 
     #返回
     cd "${myadress}"
 else
-    exit
+	exit
 fi
 done
