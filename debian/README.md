@@ -16,18 +16,69 @@ cd /home/lighthouse/debian/Yunzai-Bot/plugins
 
 > **测试系统环境debian9.4、debian11.1**
 
-> 安装nodejs和pnpm
+**安装nodejs第一种方法**
+
+安装nodejs
 
 ```shell
 apt update && apt install -y curl
-curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
-apt install -y nodejs
+```
+
+```shell
+# nodejs v16.x
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash - &&\
+apt-get install -y nodejs
+
+# nodejs v18.x
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash - &&\
+apt-get install -y nodejs
+```
+
+
+
+**安装nodejs第二种方法**
+
+> 输入arch或者uname -m，查看系统架构
+
+```shell
+root@localhost:~# arch
+# 输出x86_64 为x64
+# 输出aarch64 为arm64
+# 其他系统架构请百度在选择安装
+```
+
+> 安装nodejs **（版本自行选择，这里为nodejs17.9.0的arm64）**
+>
+> [官方镜像站](https://nodejs.org/dist/)和[华为云镜像站](https://repo.huaweicloud.com/nodejs/)
+>
+> 请选择与下面nodejs版本后**linux-系统架构**对应的压缩包，复制链接
+>
+> 例如x64则是node-v17.9.0-linux-x64.tar.gz
+
+```shell
+apt update && apt install -y wget
+
+wget https://repo.huaweicloud.com/nodejs/v17.9.0/node-v17.9.0-linux-arm64.tar.gz
+
+tar -xf node-v17.9.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v17.9.0
+
+echo -e '#node v17.9.0\nexport PATH=/usr/local/node-v17.9.0/bin:$PATH' > /etc/profile.d/node.sh
+
+source /etc/profile
+```
+
+> pnpm安装 **（如安装的慢，建议换源）**
+
+```shell
 npm install pnpm -g
 ```
 
-> pnpm换源 **（建议执行）**
+
+> npm和pnpm换源 **（如为官方服务器，推荐找自己服务商的镜像源）**
 
 ```shell
+npm config set registry https://registry.npmmirror.com
+
 pnpm config set registry https://registry.npmmirror.com
 ```
 
@@ -173,8 +224,8 @@ pip3 --version
 
 ```shell
 cd ..
-rm -rf Python-3.9.10.tgz
-rm -rf Python-3.9.10
+rm -rf Python-3.9.0.tgz
+rm -rf Python-3.9.0
 ```
 
 
@@ -196,14 +247,6 @@ rm -rf Python-3.9.10
 ```shell
 cd ~
 mkdir .pip/
-
-# 华为云
-cat >> .pip/pip.conf <<EOF
-[global]
-index-url = https://repo.huaweicloud.com/repository/pypi/simple/
-trusted-host = repo.huaweicloud.com
-timeout = 120
-EOF
 
 # 腾讯云
 cat >> .pip/pip.conf <<EOF
