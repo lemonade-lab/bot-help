@@ -65,7 +65,11 @@ do
 			node -v
 			if [ $? != 0 ]
 			then
-				apt install -y wget
+				wget --version
+				if [ $? != 0 ]
+				then
+					apt install -y wget
+				fi
 				wget -P "${myadress}" https://repo.huaweicloud.com/nodejs/v17.9.0/node-v17.9.0-linux-${aarch}.tar.gz
 				mkdir /usr/local/node-v17.9.0
 				tar -xf "${myadress}"/node-v17.9.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v17.9.0
