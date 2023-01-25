@@ -149,8 +149,13 @@ do
 			if [ $? = "0" ]
 			then
 				redis-server --daemonize yes
-				cd "${yunzai}"
-				node app.js
+				echo
+                                echo -e "\e[31m 退出请使用Ctrl+C \e[0m"
+                                echo
+                                cd "${yunzai}"
+                                node app.js
+                                echo -e "\n"
+                                read -p "退出成功,回车并继续Enter..." Enter
 			fi
 		fi   
 
