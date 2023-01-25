@@ -146,10 +146,10 @@ do
 		then yunzaiverification
 			if [ $? = "0" ]
 			then
+				redis-server --daemonize yes
 				echo
 				echo -e "\e[31m 退出请使用Ctrl+C \e[0m"
 				echo
-				redis-server --daemonize yes
 				cd "${yunzai}"
 				node app.js
 				echo -e "\n"
