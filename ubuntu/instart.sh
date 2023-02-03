@@ -23,7 +23,7 @@ aaarch(){
 		x86_64) aarch="x64";;
 		aarch64) aarch="arm64";;
 		*)
-			read -p "$(echo -e "暂不支持armv71,s390x等架构\n手动安装参考Ubuntu详细\n回车退出")"
+			read -p "$(echo -e "暂不支持armv71,s390x等架构\n手动安装参考Ubuntu详细\n回车退出")" Enter
 			exit;;
 	esac
 }
