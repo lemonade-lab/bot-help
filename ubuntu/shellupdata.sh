@@ -37,13 +37,13 @@ then
      then
      [ -d ${bot} ] || cd /
      [ -d ${bot} ] || "https://github.com/ningmengchongshui"${bot}".git"
-     [ -e ${Centosdemo} ] || rm -rf "${bot}"
-     [ -e ${Centosdemo} ] || echo "#操作失败了，请重新执行"
-     [ ! -e ${Centosdemo} ] || cd "${bot}"
-     [ ! -e ${Centosdemo} ] || git fetch --all
-     [ ! -e ${Centosdemo} ] || git reset --hard main
-     [ ! -e ${Centosdemo} ] || git pull
-     [ ! -e ${Centosdemo} ] || echo "#执行完成,请重启工具"
+     [ -e ${Ubuntudemo} ] || rm -rf "${bot}"
+     [ -e ${Ubuntudemo} ] || echo "#操作失败了，请重新执行"
+     [ ! -e ${Ubuntudemo} ] || cd "${bot}"
+     [ ! -e ${Ubuntudemo} ] || git fetch --all
+     [ ! -e ${Ubuntudemo} ] || git reset --hard main
+     [ ! -e ${Ubuntudemo} ] || git pull
+     [ ! -e ${Ubuntudemo} ] || echo "#执行完成,请重启工具"
      read -p "Enter回车并继续..." y
      fi
      
