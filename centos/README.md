@@ -1,18 +1,40 @@
-# Centos系统文档
+## Centos系统文档
 
-> 机器人目录
+|  说明 | 命令行  |
+|---|---|
+|  查看当前目录 | `ls`  |
+|  查看当前地址 | `pwd`  |
+|  切换到系统根目录 | `cd /`  |
+
+|  介绍 | 指令  |
+|---|---|
+|  机器人根目录  | `cd /home/lighthouse/centos/Yunzai-Bot`  |
+|  插件目录 | `cd /home/lighthouse/centos/Yunzai-Bot/plugins`  |
+|  配置地址 | `cd /home/lighthouse/centos/Yunzai-Bot/config/config`  |
+
+
+
+##  日常使用
+
+>运行账号`机器人根目录下执行`
 
 ```sh
-cd /home/lighthouse/centos/Yunzai-Bot
+node app.js
 ```
 
-> 插件目录
+>后台运行`机器人根目录下执行`
 
 ```sh
-cd /home/lighthouse/centos/Yunzai-Bot/plugins
+npm run start
 ```
 
-# 手动安装
+> 后台重启`机器人根目录下执行`
+
+```sh
+npm run restart
+```
+
+#3 手动安装
 
 > 安装**git**
 
@@ -87,38 +109,7 @@ npm install image-size
 npm install express multer body-parser jsonwebtoken
 ```
 
-#  日常使用
-
->运行账号`Yunzai-Bot目录下执行`
-
-```sh
-node app.js
-```
-
->后台运行`Yunzai-Bot目录下执行`
-
-```sh
-npm run start
-```
-
-> 后台重启`Yunzai-Bot目录下执行`
-
-```sh
-npm run restart
-```
-
-> 出现`版本过低`无法登录
-
-```sh
-cd Yunzai-Bot/data/`此处替换为你的机器人qq号`/
-vim device-`此处替换为你的机器人qq号`.json
-# 修改imei值，建议使用原数字-1的值
-# 重新执行上述重启命令
-```
-
-
-
-#  更多资料
+##  更多资料
 
 - Yunzai-Bot插件库：[☞Github](https://gitee.com/link?target=https%3A%2F%2Fgithub.com%2FyhArcadia%2FYunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
 - Yunzai-Bot项目库：[☞Github](https://gitee.com/link?target=https%3A%2F%2Fgithub.com%2FLe-niao%2FYunzai-Bot)/[☞Gitee](https://gitee.com/Le-niao/Yunzai-Bot)
