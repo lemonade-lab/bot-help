@@ -6,12 +6,51 @@
 |  查看当前目录 | `ls`  |
 |  查看当前地址 | `pwd`  |
 |  切换到系统根目录 | `cd /`  |
+|  修改文件qq.yqml | `vi qq.yqml`  |
+|  查看qq.yqml内容 | `cat qq.yqml`  |
 
 |  介绍 | 指令  |
 |---|---|
 |  机器人根目录  | `cd /home/lighthouse/ubuntu/Yunzai-Bot`  |
 |  插件目录 | `cd /home/lighthouse/ubuntu/Yunzai-Bot/plugins`  |
 |  配置地址 | `cd /home/lighthouse/ubuntu/Yunzai-Bot/config/config`  |
+
+
+# 日常使用
+
+> 第一次启动 **（注意：需要云崽目录里执行）**
+
+```shell
+node app
+```
+
+> 后台启动 **（注意：需要云崽目录里执行）**
+
+``` shell
+npm run start
+```
+
+> 后台重启 **（注意：需要云崽目录里执行）**
+
+```shell
+npm run restart
+```
+
+> 后台关闭 **（注意：需要云崽目录里执行）**
+
+```shell
+npm run stop
+```
+
+出现版本过低至无法登录
+
+```shell
+cd Yunzai-Bot/data/`此处替换为你的机器人qq号`/
+vim device-`此处替换为你的机器人qq号`.json
+# 修改imei值，建议使用原数字-1的值
+# 重新执行上述重启命令
+```
+
 
 # 手动安装
 
@@ -125,40 +164,6 @@ git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Gu
 pnpm install --filter=guoba-plugin
 ```
 
-# 日常使用
-
-> 第一次启动 **（注意：需要云崽目录里执行）**
-
-```shell
-node app
-```
-
-> 后台启动 **（注意：需要云崽目录里执行）**
-
-``` shell
-npm run start
-```
-
-> 后台重启 **（注意：需要云崽目录里执行）**
-
-```shell
-npm run restart
-```
-
-> 后台关闭 **（注意：需要云崽目录里执行）**
-
-```shell
-npm run stop
-```
-
-出现版本过低至无法登录
-
-```shell
-cd Yunzai-Bot/data/`此处替换为你的机器人qq号`/
-vim device-`此处替换为你的机器人qq号`.json
-# 修改imei值，建议使用原数字-1的值
-# 重新执行上述重启命令
-```
 
 ## 附录
 
