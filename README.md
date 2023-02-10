@@ -25,11 +25,9 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-h
 ```sh
 sh /yunzai-bot-help/install.sh
 ```
-## 二、手机搭建系统
+## 二、手机搭建
 >[☞Termux下载地址](https://github.com/termux/termux-app/releases)     
 >选择下载`arm64`版    
-
-### 国光教程
 
 >安装proot、git、python
 
@@ -54,26 +52,6 @@ python termux-linux-install.py
 
 ```shell
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
-```
-
-### 备用教程
-
->安装wget
-
-```shell
-apt update && apt install -y wget
-```
-
->启动脚本|选择amd64|选择ubuntu系统|选择bionc
-
-```
-bash -c "$(wget -qO- https://gitee.com/WinterChocolates/termux-linux/raw/main/install_linux.sh)"
-```
-
->启动系统
-
-```shell
-~/start-ubuntu.sh
 ```
 
 
