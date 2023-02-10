@@ -2,8 +2,8 @@
 >Centos&&Ubuntu系统轻量型图形化工具     
 UpdateTime:2023/1/5_V1.4 
 ## 一、安装教程 
-#### （1）切换用户
->必须`ROOT`模式
+#### （1）切换权限
+>必须`ROOT`用户
 ```sh
 sudo su root      
 ```
@@ -25,7 +25,8 @@ git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-h
 ```sh
 sh /yunzai-bot-help/install.sh
 ```
-## 二、手机搭建
+## 二、安卓搭建
+>需要先安装APP应用     
 >[☞Termux下载地址](https://github.com/termux/termux-app/releases)     
 >选择下载`arm64`版    
 
@@ -54,8 +55,7 @@ python termux-linux-install.py
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 
-
-
+>安卓启动以是ROOT用户,无需再切换
 
 ## 三、远程连接工具    
 > Android：`JuiceSSH`         
