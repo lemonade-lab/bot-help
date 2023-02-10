@@ -55,7 +55,7 @@ python termux-linux-install.py
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 
->安卓启动以是ROOT用户,无需再切换
+>启动后已是ROOT用户,无需再切换
 
 ## 三、远程连接工具    
 > Android：`JuiceSSH`         
