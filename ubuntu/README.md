@@ -1,4 +1,4 @@
-# Ubuntu系统文档
+## Ubuntu系统文档
 
 
 |  说明 | 命令行  |
@@ -16,43 +16,36 @@
 |  配置地址 | `cd /home/lighthouse/ubuntu/Yunzai-Bot/config/config`  |
 
 
-# 日常使用
-
-> 第一次启动 **（注意：需要云崽目录里执行）**
+## 日常使用
+>需要redis是开启状态
+```
+redis-server --daemonize yes
+```
+> 第一次启动 **（根目录下指令）**
 
 ```shell
-node app
+node app.js
 ```
 
-> 后台启动 **（注意：需要云崽目录里执行）**
+> 后台启动 **（根目录下指令）**
 
 ``` shell
 npm run start
 ```
 
-> 后台重启 **（注意：需要云崽目录里执行）**
+> 后台重启 **（根目录下指令）**
 
 ```shell
 npm run restart
 ```
 
-> 后台关闭 **（注意：需要云崽目录里执行）**
+> 后台关闭 **（根目录下指令）**
 
 ```shell
 npm run stop
 ```
 
-出现版本过低至无法登录
-
-```shell
-cd Yunzai-Bot/data/`此处替换为你的机器人qq号`/
-vim device-`此处替换为你的机器人qq号`.json
-# 修改imei值，建议使用原数字-1的值
-# 重新执行上述重启命令
-```
-
-
-# 手动安装
+## 手动安装
 
 **安装nodejs第一种方法**
 
