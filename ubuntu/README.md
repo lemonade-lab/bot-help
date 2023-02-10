@@ -1,12 +1,18 @@
 # Ubuntu系统文档
->机器人目录
-```sh
-cd /home/lighthouse/ubuntu/Yunzai-Bot
-```
->插件目录
-```sh
-cd /home/lighthouse/ubuntu/Yunzai-Bot/plugins
-```
+
+
+|  说明 | 命令行  |
+|---|---|
+|  查看当前目录 | `ls`  |
+|  查看当前地址 | `pwd`  |
+|  切换到系统根目录 | `cd /`  |
+
+|  介绍 | 指令  |
+|---|---|
+|  机器人根目录  | `cd /home/lighthouse/ubuntu/Yunzai-Bot`  |
+|  插件目录 | `cd /home/lighthouse/ubuntu/Yunzai-Bot/plugins`  |
+|  配置地址 | `cd /home/lighthouse/ubuntu/Yunzai-Bot/config/config`  |
+
 # 手动安装
 
 **安装nodejs第一种方法**
