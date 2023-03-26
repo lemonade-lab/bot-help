@@ -6,7 +6,8 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-yunzai="${myadress}/ubuntu/Yunzai-Bot"
+#yunzai="${myadress}/ubuntu/Yunzai-Bot"
+yunzai="${myadress}/ubuntu/Miao-Yunzai"
 readonly yunzai
 
 yunzaiplugin="${yunzai}/plugins"
@@ -98,7 +99,7 @@ do
 
 			##yunzai
 			cd "${myadress}/ubuntu"
-			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
+			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git
 
 			if [ ! -d "${yunzaiplugin}" ]
 			then
