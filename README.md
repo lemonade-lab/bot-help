@@ -19,7 +19,7 @@ apt update -y && apt-get install git -y && apt-get install  whiptail -y
 #### （3）项目拉取
 >克隆启动
 ```sh
-git clone https://gitee.com/ningmengchongshui/yunzai-bot-help.git  /yunzai-bot-help && chmod +x /yunzai-bot-help/*/*.sh && sh /yunzai-bot-help/install.sh
+git clone https://gitee.com/three-point-of-water/yunzai-bot-help.git  /yunzai-bot-help && chmod +x /yunzai-bot-help/*/*.sh && sh /yunzai-bot-help/install.sh
 ```
 >日常启动
 ```sh
@@ -72,4 +72,5 @@ python termux-linux-install.py
 ## 五、企鹅讨论    
 群名  | 群号  |  群主 
 ------------- | -------------  | -------------    
-| [BotHelp](https://afdian.net/a/WinterChocolates) | 806943302 | [ @柠檬冲水](https://gitee.com/ningmengchongshui) | 
+Alemon| [806943302](https://jq.qq.com/?_wv=1027&k=AZ3Iigpq) | 1715713638 
+
