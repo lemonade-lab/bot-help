@@ -6,7 +6,8 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-yunzai="${myadress}/centos/Yunzai-Bot"
+#yunzai="${myadress}/centos/Yunzai-Bot"
+yunzai="${myadress}/centos/Miao-Yunzai"
 readonly yunzai
 
 yunzaiplugin="${yunzai}/plugins"
@@ -17,6 +18,16 @@ yunzaiGuoba="${yunzai}/plugins/Guoba-Plugin/resources"
 readonly yunzaiGuoba
 yunzaixiaoyao="${yunzai}/plugins/xiaoyao-cvs-plugin/resources"
 readonly yunzaixiaoyao
+
+aaarch(){
+	case $(arch) in
+		x86_64) aarch="x64";;
+		aarch64) aarch="arm64";;
+		*)
+			read -p "$(echo -e "暂不支持armv71,s390x等架构\n手动安装参考Ubuntu详细\n回车退出")" Enter
+			exit;;
+	esac
+}
 
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
@@ -52,23 +63,31 @@ then
 #安装
     if [ $OPTION = 1 ]
     then
+    aaarch
     node -v
         if [ $? != 0 ]
         then
-        #兼容centos7
-        yum install -y dnf
-        dnf module install nodejs:16 -y
-        fi
-    node -v
-        if [ $? != 0 ]
-        then
-        yum install -y nodejs
-        yum install -y npm
+	wget --version
+	if [ $? != 0 ]
+	then yum -y install wget
+	fi
+	wget -P "${myadress}" https://repo.huaweicloud.com/nodejs/v17.9.0/node-v17.9.0-linux-${aarch}.tar.gz
+	mkdir /usr/local/node-v17.9.0
+	tar -xf "${myadress}"/node-v17.9.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v17.9.0
+	echo -e '#node v17.9.0\nexport PATH=/usr/local/node-v17.9.0/bin:$PATH' > /etc/profile.d/node.sh
+	chmod +x /etc/profile.d/node.sh
+	source /etc/profile.d/node.sh
+	rm -rf node-v17.9.0-linux-${aarch}.tar.gz
         fi
     redis-server -v
         if [ $? != 0 ]
         then
         yum -y install git
+	yum -y install epel-release
+	sed -e 's!^metalink=!#metalink=!g' \
+	-e 's!^#baseurl=!baseurl=!g' \
+	-e 's!http://download\.fedoraproject\.org/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' \
+	-e 's!http://download\.example/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' -i /etc/yum.repos.d/epel*.repo
         yum -y install redis
         redis-server --daemonize yes
         systemctl enable redis.service
@@ -81,7 +100,7 @@ then
     
     ##yunzai
     cd "${myadress}/centos"
-    [ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
+    [ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git
 
         if [ ! -d "${yunzaiplugin}" ]
         then
@@ -123,20 +142,27 @@ then
     break
     fi
 
-    ##依赖
-    npm install
-    npm install image-size
-    npm install express multer body-parser jsonwebtoken
-
     ##环境准备
-    yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 -y 
+    yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 -y
     yum install libdrm libgbm libxshmfence -y
     yum install nss -y
     yum update nss -y
     #文字安装
     yum groupinstall fonts -y
     #安装Chromium
-    node ./node_modules/puppeteer/install.js
+    yum -y install chromium
+
+
+    ##依赖
+    npm config set registry https://registry.npmmirror.com
+    npm install pnpm -g
+    pnpm config set registry https://registry.npmmirror.com
+    pnpm install -P
+    pnpm install --filter=guoba-plugin
+    pnpm add image-size -w
+
+    #安装Chromium
+    #node ./node_modules/puppeteer/install.js
 
     ##返回
     read -p "安装成功,请启动账号,回车并继续Enter..." Enter
