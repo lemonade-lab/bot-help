@@ -11,9 +11,9 @@
 
 |  介绍 | 指令  |
 |---|---|
-|  机器人根目录  | `cd /home/lighthouse/ubuntu/Yunzai-Bot`  |
-|  插件目录 | `cd /home/lighthouse/ubuntu/Yunzai-Bot/plugins`  |
-|  配置地址 | `cd /home/lighthouse/ubuntu/Yunzai-Bot/config/config`  |
+|  机器人根目录  | `cd /home/lighthouse/ubuntu/Miao-Yunzai` |
+|  插件目录 | `cd /home/lighthouse/ubuntu/Miao-Yunzai/plugins` |
+|  配置地址 | `cd /home/lighthouse/ubuntu/Miao-Yunzai/config/config` |
 
 
 ## 日常使用

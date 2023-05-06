@@ -10,9 +10,9 @@
 
 |  介绍 | 指令  |
 |---|---|
-|  机器人根目录  | `cd /home/lighthouse/centos/Yunzai-Bot`  |
-|  插件目录 | `cd /home/lighthouse/centos/Yunzai-Bot/plugins`  |
-|  配置地址 | `cd /home/lighthouse/centos/Yunzai-Bot/config/config`  |
+|  机器人根目录  | `cd /home/lighthouse/centos/Miao-Yunzai` |
+|  插件目录 | `cd /home/lighthouse/centos/Miao-Yunzai/plugins` |
+|  配置地址 | `cd /home/lighthouse/centos/Miao-Yunzai/config/config` |
 
 
 
