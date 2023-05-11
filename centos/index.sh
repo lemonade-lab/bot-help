@@ -36,7 +36,26 @@ then
 
 #机器管理administrat
     if [ $OPTION = 2 ]
-    then bash "${centos}/instart.sh"
+    then
+	OPTION1=$(whiptail \
+		--title "《Bot-Help》" \
+		--menu "$version" \
+		15 50 5 \
+		"1" "Alemon-Bot" \
+		"2" "Yunzai-Bot" \
+		3>&1 1>&2 2>&3)
+		feedback1=$?
+
+	if [ $feedback1 = 0 ]
+	then
+		if [ $OPTION1 = 1 ]
+		then bash "$centos/instart-alemon.sh"
+		fi
+		if [ $OPTION1 = 2 ]
+		then bash "$centos/instart-yunzai.sh"
+		fi
+	fi
+				
     fi
 
 #运行管理BackControl
