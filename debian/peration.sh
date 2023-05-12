@@ -4,7 +4,7 @@ version=$(cat /etc/issue)
 readonly version
 myadress="/home/lighthouse"
 readonly myadress
-yunzai="${myadress}/debian/Yunzai-Bot"
+yunzai="${myadress}/debian/Miao-Yunzai"
 readonly yunzai
 yunzaiplugin="${yunzai}/plugins"
 readonly yunzaiplugin
