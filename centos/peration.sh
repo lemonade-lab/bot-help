@@ -4,12 +4,22 @@ version=$(cat /etc/redhat-release)
 readonly version
 myadress="/home/lighthouse"
 readonly myadress
-yunzai="${myadress}/centos/Yunzai-Bot"
+
+#miaozai
+yunzai="${myadress}/centos/Miao-Yunzai"
 readonly yunzai
 yunzaiplugin="${yunzai}/plugins"
 readonly yunzaiplugin
 yunzaiqq="${yunzai}/config/config/qq.yaml"
 readonly yunzaiqq
+
+#alemon-bot
+alemon="${myadress}/centos/alemon-bot"
+readonly alemon
+alemonplugin="${alemon}/plugins"
+readonly alemonplugin
+alemonid="${alemon}/config/config.yaml"
+readonly alemonid
 
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
@@ -24,6 +34,13 @@ yunzaiverification(){
    return "0"
 }
 
+alemonverification(){
+	[ -d "${alemonplugin}" ] || echo "Not installed未安装"
+	[ -d "${alemonplugin}" ] || read -p "Enter回车并继续..." Enter
+	[ -d "${alemonplugin}" ] || return "1"
+	return "0"
+}
+
 while true
 do
     OPTION=$(whiptail \
@@ -34,6 +51,8 @@ do
         "2" "运行状态status" \
 	"3" "启动云崽run" \
 	"4" "停止云崽stop" \
+	"5" "启动阿柠檬run" \
+	"6" "停止阿柠檬stop" \
         3>&1 1>&2 2>&3)
         feedback=$?
 	    if [ $feedback = 0 ]
@@ -61,7 +80,7 @@ do
 	      		[ ! -e "${yunzaiqq}" ] || cd "${yunzai}"
 	    		[ ! -e "${yunzaiqq}" ] || npm stop
 	    		[ ! -e "${yunzaiqq}" ] || npm start
-	    		[ ! -e "${yunzaiqq}" ] || echo "后台运行"
+	    		[ ! -e "${yunzaiqq}" ] || echo "已后台运行，可以在<运行状态>查看"
 	     		read -p "Enter回车并继续..." c
 			fi
 	     	fi
@@ -75,6 +94,29 @@ do
 		    	[ ! -d "${yunzaiplugin}" ] || echo "关闭"
 	    		read -p "Enter回车并继续..." c
 		 	fi
+		fi
+		if [ $OPTION = 5 ]
+		then alemonverification
+			if [ $? = "0" ]
+			then
+				[ ! -e "${alemonid}" ] || echo "#您未配置机器人ID"
+				[ ! -e "${alemonid}" ] || cd "${alemon}"
+				[ ! -e "${alemonid}" ] || npm run stop
+				[ ! -e "${alemonid}" ] || npm run start
+				[ ! -e "${alemonid}" ] || echo "已后台运行，可以在<运行状态>查看"
+				read -p "Enter回车并继续..." c
+			fi
+		fi
+		if [ $OPTION = 6 ]
+		then alemonverification
+			if [ $? = "0" ]
+			then
+				[ ! -d "${alemonplugin}" ] || cd "${alemon}"
+				[ ! -d "${alemonplugin}" ] || npm run stop
+				[ ! -d "${yunzaiplugin}" ] || echo "关闭"
+				read -p "Enter回车并继续..." c
+
+			fi
 		fi
     else
         exit
