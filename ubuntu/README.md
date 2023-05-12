@@ -4,10 +4,16 @@
 |  说明 | 命令行  |
 |---|---|
 |  查看所有目录 | `ls`  |
-|  查看当前地址 | `pwd`  |
+| 查看当前目录 | `pwd`  |
 |  切换到系统根目录 | `cd /`  |
-|  修改文件qq.yqml | `vi qq.yqml`  |
-|  查看qq.yqml内容 | `cat qq.yqml`  |
+| Yunzai修改文件qq.yqml | `vi qq.yqml`  |
+| Yunzai查看qq.yqml内容 | `cat qq.yqml`  |
+| Alemon檬修改文件config.yaml | `vi config.yaml` |
+| Alemon查看config.yaml内容 | `cat config.yaml` |
+
+
+
+## Yunzai使用
 
 |  介绍 | 指令  |
 |---|---|
@@ -16,7 +22,19 @@
 |  配置地址 | `cd /home/lighthouse/ubuntu/Miao-Yunzai/config/config` |
 
 
+
+## Alemon使用
+
+| 介绍         | 指令                                            |
+| ------------ | ----------------------------------------------- |
+| 机器人根目录 | `cd /home/lighthouse/ubuntu/alemon-bot`         |
+| 插件目录     | `cd /home/lighthouse/ubuntu/alemon-bot/plugins` |
+| 配置地址     | `cd /home/lighthouse/ubuntu/alemon-bot/config`  |
+
+
+
 ## 日常使用
+
 >需要redis是开启状态
 ```
 redis-server --daemonize yes
@@ -45,7 +63,9 @@ npm run restart
 npm run stop
 ```
 
-## 手动安装
+
+
+## 安装Nodejs
 
 **安装nodejs第一种方法**
 
@@ -89,14 +109,18 @@ root@localhost:~# arch
 ```shell
 apt update && apt install -y wget
 
-wget https://repo.huaweicloud.com/nodejs/v17.9.0/node-v17.9.0-linux-arm64.tar.gz
+wget https://repo.huaweicloud.com/nodejs/v16.20.0/node-v16.20.0-linux-x64.tar.gz
 
-tar -xf node-v17.9.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v17.9.0
+tar -xf node-v16.20.0-linux-x64.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
 
-echo -e '#node v17.9.0\nexport PATH=/usr/local/node-v17.9.0/bin:$PATH' > /etc/profile.d/node.sh
+echo -e '#node v16.20.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' > /etc/profile.d/node.sh
 
 source /etc/profile
 ```
+
+
+
+## Yunzai安装
 
 > pnpm安装 **（如安装的慢，建议换源）**
 
@@ -116,25 +140,36 @@ pnpm config set registry https://registry.npmmirror.com
 > 安装git，redis和chromium
 
 ```shell
-apt install -y git redis-server redis chromium-browser
+apt-get install -y git redis-server redis chromium-browser
 ```
 
 > 安装字体 **（可以自行百度导入）**
 
 ```shell
-apt-get install -y --force-yes --no-install-recommends fonts-wqy-microhei
+apt-get install -y fonts-wqy-microhei
 ```
 
 > 下载[云崽](https://gitee.com/Le-niao/Yunzai-Bot)
 
 ```shell
+#Yunzai
 git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
+cd Yunzai-Bot
+
+#Miao-Yunzai（必须下载喵喵插件）
+git clone --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git
+cd Miao-Yunzai
+```
+
+> 启动[云崽](https://gitee.com/Le-niao/Yunzai-Bot)
+
+```shell
+node app
 ```
 
 > 安装[喵喵插件](https://gitee.com/yoimiya-kokomi/miao-plugin) **（注意：需要云崽目录里执行）**
 
 ```shell
-cd Yunzai-Bot
 git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
 ```
 
@@ -156,6 +191,42 @@ git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Gu
 ```shell
 pnpm install --filter=guoba-plugin
 ```
+
+
+
+## Alemon安装
+
+> cnpm安装
+>
+
+```shell
+npm install cnpm -g
+```
+> 安装git，redis和chromium
+
+```shell
+apt-get install -y git redis-server redis chromium-browser
+```
+
+> 安装字体 **（可以自行百度导入）**
+
+```shell
+apt-get install -y fonts-wqy-microhei
+```
+
+> 下载[alemon](https://gitee.com/ningmengchongshui/alemon-bot)
+
+```shell
+git clone --depth=1 https://gitee.com/ningmengchongshui/alemon-bot.git
+cd alemon-bot
+```
+
+> 启动[alemon](https://gitee.com/ningmengchongshui/alemon-bot)
+
+```shell
+npm run app
+```
+
 
 
 ## 附录
