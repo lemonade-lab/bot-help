@@ -6,10 +6,10 @@
 |  查看所有目录 | `ls`  |
 | 查看当前目录 | `pwd`  |
 |  切换到系统根目录 | `cd /`  |
-| Yunzai修改文件qq.yqml | `vi qq.yqml`  |
-| Yunzai查看qq.yqml内容 | `cat qq.yqml`  |
-| Alemon檬修改文件config.yaml | `vi config.yaml` |
-| Alemon查看config.yaml内容 | `cat config.yaml` |
+| **Yunzai**修改文件qq.yqml | `vi qq.yqml`  |
+| **Yunzai**查看qq.yqml内容 | `cat qq.yqml`  |
+| **Alemon**修改文件config.yaml | `vi config.yaml` |
+| **Alemon**查看config.yaml内容 | `cat config.yaml` |
 
 
 

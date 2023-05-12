@@ -5,14 +5,28 @@
 |  查看所有目录 | `ls`  |
 |  查看当前地址 | `pwd`  |
 |  切换到系统根目录 | `cd /`  |
-|  修改文件qq.yqml | `vi qq.yqml`  |
-|  查看qq.yqml内容 | `cat qq.yqml`  |
+| **Yunzai**修改文件qq.yqml | `vi qq.yqml`  |
+| **Yunzai**查看qq.yqml内容 | `cat qq.yqml`  |
+| **Alemon**修改文件config.yaml | `vi config.yaml` |
+| **Alemon**查看config.yaml内容 | `cat config.yaml` |
+
+## Yunzai使用
 
 |  介绍 | 指令  |
 |---|---|
-|  机器人根目录  | `cd /home/lighthouse/centos/Miao-Yunzai` |
-|  插件目录 | `cd /home/lighthouse/centos/Miao-Yunzai/plugins` |
-|  配置地址 | `cd /home/lighthouse/centos/Miao-Yunzai/config/config` |
+|  机器人根目录  | `cd /home/lighthouse/ubuntu/Miao-Yunzai` |
+|  插件目录 | `cd /home/lighthouse/ubuntu/Miao-Yunzai/plugins` |
+|  配置地址 | `cd /home/lighthouse/ubuntu/Miao-Yunzai/config/config` |
+
+
+
+## Alemon使用
+
+| 介绍         | 指令                                            |
+| ------------ | ----------------------------------------------- |
+| 机器人根目录 | `cd /home/lighthouse/ubuntu/alemon-bot`         |
+| 插件目录     | `cd /home/lighthouse/ubuntu/alemon-bot/plugins` |
+| 配置地址     | `cd /home/lighthouse/ubuntu/alemon-bot/config`  |
 
 
 
@@ -39,6 +53,8 @@ npm run start
 ```sh
 npm run restart
 ```
+
+
 
 ## 手动安装
 
@@ -82,7 +98,7 @@ git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/m
 
 > 安装**锅巴** `Yunzai-Bot目录下执行`、`#锅巴登录`可以登录后台管理系统
 
-```sh
+```shell
 git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
 ```
 
@@ -114,6 +130,43 @@ npm install
 npm install image-size
 npm install express multer body-parser jsonwebtoken
 ```
+
+
+
+## Alemon安装
+
+> cnpm安装
+>
+
+```shell
+npm install cnpm -g
+```
+> 安装git，redis和chromium
+
+```shell
+apt-get install -y git redis-server redis chromium-browser
+```
+
+> 安装字体 **（可以自行百度导入）**
+
+```shell
+apt-get install -y fonts-wqy-microhei
+```
+
+> 下载[alemon](https://gitee.com/ningmengchongshui/alemon-bot)
+
+```shell
+git clone --depth=1 https://gitee.com/ningmengchongshui/alemon-bot.git
+cd alemon-bot
+```
+
+> 启动[alemon](https://gitee.com/ningmengchongshui/alemon-bot)
+
+```shell
+npm run app
+```
+
+
 
 ##  更多资料
 
