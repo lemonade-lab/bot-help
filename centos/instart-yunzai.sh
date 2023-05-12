@@ -71,13 +71,14 @@ then
 	if [ $? != 0 ]
 	then yum -y install wget
 	fi
-	wget -P "${myadress}" https://repo.huaweicloud.com/nodejs/v17.9.0/node-v17.9.0-linux-${aarch}.tar.gz
-	mkdir /usr/local/node-v17.9.0
-	tar -xf "${myadress}"/node-v17.9.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v17.9.0
-	echo -e '#node v17.9.0\nexport PATH=/usr/local/node-v17.9.0/bin:$PATH' > /etc/profile.d/node.sh
+	wget -P "${myadress}" https://repo.huaweicloud.com/nodejs/v16.20.0/node-v16.20.0-linux-${aarch}.tar.gz
+	mkdir /usr/local/node-v16.20.0
+	tar -xf "${myadress}"/node-v16.20.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
+	echo -e '#node v16.20.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' > /etc/profile.d/node.sh
 	chmod +x /etc/profile.d/node.sh
 	source /etc/profile.d/node.sh
-	rm -rf node-v17.9.0-linux-${aarch}.tar.gz
+	ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
+	rm -rf node-v16.20.0-linux-${aarch}.tar.gz
         fi
     redis-server -v
         if [ $? != 0 ]
@@ -157,6 +158,8 @@ then
     npm config set registry https://registry.npmmirror.com
     npm install pnpm -g
     pnpm config set registry https://registry.npmmirror.com
+    npm install pm2 -g
+    ln -sfn /usr/local/node-v16.20.0/bin/pm2 /usr/local/bin
     pnpm install -P
     pnpm install --filter=guoba-plugin
     pnpm add image-size -w
