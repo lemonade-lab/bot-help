@@ -137,12 +137,12 @@ do
 			[ -d "${yunzaixiaoyao}" ] || git clone --depth=1 https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin.git ./plugins/xiaoyao-cvs-plugin/
 
 			if [ ! -d "${yunzaixiaoyao}" ]
-                        then
-                                rm -rf "${yunzai}/plugins/xiaoyao-cvs-plugin"
-                                echo "安装失败Installation failed"
-                                read -p "Enter回车并继续..." Enter
-                                break
-                        fi
+			then
+				rm -rf "${yunzai}/plugins/xiaoyao-cvs-plugin"
+				echo "安装失败Installation failed"
+				read -p "Enter回车并继续..." Enter
+				break
+			fi
 
 			##依赖
 			npm config set registry https://registry.npmmirror.com
@@ -169,7 +169,7 @@ do
 				echo
 				cd "${yunzai}"
 				node app.js
-			       	echo -e "\n"
+				echo -e "\n"
 				read -p "退出成功,回车并继续Enter..." Enter
 			fi
 		fi   

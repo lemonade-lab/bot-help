@@ -66,12 +66,12 @@ do
 					apt install -y wget
 				fi
 				wget -P "${myadress}" https://repo.huaweicloud.com/nodejs/v16.20.0/node-v16.20.0-linux-${aarch}.tar.gz
-                                mkdir /usr/local/node-v16.20.0
-                                tar -xf "${myadress}"/node-v16.20.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
-                                echo -e '#node v16.13.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' > /etc/profile.d/node.sh
-                                source /etc/profile
+				mkdir /usr/local/node-v16.20.0
+				tar -xf "${myadress}"/node-v16.20.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
+				echo -e '#node v16.13.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' > /etc/profile.d/node.sh
+				source /etc/profile
 				ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
-                                rm -rf node-v16.20.0-linux-${aarch}.tar.gz
+				rm -rf node-v16.20.0-linux-${aarch}.tar.gz
 			fi
 			redis-server -v
 			if [ $? != 0 ]
@@ -127,7 +127,7 @@ do
 				echo
 				cd "${alemon}"
 				npm run app
-			       	echo -e "\n"
+				echo -e "\n"
 				read -p "退出成功,回车并继续Enter..." Enter
 			fi
 		fi   
