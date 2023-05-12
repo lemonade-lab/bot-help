@@ -1,8 +1,8 @@
 # Yunzai-Bot-Help   
 
 >Centos&&Ubuntu系统轻量型图形化工具    
- 
-UpdateTime:2023/1/5_V1.4 
+
+UpdateTime:2023/5/12_V1.5 
 
 ## 一、安装教程 
 
@@ -51,7 +51,7 @@ sh /yunzai-bot-help/install.sh
 >需要先安装APP应用     
 
 >[☞Termux下载地址](https://github.com/termux/termux-app/releases)    
- 
+
 >选择下载`arm64`版    
 
 >安装proot、git、python
@@ -84,11 +84,11 @@ python termux-linux-install.py
 ## 三、远程连接工具    
 
 > Android：`JuiceSSH`       
-  
+
 > IOS：`Termius`     
 
 > Windows：`MobaXterm`、`Termius`  
-  
+
 ## 四、功能介绍    
 - [x]  一键安装和部署环境     
 - [x] 启动/重启/更新/停止
@@ -101,6 +101,6 @@ python termux-linux-install.py
 ## 五、企鹅讨论    
 
 群名  | 群号  |  群主 
-------------- | -------------  | -------------    
-Alemon| [806943302](https://jq.qq.com/?_wv=1027&k=AZ3Iigpq) | 1715713638 
+:-----------: | :-----------:  | :-----------:    
+Alemon-Bot| [806943302](https://jq.qq.com/?_wv=1027&k=AZ3Iigpq) | 柠檬冲水 
 
