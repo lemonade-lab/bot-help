@@ -3,13 +3,13 @@
 version=$(cat /etc/redhat-release)
 readonly version
 
-centos="/yunzai-bot-help/centos"
+centos="/bot-help/centos"
 readonly centos
 
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-Help》" \
+--title "《bot-help》" \
 --menu "$version" \
 15 50 5 \
 "1" "工具管理helpManage" \

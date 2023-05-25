@@ -3,13 +3,13 @@
 version=$(cat /etc/issue)
 readonly version
 
-debian="/yunzai-bot-help/debian"
+debian="/bot-help/debian"
 readonly debian
 
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-Help》" \
+--title "《bot-help》" \
 --menu "$version" \
 15 50 5 \
 "1" "工具管理HelpManage" \

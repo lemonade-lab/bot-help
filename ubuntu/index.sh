@@ -3,13 +3,13 @@
 version=$(cat /etc/issue)
 readonly version
 
-ubuntu="/yunzai-bot-help/ubuntu"
+ubuntu="/bot-help/ubuntu"
 readonly ubuntu
 
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot-Help》" \
+--title "《bot-help》" \
 --menu "$version" \
 15 50 5 \
 "1" "工具管理HelpManage" \

@@ -6,7 +6,7 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-bot="/yunzai-bot-help"
+bot="/bot-help"
 readonly bot
 
 Ubuntudemo="${bot}/ubuntu/index.sh"

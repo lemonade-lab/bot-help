@@ -1,6 +1,6 @@
 #!/bin/bash
 
-appname="/yunzai-bot-help"
+appname="/bot-help"
 readonly appname
 
 if [ -f /etc/redhat-release ]
