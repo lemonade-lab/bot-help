@@ -18,7 +18,7 @@ sudo su root
 
 > 推荐使用 Centos7.6
 
-> 1.`Centos`系统初始化 ☞[Centos 详细内容](https://gitee.com/ningmengchongshui/bot-help/blob/main/centos/README.md)
+> 1.`Centos`系统初始化 ☞[Centos 详细内容](./centos/README.md)
 
 ```sh
 yum update -y && yum install git -y
@@ -26,7 +26,7 @@ yum update -y && yum install git -y
 
 > 推荐推荐 Ubuntu20.04
 
-> 2.`Ubuntu`系统初始化 ☞[Ubuntu 详细内容](https://gitee.com/ningmengchongshui/bot-help/blob/main/ubuntu/README.md)
+> 2.`Ubuntu`系统初始化 ☞[Ubuntu 详细内容](./ubuntu/README.md)
 
 ```sh
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
