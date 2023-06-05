@@ -36,7 +36,7 @@ then
      if [ $OPTION = 1 ]
      then
      [ -d ${bot} ] || cd /
-     [ -d ${bot} ] || "https://gitee.com/three-point-of-water${bot}.git"
+     [ -d ${bot} ] || "https://gitee.com/ningmengchongshui${bot}.git"
      [ -e ${Centosdemo} ] || rm -rf "${bot}"
      [ -e ${Centosdemo} ] || echo "#操作失败了，请重新执行"
      [ ! -e ${Centosdemo} ] || cd "${bot}"

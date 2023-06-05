@@ -37,7 +37,7 @@ apt update -y && apt-get install git -y && apt-get install  whiptail -y
 > 克隆启动
 
 ```sh
-git clone https://gitee.com/three-point-of-water/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh && sh /bot-help/install.sh
+git clone https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh && sh /bot-help/install.sh
 ```
 
 > 日常启动
