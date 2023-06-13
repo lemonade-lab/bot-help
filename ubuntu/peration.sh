@@ -6,7 +6,7 @@ myadress="/home/lighthouse"
 readonly myadress
 
 #miaozai
-yunzai="${myadress}/ubuntu/Miao-Yunzai"
+yunzai="${myadress}/Bot/Miao-Yunzai"
 readonly yunzai
 yunzaiplugin="${yunzai}/plugins"
 readonly yunzaiplugin
@@ -14,7 +14,7 @@ yunzaiqq="${yunzai}/config/config/qq.yaml"
 readonly yunzaiqq
 
 # alemon-bot
-alemon="${myadress}/ubuntu/alemon-bot"
+alemon="${myadress}/Bot/alemon-bot"
 readonly alemon
 alemonplugin="${alemon}/plugins"
 readonly alemonplugin
@@ -24,8 +24,8 @@ readonly alemonid
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
-[ -d ${myadress}"/ubuntu" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 
 yunzaiverification(){
 	[ -d "${yunzaiplugin}" ] || echo "Not installed未安装"
