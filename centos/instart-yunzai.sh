@@ -6,8 +6,8 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-#yunzai="${myadress}/centos/Yunzai-Bot"
-yunzai="${myadress}/Bot/Miao-Yunzai"
+yunzai="${myadress}/Bot/Yunzai-Bot"
+#yunzai="${myadress}/Bot/Miao-Yunzai"
 readonly yunzai
 
 yunzaiplugin="${yunzai}/plugins"
@@ -65,7 +65,7 @@ then
     then
     if [ $(ls "$myadress" | grep centos ) ]
     then
-        cd "$myadress"/centos/alemon-bot && npm run stop
+        cd "$myadress"/centos/Yunzai-Bot && npm run stop
         mv "$myadress"/centos "$myadress"/Bot
         echo "已移动目录并关闭机器人，请重启机器人"
         read -p "Enter回车结束..."
@@ -122,7 +122,7 @@ then
     
     ##yunzai
     cd "${myadress}/Bot"
-    [ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git
+    [ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
 
         if [ ! -d "${yunzaiplugin}" ]
         then
@@ -183,6 +183,7 @@ then
     ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
     pnpm install -P
     pnpm install --filter=guoba-plugin
+    pnpm add image-size -w
 
     #安装Chromium
     #node ./node_modules/puppeteer/install.js
