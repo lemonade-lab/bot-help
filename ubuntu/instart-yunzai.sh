@@ -6,8 +6,8 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-#yunzai="${myadress}/ubuntu/Yunzai-Bot"
-yunzai="${myadress}/Bot/Miao-Yunzai"
+yunzai="${myadress}/Bot/Yunzai-Bot"
+#yunzai="${myadress}/Bot/Miao-Yunzai"
 readonly yunzai
 
 yunzaiplugin="${yunzai}/plugins"
@@ -61,7 +61,7 @@ do
 	then
 		if [ $(ls "$myadress" | grep ubuntu ) ]
 		then
-        		cd "$myadress"/ubuntu/Miao-Yunzai && npm run stop
+        		cd "$myadress"/ubuntu/Yunzai-Bot && npm run stop
         		mv "$myadress"/ubuntu "$myadress"/Bot
 			echo "已移动目录并关闭机器人，请重启机器人"
 			read -p "Enter回车结束..."
@@ -107,7 +107,7 @@ do
 
 			##yunzai
 			cd "${myadress}/Bot"
-			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git
+			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
 
 			if [ ! -d "${yunzaiplugin}" ]
 			then
@@ -158,7 +158,7 @@ do
 			pnpm install -P
 			pnpm install --filter=guoba-plugin
 			npm install pm2 -g
-			ln -sfn /usr/local/node-v16.20.0/bin/pm2 /usr/local/bin
+			ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
 			pnpm add image-size -w
 
 			##返回
