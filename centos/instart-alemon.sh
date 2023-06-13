@@ -6,7 +6,7 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-alemon="${myadress}/centos/alemon-bot"
+alemon="${myadress}/Bot/alemon-bot"
 readonly alemon
 
 alemonplugin="${alemon}/plugins"
@@ -25,8 +25,8 @@ aaarch(){
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/centos" ] || mkdir centos
-[ -d ${myadress}"/centos" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 cd "${myadress}"
 
 alemonverification(){
@@ -56,6 +56,14 @@ then
 #安装
     if [ $OPTION = 1 ]
     then
+    if [ $(ls "$myadress" | grep centos ) ]
+    then
+	cd "$myadress"/centos/alemon-bot && npm run stop
+	mv "$myadress"/centos "$myadress"/Bot
+	echo "已移动目录并关闭机器人，请重启机器人"
+	read -p "Enter回车结束..."
+	continue
+    fi
     aaarch
     node -v
         if [ $? != 0 ]
@@ -95,7 +103,7 @@ then
         fi
     
     ##alemon-bot
-    cd "${myadress}/centos"
+    cd "${myadress}/Bot"
     [ -d "${alemonplugin}" ] || git clone --depth=1 https://gitee.com/ningmengchongshui/alemon-bot.git
 
         if [ ! -d "${alemonplugin}" ]
@@ -118,10 +126,8 @@ then
     ##依赖
     cd "${alemon}"
     npm config set registry https://registry.npmmirror.com
-    npm install cnpm -g
-    mpm install pm2 -g
-    ln -sfn /usr/local/node-v16.20.0/bin/pm2 /usr/local/bin
-    cnpm install
+    npm install alemon-cli -g
+    npm install
     #安装Chromium
 
     ##返回

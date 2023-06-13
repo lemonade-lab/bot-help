@@ -7,7 +7,7 @@ myadress="/home/lighthouse"
 readonly myadress
 
 #yunzai="${myadress}/centos/Yunzai-Bot"
-yunzai="${myadress}/centos/Miao-Yunzai"
+yunzai="${myadress}/Bot/Miao-Yunzai"
 readonly yunzai
 
 yunzaiplugin="${yunzai}/plugins"
@@ -32,8 +32,8 @@ aaarch(){
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/centos" ] || mkdir centos
-[ -d ${myadress}"/centos" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 cd "${myadress}"
 
 yunzaiverification(){
@@ -63,10 +63,23 @@ then
 #安装
     if [ $OPTION = 1 ]
     then
+    if [ $(ls "$myadress" | grep centos ) ]
+    then
+        cd "$myadress"/centos/alemon-bot && npm run stop
+        mv "$myadress"/centos "$myadress"/Bot
+        echo "已移动目录并关闭机器人，请重启机器人"
+        read -p "Enter回车结束..."
+        continue
+    fi
     aaarch
     node -v
         if [ $? != 0 ]
         then
+	git version
+        if [ $? != 0 ]
+        then
+        yum -y install git
+        fi
 	wget --version
 	if [ $? != 0 ]
 	then yum -y install wget
@@ -78,8 +91,21 @@ then
 	chmod +x /etc/profile.d/node.sh
 	source /etc/profile.d/node.sh
 	ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
-	rm -rf node-v16.20.0-linux-${aarch}.tar.gz
+	rm -rf "${myadress}"/node-v16.20.0-linux-${aarch}.tar.gz
         fi
+
+	if [ ! $(strings /usr/lib64/libstdc++.so.6 | grep 'CXXABI_1.3.8') ]
+	then
+	cd "$myadress"
+        git clone https://gitee.com/WinterChocolates/libstdc-.so.6.0.26.git
+        mv "$myadress"/libstdc-.so.6.0.26/libstdc++.so.6.0.26 /lib64/
+        #cp "$myadress"/libstdc-.so.6.0.26/libstdc++.so.6.0.26 /usr/lib64/
+        rm -rf /lib64/libstdc++.so.6
+        #rm -rf /usr/lib64/libstdc++.so.6
+        ln -s /lib64/libstdc++.so.6.0.26 /lib64/libstdc++.so.6
+        #ln -s /usr/lib64/libstdc++.so.6.0.26 /usr/lib64/libstdc++.so.6
+        rm -rf "$myadress"/libstdc-.so.6.0.26
+	fi
     redis-server -v
         if [ $? != 0 ]
         then
@@ -93,14 +119,9 @@ then
         redis-server --daemonize yes
         systemctl enable redis.service
         fi
-    git version
-        if [ $? != 0 ]
-        then
-        yum -y install git
-        fi
     
     ##yunzai
-    cd "${myadress}/centos"
+    cd "${myadress}/Bot"
     [ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git
 
         if [ ! -d "${yunzaiplugin}" ]
@@ -159,10 +180,9 @@ then
     npm install pnpm -g
     pnpm config set registry https://registry.npmmirror.com
     npm install pm2 -g
-    ln -sfn /usr/local/node-v16.20.0/bin/pm2 /usr/local/bin
+    ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
     pnpm install -P
     pnpm install --filter=guoba-plugin
-    pnpm add image-size -w
 
     #安装Chromium
     #node ./node_modules/puppeteer/install.js
