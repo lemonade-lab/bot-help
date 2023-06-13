@@ -5,16 +5,23 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-#miaozai
-yunzai="${myadress}/centos/Miao-Yunzai"
+#yunzai
+yunzai="${myadress}/Bot/Yunzai-Bot"
 readonly yunzai
 yunzaiplugin="${yunzai}/plugins"
 readonly yunzaiplugin
 yunzaiqq="${yunzai}/config/config/qq.yaml"
-readonly yunzaiqq
+
+#miaozai
+miaozai="${myadress}/Bot/Miao-Yunzai"
+readonly miaozai
+miaozaiplugin="${miaozai}/plugins"
+readonly miaozaiplugin
+yunzaiqq="${miaozai}/config/config/qq.yaml"
+readonly miaozaiqq
 
 #alemon-bot
-alemon="${myadress}/centos/alemon-bot"
+alemon="${myadress}/Bot/alemon-bot"
 readonly alemon
 alemonplugin="${alemon}/plugins"
 readonly alemonplugin
@@ -24,13 +31,20 @@ readonly alemonid
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/centos" ] || mkdir centos
-[ -d ${myadress}"/centos" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 
 yunzaiverification(){
    [ -d "${yunzaiplugin}" ] || echo "Not installed未安装"
    [ -d "${yunzaiplugin}" ] || read -p "Enter回车并继续..." Enter
    [ -d "${yunzaiplugin}" ] || return "1"
+   return "0"
+}
+
+miaozaiverification(){
+   [ -d "${miaozaiplugin}" ] || echo "Not installed未安装"
+   [ -d "${miaozaiplugin}" ] || read -p "Enter回车并继续..." Enter
+   [ -d "${miaozaiplugin}" ] || return "1"
    return "0"
 }
 
@@ -46,13 +60,15 @@ do
     OPTION=$(whiptail \
         --title "《Yunzai-Bot》" \
         --menu "$version" \
-        15 50 5 \
+        15 50 6 \
         "1" "安装installPM2" \
         "2" "运行状态status" \
-	"3" "启动云崽run" \
-	"4" "停止云崽stop" \
-	"5" "启动阿柠檬run" \
-	"6" "停止阿柠檬stop" \
+	"3" "启动Miaozai-Bot run" \
+        "4" "停止Miaozai-Bot stop" \
+	"5" "启动Alemon-Bot run" \
+	"6" "停止Alemon-Bot stop" \
+	"7" "启动Yunzai-Bot run" \
+        "8" "停止Yunzai-Bot stop" \
         3>&1 1>&2 2>&3)
         feedback=$?
 	    if [ $feedback = 0 ]
@@ -72,7 +88,7 @@ do
 			read -p "Enter回车并继续..." c
 	     	fi
 
-		if [ $OPTION = 3 ]
+		if [ $OPTION = 7 ]
 		then yunzaiverification
 			if [ $? = "0" ]
 			then 
@@ -85,7 +101,7 @@ do
 			fi
 	     	fi
 
-	    	if [ $OPTION = 4 ]
+	    	if [ $OPTION = 8 ]
 	    	then yunzaiverification
 			if [ $? = "0" ]
 			then 
@@ -118,6 +134,29 @@ do
 
 			fi
 		fi
+		if [ $OPTION = 3 ]
+                then miaozaiverification
+                        if [ $? = "0" ]
+                        then
+                        [ -e "${miaozaiqq}" ] || echo "#您未配置机器人V3QQ"
+                        [ ! -e "${miaozaiqq}" ] || cd "${miaozai}"
+                        [ ! -e "${miaozaiqq}" ] || npm stop
+                        [ ! -e "${miaozaiqq}" ] || npm start
+                        [ ! -e "${miaozaiqq}" ] || echo "已后台运行，可以在<运行状态>查看"
+                        read -p "Enter回车并继续..." c
+                        fi
+                fi
+
+                if [ $OPTION = 4 ]
+                then miaozaiverification
+                        if [ $? = "0" ]
+                        then
+                        [ ! -d "${miaozaiplugin}" ] || cd "${miaozai}"
+                        [ ! -d "${miaozaiplugin}" ] || npm stop
+                        [ ! -d "${miaozaiplugin}" ] || echo "关闭"
+                        read -p "Enter回车并继续..." c
+                        fi
+                fi
     else
         exit
     fi
