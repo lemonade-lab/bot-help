@@ -59,7 +59,7 @@ do
 	feedback=$?
 	if [ $feedback = 0 ]
 	then
-		if [ $(ls "$myadress" | grep Bot ) ]
+		if [ $(ls "$myadress" | grep ubuntu ) ]
 		then
         		cd "$myadress"/ubuntu/Miao-Yunzai && npm run stop
         		mv "$myadress"/ubuntu "$myadress"/Bot

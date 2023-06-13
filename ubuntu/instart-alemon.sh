@@ -56,7 +56,7 @@ do
 		#安装
 		if [ $OPTION = 1 ]
 		then
-			if [ $(ls "$myadress" | grep Bot ) ]
+			if [ $(ls "$myadress" | grep ubuntu ) ]
 			then
 				cd "$myadress"/ubuntu/alemon-bot && npm run stop
 				mv "$myadress"/ubuntu "$myadress"/Bot
