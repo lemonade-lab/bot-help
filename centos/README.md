@@ -9,23 +9,31 @@
 |  查看器 | `cat <name>`  |
 
 
-## Yunzai使用
+
+## Miao-Yunzai使用
 
 |  介绍 | 指令  |
 |---|---|
-|  机器人根目录  | `cd /home/lighthouse/centos/Miao-Yunzai` |
-|  插件目录 | `cd /home/lighthouse/centos/Miao-Yunzai/plugins` |
-|  配置地址 | `cd /home/lighthouse/centos/Miao-Yunzai/config/config` |
+|  机器人根目录  | `cd /home/lighthouse/Bot/Miao-Yunzai` |
+|  插件目录 | `cd /home/lighthouse/Bot/Miao-Yunzai/plugins` |
+|  配置地址 | `cd /home/lighthouse/Bot/Miao-Yunzai/config/config` |
+
+## Yunzai-Bot使用
+
+|  介绍 | 指令  |
+|---|---|
+|  机器人根目录  | `cd /home/lighthouse/Bot/Yunzai-Bot` |
+|  插件目录 | `cd /home/lighthouse/Bot/Yunzai-Bot/plugins` |
+|  配置地址 | `cd /home/lighthouse/Bot/Yunzai-Bot/config/config` |
 
 
+## Alemon-Bot使用
 
-## Alemon使用
-
-| 介绍         | 指令                                            |
-| ------------ | ----------------------------------------------- |
-| 机器人根目录 | `cd /home/lighthouse/centos/alemon-bot`         |
-| 插件目录     | `cd /home/lighthouse/centos/alemon-bot/plugins` |
-| 配置地址     | `cd /home/lighthouse/centos/alemon-bot/config`  |
+| 介绍         | 指令                                         |
+| ------------ | -------------------------------------------- |
+| 机器人根目录 | `cd /home/lighthouse/Bot/alemon-bot`         |
+| 插件目录     | `cd /home/lighthouse/Bot/alemon-bot/plugins` |
+| 配置地址     | `cd /home/lighthouse/Bot/alemon-bot/config`  |
 
 ## 编辑文本
 
