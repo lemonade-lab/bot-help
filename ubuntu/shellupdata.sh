@@ -9,7 +9,7 @@ readonly myadress
 bot="/bot-help"
 readonly bot
 
-Ubuntudemo="${bot}/Bot/index.sh"
+Ubuntudemo="${bot}/ubuntu/index.sh"
 readonly Ubuntudemo
 
 cd /home

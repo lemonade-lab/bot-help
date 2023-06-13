@@ -3,8 +3,8 @@
 version=$(cat /etc/issue)
 readonly version
 
-Bot="/bot-help/Bot"
-readonly Bot
+ubuntu="/bot-help/ubuntu"
+readonly ubuntu
 
 while true
 do

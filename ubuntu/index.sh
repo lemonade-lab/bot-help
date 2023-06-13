@@ -1,10 +1,10 @@
 #!/bin/bash
-#Bot启动
+#ubuntu启动
 version=$(cat /etc/issue)
 readonly version
 
-Bot="/bot-help/Bot"
-readonly Bot
+ubuntu="/bot-help/ubuntu"
+readonly ubuntu
 
 while true
 do
@@ -30,7 +30,7 @@ then
 
 #工具管理HelpManage
     if [ $OPTION = 6 ]
-    then bash "${Bot}/shellupdata.sh"
+    then bash "${ubuntu}/shellupdata.sh"
     fi
 
 #机器管理administrat
@@ -40,8 +40,8 @@ then
                 --title "《Bot-Help》" \
                 --menu "$version" \
                 15 50 5 \
-                "1" "Alemon-Bot" \
-                "2" "Yunzai-Bot" \
+                "1" "Alemon-ubuntu" \
+                "2" "Yunzai-ubuntu" \
 		"3" "Miao-Yunzai" \
                 3>&1 1>&2 2>&3)
                 feedback1=$?
@@ -49,50 +49,50 @@ then
         if [ $feedback1 = 0 ]
         then
                 if [ $OPTION1 = 1 ]
-                then bash "$Bot/instart-alemon.sh"
+                then bash "$ubuntu/instart-alemon.sh"
                 fi
                 if [ $OPTION1 = 2 ]
-                then bash "$Bot/instart-yunzai.sh"
+                then bash "$ubuntu/instart-yunzai.sh"
                 fi
 		if [ $OPTION1 = 3 ]
-		then bash "$Bot/instart-miaozai.sh"
+		then bash "$ubuntu/instart-miaozai.sh"
 		fi
         fi
     fi
 
 #运行管理BackControl
     if [ $OPTION = 2 ]
-    then bash "${Bot}/peration.sh"
+    then bash "${ubuntu}/peration.sh"
     fi
   
 #进程管理ProcessManage
     if [ $OPTION = 3 ]
-    then bash "${Bot}/process.sh"
+    then bash "${ubuntu}/process.sh"
     fi
 
 #桌面安装DesktopInstall
     if [ $OPTION = 4 ]
-    then bash "${Bot}/desktop.sh"
+    then bash "${ubuntu}/desktop.sh"
     fi
 
 #环境管理EnvironManage
     if [ $OPTION = 5 ]
-    then bash "${Bot}/environ.sh"
+    then bash "${ubuntu}/environ.sh"
     fi
 
 #系统语言SystemLanguage
     if [ $OPTION = 7 ]
-    then bash "${Bot}/systemlanguage.sh"
+    then bash "${ubuntu}/systemlanguage.sh"
     fi
 
 #远程管理SSHManage
     if [ $OPTION = 8 ]
-    then bash "${Bot}/longrange.sh"
+    then bash "${ubuntu}/longrange.sh"
     fi
 
 #防火设置firewall
     if [ $OPTION = 9 ]
-    then bash "${Bot}/firewall.sh"
+    then bash "${ubuntu}/firewall.sh"
     fi
 
 #系统重启restart
