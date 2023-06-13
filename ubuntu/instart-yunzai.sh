@@ -7,7 +7,7 @@ myadress="/home/lighthouse"
 readonly myadress
 
 #yunzai="${myadress}/ubuntu/Yunzai-Bot"
-yunzai="${myadress}/ubuntu/Miao-Yunzai"
+yunzai="${myadress}/Bot/Miao-Yunzai"
 readonly yunzai
 
 yunzaiplugin="${yunzai}/plugins"
@@ -32,8 +32,8 @@ aaarch(){
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
-[ -d ${myadress}"/ubuntu" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 cd "${myadress}"
 
 yunzaiverification(){
@@ -59,7 +59,14 @@ do
 	feedback=$?
 	if [ $feedback = 0 ]
 	then
-
+		if [ $(ls "$myadress" | grep ubuntu ) ]
+		then
+        		cd "$myadress"/ubuntu/Miao-Yunzai && npm run stop
+        		mv "$myadress"/ubuntu "$myadress"/Bot
+			echo "已移动目录并关闭机器人，请重启机器人"
+			read -p "Enter回车结束..."
+			continue
+		fi
 		#安装
 		if [ $OPTION = 1 ]
 		then
@@ -99,7 +106,7 @@ do
 			apt install -y chromium-browser
 
 			##yunzai
-			cd "${myadress}/ubuntu"
+			cd "${myadress}/Bot"
 			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git
 
 			if [ ! -d "${yunzaiplugin}" ]
