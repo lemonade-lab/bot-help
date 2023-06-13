@@ -43,6 +43,7 @@ then
 		15 50 5 \
 		"1" "Alemon-Bot" \
 		"2" "Yunzai-Bot" \
+		"3" "Miao-Yunzai" \
 		3>&1 1>&2 2>&3)
 		feedback1=$?
 
@@ -54,6 +55,9 @@ then
 		if [ $OPTION1 = 2 ]
 		then bash "$centos/instart-yunzai.sh"
 		fi
+		if [ $OPTION1 = 3 ]
+                then bash "$centos/instart-miaozai.sh"
+                fi
 	fi
 				
     fi
