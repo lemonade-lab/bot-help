@@ -1,10 +1,10 @@
 #!/bin/bash
-#ubuntu启动
+#Bot启动
 version=$(cat /etc/issue)
 readonly version
 
-ubuntu="/bot-help/ubuntu"
-readonly ubuntu
+Bot="/bot-help/Bot"
+readonly Bot
 
 while true
 do

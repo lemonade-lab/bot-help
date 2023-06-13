@@ -56,10 +56,10 @@ do
 		#安装
 		if [ $OPTION = 1 ]
 		then
-			if [ $(ls "$myadress" | grep ubuntu ) ]
+			if [ $(ls "$myadress" | grep Bot ) ]
 			then
-				cd "$myadress"/ubuntu/alemon-bot && npm run stop
-				mv "$myadress"/ubuntu "$myadress"/Bot
+				cd "$myadress"/Bot/alemon-bot && npm run stop
+				mv "$myadress"/Bot "$myadress"/Bot
 				echo "已移动目录并关闭机器人，请重启机器人"
 				read -p "Enter回车结束..."
 				continue

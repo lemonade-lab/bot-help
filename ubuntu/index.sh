@@ -1,10 +1,10 @@
 #!/bin/bash
-#ubuntu启动
+#Bot启动
 version=$(cat /etc/issue)
 readonly version
 
-ubuntu="/bot-help/ubuntu"
-readonly ubuntu
+Bot="/bot-help/Bot"
+readonly Bot
 
 while true
 do
@@ -30,7 +30,7 @@ then
 
 #工具管理HelpManage
     if [ $OPTION = 6 ]
-    then bash "${ubuntu}/shellupdata.sh"
+    then bash "${Bot}/shellupdata.sh"
     fi
 
 #机器管理administrat
@@ -49,50 +49,50 @@ then
         if [ $feedback1 = 0 ]
         then
                 if [ $OPTION1 = 1 ]
-                then bash "$ubuntu/instart-alemon.sh"
+                then bash "$Bot/instart-alemon.sh"
                 fi
                 if [ $OPTION1 = 2 ]
-                then bash "$ubuntu/instart-yunzai.sh"
+                then bash "$Bot/instart-yunzai.sh"
                 fi
 		if [ $OPTION1 = 3 ]
-		then bash "$ubuntu/instart-miaozai.sh"
+		then bash "$Bot/instart-miaozai.sh"
 		fi
         fi
     fi
 
 #运行管理BackControl
     if [ $OPTION = 2 ]
-    then bash "${ubuntu}/peration.sh"
+    then bash "${Bot}/peration.sh"
     fi
   
 #进程管理ProcessManage
     if [ $OPTION = 3 ]
-    then bash "${ubuntu}/process.sh"
+    then bash "${Bot}/process.sh"
     fi
 
 #桌面安装DesktopInstall
     if [ $OPTION = 4 ]
-    then bash "${ubuntu}/desktop.sh"
+    then bash "${Bot}/desktop.sh"
     fi
 
 #环境管理EnvironManage
     if [ $OPTION = 5 ]
-    then bash "${ubuntu}/environ.sh"
+    then bash "${Bot}/environ.sh"
     fi
 
 #系统语言SystemLanguage
     if [ $OPTION = 7 ]
-    then bash "${ubuntu}/systemlanguage.sh"
+    then bash "${Bot}/systemlanguage.sh"
     fi
 
 #远程管理SSHManage
     if [ $OPTION = 8 ]
-    then bash "${ubuntu}/longrange.sh"
+    then bash "${Bot}/longrange.sh"
     fi
 
 #防火设置firewall
     if [ $OPTION = 9 ]
-    then bash "${ubuntu}/firewall.sh"
+    then bash "${Bot}/firewall.sh"
     fi
 
 #系统重启restart

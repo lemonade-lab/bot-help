@@ -9,14 +9,14 @@ readonly myadress
 bot="/bot-help"
 readonly bot
 
-Ubuntudemo="${bot}/ubuntu/index.sh"
+Ubuntudemo="${bot}/Bot/index.sh"
 readonly Ubuntudemo
 
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
-[ -d ${myadress}"/ubuntu" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 
 while true
 do

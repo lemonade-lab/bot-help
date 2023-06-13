@@ -6,7 +6,7 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-#yunzai="${myadress}/ubuntu/Yunzai-Bot"
+#yunzai="${myadress}/Bot/Yunzai-Bot"
 yunzai="${myadress}/Bot/Miao-Yunzai"
 readonly yunzai
 
@@ -59,10 +59,10 @@ do
 	feedback=$?
 	if [ $feedback = 0 ]
 	then
-		if [ $(ls "$myadress" | grep ubuntu ) ]
+		if [ $(ls "$myadress" | grep Bot ) ]
 		then
-        		cd "$myadress"/ubuntu/Miao-Yunzai && npm run stop
-        		mv "$myadress"/ubuntu "$myadress"/Bot
+        		cd "$myadress"/Bot/Miao-Yunzai && npm run stop
+        		mv "$myadress"/Bot "$myadress"/Bot
 			echo "已移动目录并关闭机器人，请重启机器人"
 			read -p "Enter回车结束..."
 			continue
