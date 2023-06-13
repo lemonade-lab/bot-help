@@ -20,17 +20,17 @@ then release="centos"
 fi
 
 if [ ${release} = "centose" ]
-then sh "${appname}/centos/index.sh"
+then bash "${appname}/centos/index.sh"
 fi
 
 if [ ${release} = "centos" ]
-then sh "${appname}/centos/index.sh"
+then bash "${appname}/centos/index.sh"
 fi
 
 if [ ${release} = "ubuntu" ]
-then sh "${appname}/ubuntu/index.sh"
+then bash "${appname}/ubuntu/index.sh"
 fi
 
 if [ ${release} = "debian" ]
-then sh "${appname}/debian/index.sh"
+then bash "${appname}/debian/index.sh"
 fi
