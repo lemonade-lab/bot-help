@@ -154,11 +154,11 @@ do
 			##依赖
 			npm config set registry https://registry.npmmirror.com
 			npm install pnpm -g
+            npm install pm2 -g
+            ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
 			pnpm config set registry https://registry.npmmirror.com
 			pnpm install -P
 			pnpm install --filter=guoba-plugin
-			npm install pm2 -g
-			ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
 			pnpm add image-size -w
 
 			##返回
