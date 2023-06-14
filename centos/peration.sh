@@ -17,7 +17,7 @@ miaozai="${myadress}/Bot/Miao-Yunzai"
 readonly miaozai
 miaozaiplugin="${miaozai}/plugins"
 readonly miaozaiplugin
-yunzaiqq="${miaozai}/config/config/qq.yaml"
+miaozaiqq="${miaozai}/config/config/qq.yaml"
 readonly miaozaiqq
 
 #alemon-bot
