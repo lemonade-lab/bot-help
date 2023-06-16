@@ -107,7 +107,7 @@ do
 
 			##yunzai
 			cd "${myadress}/Bot"
-			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
+			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Yunzai-Bot.git
 
 			if [ ! -d "${yunzaiplugin}" ]
 			then
