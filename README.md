@@ -4,7 +4,7 @@
 
 > Centos&&Ubuntu 系统轻量型图形化工具
 
-UpdateTime:2023/5/12_V1.5
+UpdateTime:2023/6/13_V1.6
 
 ## 一、安装教程
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-#ubuntu启动
+#Bot启动
 version=$(cat /etc/issue)
 readonly version
 

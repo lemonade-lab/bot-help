@@ -5,28 +5,57 @@
 |  查看所有目录 | `ls`  |
 |  查看当前地址 | `pwd`  |
 |  切换到系统根目录 | `cd /`  |
-| **Yunzai**修改文件qq.yqml | `vi qq.yqml`  |
-| **Yunzai**查看qq.yqml内容 | `cat qq.yqml`  |
-| **Alemon**修改文件config.yaml | `vi config.yaml` |
-| **Alemon**查看config.yaml内容 | `cat config.yaml` |
+|  编辑器 | `vi  <name>`  |
+|  查看器 | `cat <name>`  |
 
-## Yunzai使用
+
+
+## Miao-Yunzai使用
 
 |  介绍 | 指令  |
 |---|---|
-|  机器人根目录  | `cd /home/lighthouse/ubuntu/Miao-Yunzai` |
-|  插件目录 | `cd /home/lighthouse/ubuntu/Miao-Yunzai/plugins` |
-|  配置地址 | `cd /home/lighthouse/ubuntu/Miao-Yunzai/config/config` |
+|  机器人根目录  | `cd /home/lighthouse/Bot/Miao-Yunzai` |
+|  插件目录 | `cd /home/lighthouse/Bot/Miao-Yunzai/plugins` |
+|  配置地址 | `cd /home/lighthouse/Bot/Miao-Yunzai/config/config` |
+
+## Yunzai-Bot使用
+
+|  介绍 | 指令  |
+|---|---|
+|  机器人根目录  | `cd /home/lighthouse/Bot/Yunzai-Bot` |
+|  插件目录 | `cd /home/lighthouse/Bot/Yunzai-Bot/plugins` |
+|  配置地址 | `cd /home/lighthouse/Bot/Yunzai-Bot/config/config` |
 
 
+## Alemon-Bot使用
 
-## Alemon使用
+| 介绍         | 指令                                         |
+| ------------ | -------------------------------------------- |
+| 机器人根目录 | `cd /home/lighthouse/Bot/alemon-bot`         |
+| 插件目录     | `cd /home/lighthouse/Bot/alemon-bot/plugins` |
+| 配置地址     | `cd /home/lighthouse/Bot/alemon-bot/config`  |
 
-| 介绍         | 指令                                            |
-| ------------ | ----------------------------------------------- |
-| 机器人根目录 | `cd /home/lighthouse/ubuntu/alemon-bot`         |
-| 插件目录     | `cd /home/lighthouse/ubuntu/alemon-bot/plugins` |
-| 配置地址     | `cd /home/lighthouse/ubuntu/alemon-bot/config`  |
+## 编辑文本
+
+可以先提前查看以下文件
+```
+cat qq.yaml #查看qq.yaml
+```
+确实是需要修改的,就进入文件
+```
+vi qq.yaml #修改qq.yaml
+```
+进入后按`i`切换编辑模式
+
+这时你可以任意更改字符
+
+确认更改完毕后
+
+按`ESC`退出编辑模式
+
+同时输入`:wq!`并回车
+
+表示强制保存当前文件
 
 
 

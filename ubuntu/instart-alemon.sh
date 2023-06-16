@@ -6,7 +6,7 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-alemon="${myadress}/ubuntu/alemon-bot"
+alemon="${myadress}/Bot/alemon-bot"
 readonly alemon
 
 alemonplugin="${alemon}/plugins"
@@ -25,8 +25,8 @@ aaarch(){
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
-[ -d ${myadress}"/ubuntu" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 cd "${myadress}"
 
 alemonverification(){
@@ -56,6 +56,14 @@ do
 		#安装
 		if [ $OPTION = 1 ]
 		then
+			if [ $(ls "$myadress" | grep ubuntu ) ]
+			then
+				cd "$myadress"/ubuntu/alemon-bot && npm run stop
+				mv "$myadress"/ubuntu "$myadress"/Bot
+				echo "已移动目录并关闭机器人，请重启机器人"
+				read -p "Enter回车结束..."
+				continue
+			fi
 			aaarch
 			node -v
 			if [ $? != 0 ]
@@ -69,7 +77,7 @@ do
 				mkdir /usr/local/node-v16.20.0
 				tar -xf "${myadress}"/node-v16.20.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
 				echo -e '#node v16.13.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' > /etc/profile.d/node.sh
-				source /etc/profile
+				source /etc/profile && source /etc/profile.d/node.sh
 				ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
 				rm -rf node-v16.20.0-linux-${aarch}.tar.gz
 			fi
@@ -92,7 +100,7 @@ do
 			apt install -y chromium-browser
 
 			##alemon
-			cd "${myadress}/ubuntu"
+			cd "${myadress}/Bot"
 			[ -d "${alemonplugin}" ] || git clone --depth=1 https://gitee.com/ningmengchongshui/alemon-bot.git
 
 			if [ ! -d "${alemonplugin}" ]
@@ -107,10 +115,8 @@ do
 			##依赖
 			cd "${alemon}"
 			npm config set registry https://registry.npmmirror.com
-			npm install cnpm -g
-			npm install pm2 -g
-			ln -sfn /usr/local/node-v16.20.0/bin/pm2 /usr/local/bin
-			cnpm install
+			npm install alemon-cli -g
+			npm install
 
 			##返回
 			read -p "安装成功,请启动账号,回车并继续Enter..." Enter

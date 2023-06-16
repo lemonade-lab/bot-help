@@ -11,13 +11,13 @@ do
 OPTION=$(whiptail \
 --title "《bot-help》" \
 --menu "$version" \
-15 50 5 \
-"1" "工具管理HelpManage" \
-"2" "机器管理administrat" \
-"3" "运行管理BackControl" \
-"4" "进程管理ProcessManage" \
-"5" "桌面安装DesktopInstall" \
-"6" "环境管理EnvironManage" \
+15 50 6 \
+"1" "机器管理administrat" \
+"2" "运行管理BackControl" \
+"3" "进程管理ProcessManage" \
+"4" "桌面安装DesktopInstall" \
+"5" "环境管理EnvironManage" \
+"6" "工具管理HelpManage" \
 "7" "系统语言SystemLanguage" \
 "8" "远程管理SSHManage" \
 "9" "防火设置firewall" \
@@ -29,12 +29,12 @@ if [ $feedback = 0 ]
 then
 
 #工具管理HelpManage
-    if [ $OPTION = 1 ]
+    if [ $OPTION = 6 ]
     then bash "${ubuntu}/shellupdata.sh"
     fi
 
 #机器管理administrat
-    if [ $OPTION = 2 ]
+    if [ $OPTION = 1 ]
     then
 	    OPTION1=$(whiptail \
                 --title "《Bot-Help》" \
@@ -42,6 +42,7 @@ then
                 15 50 5 \
                 "1" "Alemon-Bot" \
                 "2" "Yunzai-Bot" \
+		"3" "Miao-Yunzai" \
                 3>&1 1>&2 2>&3)
                 feedback1=$?
 
@@ -53,26 +54,29 @@ then
                 if [ $OPTION1 = 2 ]
                 then bash "$ubuntu/instart-yunzai.sh"
                 fi
+		if [ $OPTION1 = 3 ]
+		then bash "$ubuntu/instart-miaozai.sh"
+		fi
         fi
     fi
 
 #运行管理BackControl
-    if [ $OPTION = 3 ]
+    if [ $OPTION = 2 ]
     then bash "${ubuntu}/peration.sh"
     fi
   
 #进程管理ProcessManage
-    if [ $OPTION = 4 ]
+    if [ $OPTION = 3 ]
     then bash "${ubuntu}/process.sh"
     fi
 
 #桌面安装DesktopInstall
-    if [ $OPTION = 5 ]
+    if [ $OPTION = 4 ]
     then bash "${ubuntu}/desktop.sh"
     fi
 
 #环境管理EnvironManage
-    if [ $OPTION = 6 ]
+    if [ $OPTION = 5 ]
     then bash "${ubuntu}/environ.sh"
     fi
 

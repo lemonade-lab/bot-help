@@ -15,8 +15,8 @@ readonly Centosdemo
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/centos" ] || mkdir centos
-[ -d ${myadress}"/centos" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 
 while true
 do

@@ -6,8 +6,8 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-yunzai="${myadress}/Bot/Yunzai-Bot"
-#yunzai="${myadress}/Bot/Miao-Yunzai"
+#yunzai="${myadress}/Bot/Yunzai-Bot"
+yunzai="${myadress}/Bot/Miao-Yunzai"
 readonly yunzai
 
 yunzaiplugin="${yunzai}/plugins"
@@ -46,7 +46,7 @@ yunzaiverification(){
 while true
 do
 	OPTION=$(whiptail \
-		--title "《Yunzai-Bot》" \
+		--title "《Miaozai-Bot》" \
 		--menu "$version" \
 		15 50 5 \
 		"1" "install快捷安装" \
@@ -61,7 +61,7 @@ do
 	then
 		if [ $(ls "$myadress" | grep ubuntu ) ]
 		then
-        		cd "$myadress"/ubuntu/Yunzai-Bot && npm run stop
+        		cd "$myadress"/ubuntu/Miao-Yunzai && npm run stop
         		mv "$myadress"/ubuntu "$myadress"/Bot
 			echo "已移动目录并关闭机器人，请重启机器人"
 			read -p "Enter回车结束..."
@@ -107,7 +107,7 @@ do
 
 			##yunzai
 			cd "${myadress}/Bot"
-			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Yunzai-Bot.git
+			[ -d "${yunzaiplugin}" ] || git clone --depth=1 https://gitee.com/yoimiya-kokomi/Miao-Yunzai.git
 
 			if [ ! -d "${yunzaiplugin}" ]
 			then

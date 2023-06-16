@@ -15,8 +15,8 @@ readonly Ubuntudemo
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/ubuntu" ] || mkdir ubuntu
-[ -d ${myadress}"/ubuntu" ] || exit
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
 
 while true
 do
