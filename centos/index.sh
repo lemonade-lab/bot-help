@@ -49,7 +49,6 @@ then
 
 	if [ $feedback1 = 0 ]
 	then
-		fi
 		if [ $OPTION1 = 1 ]
 		then bash "$centos/instart-yunzai.sh"
 		fi
