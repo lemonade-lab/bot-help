@@ -44,6 +44,7 @@ then
 		"1" "Alemon-Bot" \
 		"2" "Yunzai-Bot" \
 		"3" "Miao-Yunzai" \
+		"4" "仅部署环境" \
 		3>&1 1>&2 2>&3)
 		feedback1=$?
 
@@ -54,6 +55,9 @@ then
 		fi
 		if [ $OPTION1 = 2 ]
 		then bash "$centos/instart-yunzai.sh"
+		fi
+		if [ $OPTION1 = 4 ]
+		then bash "$centos/instart-environment.sh"
 		fi
 		if [ $OPTION1 = 3 ]
                 then bash "$centos/instart-miaozai.sh"
