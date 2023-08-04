@@ -44,7 +44,7 @@ then
 		"1" "Alemon-Bot" \
 		"2" "Yunzai-Bot" \
 		"3" "Miao-Yunzai" \
-		"4" "仅部署环境" \
+		"4" "Basic-Environment" \
 		3>&1 1>&2 2>&3)
 		feedback1=$?
 

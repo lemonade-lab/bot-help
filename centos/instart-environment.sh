@@ -16,7 +16,6 @@ cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
 
-
 while true
 do
 OPTION=$(whiptail \
@@ -81,19 +80,14 @@ then
     #安装Chromium
     yum -y install chromium
 
-
     ##依赖
     npm config set registry https://registry.npmmirror.com
     npm install alemon-cli -g
-    npm install
-    #安装Chromium
 
     ##返回
     read -p "安装成功,回车并继续Enter..." Enter
     fi
     
-  
-
     #返回
     cd "${myadress}"
 else
