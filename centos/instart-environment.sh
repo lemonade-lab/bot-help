@@ -1,7 +1,73 @@
 #!/bin/bash
-node -v
-if [ $? != 0 ]
+
+version=$(cat /etc/redhat-release)
+readonly version
+
+myadress="/home/lighthouse"
+readonly myadress
+
+alemon="${myadress}/Bot/alemon-bot"
+readonly alemon
+
+alemonplugin="${alemon}/plugins"
+readonly alemonplugin
+
+aaarch(){
+	case $(arch) in
+		x86_64) aarch="x64";;
+		aarch64) aarch="arm64";;
+		*)
+			read -p "$(echo -e "暂不支持armv71,s390x等架构\n手动安装参考Ubuntu详细\n回车退出")" Enter
+			exit;;
+	esac
+}
+
+cd /home
+[ -d ${myadress} ] || mkdir lighthouse
+cd "${myadress}"
+[ -d ${myadress}"/Bot" ] || mkdir Bot
+[ -d ${myadress}"/Bot" ] || exit
+cd "${myadress}"
+
+alemonverification(){
+   [ -d "${alemonplugin}" ] || echo "Not installed未安装"
+   [ -d "${alemonplugin}" ] || read -p "Enter回车并继续..." Enter
+   [ -d "${alemonplugin}" ] || return "1"
+   return "0"
+}
+
+while true
+do
+OPTION=$(whiptail \
+--title "《Alemon-Bot》" \
+--menu "$version" \
+15 50 5 \
+"1" "install快捷安装" \
+"2" "startUp启动账号" \
+"3" "reLogin重新登录" \
+"4" "toUpdate机器更新" \
+"5" "unInstall机器卸载" \
+3>&1 1>&2 2>&3)
+
+feedback=$?
+if [ $feedback = 0 ]
 then
+
+#安装
+    if [ $OPTION = 1 ]
+    then
+    if [ $(ls "$myadress" | grep centos ) ]
+    then
+	cd "$myadress"/centos/alemon-bot && npm run stop
+	mv "$myadress"/centos "$myadress"/Bot
+	echo "已移动目录并关闭机器人，请重启机器人"
+	read -p "Enter回车结束..."
+	continue
+    fi
+    aaarch
+    node -v
+        if [ $? != 0 ]
+        then
 	wget --version
 	if [ $? != 0 ]
 	then yum -y install wget
@@ -16,32 +82,48 @@ then
 	source /etc/profile
 	ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
 	rm -rf node-v16.20.0-linux-${aarch}.tar.gz
-fi
-redis-server -v
-if [ $? != 0 ]
-then
-yum -y install git
-yum -y install epel-release
+        fi
+    redis-server -v
+        if [ $? != 0 ]
+        then
+        yum -y install git
+	yum -y install epel-release
 	sed -e 's!^metalink=!#metalink=!g' \
 	-e 's!^#baseurl=!baseurl=!g' \
 	-e 's!http://download\.fedoraproject\.org/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' \
 	-e 's!http://download\.example/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' -i /etc/yum.repos.d/epel*.repo
-yum -y install redis
-redis-server --daemonize yes
-systemctl enable redis.service
+        yum -y install redis
+        redis-server --daemonize yes
+        systemctl enable redis.service
+        fi
+    git version
+        if [ $? != 0 ]
+        then
+        yum -y install git
+        fi
+
+    ##环境准备
+    yum install nss -y
+    yum update nss -y
+    #文字安装
+    yum groupinstall fonts -y
+    #安装Chromium
+    yum -y install chromium
+
+    ##依赖
+    cd "${alemon}"
+    npm config set registry https://registry.npmmirror.com
+    npm install alemon-cli -g
+    npm install
+    #安装Chromium
+
+    ##返回
+    read -p "安装成功,请启动账号,回车并继续Enter..." Enter
+    fi
+    
+    #返回
+    cd "${myadress}"
+else
+    exit
 fi
-git version
-if [ $? != 0 ]
-then
-yum -y install git
-fi
-#环境准备
-yum install nss -y
-yum update nss -y
-#文字安装
-yum groupinstall fonts -y
-#安装Chromium
-yum -y install chromium
-#依赖
-npm config set registry https://registry.npmmirror.com
-npm install alemon-cli -g
+done
