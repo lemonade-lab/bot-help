@@ -1,17 +1,12 @@
 #!/bin/bash
-
 version=$(cat /etc/redhat-release)
 readonly version
-
 myadress="/home/lighthouse"
 readonly myadress
-
 alemon="${myadress}/Bot/alemon-bot"
 readonly alemon
-
 alemonplugin="${alemon}/plugins"
 readonly alemonplugin
-
 aaarch(){
 	case $(arch) in
 		x86_64) aarch="x64";;
@@ -21,7 +16,6 @@ aaarch(){
 			exit;;
 	esac
 }
-
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
