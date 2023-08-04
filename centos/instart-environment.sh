@@ -70,7 +70,6 @@ then
         then
         yum -y install git
         fi
- 
 
     ##环境准备
     yum install nss -y
@@ -79,10 +78,6 @@ then
     yum groupinstall fonts -y
     #安装Chromium
     yum -y install chromium
-
-    ##依赖
-    npm config set registry https://registry.npmmirror.com
-    npm install alemon-cli -g
 
     ##返回
     read -p "安装成功,回车并继续Enter..." Enter
