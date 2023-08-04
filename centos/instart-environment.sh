@@ -6,11 +6,6 @@ readonly version
 myadress="/home/lighthouse"
 readonly myadress
 
-alemon="${myadress}/Bot/alemon-bot"
-readonly alemon
-
-alemonplugin="${alemon}/plugins"
-readonly alemonplugin
 
 aaarch(){
 	case $(arch) in
@@ -25,25 +20,7 @@ aaarch(){
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
-[ -d ${myadress}"/Bot" ] || mkdir Bot
-[ -d ${myadress}"/Bot" ] || exit
-cd "${myadress}"
 
-alemonverification(){
-   [ -d "${alemonplugin}" ] || echo "Not installed未安装"
-   [ -d "${alemonplugin}" ] || read -p "Enter回车并继续..." Enter
-   [ -d "${alemonplugin}" ] || return "1"
-   return "0"
-}
-
-if [ $(ls "$myadress" | grep centos ) ]
-then
-	cd "$myadress"/centos/alemon-bot && npm run stop
-	mv "$myadress"/centos "$myadress"/Bot
-	echo "已移动目录并关闭机器人，请重启机器人"
-	read -p "Enter回车结束..."
-	continue
-fi
 aaarch
 node -v
 if [ $? != 0 ]
