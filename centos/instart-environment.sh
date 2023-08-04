@@ -1,8 +1,11 @@
 #!/bin/bash
+
 version=$(cat /etc/redhat-release)
 readonly version
+
 myadress="/home/lighthouse"
 readonly myadress
+
 aaarch(){
 	case $(arch) in
 		x86_64) aarch="x64";;
@@ -12,6 +15,7 @@ aaarch(){
 			exit;;
 	esac
 }
+
 cd /home
 [ -d ${myadress} ] || mkdir lighthouse
 cd "${myadress}"
@@ -19,7 +23,7 @@ cd "${myadress}"
 while true
 do
 OPTION=$(whiptail \
---title "《instart-environment》" \
+--title "《Yunzai-Bot》" \
 --menu "$version" \
 15 50 5 \
 "1" "开始安装" \
@@ -37,6 +41,11 @@ then
     node -v
         if [ $? != 0 ]
         then
+	git version
+        if [ $? != 0 ]
+        then
+        yum -y install git
+        fi
 	wget --version
 	if [ $? != 0 ]
 	then yum -y install wget
@@ -45,13 +54,24 @@ then
 	mkdir /usr/local/node-v16.20.0
 	tar -xf "${myadress}"/node-v16.20.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
 	echo -e '#node v16.20.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' > /etc/profile.d/node.sh
-	echo -e '#node v16.20.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' >> /etc/bashrc
 	chmod +x /etc/profile.d/node.sh
 	source /etc/profile.d/node.sh
-	source /etc/profile
 	ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
-	rm -rf node-v16.20.0-linux-${aarch}.tar.gz
+	rm -rf "${myadress}"/node-v16.20.0-linux-${aarch}.tar.gz
         fi
+
+	if [ ! $(strings /usr/lib64/libstdc++.so.6 | grep 'CXXABI_1.3.8') ]
+	then
+	cd "$myadress"
+        git clone https://gitee.com/WinterChocolates/libstdc-.so.6.0.26.git
+        mv "$myadress"/libstdc-.so.6.0.26/libstdc++.so.6.0.26 /lib64/
+        #cp "$myadress"/libstdc-.so.6.0.26/libstdc++.so.6.0.26 /usr/lib64/
+        rm -rf /lib64/libstdc++.so.6
+        #rm -rf /usr/lib64/libstdc++.so.6
+        ln -s /lib64/libstdc++.so.6.0.26 /lib64/libstdc++.so.6
+        #ln -s /usr/lib64/libstdc++.so.6.0.26 /usr/lib64/libstdc++.so.6
+        rm -rf "$myadress"/libstdc-.so.6.0.26
+	fi
     redis-server -v
         if [ $? != 0 ]
         then
@@ -65,13 +85,10 @@ then
         redis-server --daemonize yes
         systemctl enable redis.service
         fi
-    git version
-        if [ $? != 0 ]
-        then
-        yum -y install git
-        fi
 
     ##环境准备
+    yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 -y
+    yum install libdrm libgbm libxshmfence -y
     yum install nss -y
     yum update nss -y
     #文字安装
@@ -79,8 +96,18 @@ then
     #安装Chromium
     yum -y install chromium
 
+    ##依赖
+    npm config set registry https://registry.npmmirror.com
+    npm install pnpm -g
+    pnpm config set registry https://registry.npmmirror.com
+    npm install pm2 -g
+    ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
+    pnpm install -P
+    pnpm install --filter=guoba-plugin
+    pnpm add image-size -w
+
     ##返回
-    read -p "安装成功,回车并继续Enter..." Enter
+    read -p "安装成功,请启动账号,回车并继续Enter..." Enter
     fi
     
     #返回

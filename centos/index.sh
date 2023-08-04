@@ -41,27 +41,24 @@ then
 		--title "《Bot-Help》" \
 		--menu "$version" \
 		15 50 5 \
-		"1" "Alemon-Bot" \
-		"2" "Yunzai-Bot" \
-		"3" "Miao-Yunzai" \
-		"4" "Basic-Environment" \
+		"1" "Yunzai-Bot" \
+		"2" "Miao-Yunzai" \
+		"3" "Basic-Environment" \
 		3>&1 1>&2 2>&3)
 		feedback1=$?
 
 	if [ $feedback1 = 0 ]
 	then
-		if [ $OPTION1 = 1 ]
-		then bash "$centos/instart-alemon.sh"
 		fi
-		if [ $OPTION1 = 2 ]
+		if [ $OPTION1 = 1 ]
 		then bash "$centos/instart-yunzai.sh"
 		fi
-		if [ $OPTION1 = 4 ]
+		if [ $OPTION1 = 3 ]
 		then bash "$centos/instart-environment.sh"
 		fi
-		if [ $OPTION1 = 3 ]
+		if [ $OPTION1 = 2 ]
                 then bash "$centos/instart-miaozai.sh"
-                fi
+        fi
 	fi
 				
     fi
