@@ -1,27 +1,5 @@
 #!/bin/bash
 
-version=$(cat /etc/redhat-release)
-readonly version
-
-myadress="/home/lighthouse"
-readonly myadress
-
-
-aaarch(){
-	case $(arch) in
-		x86_64) aarch="x64";;
-		aarch64) aarch="arm64";;
-		*)
-			read -p "$(echo -e "暂不支持armv71,s390x等架构\n手动安装参考Ubuntu详细\n回车退出")" Enter
-			exit;;
-	esac
-}
-
-cd /home
-[ -d ${myadress} ] || mkdir lighthouse
-cd "${myadress}"
-
-aaarch
 node -v
 if [ $? != 0 ]
 then
