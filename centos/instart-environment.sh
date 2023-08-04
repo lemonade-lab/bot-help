@@ -102,12 +102,9 @@ then
     pnpm config set registry https://registry.npmmirror.com
     npm install pm2 -g
     ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
-    pnpm install -P
-    pnpm install --filter=guoba-plugin
-    pnpm add image-size -w
 
     ##返回
-    read -p "安装成功,请启动账号,回车并继续Enter..." Enter
+    read -p "安装成功,回车并继续Enter..." Enter
     fi
     
     #返回
