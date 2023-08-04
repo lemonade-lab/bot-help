@@ -1,5 +1,4 @@
 #!/bin/bash
-
 node -v
 if [ $? != 0 ]
 then
@@ -22,7 +21,7 @@ redis-server -v
 if [ $? != 0 ]
 then
 yum -y install git
-	yum -y install epel-release
+yum -y install epel-release
 	sed -e 's!^metalink=!#metalink=!g' \
 	-e 's!^#baseurl=!baseurl=!g' \
 	-e 's!http://download\.fedoraproject\.org/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' \
@@ -36,15 +35,13 @@ if [ $? != 0 ]
 then
 yum -y install git
 fi
-
-##环境准备
+#环境准备
 yum install nss -y
 yum update nss -y
 #文字安装
 yum groupinstall fonts -y
 #安装Chromium
 yum -y install chromium
-
-##依赖
+#依赖
 npm config set registry https://registry.npmmirror.com
 npm install alemon-cli -g
