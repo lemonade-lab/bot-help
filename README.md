@@ -2,7 +2,7 @@
 
 > Centos&&Ubuntu 系统轻量型图形化工具
 
-UpdateTime:2023/6/13_V1.6
+UpdateTime:2023/9/1_V1.7
 
 ## 一、安装教程
 
@@ -34,16 +34,16 @@ apt update -y && apt-get install git -y && apt-get install  whiptail -y
 
 #### （3）项目拉取
 
-> 克隆启动
+> 克隆并初次启动
 
 ```sh
-git clone https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh && sh /bot-help/install.sh
+git clone https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 日常启动
 
 ```sh
-sh /bot-help/install.sh
+bot-help
 ```
 
 ## 二、安卓搭建
