@@ -10,25 +10,25 @@ UpdateTime:2023/9/1_V1.7
 
 > 必须`ROOT`用户
 
-```sh
+```shell
 sudo su root
 ```
 
 #### （2）环境准备
 
-> 推荐使用 Centos7.6
+> 推荐使用 Centos7.6 系统
 
 > 1.`Centos`系统初始化 ☞[Centos 详细内容](./centos/README.md)
 
-```sh
+```shell
 yum update -y && yum install git -y
 ```
 
-> 推荐推荐 Ubuntu20.04
+> 推荐推荐 Ubuntu20.04 系统
 
 > 2.`Ubuntu`系统初始化 ☞[Ubuntu 详细内容](./ubuntu/README.md)
 
-```sh
+```shell
 apt update -y && apt-get install git -y && apt-get install  whiptail -y
 ```
 
@@ -36,19 +36,19 @@ apt update -y && apt-get install git -y && apt-get install  whiptail -y
 
 > 克隆并初次启动
 
-```sh
+```shell
 git clone https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 日常启动
 
-```sh
+```shell
 bot-help
 ```
 
 ## 二、安卓搭建
 
-> 需要先安装 APP 应用
+> 需要先安装 APP Termux 
 
 > [☞Termux 下载地址](https://github.com/termux/termux-app/releases)
 
@@ -95,9 +95,8 @@ python termux-linux-install.py
 - [x] 启动/重启/更新/停止
 - [x] 后台运行/重新登录
 - [x] 端口管理(杀进程)
-- [x] SSH 开通帮助（远程连接）
+- [x] SSH 开通（远程连接）
 - [x] 系统语言(可设置中文)
-- [x] 桌面安装(入门必备)
 
 ## 五、企鹅讨论
 
