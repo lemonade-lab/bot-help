@@ -29,7 +29,7 @@ yum update -y && yum install git -y
 > 2.`Ubuntu`系统初始化 ☞[Ubuntu 详细内容](./ubuntu/README.md)
 
 ```shell
-apt update -y && apt-get install git -y && apt-get install  whiptail -y
+apt update -y && apt-get install git whiptail -y
 ```
 
 #### （3）项目拉取
@@ -37,7 +37,7 @@ apt update -y && apt-get install git -y && apt-get install  whiptail -y
 > 克隆并初次启动
 
 ```shell
-git clone https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
+git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 日常启动
@@ -63,7 +63,7 @@ pkg install proot git python -y
 > 安装系统脚本
 
 ```shell
-git clone https://gitee.com/Le-niao/termux-install-linux.git
+git clone --depth=1 https://gitee.com/Le-niao/termux-install-linux.git
 ```
 
 > 启动系统脚本|选择 ubuntu 系统
