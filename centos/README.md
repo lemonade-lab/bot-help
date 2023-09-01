@@ -27,13 +27,6 @@
 |  配置地址 | `cd /home/lighthouse/Bot/Yunzai-Bot/config/config` |
 
 
-## Alemon-Bot使用
-
-| 介绍         | 指令                                         |
-| ------------ | -------------------------------------------- |
-| 机器人根目录 | `cd /home/lighthouse/Bot/alemon-bot`         |
-| 插件目录     | `cd /home/lighthouse/Bot/alemon-bot/plugins` |
-| 配置地址     | `cd /home/lighthouse/Bot/alemon-bot/config`  |
 
 ## 编辑文本
 
@@ -160,44 +153,6 @@ npm install image-size
 npm install express multer body-parser jsonwebtoken
 ```
 
-
-
-## Alemon安装
-
-> cnpm安装
->
-
-```shell
-npm install cnpm -g
-```
-> 安装git，redis和chromium
-
-```shell
-apt-get install -y git redis-server redis chromium-browser
-```
-
-> 安装字体 **（可以自行百度导入）**
-
-```shell
-apt-get install -y fonts-wqy-microhei
-```
-
-> 下载[alemon](https://gitee.com/ningmengchongshui/alemon-bot)
-
-```shell
-git clone --depth=1 https://gitee.com/ningmengchongshui/alemon-bot.git
-cd alemon-bot
-```
-
-> 启动[alemon](https://gitee.com/ningmengchongshui/alemon-bot)
-
-```shell
-npm run app
-```
-
-
-
 ##  更多资料
 
 - Yunzai-Bot插件库：[☞Github](https://gitee.com/link?target=https%3A%2F%2Fgithub.com%2FyhArcadia%2FYunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
-- Yunzai-Bot项目库：[☞Github](https://gitee.com/link?target=https%3A%2F%2Fgithub.com%2FLe-niao%2FYunzai-Bot)/[☞Gitee](https://gitee.com/Le-niao/Yunzai-Bot)
