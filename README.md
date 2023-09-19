@@ -102,4 +102,4 @@ python termux-linux-install.py
 
 |    群名    |                        群号                         |   群主   |
 | :--------: | :-------------------------------------------------: | :------: |
-| Alemon-Bot | [806943302](https://jq.qq.com/?_wv=1027&k=AZ3Iigpq) | 柠檬冲水 |
+| alemonjs | [806943302](https://jq.qq.com/?_wv=1027&k=AZ3Iigpq) | 柠檬冲水 |
