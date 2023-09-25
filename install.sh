@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 引入变量
-source ./globals.sh
+source /bot-help/globals.sh
 
 # 设置 bot-help
 bash bin.sh
