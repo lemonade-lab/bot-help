@@ -30,19 +30,19 @@ readonly myadress
 centos="/bot-help/centos"
 readonly centos
 
-centosIndex="${AppName}/centos/index.sh"
+centosIndex="$AppName/centos/index.sh"
 readonly centosIndex
 
 debian="/bot-help/debian"
 readonly debian
 
-debianIndex="${AppName}/centos/index.sh"
+debianIndex="$AppName/centos/index.sh"
 readonly debianIndex
 
 ubuntu="/bot-help/ubuntu"
 readonly ubuntu
 
-ubuntuIndex="${AppName}/centos/index.sh"
+ubuntuIndex="$AppName/centos/index.sh"
 readonly ubuntuIndex
 
 aaarch(){
