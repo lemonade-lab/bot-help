@@ -78,45 +78,43 @@ then
     read -p "完成机器人环境安装!回车并继续Enter..." Enter
     fi
     
-    #返回
-    cd "$DIRECTORY"
+
+#返回
+cd "$DIRECTORY"
 
     if [ $OPTION = 2 ]
     then
 
 yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm
-
 rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
-
 yum install mysql-community-server
-
 systemctl start mysqld # 启动
-
 systemctl enable mysqld # 自启动
-
-    ##返回
 read -p "完成数据库安装!回车并继续Enter..." Enter
 
     fi
 
+#返回
+cd "$DIRECTORY"
     
     if [ $OPTION = 3 ]
     then
-yum -y install git
-yum -y install epel-release
-sed -e 's!^metalink=!#metalink=!g' \
-	-e 's!^#baseurl=!baseurl=!g' \
-	-e 's!http://download\.fedoraproject\.org/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' \
-	-e 's!http://download\.example/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' -i /etc/yum.repos.d/epel*.repo
-yum -y install redis
-redis-server --daemonize yes
-systemctl enable redis.service
 
-    ##返回
+cd "$DIRECTORY/file"
+# 下载
+wget http://download.redis.io/releases/redis-6.2.13.tar.gz
+redis-6.2.13
+tar xzf redis-6.2.13.tar.gz
+cd redis-6.2.13
+make
+make install
+redis-server --daemonize yes
 read -p "完成数据库安装!回车并继续Enter..." Enter
-    
 
     fi
+
+#返回
+cd "$DIRECTORY"
 
 else
     exit

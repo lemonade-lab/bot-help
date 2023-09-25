@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 source /bot-help/globals.sh
 
 # 进入
@@ -9,7 +8,7 @@ cd "$DIRECTORY"
 while true
 do
 OPTION=$(whiptail \
---title "《process》" \
+--title "《Process》" \
 --menu "$version" \
 15 50 5 \
 "1" "安装installLsof" \

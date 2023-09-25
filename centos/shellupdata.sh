@@ -8,7 +8,7 @@ cd "$DIRECTORY"
 while true
 do
 OPTION=$(whiptail \
---title "《HelpManage》" \
+--title "《Manage》" \
 --menu "$version" \
 15 50 5 \
 "1" "update工具更新" \

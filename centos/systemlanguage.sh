@@ -9,14 +9,13 @@ cd "$DIRECTORY"
 while true
 do
 OPTION=$(whiptail \
---title "《System-language》" \
+--title "《Language》" \
 --menu "$version" \
 15 50 5 \
-"1" "编辑教程instruction" \
-"2" "下载语言downloadlanguage" \
-"3" "语言列表languagelist" \
-"4" "编辑语言editlanguage" \
-"5" "当前语言currentlanguage" \
+"1" "下载语言downloadlanguage" \
+"2" "语言列表languagelist" \
+"3" "编辑语言editlanguage" \
+"4" "当前语言currentlanguage" \
 3>&1 1>&2 2>&3)
 
 feedback=$?
@@ -25,21 +24,6 @@ then
 
     if [ $OPTION = 1 ]
     then
-    echo "__________________________________________________"
-    echo "第一步：下载语言"
-    echo "第二步：语言列表"
-    echo "找到zh_CN.utf8类似字眼并复制"
-    echo "第三步：编辑语言"
-    echo "__________________________________________________"
-    echo "按i进入插入模式"
-    echo "按ESE进入命令模式"
-    echo "输入:wq!保存"
-    echo "输入:q!退出"
-    read -p "Enter回车并继续..." x
-    fi
-
-    if [ $OPTION = 2 ]
-    then
     cd "$DIRECTORY"
     sudo yum install dnf -y
     dnf install langpacks-zh_CN
@@ -47,17 +31,17 @@ then
     read -p "已执行Enter回车并继续..." x
     fi 
 
-    if [ $OPTION = 3 ]
+    if [ $OPTION = 2 ]
     then locale -a
     read -p "Enter回车并继续..." x
     fi
 
 
-    if [ $OPTION = 4 ]
+    if [ $OPTION = 3 ]
     then vi /etc/locale.conf
     fi
     
-    if [ $OPTION = 5 ]
+    if [ $OPTION = 4 ]
     then echo $LANG
     read -p "Enter回车并继续..." x
     fi

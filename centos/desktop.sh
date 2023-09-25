@@ -5,7 +5,7 @@ source /bot-help/globals.sh
 while true
 do
 OPTION=$(whiptail \
---title "《bot-help》" \
+--title "《Desktop》" \
 --menu "$version" \
 15 50 5 \
 "1" "安装" \
@@ -17,7 +17,10 @@ then
 
 #工具管理HelpManage
     if [ $OPTION = 1 ]
-    then read -p "待施工" Enter
+    then 
+yum groupinstall "GNOME Desktop" -y
+systemctl set-default graphical.target
+read -p "安装完成,重启后生效" Enter
     fi
 
 else

@@ -33,11 +33,13 @@ do
             bash "${centos}/desktop.sh"
         fi
 
+        # process
         if [ $OPTION = 3 ]
         then
             bash "${centos}/process.sh"
         fi
 
+        # shellupdata
         if [ $OPTION = 4 ]
         then
             bash "${centos}/shellupdata.sh"
