@@ -4,7 +4,7 @@
 source /bot-help/globals.sh
 
 # 设置 bot-help
-bash bin.sh
+bash /bot-help/bin.sh
 
 # 启动
 release=""
