@@ -8,10 +8,12 @@ cd "$DIRECTORY"
 while true
 do
 OPTION=$(whiptail \
---title "《Yunzai-Bot》" \
+--title "《Environment》" \
 --menu "$version" \
 15 50 5 \
-"1" "开始安装" \
+"1" "安装node" \
+"2" "安装mysql" \
+"3" "安装redis" \
 3>&1 1>&2 2>&3)
 
 feedback=$?
@@ -73,11 +75,49 @@ then
     ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
 
     ##返回
-    read -p "完成机器人环境安装!\n回车并继续Enter..." Enter
+    read -p "完成机器人环境安装!回车并继续Enter..." Enter
     fi
     
     #返回
     cd "$DIRECTORY"
+
+    if [ $OPTION = 2 ]
+    then
+
+yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm
+
+rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+
+yum install mysql-community-server
+
+systemctl start mysqld # 启动
+
+systemctl enable mysqld # 自启动
+
+    ##返回
+read -p "完成数据库安装!回车并继续Enter..." Enter
+
+    fi
+
+    
+    if [ $OPTION = 3 ]
+    then
+yum -y install git
+yum -y install epel-release
+sed -e 's!^metalink=!#metalink=!g' \
+	-e 's!^#baseurl=!baseurl=!g' \
+	-e 's!http://download\.fedoraproject\.org/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' \
+	-e 's!http://download\.example/pub/epel!https://mirrors.tuna.tsinghua.edu.cn/epel!g' -i /etc/yum.repos.d/epel*.repo
+yum -y install redis
+redis-server --daemonize yes
+systemctl enable redis.service
+
+    ##返回
+read -p "完成数据库安装!回车并继续Enter..." Enter
+    
+
+    fi
+
 else
     exit
 fi

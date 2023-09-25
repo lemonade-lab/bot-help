@@ -41,8 +41,9 @@ then
     if [ $OPTION = 2 ]
     then
     cd "$DIRECTORY"
+    sudo yum install dnf -y
     dnf install langpacks-zh_CN
-    dnf install -y ibus-libpinyin.x86_64
+    dnf install ibus-libpinyin.x86_64 -y
     read -p "已执行Enter回车并继续..." x
     fi 
 
