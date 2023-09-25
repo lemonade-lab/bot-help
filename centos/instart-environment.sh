@@ -118,7 +118,7 @@ cd /usr/local
 wget http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
 tar zxvf pcre-8.45.tar.gz
 cd /usr/local/pcre-8.45
-/usr/local/configure
+/usr/local/pcre-8.45/configure
 make 
 make install
 pcre-config --version
