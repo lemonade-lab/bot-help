@@ -6,14 +6,20 @@ UpdateTime:2023/9/1_V1.7
 
 ## 一、安装教程
 
+####  (0) 切换根用户
+```
+sudo su root
+```
+
 #### （1）环境准备
 
 > 推荐使用 Centos7.6 系统
 
 > 1.`Centos`系统初始化 ☞[Centos 详细内容](./centos/README.md)
 
+
 ```shell
-sudo su root && yum update -y && yum install git -y
+yum update -y && yum install git -y
 ```
 
 > 推荐推荐 Ubuntu20.04 系统
@@ -21,7 +27,7 @@ sudo su root && yum update -y && yum install git -y
 > 2.`Ubuntu`系统初始化 ☞[Ubuntu 详细内容](./ubuntu/README.md)
 
 ```shell
-sudo su root && apt update -y && apt-get install git whiptail -y
+ apt update -y && apt-get install git whiptail -y
 ```
 
 #### （2）项目拉取
@@ -40,12 +46,12 @@ bot-help
 
 > 一条龙指令`Centos`
 
-
 ```
 sudo su root && yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 一条龙指令`Ubuntu`
+
 
 ```
 sudo su root && apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
