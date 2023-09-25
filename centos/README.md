@@ -9,34 +9,13 @@
 |  查看器 | `cat <name>`  |
 
 
-
-## Miao-Yunzai使用
-
-|  介绍 | 指令  |
-|---|---|
-|  机器人根目录  | `cd /home/lighthouse/Bot/Miao-Yunzai` |
-|  插件目录 | `cd /home/lighthouse/Bot/Miao-Yunzai/plugins` |
-|  配置地址 | `cd /home/lighthouse/Bot/Miao-Yunzai/config/config` |
-
-## Yunzai-Bot使用
-
-|  介绍 | 指令  |
-|---|---|
-|  机器人根目录  | `cd /home/lighthouse/Bot/Yunzai-Bot` |
-|  插件目录 | `cd /home/lighthouse/Bot/Yunzai-Bot/plugins` |
-|  配置地址 | `cd /home/lighthouse/Bot/Yunzai-Bot/config/config` |
-
-
-
 ## 编辑文本
 
-可以先提前查看以下文件
 ```shell
-cat qq.yaml #查看qq.yaml
+cat alemon.toml #查看alemon.toml
 ```
-确实是需要修改的,就进入文件
 ```shell
-vi qq.yaml #修改qq.yaml
+vi alemon.toml #修改alemon.toml
 ```
 进入后按`i`切换编辑模式
 
@@ -49,33 +28,6 @@ vi qq.yaml #修改qq.yaml
 同时输入`:wq!`并回车
 
 表示强制保存当前文件
-
-
-
-
-##  日常使用
->需要确保数据库启动
-```shell
-redis-server --daemonize yes
-```
->运行账号`机器人根目录下执行`
-
-```shell
-node app.js
-```
-
->后台运行`机器人根目录下执行`
-
-```shell
-npm run start
-```
-
-> 后台重启`机器人根目录下执行`
-
-```shell
-npm run restart
-```
-
 
 
 ## 手动安装
@@ -114,24 +66,6 @@ redis-server --daemonize yes
 
 ```shell
 systemctl enable redis.service
-```
-
-> 安装**Yunzai-Bot**
-
-```shell
-git clone --depth=1 https://gitee.com/Le-niao/Yunzai-Bot.git
-```
-
-> 安装**喵喵** `Yunzai-Bot目录下执行`
-
-```shell
-git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
-```
-
-> 安装**锅巴** `Yunzai-Bot目录下执行`、`#锅巴登录`可以登录后台管理系统
-
-```shell
-git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
 ```
 
 > 安装**必要环境**
@@ -209,15 +143,3 @@ node ./node_modules/puppeteer/install.js
 ```shell
 yum groupinstall fonts -y 
 ```
-
->加载**锅巴所需依赖** 
-
-```shell
-npm install
-npm install image-size
-npm install express multer body-parser jsonwebtoken
-```
-
-##  更多资料
-
-- Yunzai-Bot插件库：[☞Github](https://gitee.com/link?target=https%3A%2F%2Fgithub.com%2FyhArcadia%2FYunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)

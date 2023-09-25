@@ -1,7 +1,6 @@
 #!/bin/bash
 
-version=$(cat /etc/redhat-release)
-readonly version
+source ../globals.sh
 
 while true
 do

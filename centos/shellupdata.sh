@@ -1,22 +1,9 @@
 #!/bin/bash
 
-version=$(cat /etc/redhat-release)
-readonly version
+source ../globals.sh
 
-myadress="/home/lighthouse"
-readonly myadress
-
-bot="/bot-help"
-readonly bot
-
-Centosdemo="${bot}/centos/index.sh"
-readonly Centosdemo
-
-cd /home
-[ -d ${myadress} ] || mkdir lighthouse
-cd "${myadress}"
-[ -d ${myadress}"/Bot" ] || mkdir Bot
-[ -d ${myadress}"/Bot" ] || exit
+# 进入
+cd "$DIRECTORY"
 
 while true
 do
@@ -35,15 +22,15 @@ then
 #更新
      if [ $OPTION = 1 ]
      then
-     [ -d ${bot} ] || cd /
-     [ -d ${bot} ] || "https://gitee.com/ningmengchongshui${bot}.git"
-     [ -e ${Centosdemo} ] || rm -rf "${bot}"
-     [ -e ${Centosdemo} ] || echo "#操作失败了，请重新执行"
-     [ ! -e ${Centosdemo} ] || cd "${bot}"
-     [ ! -e ${Centosdemo} ] || git fetch --all
-     [ ! -e ${Centosdemo} ] || git reset --hard main
-     [ ! -e ${Centosdemo} ] || git pull
-     [ ! -e ${Centosdemo} ] || echo "#执行完成,请重启工具"
+     [ -d ${AppName} ] || cd /
+     [ -d ${AppName} ] || "https://gitee.com/ningmengchongshui${bot}.git"
+     [ -e ${centosIndex} ] || rm -rf "${AppName}"
+     [ -e ${centosIndex} ] || echo "#操作失败了，请重新执行"
+     [ ! -e ${centosIndex} ] || cd "${AppName}"
+     [ ! -e ${centosIndex} ] || git fetch --all
+     [ ! -e ${centosIndex} ] || git reset --hard main
+     [ ! -e ${centosIndex} ] || git pull
+     [ ! -e ${centosIndex} ] || echo "#执行完成,请重启工具"
      read -p "Enter回车并继续..." y
      fi
      
@@ -51,7 +38,7 @@ then
      if [ $OPTION = 2 ]
      then
      sudo su root
-     rm -rf "${bot}"
+     rm -rf "${AppName}"
      read -p "执行完成Enter回车并继续..." y
      fi
 

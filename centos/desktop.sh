@@ -1,10 +1,6 @@
 #!/bin/bash
-#centos启动
-version=$(cat /etc/redhat-release)
-readonly version
 
-centos="/bot-help/centos"
-readonly centos
+source ../globals.sh
 
 while true
 do

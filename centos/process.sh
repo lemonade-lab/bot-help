@@ -1,16 +1,10 @@
 #!/bin/bash
-version=$(cat /etc/redhat-release)
-readonly version
 
-myadress="/home/lighthouse"
-readonly myadress
 
-cd /home
-[ -d ${myadress} ] || mkdir lighthouse
-cd "${myadress}"
-[ -d ${myadress}"/Bot" ] || mkdir Bot
-[ -d ${myadress}"/Bot" ] || exit
+source ../globals.sh
 
+# 进入
+cd "$DIRECTORY"
 
 while true
 do
@@ -27,7 +21,6 @@ feedback=$?
 if [ $feedback = 0 ]
 then
    
-    cd "${myadress}"
     if [ $OPTION = 1 ]
     then yum install lsof
     read -p "Enter回车并继续..." Enter

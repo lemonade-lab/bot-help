@@ -1,16 +1,11 @@
 #!/bin/bash
 
-version=$(cat /etc/redhat-release)
-readonly version
+source ../globals.sh
 
-myadress="/home/lighthouse"
-readonly myadress
 
-cd /home
-[ -d ${myadress} ] || mkdir lighthouse
-cd "${myadress}"
-[ -d ${myadress}"/Bot" ] || mkdir Bot
-[ -d ${myadress}"/Bot" ] || exit
+# 进入
+cd "$DIRECTORY"
+
 
 while true
 do
@@ -46,7 +41,7 @@ then
 
     if [ $OPTION = 2 ]
     then
-    cd "${myadress}"
+    cd "$DIRECTORY"
     dnf install langpacks-zh_CN
     dnf install -y ibus-libpinyin.x86_64
     read -p "已执行Enter回车并继续..." x
