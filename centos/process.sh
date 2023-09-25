@@ -11,9 +11,9 @@ OPTION=$(whiptail \
 --title "《Process》" \
 --menu "$version" \
 15 50 5 \
-"1" "安装installLsof" \
-"2" "查看lsof -i:" \
-"3" "杀死kill -9" \
+"1" "安装InstallLsof" \
+"2" "查看Lsof -i:" \
+"3" "杀死Kill -9" \
 3>&1 1>&2 2>&3)
 feedback=$?
 if [ $feedback = 0 ]

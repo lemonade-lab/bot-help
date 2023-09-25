@@ -2,6 +2,17 @@
 
 source /bot-help/globals.sh
 
+wget --version
+if [ $? != 0 ]
+then yum -y install wget
+fi
+
+git version
+if [ $? != 0 ]
+then
+yum -y install git
+fi
+
 while true
 do
     OPTION=$(whiptail \
@@ -23,7 +34,7 @@ do
         # 环境部署administrat
         if [ $OPTION = 1 ]
         then
-            bash "$centos/instart-environment.sh"
+            bash "$centos/environment.sh"
         fi
 
         # 桌面安装DesktopInstall

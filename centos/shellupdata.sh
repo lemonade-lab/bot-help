@@ -11,8 +11,8 @@ OPTION=$(whiptail \
 --title "《Manage》" \
 --menu "$version" \
 15 50 5 \
-"1" "update工具更新" \
-"2" "uninstall工具卸载" \
+"1" "工具更新Update" \
+"2" "工具卸载Uninstall" \
 3>&1 1>&2 2>&3)
 feedback=$?
 if [ $feedback = 0 ]

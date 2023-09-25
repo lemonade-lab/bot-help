@@ -12,10 +12,10 @@ OPTION=$(whiptail \
 --title "《Language》" \
 --menu "$version" \
 15 50 5 \
-"1" "下载语言downloadlanguage" \
-"2" "语言列表languagelist" \
-"3" "编辑语言editlanguage" \
-"4" "当前语言currentlanguage" \
+"1" "下载语言Downloadlanguage" \
+"2" "语言列表Languagelist" \
+"3" "编辑语言Editlanguage" \
+"4" "当前语言Currentlanguage" \
 3>&1 1>&2 2>&3)
 feedback=$?
 if [ $feedback = 0 ]

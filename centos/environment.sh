@@ -29,15 +29,7 @@ then
     node -v
         if [ $? != 0 ]
         then
-	git version
-        if [ $? != 0 ]
-        then
-        yum -y install git
-        fi
-	wget --version
-	if [ $? != 0 ]
-	then yum -y install wget
-	fi
+
 	wget -P "$DIRECTORY" https://repo.huaweicloud.com/nodejs/v16.20.0/node-v16.20.0-linux-${aarch}.tar.gz
 	mkdir /usr/local/node-v16.20.0
 	tar -xf "$DIRECTORY"/node-v16.20.0-linux-${aarch}.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
@@ -95,6 +87,7 @@ read -p "完成数据库安装!回车并继续Enter..." Enter
     then
 
 cd "$AppName/file"
+
 
 # 下载
 wget http://download.redis.io/releases/redis-6.2.13.tar.gz
