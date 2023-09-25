@@ -6,7 +6,7 @@ UpdateTime:2023/9/1_V1.7
 
 ## 一、安装教程
 
-####  (0) 切换根用户
+#### （0）切换根用户
 ```
 sudo su root
 ```
@@ -47,14 +47,14 @@ bot-help
 > 一条龙指令`Centos`
 
 ```
-sudo su root && yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
+yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 一条龙指令`Ubuntu`
 
 
 ```
-sudo su root && apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
+apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 ## 二、安卓搭建
