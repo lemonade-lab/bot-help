@@ -127,7 +127,7 @@ read -p "完成/usr/local/pcre安装!回车并继续Enter..." Enter
 
     fi
 
-    if [ $OPTION = 4 ]
+    if [ $OPTION = 5 ]
     then
 
 cd /usr/local
