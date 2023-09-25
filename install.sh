@@ -3,9 +3,10 @@
 # 引入变量
 source ./globals.sh
 
-# 设置bot-help
+# 设置 bot-help
 bash bin.sh
 
+# 启动
 release=""
 
 # 检查系统
@@ -23,12 +24,12 @@ fi
 
 case $release in
     "centose" | "centos")
-        bash "${AppName}/centos/index.sh"
+        bash "$centosIndex"
         ;;
     "ubuntu")
-        bash "${AppName}/ubuntu/index.sh"
+        bash "$uentosIndex"
         ;;
     "debian")
-        bash "${AppName}/debian/index.sh"
+        bash "$dentosIndex"
         ;;
 esac

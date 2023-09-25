@@ -45,7 +45,6 @@ readonly ubuntu
 ubuntuIndex="${AppName}/centos/index.sh"
 readonly ubuntuIndex
 
-
 aaarch(){
 	case $(arch) in
 		x86_64) aarch="x64";;

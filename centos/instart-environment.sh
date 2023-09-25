@@ -100,7 +100,8 @@ cd "$DIRECTORY"
     if [ $OPTION = 3 ]
     then
 
-cd "$DIRECTORY/file"
+cd "$AppName/file"
+
 # 下载
 wget http://download.redis.io/releases/redis-6.2.13.tar.gz
 redis-6.2.13
