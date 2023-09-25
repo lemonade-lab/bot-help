@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-source ../globals.sh
+source /bot-help/globals.sh
 
 # 进入
 cd "$DIRECTORY"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../globals.sh
+source /bot-help/globals.sh
 
 while true
 do
