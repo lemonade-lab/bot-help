@@ -6,22 +6,14 @@ UpdateTime:2023/9/1_V1.7
 
 ## 一、安装教程
 
-#### （1）切换权限
-
-> 必须`ROOT`用户
-
-```shell
-sudo su root
-```
-
-#### （2）环境准备
+#### （1）环境准备
 
 > 推荐使用 Centos7.6 系统
 
 > 1.`Centos`系统初始化 ☞[Centos 详细内容](./centos/README.md)
 
 ```shell
-yum update -y && yum install git -y
+sudo su root && yum update -y && yum install git -y
 ```
 
 > 推荐推荐 Ubuntu20.04 系统
@@ -29,10 +21,10 @@ yum update -y && yum install git -y
 > 2.`Ubuntu`系统初始化 ☞[Ubuntu 详细内容](./ubuntu/README.md)
 
 ```shell
-apt update -y && apt-get install git whiptail -y
+sudo su root && apt update -y && apt-get install git whiptail -y
 ```
 
-#### （3）项目拉取
+#### （2）项目拉取
 
 > 克隆并初次启动
 
@@ -44,6 +36,19 @@ git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /b
 
 ```shell
 bot-help
+```
+
+> 一条龙指令`Centos`
+
+
+```
+sudo su root && yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
+```
+
+> 一条龙指令`Ubuntu`
+
+```
+sudo su root && apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 ## 二、安卓搭建
