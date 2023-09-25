@@ -117,7 +117,7 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 cd /usr/local
 wget http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
 tar zxvf pcre-8.45.tar.gz
-cd /usr/localpcre-8.45
+cd /usr/local/pcre-8.45
 /usr/local/configure
 make 
 make install
@@ -133,7 +133,7 @@ read -p "完成/usr/local/pcre安装!回车并继续Enter..." Enter
 cd /usr/local
 wget http://nginx.org/download/nginx-1.24.0.tar.gz
 tar zxvf nginx-1.24.0.tar.gz
-cd nginx-1.24.0
+cd /usr/local/nginx-1.24.0
 /usr/local/nginx-1.24.0/configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-pcre=/usr/local/pcre-8.45
 make
 make install
