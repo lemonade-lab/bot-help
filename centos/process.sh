@@ -16,7 +16,6 @@ OPTION=$(whiptail \
 "3" "杀死kill -9" \
 3>&1 1>&2 2>&3)
 feedback=$?
-
 if [ $feedback = 0 ]
 then
    

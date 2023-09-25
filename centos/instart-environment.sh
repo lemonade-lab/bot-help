@@ -14,8 +14,9 @@ OPTION=$(whiptail \
 "1" "安装node" \
 "2" "安装mysql" \
 "3" "安装redis" \
+"4" "安装pcre" \
+"5" "安装nginx" \
 3>&1 1>&2 2>&3)
-
 feedback=$?
 if [ $feedback = 0 ]
 then
@@ -77,10 +78,6 @@ then
     ##返回
     read -p "完成机器人环境安装!回车并继续Enter..." Enter
     fi
-    
-
-#返回
-cd "$DIRECTORY"
 
     if [ $OPTION = 2 ]
     then
@@ -93,9 +90,6 @@ systemctl enable mysqld # 自启动
 read -p "完成数据库安装!回车并继续Enter..." Enter
 
     fi
-
-#返回
-cd "$DIRECTORY"
     
     if [ $OPTION = 3 ]
     then
@@ -114,7 +108,42 @@ read -p "完成数据库安装!回车并继续Enter..." Enter
 
     fi
 
-#返回
+    if [ $OPTION = 4 ]
+    then
+
+#基础环境
+yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
+# pcre
+cd /usr/local
+wget http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
+tar zxvf pcre-8.45.tar.gz
+ ./configure
+make 
+make install
+pcre-config --version
+
+read -p "完成/usr/local/pcre安装!回车并继续Enter..." Enter
+
+    fi
+
+    if [ $OPTION = 4 ]
+    then
+
+cd /usr/local
+wget http://nginx.org/download/nginx-1.24.0.tar.gz
+tar zxvf nginx-1.24.0.tar.gz
+cd nginx-1.24.0
+./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-pcre=/usr/local/pcre-8.45
+make
+make install
+/usr/local/nginx/sbin/nginx -v
+
+read -p "完成/usr/local/nginx/sbin/nginx安装!回车并继续Enter..." Enter
+
+    fi
+
+
+#最后返回
 cd "$DIRECTORY"
 
 else

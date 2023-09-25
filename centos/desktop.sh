@@ -11,7 +11,6 @@ OPTION=$(whiptail \
 "1" "安装" \
 3>&1 1>&2 2>&3)
 feedback=$?
-
 if [ $feedback = 0 ]
 then
 

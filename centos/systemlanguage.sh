@@ -17,7 +17,6 @@ OPTION=$(whiptail \
 "3" "编辑语言editlanguage" \
 "4" "当前语言currentlanguage" \
 3>&1 1>&2 2>&3)
-
 feedback=$?
 if [ $feedback = 0 ]
 then

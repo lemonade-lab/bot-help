@@ -18,7 +18,6 @@ do
     "8" "系统重启Restart" \
     3>&1 1>&2 2>&3)
     feedback=$?
-
     if [ $feedback = 0 ]
     then
         # 环境部署administrat
