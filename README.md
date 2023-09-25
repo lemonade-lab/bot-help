@@ -1,17 +1,17 @@
-# bot-help
+# Bot-Help
 
-> Centos&&Ubuntu 系统轻量型图形化工具
+> Centos&&Ubuntu&&debian 系统轻量型图形化工具
 
-UpdateTime:2023/9/1_V1.7
+UpdateTime:2023/9/26_V2.0
 
 ## 一、安装教程
 
-#### （0）切换根用户
+#### （1）切换用户
 ```
 sudo su root
 ```
 
-#### （1）环境准备
+#### （2）环境准备
 
 > 推荐使用 Centos7.6 系统
 
@@ -30,7 +30,7 @@ yum update -y && yum install git -y
  apt update -y && apt-get install git whiptail -y
 ```
 
-#### （2）项目拉取
+#### （3）项目拉取
 
 > 克隆并初次启动
 
@@ -44,14 +44,15 @@ git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /b
 bot-help
 ```
 
-> 一条龙指令`Centos`
+#### （4）一条龙指令
+
+> 推荐使用 Centos7.6 系统
 
 ```
 yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
-> 一条龙指令`Ubuntu`
-
+> 推荐推荐 Ubuntu20.04 系统
 
 ```
 apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
