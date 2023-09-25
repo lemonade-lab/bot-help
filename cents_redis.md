@@ -6,7 +6,7 @@ redis-cli SAVE
 # 删除
 ```
 systemctl stop redis
-yum remove redis
+yum remove redis -y
 ```
 
 # 下载并编译

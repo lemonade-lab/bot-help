@@ -88,10 +88,8 @@ read -p "完成数据库安装!回车并继续Enter..." Enter
 
 cd "$AppName/file"
 
-
 # 下载
 wget http://download.redis.io/releases/redis-6.2.13.tar.gz
-redis-6.2.13
 tar xzf redis-6.2.13.tar.gz
 cd redis-6.2.13
 make
