@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# 用户
 DIRECTORY="/home/lighthouse"
 
 if [ ! -d "$DIRECTORY" ]; then
@@ -20,10 +21,6 @@ readonly AppName
 # 版本
 version=$(cat /etc/redhat-release)
 readonly version
-
-# 执行用户
-myadress="/home/lighthouse"
-readonly myadress
 
 centos="/bot-help/centos"
 readonly centos

@@ -15,13 +15,14 @@ while true; do
         "3" "安装redis" \
         "4" "安装pcre" \
         "5" "安装nginx" \
+        "6" "安装epel-release" \
         3>&1 1>&2 2>&3)
     feedback=$?
     if [ $feedback = 0 ]; then
 
         #安装
         if [ $OPTION = 1 ]; then
- 
+
             node -v
             if [ $? != 0 ]; then
 
@@ -80,15 +81,29 @@ while true; do
 
             cd "$AppName/file"
 
-            # 下载
-            wget http://download.redis.io/releases/redis-6.2.13.tar.gz
-            tar xzf redis-6.2.13.tar.gz
+            # 检查是否已经存在 Redis 源代码目录
+            if [ ! -d "$AppName/file/redis-6.2.13" ]; then
+                # 下载 Redis
+                wget -P "$AppName/file" http://download.redis.io/releases/redis-6.2.13.tar.gz
+                tar xzf "$AppName/file/redis-6.2.13.tar.gz"
+            fi
+
             cd "$AppName/file/redis-6.2.13"
-            make
-            make install
+
+            # 检查是否已经编译安装 Redis
+            if [ ! -x "$AppName/file/redis-6.2.13/src/redis-server" ]; then
+                # 编译 Redis
+                make
+                make install
+            fi
+
+            # 启动 Redis 服务
             redis-server --daemonize yes
+
             # 设置
             sh "$AppName/file/redis.sh"
+            
+            echo "地址:$AppName/file/redis"
 
             read -p "完成数据库安装!回车并继续Enter..." Enter
 
@@ -98,15 +113,23 @@ while true; do
 
             #基础环境
             yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel
-            # pcre
-            cd /usr/local
-            wget http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
-            tar zxvf pcre-8.45.tar.gz
-            cd /usr/local/pcre-8.45
-            /usr/local/pcre-8.45/configure
-            make
-            make install
+
+            # 检查是否已经安装了 pcre
+            if [ ! -d "/usr/local/pcre-8.45" ]; then
+
+                wget -P /usr/local http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
+                tar zxvf /usr/local/pcre-8.45.tar.gz
+                cd /usr/local/pcre-8.45
+                /usr/local/pcre-8.45/configure
+                make
+                make install
+
+            fi
+
+            # 检查
             pcre-config --version
+
+            echo "地址:/usr/local/pcre"
 
             read -p "完成/usr/local/pcre安装!回车并继续Enter..." Enter
 
@@ -114,16 +137,36 @@ while true; do
 
         if [ $OPTION = 5 ]; then
 
-            cd /usr/local
-            wget http://nginx.org/download/nginx-1.24.0.tar.gz
-            tar zxvf nginx-1.24.0.tar.gz
-            cd /usr/local/nginx-1.24.0
-            /usr/local/nginx-1.24.0/configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-pcre=/usr/local/pcre-8.45
-            make
-            make install
+            # 检查是否已经安装了 nginx
+            if [ ! -d "/usr/local/nginx-1.24.0" ]; then
+
+                wget -P /usr/local http://nginx.org/download/nginx-1.24.0.tar.gz
+                tar zxvf /usr/local/nginx-1.24.0.tar.gz
+                cd /usr/local/nginx-1.24.0
+                /usr/local/nginx-1.24.0/configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-pcre=/usr/local/pcre-8.45
+                make
+                make install
+
+            fi
+
+            # 检查
             /usr/local/nginx/sbin/nginx -v
 
-            read -p "完成/usr/local/nginx/sbin/nginx安装!回车并继续Enter..." Enter
+            echo "地址:/usr/local/nginx"
+
+            read -p "完成安装!回车并继续Enter..." Enter
+
+        fi
+
+        if [ $OPTION = 6 ]; then
+
+            yum install epel-release
+
+            yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+            yum-config-manager --enable remi
+
+            read -p "完成安装!回车并继续Enter..." Enter
 
         fi
 
