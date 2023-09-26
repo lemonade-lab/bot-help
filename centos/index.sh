@@ -53,6 +53,11 @@ do
         if [ $OPTION = 4 ]
         then
             bash "${centos}/shellupdata.sh"
+            child_exit_code=$?
+            if [ $child_exit_code -eq 0 ]
+            then
+                exit  # 结束整个脚本的执行
+            fi
         fi
 
         # 系统语言SystemLanguage

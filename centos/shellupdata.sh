@@ -31,7 +31,7 @@ then
      [ ! -e ${centosIndex} ] || git pull
      [ ! -e ${centosIndex} ] || echo "#执行完成,请输入启动指令bot-help"
      # 直接结束了
-     exit
+     exit 0
      fi
      
 #卸载
@@ -40,10 +40,10 @@ then
      sudo su root
      rm -rf "${AppName}"
      read -p "执行完成..." y
-     exit
+     exit 0
      fi
 
 else
-     exit
+     exit 1
 fi
 done
