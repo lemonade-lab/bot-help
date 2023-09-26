@@ -18,6 +18,9 @@ fi
 AppName="/bot-help"
 readonly AppName
 
+CloneName="bot-help"
+readonly  CloneName
+
 # 版本
 version=$(cat /etc/redhat-release)
 readonly version

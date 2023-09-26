@@ -20,6 +20,7 @@ tar xzf redis-6.2.13.tar.gz
 ```
 cd redis-6.2.13
 ```
+
 ```
 make
 make install
