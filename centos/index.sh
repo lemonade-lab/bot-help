@@ -40,19 +40,19 @@ do
         # 桌面安装DesktopInstall
         if [ $OPTION = 2 ]
         then
-            bash "${centos}/desktop.sh"
+            bash "$centos/desktop.sh"
         fi
 
         # process
         if [ $OPTION = 3 ]
         then
-            bash "${centos}/process.sh"
+            bash "$centos/process.sh"
         fi
 
         # shellupdata
         if [ $OPTION = 4 ]
         then
-            bash "${centos}/shellupdata.sh"
+            bash "$centos/shellupdata.sh"
             child_exit_code=$?
             if [ $child_exit_code -eq 0 ]
             then
@@ -63,19 +63,19 @@ do
         # 系统语言SystemLanguage
         if [ $OPTION = 5 ]
         then
-            bash "${centos}/systemlanguage.sh"
+            bash "$centos/systemlanguage.sh"
         fi
 
         # 远程管理SSHManage
         if [ $OPTION = 6 ]
         then
-            bash "${centos}/longrange.sh"
+            bash "$centos/longrange.sh"
         fi
 
         # 防火设置firewall
         if [ $OPTION = 7 ]
         then
-            bash "${centos}/firewall.sh"
+            bash "$centos/firewall.sh"
         fi
 
         # 系统重启restart

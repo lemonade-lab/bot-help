@@ -23,13 +23,13 @@ else
 fi
 
 case $release in
-    "centose" | "centos")
-        bash "$centosIndex"
-        ;;
-    "ubuntu")
-        bash "$uentosIndex"
-        ;;
-    "debian")
-        bash "$dentosIndex"
-        ;;
+"centose" | "centos")
+    bash "$centosIndex"
+    ;;
+"ubuntu")
+    bash "$uentosIndex"
+    ;;
+"debian")
+    bash "$dentosIndex"
+    ;;
 esac
