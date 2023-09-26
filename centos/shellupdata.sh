@@ -29,8 +29,9 @@ then
      [ ! -e ${centosIndex} ] || git fetch --all
      [ ! -e ${centosIndex} ] || git reset --hard main
      [ ! -e ${centosIndex} ] || git pull
-     [ ! -e ${centosIndex} ] || echo "#执行完成,请重启工具"
-     read -p "Enter回车并继续..." y
+     [ ! -e ${centosIndex} ] || echo "#执行完成,请输入启动指令bot-help"
+     # 直接结束了
+     exit
      fi
      
 #卸载
@@ -38,7 +39,8 @@ then
      then
      sudo su root
      rm -rf "${AppName}"
-     read -p "执行完成Enter回车并继续..." y
+     read -p "执行完成..." y
+     exit
      fi
 
 else
