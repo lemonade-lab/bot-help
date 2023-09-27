@@ -4,13 +4,13 @@ source /bot-help/globals.sh
 
 wget --version
 if [ $? != 0 ]
-then yum -y install wget
+then yum  install wget -y
 fi
 
 git version
 if [ $? != 0 ]
 then
-yum -y install git
+yum  install git -y
 fi
 
 while true

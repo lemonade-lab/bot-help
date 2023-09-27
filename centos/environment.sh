@@ -53,7 +53,7 @@ while true; do
             #文字安装
             yum groupinstall fonts -y
             #安装Chromium
-            yum -y install chromium
+            yum  install chromium -y
 
             ##依赖
             npm config set registry https://registry.npmmirror.com
@@ -68,9 +68,9 @@ while true; do
 
         if [ $OPTION = 2 ]; then
 
-            yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm
-            rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
-            yum install mysql-community-server
+            yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm -y
+            rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 
+            yum install mysql-community-server -y
             systemctl start mysqld  # 启动
             systemctl enable mysqld # 自启动
             read -p "完成数据库安装!回车并继续Enter..." Enter
@@ -112,7 +112,7 @@ while true; do
         if [ $OPTION = 4 ]; then
 
             #基础环境
-            yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel
+            yum install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel -y
 
             # 检查是否已经安装了 pcre
             if [ ! -d "/usr/local/pcre-8.45" ]; then
@@ -160,11 +160,11 @@ while true; do
 
         if [ $OPTION = 6 ]; then
 
-            yum install epel-release
+            yum install epel-release -y
 
-            yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+            yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
 
-            yum-config-manager --enable remi
+            yum-config-manager --enable remi -y
 
             read -p "完成安装!回车并继续Enter..." Enter
 

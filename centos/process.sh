@@ -18,7 +18,7 @@ while true; do
     if [ $feedback = 0 ]; then
 
         if [ $OPTION = 1 ]; then
-            yum install lsof
+            yum install lsof -y
             read -p "Enter回车并继续..." Enter
         fi
 
