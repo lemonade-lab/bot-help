@@ -144,7 +144,7 @@ while true; do
                 wget  "http://nginx.org/download/nginx-$centosNginxV.tar.gz"
                 tar zxvf "nginx-$centosNginxV.tar.gz"
                 cd "nginx-$centosNginxV"
-                ./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module "--with-pcre=/usr/local/$centosPcreV"
+                ./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module "--with-pcre=/usr/local/pcre-$centosPcreV"
                 make
                 make install
 
