@@ -1,24 +1,24 @@
 查看系统版本
 
-```shell
+```sh
 cat /etc/centos-release
 ```
 
 # 安装
 设置源
-```shell
+```sh
 yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm
 ```
 设置源
-```shell
+```sh
 rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 ```
-```shell
+```sh
 yum install mysql-community-server
 ```
 
 启动服务
-```shell
+```sh
 systemctl start mysqld # 启动
 
 systemctl enable mysqld # 自启动
@@ -27,7 +27,7 @@ service mysqld status # 状态
 ```
 
 查看版本
-```shll
+```sh
 mysql -version
 ```
 
@@ -35,11 +35,11 @@ mysql -version
 # 登录
 
 查看临时密码
-```shell
+```sh
 grep 'temporary password' /var/log/mysqld.log
 ```
 登录
-```shell
+```sh
 mysql -u root -p
 ```
 先设置强密码
@@ -92,17 +92,17 @@ exit;
 # 防火墙
 
  检查系统是否安装了FirewallD：
-```shell
+```sh
 systemctl status firewalld
 ```
 
 如果该服务未安装，则需要使用以下命令安装：
-```shell
+```sh
 sudo yum install firewalld
 ```
 
 启动FirewallD服务：
-```shell
+```sh
 sudo systemctl start firewalld
 ```
     
@@ -110,41 +110,41 @@ sudo systemctl start firewalld
 
 设置FirewallD服务在系统启动时自动启动：
 
-```shell
+```sh
 sudo systemctl enable firewalld
 ```
 
 查看防火墙
-```shell
+```sh
 firewall-cmd --query-port=3306/tcp
 ```
 
 开启防火墙
-```shell
+```sh
 firewall-cmd --zone=public --add-port=3306/tcp --permanent
 ```
 
 重载防火墙
-```shell
+```sh
 firewall-cmd --reload
 ```
 
 # 日常指令
 
-```shell
+```sh
 sudo systemctl stop mysqld
 ```
 
-```shell
+```sh
 sudo systemctl start mysqld
 ```
 
 # 免密码登录
-```shell
+```sh
 vi /etc/my.cnf
 ```
 
-```txt
+```toml
 [mysqld]
 skip-grant-tables
 ```

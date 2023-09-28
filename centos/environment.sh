@@ -28,12 +28,12 @@ while true; do
 
                 wget -P "$DIRECTORY" https://repo.huaweicloud.com/nodejs/v$centosNodeV/node-v$centosNodeV-linux-$architecture.tar.gz
                 mkdir "/usr/local/node-v$centosNodeV"
-                tar -xf "$DIRECTORY"/node-v16.20.0-linux-$architecture.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
+                tar -xf "$DIRECTORY/node-v$centosNodeV-linux-$architecture.tar.gz" --strip-components 1 -C "/usr/local/node-v$centosNodeV"
                 echo -e '#node v16.20.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' >/etc/profile.d/node.sh
                 chmod +x /etc/profile.d/node.sh
                 source /etc/profile.d/node.sh
-                ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
-                rm -rf "$DIRECTORY"/node-v16.20.0-linux-$architecture.tar.gz
+                ln -sfn "/usr/local/node-v$centosNodeV/bin/*" /usr/local/bin
+                rm -rf "$DIRECTORY/node-v$centosNodeV-linux-$architecture.tar.gz"
             fi
 
             if [ ! $(strings /usr/lib64/libstdc++.so.6 | grep 'CXXABI_1.3.8') ]; then
@@ -56,11 +56,7 @@ while true; do
             yum  install chromium -y
 
             ##依赖
-            npm config set registry https://registry.npmmirror.com
-            npm install pnpm -g
-            pnpm config set registry https://registry.npmmirror.com
-            npm install pm2 -g
-            ln -sfn /usr/local/node-v16.20.0/bin/* /usr/local/bin
+            ln -sfn "/usr/local/node-v$centosNodeV/bin/*" /usr/local/bin
 
             ##返回
             read -p "完成机器人环境安装!回车并继续Enter..." Enter
@@ -79,16 +75,17 @@ while true; do
 
         if [ $OPTION = 3 ]; then
 
-            cd "$AppName/file"
 
             # 检查是否已经存在 Redis 源代码目录
             if [ ! -d "$AppName/file/redis-$centosRedisV" ]; then
+                cd "$AppName/file"
                 # 下载 Redis
                 wget "http://download.redis.io/releases/redis-$centosRedisV.tar.gz"
                 tar xzf "redis-$centosRedisV.tar.gz"
+       
             fi
-
-            cd "redis-$centosRedisV"
+            
+            cd "$AppName/file/redis-$centosRedisV"
 
             # 检查是否已经编译安装 Redis
             if [ ! -x "$AppName/file/redis-$centosRedisV/src/redis-server" ]; then
@@ -99,14 +96,11 @@ while true; do
 
             # 启动 Redis 服务
             redis-server --daemonize yes
-
             
-            cd "$AppName/file"
-
             # 设置
-            sh  redis.sh 
+            sh  "$AppName/file/redis.sh"
             
-            echo "地址:$AppName/file/redis"
+            echo "$AppName/file/redis-$centosRedisV"
 
             read -p "完成数据库安装!回车并继续Enter..." Enter
 
@@ -119,7 +113,7 @@ while true; do
 
             # 检查是否已经安装了 pcre
             if [ ! -d "/usr/local/pcre-$centosPcreV" ]; then
-               
+            
                 cd /usr/local
                 wget "http://downloads.sourceforge.net/project/pcre/pcre/$centosPcreV/pcre-$centosPcreV.tar.gz"
                 tar zxvf "pcre-$centosPcreV.tar.gz"
@@ -129,11 +123,13 @@ while true; do
                 make install
 
             fi
+            
+            cd  "/usr/local/pcre-$centosPcreV"
 
             # 检查
             pcre-config --version
 
-            echo "地址:/usr/local/pcre"
+            echo "/usr/local/pcre-$centosPcreV"
 
             read -p "完成/usr/local/pcre安装!回车并继续Enter..." Enter
 
@@ -157,7 +153,7 @@ while true; do
             # 检查
             /usr/local/nginx/sbin/nginx -v
 
-            echo "地址:/usr/local/nginx"
+            echo "/usr/local/nginx-$centosNginxV"
 
             read -p "完成安装!回车并继续Enter..." Enter
 

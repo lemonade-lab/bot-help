@@ -9,7 +9,7 @@ UpdateTime:2023/9/26_V2.0
 ## 一、安装教程
 
 #### （1）切换用户
-```
+```sh
 sudo su root
 ```
 
@@ -20,7 +20,7 @@ sudo su root
 > 1.`Centos`系统初始化 ☞[Centos 详细内容](./centos/README.md)
 
 
-```shell
+```sh
 yum update -y && yum install git -y
 ```
 
@@ -28,7 +28,7 @@ yum update -y && yum install git -y
 
 > 2.`Ubuntu`系统初始化 ☞[Ubuntu 详细内容](./ubuntu/README.md)
 
-```shell
+```sh
  apt update -y && apt-get install git whiptail -y
 ```
 
@@ -36,13 +36,13 @@ yum update -y && yum install git -y
 
 > 克隆并初次启动
 
-```shell
+```sh
 git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 日常启动
 
-```shell
+```sh
 bot-help
 ```
 
@@ -50,13 +50,13 @@ bot-help
 
 > 推荐使用 Centos7.6 系统
 
-```
+```sh
 yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 推荐推荐 Ubuntu20.04 系统
 
-```
+```sh
 apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
@@ -70,26 +70,26 @@ apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main 
 
 > 安装 proot、git、python
 
-```shell
+```sh
 pkg install proot git python -y
 ```
 
 > 安装系统脚本
 
-```shell
+```sh
 git clone --depth=1 https://gitee.com/Le-niao/termux-install-linux.git
 ```
 
 > 启动系统脚本|选择 ubuntu 系统
 
-```shell
+```sh
 cd ~/termux-install-linux
 python termux-linux-install.py
 ```
 
 > 启动系统
 
-```shell
+```sh
 ~/Termux-Linux/Ubuntu/start-ubuntu.sh
 ```
 
