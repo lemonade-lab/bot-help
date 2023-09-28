@@ -57,3 +57,11 @@ DetectionArchitecture() {
 }
 
 DetectionArchitecture
+
+
+# 版本控制
+
+centosNodeV='16.20.0'
+centosRedisV='6.2.13'
+centosPcreV='8.45'
+centosNginxV='1.24.0'

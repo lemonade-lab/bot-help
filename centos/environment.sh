@@ -2,13 +2,6 @@
 
 source /bot-help/globals.sh
 
-
-# 版本控制
-
-centosNodeV='v16.20.0'
-centosRedisV='v16.20.0'
-
-
 # 进入
 cd "$DIRECTORY"
 
@@ -33,8 +26,8 @@ while true; do
             node -v
             if [ $? != 0 ]; then
 
-                wget -P "$DIRECTORY" https://repo.huaweicloud.com/nodejs/v16.20.0/node-v16.20.0-linux-$architecture.tar.gz
-                mkdir /usr/local/node-v16.20.0
+                wget -P "$DIRECTORY" https://repo.huaweicloud.com/nodejs/v$centosNodeV/node-v$centosNodeV-linux-$architecture.tar.gz
+                mkdir "/usr/local/node-v$centosNodeV"
                 tar -xf "$DIRECTORY"/node-v16.20.0-linux-$architecture.tar.gz --strip-components 1 -C /usr/local/node-v16.20.0
                 echo -e '#node v16.20.0\nexport PATH=/usr/local/node-v16.20.0/bin:$PATH' >/etc/profile.d/node.sh
                 chmod +x /etc/profile.d/node.sh
@@ -89,16 +82,16 @@ while true; do
             cd "$AppName/file"
 
             # 检查是否已经存在 Redis 源代码目录
-            if [ ! -d "$AppName/file/redis-6.2.13" ]; then
+            if [ ! -d "$AppName/file/redis-$centosRedisV" ]; then
                 # 下载 Redis
-                wget http://download.redis.io/releases/redis-6.2.13.tar.gz
-                tar xzf redis-6.2.13.tar.gz
+                wget "http://download.redis.io/releases/redis-$centosRedisV.tar.gz"
+                tar xzf "redis-$centosRedisV.tar.gz"
             fi
 
-            cd redis-6.2.13
+            cd "redis-$centosRedisV"
 
             # 检查是否已经编译安装 Redis
-            if [ ! -x "$AppName/file/redis-6.2.13/src/redis-server" ]; then
+            if [ ! -x "$AppName/file/redis-$centosRedisV/src/redis-server" ]; then
                 # 编译 Redis
                 make
                 make install
@@ -125,12 +118,12 @@ while true; do
             yum install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel -y
 
             # 检查是否已经安装了 pcre
-            if [ ! -d "/usr/local/pcre-8.45" ]; then
+            if [ ! -d "/usr/local/pcre-$centosPcreV" ]; then
                
                 cd /usr/local
-                wget http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
-                tar zxvf pcre-8.45.tar.gz
-                cd pcre-8.45
+                wget "http://downloads.sourceforge.net/project/pcre/pcre/$centosPcreV/pcre-$centosPcreV.tar.gz"
+                tar zxvf "pcre-$centosPcreV.tar.gz"
+                cd "pcre-$centosPcreV"
                 ./configure
                 make
                 make install
@@ -149,13 +142,13 @@ while true; do
         if [ $OPTION = 5 ]; then
 
             # 检查是否已经安装了 nginx
-            if [ ! -d "/usr/local/nginx-1.24.0" ]; then
+            if [ ! -d "/usr/local/nginx-$centosNginxV" ]; then
 
                 cd /usr/local
-                wget  http://nginx.org/download/nginx-1.24.0.tar.gz
-                tar nginx-1.24.0.tar.gz
-                cd nginx-1.24.0
-                ./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-pcre=/usr/local/pcre-8.45
+                wget  "http://nginx.org/download/nginx-$centosNginxV.tar.gz"
+                tar "nginx-$centosNginxV.tar.gz"
+                cd "nginx-$centosNginxV"
+                ./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module "--with-pcre=/usr/local/$centosPcreV"
                 make
                 make install
 
