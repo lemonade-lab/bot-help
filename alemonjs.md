@@ -1,14 +1,14 @@
 # VitePress
 
 ```
- server {
-        listen       80;
-        server_name  alemonjs.com;
+     server {
+            listen       80;
+            server_name  alemonjs.com;
 
-        location / {
-            return 301 https://$host$request_uri;
-        }
- }
+            location / {
+                return 301 https://$host$request_uri;
+            }
+      }
 ```
 
 ```
