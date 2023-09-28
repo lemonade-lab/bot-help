@@ -81,7 +81,7 @@ while true; do
                 cd "$AppName/file"
                 # 下载 Redis
                 wget "http://download.redis.io/releases/redis-$centosRedisV.tar.gz"
-                tar xzf "redis-$centosRedisV.tar.gz"
+                tar zxvf "redis-$centosRedisV.tar.gz"
        
             fi
             
@@ -142,7 +142,7 @@ while true; do
 
                 cd /usr/local
                 wget  "http://nginx.org/download/nginx-$centosNginxV.tar.gz"
-                tar "nginx-$centosNginxV.tar.gz"
+                tar zxvf "nginx-$centosNginxV.tar.gz"
                 cd "nginx-$centosNginxV"
                 ./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module "--with-pcre=/usr/local/$centosPcreV"
                 make
