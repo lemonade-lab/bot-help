@@ -2,6 +2,13 @@
 
 source /bot-help/globals.sh
 
+
+# 版本控制
+
+centosNodeV='v16.20.0'
+centosRedisV='v16.20.0'
+
+
 # 进入
 cd "$DIRECTORY"
 
@@ -84,11 +91,11 @@ while true; do
             # 检查是否已经存在 Redis 源代码目录
             if [ ! -d "$AppName/file/redis-6.2.13" ]; then
                 # 下载 Redis
-                wget -P "$AppName/file" http://download.redis.io/releases/redis-6.2.13.tar.gz
-                tar xzf "$AppName/file/redis-6.2.13.tar.gz"
+                wget http://download.redis.io/releases/redis-6.2.13.tar.gz
+                tar xzf redis-6.2.13.tar.gz
             fi
 
-            cd "$AppName/file/redis-6.2.13"
+            cd redis-6.2.13
 
             # 检查是否已经编译安装 Redis
             if [ ! -x "$AppName/file/redis-6.2.13/src/redis-server" ]; then
@@ -100,8 +107,11 @@ while true; do
             # 启动 Redis 服务
             redis-server --daemonize yes
 
+            
+            cd "$AppName/file"
+
             # 设置
-            sh "$AppName/file/redis.sh"
+            sh  redis.sh 
             
             echo "地址:$AppName/file/redis"
 
@@ -116,11 +126,12 @@ while true; do
 
             # 检查是否已经安装了 pcre
             if [ ! -d "/usr/local/pcre-8.45" ]; then
-
-                wget -P /usr/local http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
-                tar zxvf /usr/local/pcre-8.45.tar.gz
-                cd /usr/local/pcre-8.45
-                /usr/local/pcre-8.45/configure
+               
+                cd /usr/local
+                wget http://downloads.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
+                tar zxvf pcre-8.45.tar.gz
+                cd pcre-8.45
+                ./configure
                 make
                 make install
 
@@ -140,10 +151,11 @@ while true; do
             # 检查是否已经安装了 nginx
             if [ ! -d "/usr/local/nginx-1.24.0" ]; then
 
-                wget -P /usr/local http://nginx.org/download/nginx-1.24.0.tar.gz
-                tar zxvf /usr/local/nginx-1.24.0.tar.gz
-                cd /usr/local/nginx-1.24.0
-                /usr/local/nginx-1.24.0/configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-pcre=/usr/local/pcre-8.45
+                cd /usr/local
+                wget  http://nginx.org/download/nginx-1.24.0.tar.gz
+                tar nginx-1.24.0.tar.gz
+                cd nginx-1.24.0
+                ./configure --prefix=/usr/local/nginx --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-pcre=/usr/local/pcre-8.45
                 make
                 make install
 

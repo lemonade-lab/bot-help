@@ -44,7 +44,7 @@ mysql -u root -p
 ```
 先设置强密码
 ```sql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'XJH002580!';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'My002580!';
 ```
 更改规格为弱密码
 ```sql

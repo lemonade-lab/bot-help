@@ -24,9 +24,8 @@ do
     "3" "端口管理PortManagement" \
     "4" "工具管理ToolManagement" \
     "5" "系统语言SystemLanguage" \
-    "6" "远程管理SSHManage" \
-    "7" "防火设置Firewall" \
-    "8" "系统重启Restart" \
+    "6" "防火设置Firewall" \
+    "7" "系统重启Restart" \
     3>&1 1>&2 2>&3)
     feedback=$?
     if [ $feedback = 0 ]
@@ -66,20 +65,14 @@ do
             bash "$centos/systemlanguage.sh"
         fi
 
-        # 远程管理SSHManage
-        if [ $OPTION = 6 ]
-        then
-            bash "$centos/longrange.sh"
-        fi
-
         # 防火设置firewall
-        if [ $OPTION = 7 ]
+        if [ $OPTION = 6 ]
         then
             bash "$centos/firewall.sh"
         fi
 
         # 系统重启restart
-        if [ $OPTION = 8 ]
+        if [ $OPTION = 7 ]
         then
             shutdown -r now
         fi
