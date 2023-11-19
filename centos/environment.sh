@@ -58,6 +58,9 @@ while true; do
             ##依赖
             ln -sfn "/usr/local/node-v$centosNodeV/bin/*" /usr/local/bin
 
+            ##更新环境
+            source /etc/profile
+
             ##返回
             read -p "完成机器人环境安装!回车并继续Enter..." Enter
         fi
@@ -67,8 +70,14 @@ while true; do
             yum localinstall https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm -y
             rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 
             yum install mysql-community-server -y
+
+
+            ##更新环境
+            source /etc/profile
+
             systemctl start mysqld  # 启动
             systemctl enable mysqld # 自启动
+
             read -p "完成数据库安装!回车并继续Enter..." Enter
 
         fi
@@ -92,6 +101,10 @@ while true; do
                 # 编译 Redis
                 make
                 make install
+
+                ##更新环境
+                source /etc/profile
+
             fi
 
             # 启动 Redis 服务
@@ -122,6 +135,9 @@ while true; do
                 make
                 make install
 
+                ##更新环境
+                source /etc/profile
+
             fi
             
             cd  "/usr/local/pcre-$centosPcreV"
@@ -148,6 +164,9 @@ while true; do
                 make
                 make install
 
+                ##更新环境
+                source /etc/profile
+
             fi
 
             # 检查
@@ -166,6 +185,10 @@ while true; do
             yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
 
             yum-config-manager --enable remi -y
+
+
+            ##更新环境
+            source /etc/profile
 
             read -p "完成安装!回车并继续Enter..." Enter
 
