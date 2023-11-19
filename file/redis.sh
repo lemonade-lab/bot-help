@@ -22,6 +22,10 @@ Restart=always
 WantedBy=multi-user.target
 EOF
 
+
+##更新环境
+source /etc/profile
+
 # 重新加载 systemd 配置
 systemctl daemon-reload
 
