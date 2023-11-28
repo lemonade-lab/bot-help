@@ -23,7 +23,7 @@ while true; do
 
 
         #更新环境
-        if [ $OPTION = 1 ]; then
+        if [ $OPTION = 0 ]; then
             source /etc/profile
             ##返回
             read -p "环境已刷新!回车并继续Enter..." Enter
