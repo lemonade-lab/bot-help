@@ -108,7 +108,7 @@ while true; do
             fi
 
             # 启动 Redis 服务
-            redis-server --daemonize yes
+            ./src/redis-server --daemonize yes
             
             # 设置
             sh  "$AppName/file/redis.sh"
