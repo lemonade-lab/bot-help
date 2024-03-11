@@ -129,6 +129,19 @@ firewall-cmd --zone=public --add-port=3306/tcp --permanent
 firewall-cmd --reload
 ```
 
+# 密钥不匹配
+
+更新
+```
+sudo yum update mysql80-community-release
+```
+
+重新安装
+
+```
+sudo yum install mysql-community-server
+```
+
 # 日常指令
 
 ```sh
