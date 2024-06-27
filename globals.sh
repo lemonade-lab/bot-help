@@ -22,7 +22,7 @@ CloneName="bot-help"
 readonly  CloneName
 
 # 版本
-version=$(cat /etc/redhat-release)
+version=$(cat /etc/redhat-release 2>/dev/null || cat /etc/issue 2>/dev/null | sed 's/\\n//g; s/\\l//g; s/(Core)//g')
 readonly version
 
 centos="/bot-help/centos"
@@ -36,18 +36,6 @@ readonly deub
 
 deubIndex="$AppName/deub/index.sh"
 readonly deubIndex
-
-# debian="/bot-help/debian"
-# readonly debian
-
-# debianIndex="$AppName/centos/index.sh"
-# readonly debianIndex
-
-# ubuntu="/bot-help/ubuntu"
-# readonly ubuntu
-
-# ubuntuIndex="$AppName/centos/index.sh"
-# readonly ubuntuIndex
 
 architecture=""
 
