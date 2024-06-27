@@ -31,17 +31,23 @@ readonly centos
 centosIndex="$AppName/centos/index.sh"
 readonly centosIndex
 
-debian="/bot-help/debian"
-readonly debian
+deub="/bot-help/deub"
+readonly deub
 
-debianIndex="$AppName/centos/index.sh"
-readonly debianIndex
+deubIndex="$AppName/deub/index.sh"
+readonly deubIndex
 
-ubuntu="/bot-help/ubuntu"
-readonly ubuntu
+# debian="/bot-help/debian"
+# readonly debian
 
-ubuntuIndex="$AppName/centos/index.sh"
-readonly ubuntuIndex
+# debianIndex="$AppName/centos/index.sh"
+# readonly debianIndex
+
+# ubuntu="/bot-help/ubuntu"
+# readonly ubuntu
+
+# ubuntuIndex="$AppName/centos/index.sh"
+# readonly ubuntuIndex
 
 architecture=""
 
