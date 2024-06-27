@@ -20,7 +20,7 @@ while true; do
           if [ $OPTION = 1 ]; then
                if [ ! -d "$AppName" ]; then
                     cd /
-                    git clone "https://gitee.com/ningmengchongshui/bot-help.git"
+                    git clone "https://github.com/ningmengchongshui/bot-help.git"
                fi
 
                if [ ! -e "$centosIndex" ]; then
