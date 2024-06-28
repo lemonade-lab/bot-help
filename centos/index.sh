@@ -2,12 +2,12 @@
 
 source /bot-help/globals.sh
 
-wget --version
+wget --version 1>/dev/null
 if [ $? != 0 ]
 then yum  install wget -y
 fi
 
-git version
+git version 1>/dev/null
 if [ $? != 0 ]
 then
 yum  install git -y

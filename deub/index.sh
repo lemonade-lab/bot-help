@@ -2,11 +2,11 @@
 
 source /bot-help/globals.sh
 
-wget --version
+wget --version 1>/dev/null
 if [ $? != 0 ]; then apt-get install wget -y 
 fi
 
-git version
+git version 1>/dev/null 
 if [ $? != 0 ]; then apt-get install git -y 
 fi
 
