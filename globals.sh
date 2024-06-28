@@ -22,7 +22,9 @@ CloneName="bot-help"
 readonly  CloneName
 
 # 版本
-version=$(cat /etc/redhat-release 2>/dev/null || cat /etc/issue 2>/dev/null | sed 's/\\n//g; s/\\l//g; s/(Core)//g')
+. /etc/os-release
+version="$NAME"
+#version=$(cat /etc/redhat-release 2>/dev/null || cat /etc/issue 2>/dev/null | sed 's/\\n//g; s/\\l//g; s/(Core)//g')
 readonly version
 
 centos="/bot-help/centos"
