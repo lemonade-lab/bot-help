@@ -13,6 +13,14 @@ cd ~/.ssh
 cat id_rsa.pub
 ```
 
+配置账号
+
+```sh
+git config --global user.email "xxx@xxx.com"
+git config --global user.name "xxx"
+git config --global user.password "xxx"
+```
+
 ### 显示
 
 查看当前分支大小
