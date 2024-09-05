@@ -60,42 +60,7 @@ yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee
 apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/lemonade-lab/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
-## 二、安卓搭建
-
-> 需要先安装 APP Termux 
-
-> [☞Termux 下载地址](https://github.com/termux/termux-app/releases)
-
-> 选择下载`arm64`版
-
-> 安装 proot、git、python
-
-```sh
-pkg install proot git python -y
-```
-
-> 安装系统脚本
-
-```sh
-git clone --depth=1 https://gitee.com/Le-niao/termux-install-linux.git
-```
-
-> 启动系统脚本|选择 ubuntu 系统
-
-```sh
-cd ~/termux-install-linux
-python termux-linux-install.py
-```
-
-> 启动系统
-
-```sh
-~/Termux-Linux/Ubuntu/start-ubuntu.sh
-```
-
-> 启动后已是 ROOT 用户,无需再切换
-
-## 三、远程连接工具
+## 二、远程连接工具
 
 > Android：`JuiceSSH`
 
@@ -103,7 +68,7 @@ python termux-linux-install.py
 
 > Windows：`MobaXterm`、`Termius`
 
-## 四、功能介绍
+## 三、功能介绍
 
 - [x] 一键部署环境
 - [x] 桌面安装
