@@ -37,7 +37,7 @@ yum update -y && yum install git -y
 > 克隆并初次启动
 
 ```sh
-git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
+git clone --depth=1 -b main https://gitee.com/lemonade-lab/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 日常启动
@@ -51,13 +51,13 @@ bot-help
 > 推荐使用 Centos7.6 系统
 
 ```sh
-yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
+yum update -y && yum install git -y && git clone --depth=1 -b main https://gitee.com/lemonade-lab/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 > 推荐推荐 Ubuntu20.04 系统
 
 ```sh
-apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/ningmengchongshui/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
+apt update -y && apt-get install git whiptail -y && git clone --depth=1 -b main https://gitee.com/lemonade-lab/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
 ```
 
 ## 二、安卓搭建
