@@ -1,4 +1,4 @@
-# Bot-Help
+# Visible
 
 > Centos&&Ubuntu&&debian 系统轻量型图形化工具
 
@@ -37,13 +37,13 @@ yum update -y && yum install git -y
 > 克隆并初次启动
 
 ```sh
-git clone --depth=1 -b main https://github.com/lemonade-lab/bot-help.git  /bot-help && chmod +x /bot-help/*/*.sh  && sh /bot-help/install.sh
+git clone --depth=1 -b main https://github.com/lemonade-lab/visible.git  /visible && chmod +x /visible/*/*.sh  && sh /visible/install.sh
 ```
 
 > 日常启动
 
 ```sh
-bot-help
+visible
 ```
 
 ## 二、远程连接工具
@@ -53,12 +53,3 @@ bot-help
 > IOS：`Termius`
 
 > Windows：`MobaXterm`、`Termius`
-
-## 三、功能介绍
-
-- [x] 一键部署环境
-- [x] 桌面安装
-- [x] 端口管理(杀进程)
-- [x] SSH 开通（远程连接）
-- [x] 系统语言(可设置中文)
-
