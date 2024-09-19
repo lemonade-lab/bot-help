@@ -15,10 +15,10 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 
 # 地址
-AppName="/bot-help"
+AppName="/visible"
 readonly AppName
 
-CloneName="bot-help"
+CloneName="visible"
 readonly  CloneName
 
 # 版本
@@ -27,13 +27,13 @@ version=$NAME
 #version=$(cat /etc/redhat-release 2>/dev/null || cat /etc/issue 2>/dev/null | sed 's/\\n//g; s/\\l//g; s/(Core)//g')
 readonly version
 
-centos="/bot-help/centos"
+centos="/visible/centos"
 readonly centos
 
 centosIndex="$AppName/centos/index.sh"
 readonly centosIndex
 
-deub="/bot-help/deub"
+deub="/visible/deub"
 readonly deub
 
 deubIndex="$AppName/deub/index.sh"
