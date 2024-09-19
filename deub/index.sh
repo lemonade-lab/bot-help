@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /bot-help/globals.sh
+source /visible/globals.sh
 
 wget --version 1>/dev/null
 if [ $? != 0 ]; then apt-get install wget -y 
@@ -13,7 +13,7 @@ fi
 while true
 do
 	OPTION=$(whiptail \
-		--title "《bot-help》" \
+		--title "《visible》" \
 		--menu "${version}" \
 		15 50 6 \
 		"1" "环境部署Env Deploy" \

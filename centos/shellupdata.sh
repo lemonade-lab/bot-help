@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /bot-help/globals.sh
+source /visible/globals.sh
 
 # 进入
 cd "$DIRECTORY"
@@ -20,7 +20,7 @@ while true; do
           if [ $OPTION = 1 ]; then
                if [ ! -d "$AppName" ]; then
                     cd /
-                    git clone "https://github.com/ningmengchongshui/bot-help.git"
+                    git clone "https://github.com/ningmengchongshui/visible.git"
                fi
 
                if [ ! -e "$centosIndex" ]; then
@@ -31,7 +31,7 @@ while true; do
                     git fetch --all
                     git reset --hard main
                     git pull
-                    echo "《BOT-HELP》"
+                    echo "《visible》"
                     echo "#执行完成...."
                     echo "#请输入启动指令唤起...."
                fi
@@ -43,7 +43,7 @@ while true; do
           if [ $OPTION = 2 ]; then
                sudo su root
                rm -rf "$AppName"
-               echo "《BOT-HELP》"
+               echo "《visible》"
                echo "#已卸载应用..."
                exit 0
           fi

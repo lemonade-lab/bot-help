@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /bot-help/globals.sh
+source /visible/globals.sh
 
 cd "$DIRECTORY"
 
