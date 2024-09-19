@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # 引入变量
-source /bot-help/globals.sh
+source /visible/globals.sh
 
-# 设置 bot-help
-bash /bot-help/bin.sh
+# 设置 visible
+bash /visible/bin.sh
 
 # 启动 检查系统
 . /etc/os-release
