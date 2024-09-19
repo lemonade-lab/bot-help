@@ -4,12 +4,12 @@ if [ ! -d "/usr/local/bin" ]; then
 fi
 
 # 检查脚本文件是否已经存在内容
-if [ ! -s "/usr/local/bin/bot-help" ]; then
+if [ ! -s "/usr/local/bin/visible" ]; then
     # 写入脚本内容到文件
-    tee /usr/local/bin/bot-help >/dev/null <<EOF
+    tee /usr/local/bin/visible >/dev/null <<EOF
 #!/bin/bash
-/bot-help/install.sh
+/visible/install.sh
 EOF
     # 设置脚本文件的可执行权限
-    chmod +x /usr/local/bin/bot-help
+    chmod +x /usr/local/bin/visible
 fi
