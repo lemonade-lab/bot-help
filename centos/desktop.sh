@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /bot-help/globals.sh
+source /visible/globals.sh
 
 while true; do
     OPTION=$(whiptail \
